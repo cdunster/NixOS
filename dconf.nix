@@ -46,6 +46,7 @@ in
     };
 
     "org/gnome/shell" = {
+      disable-user-extensions = false;
       enabled-extensions = [ "material-shell@papyelgringo" ];
       welcome-dialog-last-shown-version = "41.1";
     };
