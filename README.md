@@ -13,9 +13,6 @@ git clone https://github.com/cdunster/NixOS.git /mnt/etc/nixos
 # Generate the hardware specific configuration.
 nixos-generate-config --root /mnt/
 
-# Add home-manager
-/mnt/etc/nixos/add-home-manager.sh
-
 # Install NixOS.
 nixos-install
 ```
@@ -30,15 +27,15 @@ exit
 
 And now reboot into the new NixOS installation.
 ```shell
-reboot now
+reboot
+```
+
+Once rebooted you need to finish the installation with the NixOS flakes.
+```shell
+sudo nixos-rebuild switch --flake /etc/nixos#
 ```
 
 # Modifying NixOS
-Before you can rebuild NixOS you need home-manager installed on this new installation (the step above installs home-manager on the live CD).
-```shell
-sudo /etc/nixos/add-home-manager.sh
-```
-
 Now you can make changes to the `/etc/nixos/configuration.nix` file to modify the installation. If you followed the installation steps then this directory should be a clone of this repo. You need super root privileges to modify this directory.
 ```shell
 sudo nvim /etc/nixos/configuration.nix
@@ -46,5 +43,5 @@ sudo nvim /etc/nixos/configuration.nix
 
 After making changes then rebuild NixOS and switch to this new build.
 ```shell
-sudo nixos-rebuild switch
+sudo nixos-rebuild switch --flake /etc/nixos#
 ```
