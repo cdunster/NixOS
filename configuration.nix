@@ -1,10 +1,15 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      <home-manager/nixos>
-    ];
+  nix = {
+    package = pkgs.nixUnstable;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   # Use the EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -47,17 +52,17 @@
   };
 
   # Exclude these packages from the Gnome install.
-  environment.gnome.excludePackages = [
-    pkgs.gnome.cheese
-    pkgs.gnome.geary
-    pkgs.gnome.gnome-music
-    pkgs.gnome.gedit
-    pkgs.gnome.epiphany
-    pkgs.gnome.totem
-    pkgs.gnome-tour
-    pkgs.gnome.gnome-contacts
-    pkgs.gnome.gnome-weather
-    pkgs.gnome-connections
+  environment.gnome.excludePackages = with pkgs; [
+    gnome.cheese
+    gnome.geary
+    gnome.gnome-music
+    gnome.gedit
+    gnome.epiphany
+    gnome.totem
+    gnome-tour
+    gnome.gnome-contacts
+    gnome.gnome-weather
+    gnome-connections
   ];
 
   # Enable sound.
@@ -76,22 +81,6 @@
   users.users.callum = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-  };
-
-  # Manage user accounts with home-manager.
-  home-manager.users.callum = { pkgs, ... }: {
-    imports = [ ./dconf.nix ];
-
-    home.packages = with pkgs; [
-      gnomeExtensions.material-shell
-      git
-      bat
-      neovim
-      neovim-qt
-      brave
-    ];
-
-    programs.bash.enable = true;
   };
 
   # This value determines the NixOS release from which the default
