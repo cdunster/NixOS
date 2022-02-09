@@ -18,8 +18,10 @@
   # Set the system time zone.
   time.timeZone = "Europe/Amsterdam";
 
+  # Set the system host name.
+  networking.hostName = "MiNixOS";
+
   # Enable WiFi.
-  # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # The global useDHCP flag is deprecated, therefore explicitly set to false here.
