@@ -24,7 +24,7 @@
     shellInit = ''
       starship init fish | source
     '';
-    shellAliases = {
+    shellAbbrs = {
       lg = "lazygit";
     };
   };
