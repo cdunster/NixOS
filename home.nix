@@ -5,13 +5,8 @@
   home.packages = with pkgs; [
     gnomeExtensions.material-shell
     dconf2nix
-    lazygit
-    bat
-    exa
     fd
-    fzf
     ripgrep
-    neovim
     neovim-qt
     brave
     spotify
@@ -47,4 +42,14 @@
     [user]
         email = "cdunster@users.noreply.github.com";
   '';
+
+  programs.lazygit.enable = true;
+
+  programs.bat.enable = true;
+
+  programs.exa.enable = true;
+
+  programs.fzf.enable = true;
+
+  programs.neovim.enable = true;
 }
