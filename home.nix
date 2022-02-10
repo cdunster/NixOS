@@ -5,7 +5,6 @@
   home.packages = with pkgs; [
     gnomeExtensions.material-shell
     dconf2nix
-    starship
     lazygit
     bat
     exa
@@ -20,13 +19,12 @@
 
   programs.fish = {
     enable = true;
-    shellInit = ''
-      starship init fish | source
-    '';
     shellAbbrs = {
       lg = "lazygit";
     };
   };
+
+  programs.starship.enable = true;
 
   programs.git = {
     enable = true;
