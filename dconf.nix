@@ -1,11 +1,14 @@
 # Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
 { lib, ... }:
 
-let
-  mkTuple = lib.hm.gvariant.mkTuple;
-in
+with lib.hm.gvariant;
+
 {
   dconf.settings = {
+    "org/gnome/control-center" = {
+      last-panel = "display";
+    };
+
     "org/gnome/desktop/input-sources" = {
       sources = [ (mkTuple [ "xkb" "us" ]) ];
       xkb-options = [ "eurosign:e" ];
@@ -13,6 +16,14 @@ in
 
     "org/gnome/desktop/interface" = {
       gtk-im-module = "gtk-im-context-simple";
+    };
+
+    "org/gnome/desktop/notifications" = {
+      application-children = [ "brave-browser" ];
+    };
+
+    "org/gnome/desktop/notifications/application/brave-browser" = {
+      application-id = "brave-browser.desktop";
     };
 
     "org/gnome/desktop/privacy" = {
