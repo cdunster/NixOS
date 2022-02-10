@@ -81,12 +81,16 @@
     neovim
   ];
 
+  # Enable the fish shell.
+  programs.fish.enable = true;
+
   # Set kitty as the default terminal.
   environment.sessionVariables.TERMINAL = [ "kitty" ];
 
   # Define user accounts.
   users.users.callum = {
     isNormalUser = true;
+    shell = pkgs.fish;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
 
