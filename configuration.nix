@@ -65,6 +65,7 @@
     gnome.gnome-contacts
     gnome.gnome-weather
     gnome-connections
+    gnome.gnome-terminal
   ];
 
   # Enable sound.
@@ -76,8 +77,12 @@
 
   # System level packages to install (available for all users).
   environment.systemPackages = with pkgs; [
+    kitty
     neovim
   ];
+
+  # Set kitty as the default terminal.
+  environment.sessionVariables.TERMINAL = [ "kitty" ];
 
   # Define user accounts.
   users.users.callum = {
