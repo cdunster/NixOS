@@ -16,5 +16,8 @@
 
   programs.fish = {
     enable = true;
+    shellAliases = {
+      lg = "lazygit";
+    };
   };
 }
