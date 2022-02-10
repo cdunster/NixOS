@@ -43,7 +43,15 @@
         email = "cdunster@users.noreply.github.com";
   '';
 
-  programs.lazygit.enable = true;
+  programs.lazygit = {
+    enable = true;
+    settings = {
+      notARepository = "skip";
+      gui = {
+        showCommandLog = false;
+      };
+    };
+  };
 
   programs.bat.enable = true;
 
