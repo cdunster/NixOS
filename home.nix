@@ -10,6 +10,9 @@
     lazygit
     bat
     exa
+    fd
+    fzf
+    ripgrep
     neovim
     neovim-qt
     brave
