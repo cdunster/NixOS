@@ -16,6 +16,7 @@
     neovim
     neovim-qt
     brave
+    spotify
   ];
 
   programs.fish = {
