@@ -7,6 +7,8 @@
     '';
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   imports = [
     ./hardware-configuration.nix
   ];
