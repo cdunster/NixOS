@@ -4,8 +4,11 @@
 
   home.packages = with pkgs; [
     gnomeExtensions.material-shell
+    dconf2nix
     git
+    lazygit
     bat
+    exa
     neovim
     neovim-qt
     brave
