@@ -12,6 +12,11 @@
     spotify
   ];
 
+  programs.kitty = {
+    enable = true;
+    theme = "Darkside";
+  };
+
   programs.fish = {
     enable = true;
     shellAbbrs = {
