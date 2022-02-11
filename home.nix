@@ -21,6 +21,7 @@
     enable = true;
     shellAbbrs = {
       lg = "lazygit";
+      ll = "exa -lah";
     };
   };
 
