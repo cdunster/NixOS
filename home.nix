@@ -69,4 +69,6 @@
   programs.fzf.enable = true;
 
   programs.neovim.enable = true;
+
+  programs.direnv.enable = true;
 }
