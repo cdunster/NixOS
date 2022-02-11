@@ -23,6 +23,9 @@
       lg = "lazygit";
       ll = "exa -lah";
     };
+    shellInit = ''
+      set -g fish_greeting ""
+    '';
   };
 
   programs.starship.enable = true;
