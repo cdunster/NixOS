@@ -1,5 +1,8 @@
 # Configure Neovim using home-manager.
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+      startifyWithConfig = import ./vim-plugins/startify.nix { vim-startify = pkgs.vimPlugins.vim-startify; };
+in {
   programs.neovim = {
     enable = true;
     extraConfig = ''
@@ -31,5 +34,8 @@
     set updatetime=300          "Better user experience.
     set wildmode=longest,list   "Enable bash-like tab completions.
     '';
+    plugins = with pkgs.vimPlugins; [
+      startifyWithConfig
+    ];
   };
 }
