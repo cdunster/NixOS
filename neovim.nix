@@ -30,14 +30,17 @@
     set timeoutlen=300          "Set the time to wait for a mapped sequence to complete.
     set updatetime=300          "Better user experience.
     set wildmode=longest,list   "Enable bash-like tab completions.
+    let g:mapleader=' '		"Set <SPC> to be the leader key for keybindings.
     '';
     plugins =
       with pkgs.vimPlugins;
       let
         startifyWithConfig = import ./vim-plugins/startify.nix { inherit vim-startify; };
+        whichkeyWithConfig = import ./vim-plugins/whichkey.nix { inherit which-key-nvim; };
       in [
         startifyWithConfig
         vim-fugitive
+        whichkeyWithConfig
     ];
   };
 }
