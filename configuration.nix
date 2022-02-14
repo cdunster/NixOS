@@ -83,11 +83,16 @@
   # System level packages to install (available for all users).
   environment.systemPackages = with pkgs; [
     kitty
-    neovim
   ];
 
   # Enable the fish shell.
   programs.fish.enable = true;
+
+  # Enable neovim and set as default editor.
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   # Define user accounts.
   users.users.callum = {
