@@ -26,6 +26,8 @@
     shellAbbrs = {
       lg = "lazygit";
       ll = "exa -lah";
+      d = "pushd";
+      ".." = "popd";
     };
     shellInit = ''
       set -g fish_greeting ""
