@@ -36,6 +36,7 @@ in {
     '';
     plugins = with pkgs.vimPlugins; [
       startifyWithConfig
+      vim-fugitive
     ];
   };
 }
