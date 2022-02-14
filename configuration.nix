@@ -70,6 +70,9 @@
     gnome.gnome-terminal
   ];
 
+  # Override default packages (removes nano and others).
+  environment.defaultPackages = [];
+
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
