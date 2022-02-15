@@ -37,10 +37,13 @@
       let
         startifyWithConfig = import ./vim-plugins/startify.nix { inherit vim-startify; };
         whichkeyWithConfig = import ./vim-plugins/whichkey.nix { inherit which-key-nvim; };
+        treesitterWithConfig = import ./vim-plugins/treesitter.nix { inherit nvim-treesitter; };
       in [
         startifyWithConfig
         vim-fugitive
         whichkeyWithConfig
+        treesitterWithConfig
+        nvim-treesitter-textobjects
     ];
   };
 }
