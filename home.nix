@@ -18,7 +18,7 @@
 
   programs.kitty = {
     enable = true;
-    theme = "Darkside";
+    theme = "Tokyo Night Storm";
   };
 
   programs.fish = {
