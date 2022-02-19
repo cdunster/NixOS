@@ -39,6 +39,7 @@
         whichkeyWithConfig = import ./vim-plugins/whichkey.nix { inherit which-key-nvim; };
         treesitterWithConfig = import ./vim-plugins/treesitter.nix { inherit nvim-treesitter; };
         gitsignsWithConfig = import ./vim-plugins/gitsigns.nix { inherit gitsigns-nvim; };
+        lspWithConfig = import ./vim-plugins/lspconfig.nix { inherit nvim-lspconfig; };
       in [
         startifyWithConfig
         vim-fugitive
@@ -46,6 +47,8 @@
         treesitterWithConfig
         nvim-treesitter-textobjects
         gitsignsWithConfig
+        telescope-nvim
+        lspWithConfig
     ];
   };
 }
