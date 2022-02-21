@@ -23,7 +23,7 @@
     set mouse=a                 "Enable the mouse for all modes.
     set clipboard+=unnamedplus  "Use the system clipboard.
     set scrolloff=4             "Context lines around cursor when scrolling.
-    set spell spelllang=en_gb   "Enable spell checking.
+    set nospell spelllang=en_gb "Disable built-in spell checking (replaced by plugin).
     set list lcs+=space:·       "Show whitespace characters.
     set hidden                  "Keep buffers open in the background.
     set signcolumn=yes          "Always show the signcolumn.
@@ -36,7 +36,20 @@
 
     colorscheme tokyonight
     '';
-    plugins = with pkgs.vimPlugins; [
+    plugins =
+    with pkgs.vimPlugins;
+    let
+      vim-spelunker = pkgs.vimUtils.buildVimPlugin {
+        name = "vim-spelunker";
+        src = pkgs.fetchFromGitHub {
+          owner = "kamykn";
+          repo = "spelunker.vim";
+          rev = "a0bc530f62798bbe053905555a4aa9ed713485eb";
+          sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
+        };
+      };
+    in
+    [
       # Telescope
       telescope-nvim
       plenary-nvim
@@ -88,6 +101,11 @@
 
       # Better motions for words i.e. camelCase, snake_case, etc.
       vim-wordmotion
+
+      # Better spellchecking (supports camelCase, snake_case, etc.).
+      { plugin = vim-spelunker;
+        config = "lua require('config.spelunker').config()";
+      }
 
       # Colour schemes
       tokyonight-nvim
