@@ -11,7 +11,6 @@
     dconf2nix
     fd
     ripgrep
-    neovim-qt
     brave
     spotify
   ];
