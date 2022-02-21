@@ -74,7 +74,13 @@
       }
 
       # Treesitter
-      { plugin = nvim-treesitter;
+      { plugin = (nvim-treesitter.withPlugins (
+          plugins: with plugins; [
+            tree-sitter-nix
+            tree-sitter-c
+            tree-sitter-rust
+          ]
+        ));
         config = "lua require('config.treesitter').config()";
       }
       nvim-treesitter-textobjects
