@@ -71,6 +71,17 @@
         config = "lua require('config.lsp').config()";
       }
 
+      # Autocomplete and Snippets
+      cmp-nvim-lsp
+      cmp-buffer
+      cmp-path
+      cmp-spell
+      cmp-vsnip
+      vim-vsnip
+      { plugin = nvim-cmp;
+        config = "lua require('config.cmp').config()";
+      }
+
       # Colour schemes
       tokyonight-nvim
     ];
