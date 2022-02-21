@@ -3,6 +3,8 @@
   programs.neovim = {
     enable = true;
     extraConfig = ''
+    lua require('statusline')
+
     "Show relative linenumbers when focused.
     :augroup numbertoggle
     :  autocmd!
@@ -34,24 +36,33 @@
 
     colorscheme tokyonight
     '';
-    plugins =
-      with pkgs.vimPlugins;
-      let
-        startifyWithConfig = import ./vim-plugins/startify.nix { inherit vim-startify; };
-        whichkeyWithConfig = import ./vim-plugins/whichkey.nix { inherit which-key-nvim; };
-        treesitterWithConfig = import ./vim-plugins/treesitter.nix { inherit nvim-treesitter; };
-        gitsignsWithConfig = import ./vim-plugins/gitsigns.nix { inherit gitsigns-nvim; };
-        lspWithConfig = import ./vim-plugins/lspconfig.nix { inherit nvim-lspconfig; };
-      in [
-        startifyWithConfig
-        vim-fugitive
-        whichkeyWithConfig
-        treesitterWithConfig
-        nvim-treesitter-textobjects
-        gitsignsWithConfig
-        telescope-nvim
-        lspWithConfig
-        tokyonight-nvim # Colour scheme.
+    plugins = with pkgs.vimPlugins; [
+      vim-fugitive
+      { plugin = which-key-nvim;
+        config = ''
+        lua << EOF
+        require("which-key").setup {
+            plugins = { spelling = true },
+            key_labels = { ["<leader>"] = "SPC", ["<space>"] = "SPC" },
+            layout = { spacing = 5 },
+        }
+        EOF
+        '';
+      }
+      { plugin = nvim-treesitter;
+        config = "lua require('config.treesitter').config()";
+      }
+      nvim-treesitter-textobjects
+      { plugin = gitsigns-nvim;
+        config = "lua require('config.gitsigns').config()";
+      }
+      telescope-nvim
+      { plugin = nvim-lspconfig;
+        config = "lua require('config.lsp').config()";
+      }
+      tokyonight-nvim # Colour scheme.
     ];
   };
+
+  xdg.configFile."nvim/lua".source = ./nvim/lua;
 }
