@@ -37,7 +37,17 @@
     colorscheme tokyonight
     '';
     plugins = with pkgs.vimPlugins; [
+      # Telescope
+      telescope-nvim
+      plenary-nvim
+
+      # Git
       vim-fugitive
+      { plugin = gitsigns-nvim;
+        config = "lua require('config.gitsigns').config()";
+      }
+
+      # WhichKey
       { plugin = which-key-nvim;
         config = ''
         lua << EOF
@@ -49,18 +59,20 @@
         EOF
         '';
       }
+
+      # Treesitter
       { plugin = nvim-treesitter;
         config = "lua require('config.treesitter').config()";
       }
       nvim-treesitter-textobjects
-      { plugin = gitsigns-nvim;
-        config = "lua require('config.gitsigns').config()";
-      }
-      telescope-nvim
+
+      # LSP
       { plugin = nvim-lspconfig;
         config = "lua require('config.lsp').config()";
       }
-      tokyonight-nvim # Colour scheme.
+
+      # Colour schemes
+      tokyonight-nvim
     ];
   };
 
