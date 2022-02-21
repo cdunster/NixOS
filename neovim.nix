@@ -82,6 +82,9 @@
         config = "lua require('config.cmp').config()";
       }
 
+      # Comment-out lines
+      vim-commentary
+
       # Colour schemes
       tokyonight-nvim
     ];
