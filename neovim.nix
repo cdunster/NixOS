@@ -85,6 +85,9 @@
       # Comment-out lines
       vim-commentary
 
+      # Better motions for words i.e. camelCase, snake_case, etc.
+      vim-wordmotion
+
       # Colour schemes
       tokyonight-nvim
     ];
