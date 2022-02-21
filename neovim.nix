@@ -70,6 +70,7 @@
       { plugin = nvim-lspconfig;
         config = "lua require('config.lsp').config()";
       }
+      lsp_signature-nvim
 
       # Autocomplete and Snippets
       cmp-nvim-lsp

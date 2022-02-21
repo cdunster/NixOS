@@ -1,4 +1,7 @@
 local on_attach = function(client, bufnr)
+    -- Enable LSP signature plugin.
+    require("lsp_signature").on_attach()
+
     local wk = require("which-key")
 
     --Use K to show documentation in preview window.
