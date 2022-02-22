@@ -50,6 +50,9 @@
       };
     in
     [
+      # Automatic session management.
+      vim-obsession
+
       # Telescope
       telescope-nvim
       plenary-nvim

@@ -1,5 +1,5 @@
 --Set the custom statusline.
-vim.o.statusline = "[%n] %<%f%m %{v:lua.LspStatus()}%=%{FugitiveHead()}"
+vim.o.statusline = "[%n] %<%f%m %{v:lua.LspStatus()} %{ObsessionStatus()}%=%{FugitiveHead()}"
 
 function _G.LspStatus()
     if vim.tbl_isempty(vim.lsp.buf_get_clients(0)) then
