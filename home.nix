@@ -4,6 +4,7 @@
     ./dconf.nix
     ./neovim.nix
     ./git.nix
+    ./tmux.nix
   ];
 
   home.packages = with pkgs; [
