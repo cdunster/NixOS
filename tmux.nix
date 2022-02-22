@@ -6,6 +6,7 @@
     baseIndex = 1;
     escapeTime = 20;
     terminal = "screen-256color";
+    tmuxinator.enable = true;
     extraConfig = ''
       bind v split-window -v
       bind s split-window -h
@@ -32,4 +33,7 @@
       }
     ];
   };
+
+  # Source tmuxinator project definition files.
+  xdg.configFile.tmuxinator.source = ./tmuxinator;
 }
