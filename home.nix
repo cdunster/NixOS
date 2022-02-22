@@ -22,9 +22,11 @@
 
   programs.fish = {
     enable = true;
-    shellAbbrs = {
+    shellAliases = {
       lg = "lazygit";
       ll = "exa -lah";
+    };
+    shellAbbrs = {
       d = "pushd";
       ".." = "popd";
     };
@@ -46,10 +48,7 @@
   };
 
   programs.bat.enable = true;
-
   programs.exa.enable = true;
-
   programs.fzf.enable = true;
-
   programs.direnv.enable = true;
 }
