@@ -1,11 +1,14 @@
 # Manage user accounts with home-manager.
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   imports = [
     ./dconf.nix
     ./neovim.nix
     ./git.nix
     ./tmux.nix
   ];
+
+  # Let home-manager manage its own installation.
+  programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
     gnomeExtensions.material-shell

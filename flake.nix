@@ -21,5 +21,22 @@
         }
       ];
     };
+
+    homeConfigurations.callum = home-manager.lib.homeManagerConfiguration {
+      system = "x86_64-linux";
+      extraSpecialArgs = attrs;
+
+      username = "Callum";
+      homeDirectory = "/home/callum";
+
+      configuration = { config, nixpkgs, ... }: {
+        nixpkgs.config.allowUnfree = true;
+
+        imports = [
+          ./home.nix
+        ];
+      };
+      stateVersion = "21.11";
+    };
   };
 }
