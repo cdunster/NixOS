@@ -32,6 +32,11 @@
       configuration = { config, nixpkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
 
+        home.sessionVariables = {
+          SHELL = "$HOME/.nix-profile/bin/fish";
+          EDITOR = "$HOME/.nix-profile/bin/nvim";
+        };
+
         imports = [
           ./home.nix
         ];
