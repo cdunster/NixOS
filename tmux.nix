@@ -9,7 +9,7 @@
     tmuxinator.enable = true;
     extraConfig = ''
       bind v split-window -v
-      bind s split-window -h
+      bind h split-window -h
 
       bind -n M-h select-pane -L
       bind -n M-j select-pane -D
