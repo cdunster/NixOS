@@ -31,6 +31,7 @@
 
       configuration = { config, nixpkgs, ... }: {
         nixpkgs.config.allowUnfree = true;
+        targets.genericLinux.enable = true;
 
         home.sessionVariables = {
           SHELL = "$HOME/.nix-profile/bin/fish";
