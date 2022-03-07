@@ -11,7 +11,7 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    gnomeExtensions.material-shell
+    # Nice WM for non-Pop!_OS systems: gnomeExtensions.material-shell
     dconf2nix
     fd
     ripgrep
