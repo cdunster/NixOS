@@ -17,6 +17,7 @@
     ripgrep
     brave
     spotify
+    slack
   ];
 
   programs.kitty = {
