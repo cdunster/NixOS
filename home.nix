@@ -30,6 +30,10 @@
       ${pkgs.nixgl.nixGLIntel}/bin/nixGLIntel ${pkgs.kitty}/bin/kitty "$@"
     '';
     theme = "Tokyo Night Storm";
+    font = {
+      name = "Fira Code";
+      size = 14;
+    };
   };
 
   programs.fish = {
