@@ -36,7 +36,6 @@
         nixpkgs.overlays = [ nixgl.overlay ];
 
         home.sessionVariables = {
-          SHELL = "$HOME/.nix-profile/bin/fish";
           EDITOR = "$HOME/.nix-profile/bin/nvim";
         };
 
