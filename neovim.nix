@@ -122,4 +122,6 @@
   };
 
   xdg.configFile."nvim/lua".source = ./nvim/lua;
+
+  home.sessionVariables.EDITOR = "${pkgs.neovim}/bin/nvim";
 }

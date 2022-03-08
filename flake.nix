@@ -35,10 +35,6 @@
         nixpkgs.config.allowUnfree = true;
         nixpkgs.overlays = [ nixgl.overlay ];
 
-        home.sessionVariables = {
-          EDITOR = "$HOME/.nix-profile/bin/nvim";
-        };
-
         imports = [
           ./home.nix
         ];
