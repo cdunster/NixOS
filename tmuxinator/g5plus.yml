@@ -1,0 +1,10 @@
+name: g5plus
+root: ~/repos/work/g5plus-power-controller
+
+windows:
+  - editor:
+      layout: layout 1502,174x44,0,0[174x33,0,0,0,174x10,0,34,5]
+      panes:
+        - nvim -S
+        - clear
+  - lazygit: lazygit

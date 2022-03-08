@@ -36,4 +36,5 @@
 
   # Source tmuxinator project definition files.
   xdg.configFile."tmuxinator/PinOS.yml".source = ./tmuxinator/PinOS.yml;
+  xdg.configFile."tmuxinator/g5plus.yml".source = ./tmuxinator/g5plus.yml;
 }
