@@ -19,7 +19,10 @@
     spotify
     slack
     nixgl.nixGLIntel
+    fira-code
   ];
+
+  home.sessionVariables.FONTCONFIG_FILE = "${pkgs.fontconfig.out}/etc/fonts/fonts.conf";
 
   programs.kitty = {
     enable = true;
