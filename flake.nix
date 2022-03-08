@@ -5,9 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixgl.url = "github:guibou/nixGL";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@attrs: {
+  outputs = { self, nixpkgs, home-manager, nixgl, ... }@attrs: {
     nixosConfigurations.MiNixOS = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = attrs;
@@ -30,8 +31,9 @@
       homeDirectory = "/home/callum";
 
       configuration = { config, nixpkgs, ... }: {
-        nixpkgs.config.allowUnfree = true;
         targets.genericLinux.enable = true;
+        nixpkgs.config.allowUnfree = true;
+        nixpkgs.overlays = [ nixgl.overlay ];
 
         home.sessionVariables = {
           SHELL = "$HOME/.nix-profile/bin/fish";

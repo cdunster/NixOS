@@ -18,10 +18,14 @@
     brave
     spotify
     slack
+    nixgl.nixGLIntel
   ];
 
   programs.kitty = {
     enable = true;
+    package = pkgs.writeShellScriptBin "kitty" ''
+      ${pkgs.nixgl.nixGLIntel}/bin/nixGLIntel ${pkgs.kitty}/bin/kitty "$@"
+    '';
     theme = "Tokyo Night Storm";
   };
 
