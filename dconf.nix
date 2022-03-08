@@ -38,6 +38,10 @@ with lib.hm.gvariant;
       translate = true;
     };
 
+    "org/gnome/desktop/applications/terminal" = {
+      exec = "/home/callum/.nix-profile/bin/kitty";
+    };
+
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
