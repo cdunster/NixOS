@@ -35,5 +35,5 @@
   };
 
   # Source tmuxinator project definition files.
-  xdg.configFile.tmuxinator.source = ./tmuxinator;
+  xdg.configFile."tmuxinator/PinOS.yml".source = ./tmuxinator/PinOS.yml;
 }
