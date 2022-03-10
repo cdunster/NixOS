@@ -1,4 +1,4 @@
---Set the custom statusline.
+-- Set the custom statusline.
 vim.o.statusline = "[%n] %<%f%m %{v:lua.LspStatus()} %{ObsessionStatus()}%=%{FugitiveHead()}"
 
 function _G.LspStatus()
@@ -6,7 +6,7 @@ function _G.LspStatus()
         return ""
     end
 
-    local err = vim.lsp.diagnostic.get_count(0, [[Error]])
-    local warn = vim.lsp.diagnostic.get_count(0, [[Warning]])
+    local err = table.getn(vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR }))
+    local warn = table.getn(vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN }))
     return "E"..tostring(err).." W"..tostring(warn)
 end
