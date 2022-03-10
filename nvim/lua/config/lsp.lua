@@ -11,8 +11,8 @@ local on_attach = function(client, bufnr)
 
     --Navigate errors.
     wk.register({
-        ["[e"] = { "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", "Previous error" },
-        ["]e"] = { "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", "Next error" },
+        ["[e"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Previous error" },
+        ["]e"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next error" },
     })
 
     --Code navigation. With g prefix.
