@@ -82,8 +82,20 @@ with lib.hm.gvariant;
       application-children = [ "io-elementary-appcenter" "slack" ];
     };
 
+    "org/gnome/desktop/notifications/application/brave-browser" = {
+      application-id = "brave-browser.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/gnome-network-panel" = {
+      application-id = "gnome-network-panel.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/io-elementary-appcenter" = {
       application-id = "io.elementary.appcenter.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify" = {
+      application-id = "org.gnome.Evolution-alarm-notify.desktop";
     };
 
     "org/gnome/desktop/notifications/application/slack" = {
