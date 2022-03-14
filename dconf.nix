@@ -311,6 +311,10 @@ with lib.hm.gvariant;
       enabled = false;
     };
 
+    "org/gnome/tweaks" = {
+      show-extensions-notice = false;
+    };
+
     "org/gtk/settings/file-chooser" = {
       clock-format = "24h";
       date-format = "regular";
