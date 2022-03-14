@@ -6,7 +6,7 @@ with lib.hm.gvariant;
 {
   dconf.settings = {
     "io/elementary/appcenter/settings" = {
-      last-refresh-time = mkInt64 1628579862;
+      last-refresh-time = mkInt64 1647254355;
       window-maximized = false;
       window-position = mkTuple [ 4 555 ];
       window-size = mkTuple [ 954 520 ];
@@ -64,14 +64,18 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       clock-format = "24h";
       clock-show-weekday = true;
+      cursor-theme = "Pop";
       document-font-name = "Fira Code 11";
       enable-hot-corners = false;
+      font-antialiasing = "grayscale";
+      font-hinting = "slight";
       font-name = "Fira Code 10";
       gtk-im-module = "gtk-im-context-simple";
       gtk-theme = "Pop";
       icon-theme = "Pop";
       locate-pointer = false;
       show-battery-percentage = true;
+      toolkit-accessibility = false;
     };
 
     "org/gnome/desktop/notifications" = {
@@ -91,6 +95,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/privacy" = {
+      disable-microphone = false;
       report-technical-problems = false;
     };
 
@@ -240,14 +245,10 @@ with lib.hm.gvariant;
       name = "Shutdown";
     };
 
-    "org/gnome/settings-daemon/plugins/xsettings" = {
-      antialiasing = "grayscale";
-      hinting = "slight";
-    };
-
     "org/gnome/shell" = {
       favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Terminal.desktop" "io.elementary.appcenter.desktop" "io.elementary.installer.desktop" "gnome-control-center.desktop" ];
       had-bluetooth-devices-setup = true;
+      welcome-dialog-last-shown-version = "40.5";
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
