@@ -15,7 +15,6 @@
     dconf2nix
     fd
     ripgrep
-    brave
     spotify
     slack
     nixgl.nixGLIntel
@@ -68,4 +67,5 @@
   programs.exa.enable = true;
   programs.fzf.enable = true;
   programs.direnv.enable = true;
+  programs.brave.enable = true;
 }
