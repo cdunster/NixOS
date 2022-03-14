@@ -9,6 +9,8 @@
     tmuxinator.enable = true;
     prefix = "C-Space";
     extraConfig = ''
+      set -g mouse on
+
       bind v split-window -v
       bind h split-window -h
 
