@@ -129,6 +129,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
+      cycle-windows = [ "<Super>Tab" ];
+      cycle-windows-backward = [ "<Shift><Super>Tab" ];
       move-to-monitor-down = [ "<Shift><Super>j" ];
       move-to-monitor-left = [ "<Shift><Super>h" ];
       move-to-monitor-right = [ "<Shift><Super>l" ];
@@ -143,6 +145,10 @@ with lib.hm.gvariant;
       move-to-workspace-7 = [ "<Shift><Super>7" ];
       move-to-workspace-8 = [ "<Shift><Super>8" ];
       move-to-workspace-9 = [ "<Shift><Super>9" ];
+      switch-applications = [ "<Alt>Tab" ];
+      switch-applications-backward = [ "<Shift><Alt>Tab" ];
+      switch-input-source = [];
+      switch-input-source-backward = [];
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-10 = [ "<Super>0" ];
       switch-to-workspace-2 = [ "<Super>2" ];
@@ -222,6 +228,7 @@ with lib.hm.gvariant;
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       search-filter-time-type = "last_modified";
+      search-view = "list-view";
     };
 
     "org/gnome/nautilus/window-state" = {
@@ -277,6 +284,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/pop-shell" = {
+      activate-launcher = [ "<Super>space" ];
+      active-hint = false;
       gap-inner = mkUint32 1;
       gap-outer = mkUint32 1;
       pop-monitor-left = [ "<Shift><Super>Left" "<Shift><Super>KP_Left" ];
