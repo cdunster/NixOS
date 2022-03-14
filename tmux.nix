@@ -7,6 +7,7 @@
     escapeTime = 20;
     terminal = "screen-256color";
     tmuxinator.enable = true;
+    prefix = "C-Space";
     extraConfig = ''
       bind v split-window -v
       bind h split-window -h
