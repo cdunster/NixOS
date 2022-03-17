@@ -46,8 +46,22 @@
       d = "pushd";
       ".." = "popd";
     };
+    functions = {
+      _fzf_open_file_nvim = {
+        body = ''
+          set _selected (fzf-tmux -p --multi --inline-info --reverse --height=30 --preview="_fzf_preview_file {}" --header="Open in nvim:" --header-first)
+          if test -n "$_selected"
+              nvim $_selected
+          end
+
+          commandline --function repaint
+        '';
+      };
+    };
     shellInit = ''
       set -g fish_greeting ""
+
+      bind \cf "_fzf_open_file_nvim"
     '';
   };
 
