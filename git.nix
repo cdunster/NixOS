@@ -3,6 +3,9 @@
   programs.git = {
     enable = true;
     userName = "Callum Dunster";
+    ignores = [
+      "Session.vim"
+    ];
     extraConfig = {
       credential.helper = "store";
       init.defaultBranch = "main";
