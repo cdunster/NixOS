@@ -54,7 +54,9 @@
       vim-obsession
 
       # Telescope
-      telescope-nvim
+      { plugin = telescope-nvim;
+        config = "lua require('config.telescope').config()";
+      }
       plenary-nvim
 
       # Git
