@@ -32,7 +32,7 @@
     set timeoutlen=300          "Set the time to wait for a mapped sequence to complete.
     set updatetime=300          "Better user experience.
     set wildmode=longest,list   "Enable bash-like tab completions.
-    let g:mapleader=' '		"Set <SPC> to be the leader key for keybindings.
+    let g:mapleader=' '         "Set <SPC> to be the leader key for keybindings.
 
     colorscheme tokyonight
     '';
