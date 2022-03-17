@@ -5,7 +5,7 @@
     clock24 = true;
     baseIndex = 1;
     escapeTime = 20;
-    terminal = "screen-256color";
+    terminal = "$TERM";
     tmuxinator.enable = true;
     prefix = "C-Space";
     extraConfig = ''
