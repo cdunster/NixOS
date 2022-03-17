@@ -22,7 +22,10 @@
     grex
   ];
 
-  home.sessionVariables.FONTCONFIG_FILE = "${pkgs.fontconfig.out}/etc/fonts/fonts.conf";
+  home.sessionVariables = {
+    FONTCONFIG_FILE = "${pkgs.fontconfig.out}/etc/fonts/fonts.conf";
+    FZF_DEFAULT_OPTS = "--inline-info --reverse --height=30 --header-first";
+  };
 
   programs.kitty = {
     enable = true;
@@ -49,7 +52,7 @@
     functions = {
       _fzf_open_file_nvim = {
         body = ''
-          set _selected (fzf-tmux -p --multi --inline-info --reverse --height=30 --preview="_fzf_preview_file {}" --header="Open in nvim:" --header-first)
+          set _selected (fzf-tmux -p --multi --preview="_fzf_preview_file {}" --header="Open in nvim:")
           if test -n "$_selected"
               nvim $_selected
           end
