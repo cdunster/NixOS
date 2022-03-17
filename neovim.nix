@@ -58,7 +58,9 @@
       plenary-nvim
 
       # Git
-      vim-fugitive
+      { plugin = vim-fugitive;
+        config = "lua require('config.fugitive').config()";
+      }
       { plugin = gitsigns-nvim;
         config = "lua require('config.gitsigns').config()";
       }
