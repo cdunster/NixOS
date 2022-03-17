@@ -19,6 +19,9 @@
       bind -n M-k select-pane -U
       bind -n M-l select-pane -R
 
+      bind -n M-] select-window -n
+      bind -n M-[ select-window -p
+
       bind -r C-h resize-pane -L
       bind -r C-j resize-pane -D
       bind -r C-k resize-pane -U
