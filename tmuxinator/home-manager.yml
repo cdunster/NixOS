@@ -1,0 +1,6 @@
+name: home-manager
+root: ~/.config/nixpkgs/
+
+windows:
+  - editor: nvim -S
+  - lazygit: lazygit
