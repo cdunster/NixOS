@@ -21,6 +21,7 @@
     fira-code
     grex
     clang_12
+    nodePackages.pyright
   ];
 
   home.sessionVariables = {

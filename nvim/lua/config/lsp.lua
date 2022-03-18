@@ -60,6 +60,11 @@ M.config = function()
             },
         },
     })
+
+    -- pyright LSP config for Python.
+    lsp.pyright.setup({
+        on_attach = on_attach,
+    })
 end
 
 return M
