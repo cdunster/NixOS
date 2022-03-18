@@ -20,6 +20,7 @@
     nixgl.nixGLIntel
     fira-code
     grex
+    clang_12
   ];
 
   home.sessionVariables = {
