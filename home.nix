@@ -22,6 +22,7 @@
     grex
     clang_12
     nodePackages.pyright
+    sumneko-lua-language-server
   ];
 
   home.sessionVariables = {

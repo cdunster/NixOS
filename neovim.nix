@@ -88,6 +88,7 @@
             tree-sitter-rust
             tree-sitter-fish
             tree-sitter-python
+            tree-sitter-lua
           ]
         ));
         config = "lua require('config.treesitter').config()";

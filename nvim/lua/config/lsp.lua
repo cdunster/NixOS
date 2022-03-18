@@ -65,6 +65,11 @@ M.config = function()
     lsp.pyright.setup({
         on_attach = on_attach,
     })
+
+    -- sumneko LSP config for Lua.
+    lsp.sumneko_lua.setup({
+        on_attach = on_attach,
+    })
 end
 
 return M
