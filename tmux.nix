@@ -11,7 +11,7 @@
     extraConfig = ''
       set -g mouse on
 
-      bind v split-window -v
+      bind v split-window -v -l 30%
       bind h split-window -h
 
       bind -n M-h select-pane -L
