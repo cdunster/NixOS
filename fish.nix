@@ -36,12 +36,36 @@
           commandline --function repaint
         '';
       };
+      _fzf_live_grep = {
+        body = ''
+          set _rg_cmd "rg --column --line-number --no-heading --color=always --smart-case"
+          set _query (commandline --current-token)
+          set _fzf (FZF_DEFAULT_COMMAND="$_rg_cmd '$_query'" \
+              fzf \
+              --ansi \
+              --disabled \
+              --query $_query \
+              --bind "change:reload:sleep 0.1; $_rg_cmd {q} || true" \
+              --delimiter : \
+              --preview 'bat {1} --color=always --highlight-line {2}' \
+              --preview-window '+{2}+3/3,~3')
+          set _fzf (string split : $_fzf)
+
+          commandline --function repaint
+          commandline --replace ""
+
+          if test -n "$_fzf[1]"
+              nvim +$_fzf[2] $_fzf[1]
+          end
+        '';
+      };
     };
     shellInit = ''
       set -g fish_greeting ""
 
       bind \cf _fzf_open_file_nvim
       bind \cp _fzf_start_tmuxinator
+      bind \cg _fzf_live_grep
     '';
   };
 }
