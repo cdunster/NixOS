@@ -40,8 +40,8 @@
     shellInit = ''
       set -g fish_greeting ""
 
-      bind \cf "_fzf_open_file_nvim"
-      bind \cp "_fzf_start_tmuxinator"
+      bind \cf _fzf_open_file_nvim
+      bind \cp _fzf_start_tmuxinator
     '';
   };
 }
