@@ -12,7 +12,7 @@
     functions = {
       _fzf_open_file_nvim = {
         body = ''
-          set _selected (fzf-tmux -p --multi --preview="_fzf_preview_file {}" --header="Open in nvim:")
+          set _selected (fzf-tmux -p 90%,90% --multi --preview="_fzf_preview_file {}" --header="Open in nvim:")
           if test -n "$_selected"
               nvim $_selected
           end
@@ -23,7 +23,7 @@
       _fzf_start_tmuxinator = {
         body = ''
           set _projects (tmuxinator list --newline)
-          set _result (printf '%s\n' $_projects | fzf-tmux -p --header-lines=1 --print-query)
+          set _result (printf '%s\n' $_projects | fzf-tmux -p 40%,30% --header-lines=1 --print-query)
           set _query $_result[1]
           set _selected $_result[2]
 
@@ -41,7 +41,7 @@
           set _rg_cmd "rg --column --line-number --no-heading --color=always --smart-case"
           set _query (commandline --current-token)
           set _fzf (FZF_DEFAULT_COMMAND="$_rg_cmd '$_query'" \
-              fzf \
+              fzf-tmux -p 90%,90% \
               --ansi \
               --disabled \
               --query $_query \
