@@ -28,12 +28,12 @@ local on_attach = function(client, bufnr)
         name = "+code",
         ["r"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename token" },
         ["a"] = { "<cmd>lua require('telescope.builtin').lsp_code_actions()<CR>", "List code actions" },
-        ["e"] = { "<cmd>lua require('telescope.builtin').lsp_document_diagnostics()<CR>", "List errors" },
+        ["e"] = { "<cmd>lua require('telescope.builtin').diagnostics({ bufnr = 0 })<CR>", "List errors" },
         ["o"] = { "<cmd>lua require('telescope.builtin').treesitter()<CR>", "List code outline" },
         ["s"] = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "List code symbols" },
         ["w"] = {
             name = "+workspace",
-            ["e"] = { "<cmd>lua require('telescope.builtin').lsp_workspace_diagnostics()<CR>", "List workspace errors" },
+            ["e"] = { "<cmd>lua require('telescope.builtin').diagnostics()<CR>", "List workspace errors" },
             ["s"] = { "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "List workspace code symbols" },
         },
     }, { prefix = "<leader>c" })
