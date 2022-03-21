@@ -9,10 +9,10 @@ local on_attach = function(client, bufnr)
         ["K"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Peek token documentation" },
     })
 
-    --Navigate errors.
+    --Navigate diagnostics.
     wk.register({
-        ["[e"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Previous error" },
-        ["]e"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next error" },
+        ["[d"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Previous diagnostic" },
+        ["]d"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next diagnostic" },
     })
 
     --Code navigation. With g prefix.
@@ -27,14 +27,14 @@ local on_attach = function(client, bufnr)
     wk.register({
         name = "+code",
         ["r"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename token" },
-        ["a"] = { "<cmd>lua require('telescope.builtin').lsp_code_actions()<CR>", "List code actions" },
-        ["e"] = { "<cmd>lua require('telescope.builtin').diagnostics({ bufnr = 0 })<CR>", "List errors" },
-        ["o"] = { "<cmd>lua require('telescope.builtin').treesitter()<CR>", "List code outline" },
-        ["s"] = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "List code symbols" },
+        ["a"] = { "<cmd>lua require('telescope.builtin').lsp_code_actions()<CR>", "List code actions in buffer" },
+        ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics({ bufnr = 0 })<CR>", "List diagnostics in buffer" },
+        ["o"] = { "<cmd>lua require('telescope.builtin').treesitter()<CR>", "List code outline of buffer" },
+        ["s"] = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "List code symbols in buffer" },
         ["w"] = {
             name = "+workspace",
-            ["e"] = { "<cmd>lua require('telescope.builtin').diagnostics()<CR>", "List workspace errors" },
-            ["s"] = { "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "List workspace code symbols" },
+            ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics()<CR>", "List diagnostics in workspace" },
+            ["s"] = { "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "List code symbols in workspace" },
         },
     }, { prefix = "<leader>c" })
 end
