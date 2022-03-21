@@ -45,9 +45,9 @@ with lib.hm.gvariant;
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
-      picture-uri = "file:///usr/share/backgrounds/pop/kate-hazen-mort1mer.png";
-      primary-color = "#000000";
-      secondary-color = "#000000";
+      picture-uri = "file:///home/callum/.local/share/backgrounds/mr_robot.jpg";
+      primary-color = "#000000000000";
+      secondary-color = "#000000000000";
     };
 
     "org/gnome/desktop/calendar" = {
@@ -115,9 +115,9 @@ with lib.hm.gvariant;
       color-shading-type = "solid";
       lock-delay = mkUint32 0;
       picture-options = "zoom";
-      picture-uri = "file:///usr/share/backgrounds/pop/kate-hazen-mort1mer.png";
-      primary-color = "#000000";
-      secondary-color = "#000000";
+      picture-uri = "file:///home/callum/.local/share/backgrounds/mr_robot.jpg";
+      primary-color = "#000000000000";
+      secondary-color = "#000000000000";
     };
 
     "org/gnome/desktop/session" = {

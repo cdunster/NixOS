@@ -11,6 +11,9 @@
   # Let home-manager manage its own installation.
   programs.home-manager.enable = true;
 
+  # Add the background image.
+  home.file.".local/share/backgrounds/mr_robot.jpg".source = ./images/mr_robot.jpg;
+
   home.packages = with pkgs; [
     # Nice WM for non-Pop!_OS systems: gnomeExtensions.material-shell
     dconf2nix
