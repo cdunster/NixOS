@@ -3,6 +3,7 @@
   programs.git = {
     enable = true;
     userName = "Callum Dunster";
+    lfs.enable = true;
     ignores = [
       "Session.vim"
     ];
