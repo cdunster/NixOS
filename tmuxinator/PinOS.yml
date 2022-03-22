@@ -3,7 +3,8 @@ root: ~/repos/personal/PinOS
 
 windows:
   - editor:
-      layout: 2ac1,208x55,0,0[208x42,0,0,10,208x12,0,43,11]
+      layout: a000,174x44,0,0[174x30,0,0,0,174x13,0,31,3]
       panes:
         - nvim -S
         - clear
+  - lazygit: lazygit
