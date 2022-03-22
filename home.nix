@@ -27,6 +27,7 @@
     clang_12
     nodePackages.pyright
     sumneko-lua-language-server
+    nixpkgs-fmt
   ];
 
   home.sessionVariables = {
