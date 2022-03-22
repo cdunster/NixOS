@@ -58,7 +58,7 @@ with lib.hm.gvariant;
       current = mkUint32 0;
       per-window = false;
       sources = [ (mkTuple [ "xkb" "us+euro" ]) ];
-      xkb-options = [];
+      xkb-options = [ ];
     };
 
     "org/gnome/desktop/interface" = {
@@ -147,8 +147,8 @@ with lib.hm.gvariant;
       move-to-workspace-9 = [ "<Shift><Super>9" ];
       switch-applications = [ "<Alt>Tab" ];
       switch-applications-backward = [ "<Shift><Alt>Tab" ];
-      switch-input-source = [];
-      switch-input-source-backward = [];
+      switch-input-source = [ ];
+      switch-input-source-backward = [ ];
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-10 = [ "<Super>0" ];
       switch-to-workspace-2 = [ "<Super>2" ];
@@ -221,7 +221,7 @@ with lib.hm.gvariant;
 
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
-      experimental-features = [];
+      experimental-features = [ ];
       workspaces-only-on-primary = true;
     };
 
@@ -295,7 +295,7 @@ with lib.hm.gvariant;
       show-title = false;
       smart-gaps = true;
       tile-by-default = true;
-      toggle-stacking-global = [];
+      toggle-stacking-global = [ ];
     };
 
     "org/gnome/shell/extensions/user-theme" = {
@@ -303,7 +303,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/keybindings" = {
-      focus-active-notification = [];
+      focus-active-notification = [ ];
       toggle-overview = [ "<Super>w" ];
     };
 

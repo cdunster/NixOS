@@ -8,12 +8,14 @@
       "Session.vim"
     ];
     includes = [
-      { condition = "gitdir:~/repos/work/";
+      {
+        condition = "gitdir:~/repos/work/";
         contents = {
           user.email = "callum.dunster@evbox.com";
         };
       }
-      { condition = "gitdir:~/repos/personal/";
+      {
+        condition = "gitdir:~/repos/personal/";
         contents = {
           user.email = "cdunster@users.noreply.github.com";
         };

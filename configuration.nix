@@ -71,7 +71,7 @@
   ];
 
   # Override default packages (removes nano and others).
-  environment.defaultPackages = [];
+  environment.defaultPackages = [ ];
 
   # Enable sound.
   sound.enable = true;
