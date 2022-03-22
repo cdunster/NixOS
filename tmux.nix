@@ -35,5 +35,6 @@
     "tmuxinator/g5plus.yml".source = ./tmuxinator/g5plus.yml;
     "tmuxinator/home-manager.yml".source = ./tmuxinator/home-manager.yml;
     "tmuxinator/triplab.yml".source = ./tmuxinator/triplab.yml;
+    "tmuxinator/HMI.yml".source = ./tmuxinator/HMI.yml;
   };
 }
