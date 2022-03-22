@@ -58,7 +58,6 @@
     };
   };
 
-  programs.bottom.enable = true;
   programs.bat.enable = true;
   programs.exa.enable = true;
   programs.fzf.enable = true;
