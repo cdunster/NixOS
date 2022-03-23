@@ -59,6 +59,23 @@
           end
         '';
       };
+      _fzf_tmux_sessions = {
+        body = ''
+          set _sessions (tmux ls 2> /dev/null)
+          set _result (printf '%s\n' $_sessions | fzf-tmux -p 40%,30% --print-query)
+          set _query $_result[1]
+          set _selected $_result[2]
+
+          if contains "$_selected" $_sessions
+              set _details (string split ':' $_selected)
+              tmux new-session -A -s $_details[1]
+          else if test -n "$_query"
+              tmux new-session -A -s $_query
+          end
+
+          commandline --function repaint
+        '';
+      };
     };
     shellInit = ''
       set -g fish_greeting ""
@@ -66,6 +83,7 @@
       bind \cf _fzf_open_file_nvim
       bind \cp _fzf_start_tmuxinator
       bind \cg _fzf_live_grep
+      bind \cs _fzf_tmux_sessions
     '';
   };
 }
