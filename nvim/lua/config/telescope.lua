@@ -5,7 +5,7 @@ M.config = function()
 
     wk.register({
         ["<C-f>"] = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find a file in working dir" },
-        ["<C-g>"] = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Search contents of files in working dir" },
+        ["<C-g>"] = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Search file content in working dir" },
     })
 end
 
