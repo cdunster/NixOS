@@ -19,15 +19,6 @@ M.config = function()
                     ["aa"] = "@statement.outer",
                 },
             },
-            swap = {
-                enable = true,
-                swap_next = {
-                    ["<M-l>"] = "@parameter.inner",
-                },
-                swap_previous = {
-                    ["<M-h>"] = "@parameter.inner",
-                },
-            },
             move = {
                 enable = true,
                 set_jumps = true, -- Add jumps in the jumplist
@@ -49,9 +40,6 @@ M.config = function()
 
     local wk = require("which-key")
     wk.register({
-        ["<M-l>"] = "Swap parameter with next",
-        ["<M-h>"] = "Swap parameter with previous",
-
         ["]]"] = "Next function start",
         ["]["] = "Next function end",
         ["[["] = "Previous function start",
