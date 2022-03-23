@@ -14,6 +14,8 @@
       bind v split-window -v -l 30%
       bind h split-window -h
 
+      bind n new-session
+
       bind -n M-h select-pane -L
       bind -n M-j select-pane -D
       bind -n M-k select-pane -U
