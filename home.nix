@@ -24,7 +24,7 @@
     nixgl.nixGLIntel
     fira-code
     grex
-    clang_12
+    clang-tools
     nodePackages.pyright
     sumneko-lua-language-server
     nixpkgs-fmt
