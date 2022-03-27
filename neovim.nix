@@ -12,6 +12,9 @@
       :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
       :augroup END
 
+      "Format Rust files on save.
+      autocmd BufWritePre *.rs lua vim.lsp.buf.formatting_sync(nil, 1000)
+
       set ignorecase              "Enable case insensitive matching.
       set smartcase               "Enable smart-case matching (match case insensitively unless upper-case used).
       set tabstop=4               "Size of a tab.
