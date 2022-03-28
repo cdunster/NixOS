@@ -1,5 +1,17 @@
 # Configure Neovim using home-manager.
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+  telescope-ui-select-nvim = pkgs.vimUtils.buildVimPlugin {
+    name = "telescope-ui-select-nvim";
+    src = pkgs.fetchFromGitHub {
+      owner = "nvim-telescope";
+      repo = "telescope-ui-select.nvim";
+      rev = "186a124a01d7f19e6fcf608d4e1cc61d61ebe939";
+      sha256 = "65/SEDm1HZ4iuEFJMOILUlMLY2Sq7zXW2os9UEkLodM=";
+    };
+  };
+in
+{
   programs.neovim = {
     enable = true;
     extraConfig = ''
@@ -62,6 +74,7 @@
           config = "lua require('config.telescope').config()";
         }
         plenary-nvim
+        telescope-ui-select-nvim
 
         # Git
         {

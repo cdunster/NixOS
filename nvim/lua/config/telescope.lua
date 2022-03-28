@@ -1,6 +1,15 @@
 local M = {}
 
 M.config = function()
+    require("telescope").setup({
+        extensions = {
+            ["ui-select"] = {
+                require("telescope.themes").get_dropdown()
+            }
+        }
+    })
+    require("telescope").load_extension("ui-select")
+
     local wk = require("which-key")
 
     wk.register({
