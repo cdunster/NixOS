@@ -27,14 +27,14 @@ local on_attach = function(client, bufnr)
     wk.register({
         name = "+code",
         ["r"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename token" },
-        ["a"] = { "<cmd>lua require('telescope.builtin').lsp_code_actions()<CR>", "List code actions in buffer" },
-        ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics({ bufnr = 0 })<CR>", "List diagnostics in buffer" },
-        ["o"] = { "<cmd>lua require('telescope.builtin').treesitter()<CR>", "List code outline of buffer" },
-        ["s"] = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "List code symbols in buffer" },
+        ["a"] = { "<cmd>lua require('telescope.builtin').lsp_code_actions()<CR>", "List line code actions" },
+        ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics({ bufnr = 0 })<CR>", "List buffer diagnostics" },
+        ["o"] = { "<cmd>lua require('telescope.builtin').treesitter()<CR>", "Show buffer code outline" },
+        ["s"] = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "List buffer code symbols" },
         ["w"] = {
             name = "+workspace",
-            ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics()<CR>", "List diagnostics in workspace" },
-            ["s"] = { "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "List code symbols in workspace" },
+            ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics()<CR>", "List workspace diagnostics" },
+            ["s"] = { "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "List workspace code symbols" },
         },
     }, { prefix = "<leader>c" })
 end
