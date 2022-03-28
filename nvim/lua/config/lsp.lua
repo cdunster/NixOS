@@ -44,14 +44,20 @@ local M = {}
 M.config = function()
     local lsp = require("lspconfig")
 
+    -- Add additional capabilities supported by nvim-cmp
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+
     -- clangd LSP config for C/C++.
     lsp.clangd.setup({
         on_attach = on_attach,
+        capabilities = capabilities,
     })
 
     -- rust_analyzer LSP config for Rust.
     lsp.rust_analyzer.setup({
         on_attach = on_attach,
+        capabilities = capabilities,
         settings = {
             ["rust-analyzer"] = {
                 checkOnSave = {
@@ -64,11 +70,13 @@ M.config = function()
     -- pyright LSP config for Python.
     lsp.pyright.setup({
         on_attach = on_attach,
+        capabilities = capabilities,
     })
 
     -- sumneko LSP config for Lua.
     lsp.sumneko_lua.setup({
         on_attach = on_attach,
+        capabilities = capabilities,
     })
 end
 
