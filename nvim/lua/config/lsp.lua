@@ -64,6 +64,10 @@ M.config = function()
                     checkOnSave = {
                         command = "clippy"
                     },
+                    diagnostics = {
+                        enable = true,
+                        disabled = {"unresolved-proc-macro"},
+                    },
                 },
             },
         },
