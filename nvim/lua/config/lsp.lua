@@ -17,7 +17,7 @@ local on_attach = function(client, bufnr)
 
     --Code navigation. With g prefix.
     wk.register({
-        ["d"] = { "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", "Go to definition" },
+        ["d"] = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Go to definition" },
         ["y"] = { "<cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>", "Go to type definition" },
         ["i"] = { "<cmd>lua require('telescope.builtin').lsp_implementations()<CR>", "Go to implementation" },
         ["r"] = { "<cmd>lua require('telescope.builtin').lsp_references()<CR>", "List references" },
