@@ -8,6 +8,10 @@ M.config = function()
         ["<C-g>"] = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Search file content in working dir" },
         ["<C-b>"] = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "List open buffers" },
     })
+
+    wk.register({
+        ["<leader>"] = { "<cmd>lua require('telescope.builtin').resume()<cr>", "Resume last telescope picker" },
+    }, { prefix = "<leader>" })
 end
 
 return M
