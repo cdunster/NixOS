@@ -109,6 +109,7 @@
           config = "lua require('config.lsp').config()";
         }
         lsp_signature-nvim
+        rust-tools-nvim # Advanced LSP features for Rust.
 
         # Autocomplete and Snippets
         cmp-nvim-lsp

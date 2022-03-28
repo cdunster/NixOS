@@ -54,14 +54,16 @@ M.config = function()
         capabilities = capabilities,
     })
 
-    -- rust_analyzer LSP config for Rust.
-    lsp.rust_analyzer.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        settings = {
-            ["rust-analyzer"] = {
-                checkOnSave = {
-                    command = "clippy"
+    -- Use rust-tools plugin for Rust.
+    require('rust-tools').setup({
+        server = {
+            on_attach = on_attach,
+            capabilities = capabilities,
+            settings = {
+                ["rust-analyzer"] = {
+                    checkOnSave = {
+                        command = "clippy"
+                    },
                 },
             },
         },
