@@ -6,6 +6,7 @@
     lfs.enable = true;
     ignores = [
       "Session.vim"
+      ".cache"
     ];
     includes = [
       {
