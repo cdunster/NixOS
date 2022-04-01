@@ -1,17 +1,5 @@
 # Configure Neovim using home-manager.
-{ pkgs, ... }:
-let
-  telescope-ui-select-nvim = pkgs.vimUtils.buildVimPlugin {
-    name = "telescope-ui-select-nvim";
-    src = pkgs.fetchFromGitHub {
-      owner = "nvim-telescope";
-      repo = "telescope-ui-select.nvim";
-      rev = "186a124a01d7f19e6fcf608d4e1cc61d61ebe939";
-      sha256 = "65/SEDm1HZ4iuEFJMOILUlMLY2Sq7zXW2os9UEkLodM=";
-    };
-  };
-in
-{
+{ pkgs, ... }: {
   programs.neovim = {
     enable = true;
     extraConfig = ''
@@ -53,14 +41,24 @@ in
     '';
     plugins =
       with pkgs.vimPlugins;
+      with pkgs.vimUtils;
       let
-        vim-spelunker = pkgs.vimUtils.buildVimPlugin {
+        vim-spelunker = buildVimPlugin {
           name = "vim-spelunker";
           src = pkgs.fetchFromGitHub {
             owner = "kamykn";
             repo = "spelunker.vim";
             rev = "a0bc530f62798bbe053905555a4aa9ed713485eb";
             sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
+          };
+        };
+        telescope-ui-select-nvim = buildVimPlugin {
+          name = "telescope-ui-select-nvim";
+          src = pkgs.fetchFromGitHub {
+            owner = "nvim-telescope";
+            repo = "telescope-ui-select.nvim";
+            rev = "186a124a01d7f19e6fcf608d4e1cc61d61ebe939";
+            sha256 = "65/SEDm1HZ4iuEFJMOILUlMLY2Sq7zXW2os9UEkLodM=";
           };
         };
       in
