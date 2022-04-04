@@ -108,6 +108,7 @@
               tree-sitter-fish
               tree-sitter-python
               tree-sitter-lua
+              tree-sitter-css
             ]
           ));
           config = "lua require('config.treesitter').config()";

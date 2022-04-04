@@ -28,6 +28,7 @@
     nodePackages.pyright
     sumneko-lua-language-server
     nixpkgs-fmt
+    nodePackages.vscode-css-languageserver-bin
   ];
 
   home.sessionVariables = {

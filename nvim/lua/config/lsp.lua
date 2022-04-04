@@ -84,6 +84,13 @@ M.config = function()
         on_attach = on_attach,
         capabilities = capabilities,
     })
+
+    -- vscode-css-languageserver for CSS.
+    lsp.cssls.setup({
+        cmd = { "css-languageserver", "--stdio" },
+        on_attach = on_attach,
+        capabilities = capabilities,
+    })
 end
 
 return M
