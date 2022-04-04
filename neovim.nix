@@ -17,10 +17,10 @@
 
       set ignorecase              "Enable case insensitive matching.
       set smartcase               "Enable smart-case matching (match case insensitively unless upper-case used).
-      set tabstop=4               "Size of a tab.
-      set softtabstop=4           "See multiple spaces as a tab.
+      set tabstop=2               "Size of a tab.
+      set softtabstop=2           "See multiple spaces as a tab.
       set expandtab               "Converts tabs to spaces.
-      set shiftwidth=4            "Auto-indented width.
+      set shiftwidth=2            "Auto-indented width.
       set number relativenumber   "Enable line numbers.
       set termguicolors           "Enable full GUI colours in the terminal.
       set mouse=a                 "Enable the mouse for all modes.
