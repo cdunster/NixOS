@@ -32,10 +32,9 @@
     rust-analyzer
   ];
 
-  home.sessionVariables = {
-    FONTCONFIG_FILE = "${pkgs.fontconfig.out}/etc/fonts/fonts.conf";
-    FZF_DEFAULT_OPTS = "--inline-info --reverse --height=30 --header-first";
-  };
+  home.sessionVariables.FZF_DEFAULT_OPTS = "--inline-info --reverse --height=30 --header-first";
+
+  fonts.fontconfig.enable = true;
 
   programs.kitty = {
     enable = true;
