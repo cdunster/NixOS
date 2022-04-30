@@ -32,8 +32,6 @@
     rust-analyzer
   ];
 
-  home.sessionVariables.FZF_DEFAULT_OPTS = "--inline-info --reverse --height=30 --header-first";
-
   fonts.fontconfig.enable = true;
 
   programs.kitty = {
@@ -60,9 +58,18 @@
     };
   };
 
+  programs.fzf = {
+    enable = true;
+    defaultOptions = [
+      "--inline-info"
+      "--reverse"
+      "--height=30"
+      "--header-first"
+    ];
+  };
+
   programs.bat.enable = true;
   programs.exa.enable = true;
-  programs.fzf.enable = true;
   programs.direnv.enable = true;
   programs.brave.enable = true;
 }
