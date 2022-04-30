@@ -29,6 +29,7 @@
     sumneko-lua-language-server
     nixpkgs-fmt
     nodePackages.vscode-css-languageserver-bin
+    rust-analyzer
   ];
 
   home.sessionVariables = {
