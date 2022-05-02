@@ -3,7 +3,7 @@
   programs.neovim = {
     enable = true;
     extraConfig = ''
-      lua require('statusline')
+      lua require('config.statusline')
 
       "Show relative linenumbers when focused.
       :augroup numbertoggle
@@ -152,7 +152,7 @@
       ];
   };
 
-  xdg.configFile."nvim/lua".source = ./nvim/lua;
+  xdg.configFile."nvim/lua/config".source = ./nvim/lua/config;
 
   home.sessionVariables.EDITOR = "${pkgs.neovim}/bin/nvim";
 }
