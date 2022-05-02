@@ -27,7 +27,7 @@ local on_attach = function(client, bufnr)
     wk.register({
         name = "+code",
         ["r"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename token" },
-        ["a"] = { "<cmd>lua require('telescope.builtin').lsp_code_actions()<CR>", "List line code actions" },
+        ["a"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "List line code actions" },
         ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics({ bufnr = 0 })<CR>", "List buffer diagnostics" },
         ["o"] = { "<cmd>lua require('telescope.builtin').treesitter()<CR>", "Show buffer code outline" },
         ["s"] = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "List buffer code symbols" },
