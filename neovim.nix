@@ -69,7 +69,8 @@
         # Telescope
         {
           plugin = telescope-nvim;
-          config = "lua require('config.telescope').config()";
+          type = "lua";
+          config = "require('config.telescope').config()\n";
         }
         plenary-nvim
         telescope-ui-select-nvim
@@ -77,24 +78,25 @@
         # Git
         {
           plugin = vim-fugitive;
-          config = "lua require('config.fugitive').config()";
+          type = "lua";
+          config = "require('config.fugitive').config()\n";
         }
         {
           plugin = gitsigns-nvim;
-          config = "lua require('config.gitsigns').config()";
+          type = "lua";
+          config = "require('config.gitsigns').config()\n";
         }
 
         # WhichKey
         {
           plugin = which-key-nvim;
+          type = "lua";
           config = ''
-            lua << EOF
             require("which-key").setup {
                 plugins = { spelling = true },
                 key_labels = { ["<leader>"] = "SPC", ["<space>"] = "SPC" },
                 layout = { spacing = 5 },
             }
-            EOF
           '';
         }
 
@@ -111,14 +113,16 @@
               tree-sitter-css
             ]
           ));
-          config = "lua require('config.treesitter').config()";
+          type = "lua";
+          config = "require('config.treesitter').config()\n";
         }
         nvim-treesitter-textobjects
 
         # LSP
         {
           plugin = nvim-lspconfig;
-          config = "lua require('config.lsp').config()";
+          type = "lua";
+          config = "require('config.lsp').config()\n";
         }
         lsp_signature-nvim
         rust-tools-nvim # Advanced LSP features for Rust.
@@ -132,7 +136,8 @@
         vim-vsnip
         {
           plugin = nvim-cmp;
-          config = "lua require('config.cmp').config()";
+          type = "lua";
+          config = "require('config.cmp').config()\n";
         }
 
         # Comment-out lines
@@ -144,7 +149,8 @@
         # Better spellchecking (supports camelCase, snake_case, etc.).
         {
           plugin = vim-spelunker;
-          config = "lua require('config.spelunker').config()";
+          type = "lua";
+          config = "require('config.spelunker').config()\n";
         }
 
         # Colour schemes
