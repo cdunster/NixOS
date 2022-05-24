@@ -35,6 +35,7 @@
   xdg.configFile = {
     "tmuxinator/PinOS.yml".source = ./tmuxinator/PinOS.yml;
     "tmuxinator/g5plus.yml".source = ./tmuxinator/g5plus.yml;
+    "tmuxinator/race.yml".source = ./tmuxinator/race.yml;
     "tmuxinator/home-manager.yml".source = ./tmuxinator/home-manager.yml;
     "tmuxinator/triplab.yml".source = ./tmuxinator/triplab.yml;
     "tmuxinator/HMI.yml".source = ./tmuxinator/HMI.yml;

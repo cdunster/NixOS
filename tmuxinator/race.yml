@@ -1,0 +1,10 @@
+name: RACE
+root: ~/repos/work/race-power-controller
+
+windows:
+  - editor:
+      layout: a000,174x44,0,0[174x30,0,0,0,174x13,0,31,3]
+      panes:
+        - nvim -S
+        - clear
+  - lazygit: lazygit
