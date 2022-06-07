@@ -6,6 +6,7 @@
     ./neovim.nix
     ./git.nix
     ./tmux.nix
+    ./taskwarrior.nix
   ];
 
   # Let home-manager manage its own installation.
