@@ -31,9 +31,19 @@
     nixpkgs-fmt
     nodePackages.vscode-css-languageserver-bin
     rust-analyzer
+    stm32cubemx
   ];
 
   fonts.fontconfig.enable = true;
+
+  xdg.desktopEntries = {
+    stm32cubemx = {
+      name = "STM32CubeMX";
+      exec = "stm32cubemx";
+      terminal = false;
+      categories = [ "Application" ];
+    };
+  };
 
   programs.kitty = {
     enable = true;
