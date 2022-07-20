@@ -13,38 +13,46 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixgl, ... }@attrs: {
-    nixosConfigurations.MiNixOS = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, home-manager, nixgl, ... }@attrs:
+    let
       system = "x86_64-linux";
-      specialArgs = attrs;
-      modules = [
-        ./configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.callum = import ./home.nix;
-        }
-      ];
-    };
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = [ nixgl.overlay ];
+      };
+    in
+    {
+      nixosConfigurations.MiNixOS = nixpkgs.lib.nixosSystem {
+        inherit system pkgs;
+        specialArgs = attrs;
+        modules = [
+          ./configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.callum = import ./home.nix;
+            home-manager.extraSpecialArgs = attrs;
+          }
+        ];
+      };
 
-    homeConfigurations.callum = home-manager.lib.homeManagerConfiguration {
-      system = "x86_64-linux";
-      extraSpecialArgs = attrs;
-
-      username = "Callum";
-      homeDirectory = "/home/callum";
-
-      configuration = { config, nixpkgs, ... }: {
-        targets.genericLinux.enable = true;
-        nixpkgs.config.allowUnfree = true;
-        nixpkgs.overlays = [ nixgl.overlay ];
-
-        imports = [
+      homeConfigurations.callum = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        extraSpecialArgs = attrs;
+        modules = [
+          {
+            home = {
+              username = "Callum";
+              homeDirectory = "/home/callum";
+            };
+          }
+          {
+            targets.genericLinux.enable = true;
+          }
           ./home.nix
         ];
       };
-      stateVersion = "21.11";
     };
-  };
 }
