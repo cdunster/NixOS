@@ -83,8 +83,12 @@
     ];
   };
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   programs.bat.enable = true;
   programs.exa.enable = true;
-  programs.direnv.enable = true;
   programs.brave.enable = true;
 }
