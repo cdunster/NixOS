@@ -15,6 +15,9 @@
   # Add the background image.
   home.file.".local/share/backgrounds/mr_robot.jpg".source = ./images/mr_robot.jpg;
 
+  # The version of Home-manager used.
+  home.stateVersion = "22.11";
+
   home.packages = with pkgs; [
     # Nice WM for non-Pop!_OS systems: gnomeExtensions.material-shell
     dconf2nix
