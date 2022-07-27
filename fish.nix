@@ -76,6 +76,19 @@
           commandline --function repaint
         '';
       };
+      lf = {
+        description = "If file; print content to stdout, else list directory.";
+        argumentNames = "path";
+        body = ''
+          if test -z $path
+            ll .
+          else if test -f $path
+            bat $path
+          else if test -d $path
+            ll $path
+          end
+        '';
+      };
     };
     shellInit = ''
       set -g fish_greeting ""
