@@ -20,6 +20,7 @@
 
   home.packages = with pkgs; [
     # Nice WM for non-Pop!_OS systems: gnomeExtensions.material-shell
+    xclip
     dconf2nix
     fd
     ripgrep
