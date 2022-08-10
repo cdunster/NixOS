@@ -8,6 +8,21 @@
     terminal = "screen-256color";
     tmuxinator.enable = true;
     prefix = "C-Space";
+    plugins = with pkgs.tmuxPlugins; [
+      {
+        plugin = dracula;
+        extraConfig = ''
+          # Available plugins: battery, cpu-usage, git, gpu-usage, ram-usage, network, network-bandwidth, network-ping, weather, time
+          set -g @dracula-plugins "cpu-usage ram-usage"
+
+          set -g @dracula-show-powerline true
+          set -g @dracula-show-left-icon session
+          set -g @dracula-show-flags true
+          set -g @dracula-left-icon-padding 0
+
+        '';
+      }
+    ];
     extraConfig = ''
       set -g mouse on
 
