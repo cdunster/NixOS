@@ -54,7 +54,7 @@
     package = pkgs.writeShellScriptBin "kitty" ''
       ${pkgs.nixgl.nixGLIntel}/bin/nixGLIntel ${pkgs.kitty}/bin/kitty "$@"
     '';
-    theme = "Tokyo Night Storm";
+    theme = "Dracula";
     font = {
       name = "Fira Code";
       size = 14;
