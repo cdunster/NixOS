@@ -3,8 +3,6 @@
   programs.neovim = {
     enable = true;
     extraConfig = ''
-      lua require('config.statusline')
-
       "Show relative linenumbers when focused.
       :augroup numbertoggle
       :  autocmd!
@@ -151,6 +149,14 @@
           plugin = vim-spelunker;
           type = "lua";
           config = "require('config.spelunker').config()\n";
+        }
+
+        # Better statusline. Requires devicons.
+        lualine-lsp-progress
+        {
+          plugin = lualine-nvim;
+          type = "lua";
+          config = "require('config.lualine').config()\n";
         }
 
         # Font icons in Neovim.
