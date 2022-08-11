@@ -153,6 +153,13 @@
           config = "require('config.spelunker').config()\n";
         }
 
+        # Font icons in Neovim.
+        {
+          plugin = nvim-web-devicons;
+          type = "lua";
+          config = "require('nvim-web-devicons').setup()\n";
+        }
+
         # Colour schemes
         tokyonight-nvim
         dracula-vim
