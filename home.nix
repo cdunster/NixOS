@@ -27,7 +27,6 @@
     spotify
     slack
     nixgl.nixGLIntel
-    fira-code
     grex
     clang-tools
     nodePackages.pyright
@@ -36,6 +35,7 @@
     nodePackages.vscode-css-languageserver-bin
     rust-analyzer
     stm32cubemx
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
   fonts.fontconfig.enable = true;
@@ -56,7 +56,7 @@
     '';
     theme = "Dracula";
     font = {
-      name = "Fira Code";
+      name = "Fira Code Regular Nerd Font Complete";
       size = 14;
     };
   };
