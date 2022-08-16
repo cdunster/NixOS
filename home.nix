@@ -20,23 +20,36 @@
   home.stateVersion = "22.11";
 
   home.packages = with pkgs; [
-    # Nice WM for non-Pop!_OS systems: gnomeExtensions.material-shell
-    xclip
-    dconf2nix
-    fd
-    ripgrep
-    spotify
-    slack
-    nixgl.nixGLIntel
-    grex
-    clang-tools
-    nodePackages.pyright
-    sumneko-lua-language-server
-    nixpkgs-fmt
-    nodePackages.vscode-css-languageserver-bin
-    rust-analyzer
-    stm32cubemx
+    # Nice WM for non-Pop!_OS systems:
+    # gnomeExtensions.material-shell
+
+    # Utilities
+    xclip     # CLI clipboard manager
+    fd        # Find files and directories
+    ripgrep   # Search content of files
+    grex      # Get regex from results
+
+    # Fonts
     (nerdfonts.override { fonts = [ "Hack" ]; })
+
+    # Nix tools
+    dconf2nix         # Convert dconf files to Nix files
+    nixgl.nixGLIntel  # OpenGL wrapper: needed for running some applications
+    nixpkgs-fmt       # Format Nix files the nixpkgs' way
+
+    # Applications
+    spotify   # Proprietary music streaming
+
+    # LSPs
+    clang-tools                                 # C/C++
+    nodePackages.pyright                        # Python
+    sumneko-lua-language-server                 # Lua
+    nodePackages.vscode-css-languageserver-bin  # CSS
+    rust-analyzer                               # Rust
+
+    # Work Tools
+    stm32cubemx   # CubeMX tool for STM32 uCs
+    slack         # Proprietary IM tool
   ];
 
   fonts.fontconfig.enable = true;
