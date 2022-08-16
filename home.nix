@@ -3,6 +3,7 @@
   imports = [
     ./dconf.nix
     ./fish.nix
+    ./starship.nix
     ./neovim.nix
     ./git.nix
     ./tmux.nix
@@ -60,8 +61,6 @@
       size = 14;
     };
   };
-
-  programs.starship.enable = true;
 
   programs.lazygit = {
     enable = true;
