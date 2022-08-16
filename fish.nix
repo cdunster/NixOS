@@ -9,6 +9,17 @@
       d = "pushd";
       ".." = "popd";
     };
+    plugins = [
+      {
+        name = "dracula-fish";
+        src = pkgs.fetchFromGitHub {
+          owner = "dracula";
+          repo = "fish";
+          rev = "master";
+          sha256 = "WywEGAGaRwfHJpT+B3oKoyrnLJZxURTQ+MK9e5Asxl0=";
+        };
+      }
+    ];
     functions = {
       _fzf_open_file_nvim = {
         body = ''
