@@ -36,7 +36,7 @@
     nodePackages.vscode-css-languageserver-bin
     rust-analyzer
     stm32cubemx
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override { fonts = [ "Hack" ]; })
   ];
 
   fonts.fontconfig.enable = true;
@@ -56,9 +56,12 @@
       ${pkgs.nixgl.nixGLIntel}/bin/nixGLIntel ${pkgs.kitty}/bin/kitty "$@"
     '';
     theme = "Dracula";
-    font = {
-      name = "Fira Code Regular Nerd Font Complete";
-      size = 14;
+    settings = {
+      font_size = "14.0";
+      font_family      = "Hack Nerd Font";
+      bold_font        = "auto";
+      italic_font      = "auto";
+      bold_italic_font = "auto";
     };
   };
 

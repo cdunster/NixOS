@@ -65,16 +65,16 @@ with lib.hm.gvariant;
       clock-format = "24h";
       clock-show-weekday = true;
       cursor-theme = "Pop";
-      document-font-name = "FiraCode Nerd Font 11";
+      document-font-name = "Hack Nerd Font 11";
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      font-name = "FiraCode Nerd Font 10";
+      font-name = "Hack Nerd Font 10";
       gtk-im-module = "gtk-im-context-simple";
       gtk-theme = "Pop";
       icon-theme = "Pop";
       locate-pointer = false;
-      monospace-font-name = "FiraCode Nerd Font Mono 11";
+      monospace-font-name = "Hack Nerd Font Mono 11";
       show-battery-percentage = true;
       toolkit-accessibility = false;
     };
@@ -167,7 +167,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:close";
       num-workspaces = 10;
-      titlebar-font = "FiraCode Nerd Font 10";
+      titlebar-font = "Hack Nerd Font 10";
     };
 
     "org/gnome/evolution-data-server" = {
