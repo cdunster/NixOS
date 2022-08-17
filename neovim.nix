@@ -109,6 +109,8 @@
               tree-sitter-python
               tree-sitter-lua
               tree-sitter-css
+              tree-sitter-yaml
+              tree-sitter-markdown
             ]
           ));
           type = "lua";
