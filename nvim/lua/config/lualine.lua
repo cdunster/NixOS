@@ -29,12 +29,12 @@ M.config = function()
             lualine_z = { 'location' }
         },
         inactive_sections = {
-            lualine_a = {},
-            lualine_b = {},
-            lualine_c = { 'filename' },
-            lualine_x = { 'location' },
+            lualine_a = { 'mode' },
+            lualine_b = { { 'filetype', icon_only = true, colored = false }, 'filename', 'diagnostics' },
+            lualine_c = { 'lsp_progress' },
+            lualine_x = {},
             lualine_y = {},
-            lualine_z = {}
+            lualine_z = { 'location' }
         },
         tabline = {},
         winbar = {},
