@@ -26,7 +26,7 @@ M.config = function()
             lualine_c = { 'lsp_progress' },
             lualine_x = {},
             lualine_y = { 'diff', 'branch' },
-            lualine_z = {},
+            lualine_z = { 'location' }
         },
         inactive_sections = {
             lualine_a = {},
