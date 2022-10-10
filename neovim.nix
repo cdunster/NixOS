@@ -68,7 +68,7 @@
         {
           plugin = telescope-nvim;
           type = "lua";
-          config = "require('config.telescope').config()\n";
+          config = "require('config.telescope').config()";
         }
         plenary-nvim
         telescope-ui-select-nvim
@@ -77,12 +77,12 @@
         {
           plugin = vim-fugitive;
           type = "lua";
-          config = "require('config.fugitive').config()\n";
+          config = "require('config.fugitive').config()";
         }
         {
           plugin = gitsigns-nvim;
           type = "lua";
-          config = "require('config.gitsigns').config()\n";
+          config = "require('config.gitsigns').config()";
         }
 
         # WhichKey
@@ -94,8 +94,7 @@
                 plugins = { spelling = true },
                 key_labels = { ["<leader>"] = "SPC", ["<space>"] = "SPC" },
                 layout = { spacing = 5 },
-            }
-          '';
+            }'';
         }
 
         # Treesitter
@@ -114,7 +113,7 @@
             ]
           ));
           type = "lua";
-          config = "require('config.treesitter').config()\n";
+          config = "require('config.treesitter').config()";
         }
         nvim-treesitter-textobjects
 
@@ -122,7 +121,7 @@
         {
           plugin = nvim-lspconfig;
           type = "lua";
-          config = "require('config.lsp').config()\n";
+          config = "require('config.lsp').config()";
         }
         lsp_signature-nvim
         rust-tools-nvim # Advanced LSP features for Rust.
@@ -137,7 +136,7 @@
         {
           plugin = nvim-cmp;
           type = "lua";
-          config = "require('config.cmp').config()\n";
+          config = "require('config.cmp').config()";
         }
 
         # Comment-out lines
@@ -150,7 +149,7 @@
         {
           plugin = vim-spelunker;
           type = "lua";
-          config = "require('config.spelunker').config()\n";
+          config = "require('config.spelunker').config()";
         }
 
         # Better statusline. Requires devicons.
@@ -158,14 +157,14 @@
         {
           plugin = lualine-nvim;
           type = "lua";
-          config = "require('config.lualine').config()\n";
+          config = "require('config.lualine').config()";
         }
 
         # Font icons in Neovim.
         {
           plugin = nvim-web-devicons;
           type = "lua";
-          config = "require('nvim-web-devicons').setup()\n";
+          config = "require('nvim-web-devicons').setup()";
         }
 
         # Colour schemes
