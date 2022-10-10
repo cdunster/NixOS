@@ -28,6 +28,7 @@
     fd        # Find files and directories
     ripgrep   # Search content of files
     grex      # Get regex from results
+    gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
 
     # Fonts
     (nerdfonts.override { fonts = [ "Hack" ]; })

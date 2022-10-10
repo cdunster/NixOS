@@ -208,6 +208,10 @@ with lib.hm.gvariant;
       multi-monitor = true;
     };
 
+    "org/gnome/shell/extensions/emoji-selector" = {
+      always-show = false;
+    };
+
     "org/gnome/shell/extensions/pop-cosmic" = {
       show-applications-button = false;
       show-workspaces-button = false;
