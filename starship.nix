@@ -12,6 +12,7 @@
         format = "[$user]($style) on ";
         style_user = "bold #bd93f9";
       };
+      shell.disabled = false;
       character = {
         success_symbol = "[⇒](bold #f8f8f2)";
         error_symbol = "[⇏](bold #ff5555)";

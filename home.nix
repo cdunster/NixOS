@@ -8,6 +8,7 @@
     ./git.nix
     ./tmux.nix
     ./taskwarrior.nix
+    ./nushell.nix
   ];
 
   # Let home-manager manage its own installation.
