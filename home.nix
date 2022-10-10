@@ -24,11 +24,12 @@
     # gnomeExtensions.material-shell
 
     # Utilities
-    xclip     # CLI clipboard manager
-    fd        # Find files and directories
-    ripgrep   # Search content of files
-    grex      # Get regex from results
-    gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
+    xclip                           # CLI clipboard manager
+    fd                              # Find files and directories
+    ripgrep                         # Search content of files
+    grex                            # Get regex from results
+    gnomeExtensions.emoji-selector  # Select emojis with nice gnome UI
+    gnome.gnome-tweaks              # Extra settings for tweaking gnome
 
     # Fonts
     (nerdfonts.override { fonts = [ "Hack" ]; })
