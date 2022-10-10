@@ -34,8 +34,6 @@
       set updatetime=300          "Better user experience.
       set wildmode=longest,list   "Enable bash-like tab completions.
       let g:mapleader=' '         "Set <SPC> to be the leader key for keybindings.
-
-      colorscheme dracula
     '';
     plugins =
       with pkgs.vimPlugins;
@@ -169,7 +167,11 @@
 
         # Colour schemes
         tokyonight-nvim
-        dracula-vim
+        {
+          plugin = dracula-vim;
+          type = "viml";
+          config = "colorscheme dracula";
+        }
 
         # Support PICO-8 development
         pico8-vim
