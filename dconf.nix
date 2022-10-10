@@ -5,47 +5,39 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
-    "io/elementary/appcenter/settings" = {
-      last-refresh-time = mkInt64 1647254355;
-      window-maximized = false;
-      window-position = mkTuple [ 4 555 ];
-      window-size = mkTuple [ 954 520 ];
+    "com/system76/hidpi" = {
+      mode = "hidpi";
+    };
+
+    "org/gnome/calculator" = {
+      accuracy = 9;
+      angle-units = "degrees";
+      base = 10;
+      button-mode = "programming";
+      number-format = "automatic";
+      show-thousands = false;
+      show-zeroes = false;
+      source-currency = "DZD";
+      source-units = "degree";
+      target-currency = "DZD";
+      target-units = "radian";
+      word-size = 64;
     };
 
     "org/gnome/calendar" = {
       active-view = "week";
     };
 
-    "org/gnome/control-center" = {
-      last-panel = "keyboard";
-    };
-
-    "org/gnome/desktop/app-folders/folders/Pop-Office" = {
-      apps = [ "libreoffice-calc.desktop" "libreoffice-draw.desktop" "libreoffice-impress.desktop" "libreoffice-math.desktop" "libreoffice-startcenter.desktop" "libreoffice-writer.desktop" ];
-      name = "Office";
-      translate = true;
-    };
-
-    "org/gnome/desktop/app-folders/folders/Pop-System" = {
-      apps = [ "gnome-language-selector.desktop" "gnome-session-properties.desktop" "gnome-system-monitor.desktop" "im-config.desktop" "nm-connection-editor.desktop" "nvidia-settings.desktop" "org.gnome.baobab.desktop" "org.gnome.DiskUtility.desktop" "org.gnome.PowerStats.desktop" "org.gnome.seahorse.Application.desktop" "software-properties-gnome.desktop" "system76-driver.desktop" "system76-firmware.desktop" ];
-      name = "System";
-      translate = true;
-    };
-
-    "org/gnome/desktop/app-folders/folders/Pop-Utility" = {
-      apps = [ "com.github.donadigo.eddy.desktop" "com.system76.Popsicle.desktop" "gucharmap.desktop" "info.desktop" "org.gnome.eog.desktop" "org.gnome.Evince.desktop" "org.gnome.Extensions.desktop" "org.gnome.FileRoller.desktop" "org.gnome.font-viewer.desktop" "org.gnome.Screenshot.desktop" "org.gnome.Totem.desktop" "pop-cosmic-applications.desktop" "pop-cosmic-launcher.desktop" "pop-cosmic-workspaces.desktop" "simple-scan.desktop" "yelp.desktop" ];
-      name = "Utilities";
-      translate = true;
-    };
-
     "org/gnome/desktop/applications/terminal" = {
       exec = "/home/callum/.nix-profile/bin/kitty";
+      exec-arg = "";
     };
 
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
       picture-uri = "file:///home/callum/.local/share/backgrounds/mr_robot.jpg";
+      picture-uri-dark = "file:///home/callum/.local/share/backgrounds/mr_robot.jpg";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
@@ -58,12 +50,13 @@ with lib.hm.gvariant;
       current = mkUint32 0;
       per-window = false;
       sources = [ (mkTuple [ "xkb" "us+euro" ]) ];
-      xkb-options = [ ];
+      xkb-options = [];
     };
 
     "org/gnome/desktop/interface" = {
       clock-format = "24h";
       clock-show-weekday = true;
+      color-scheme = "prefer-light";
       cursor-theme = "Pop";
       document-font-name = "Hack Nerd Font 11";
       enable-hot-corners = false;
@@ -77,30 +70,6 @@ with lib.hm.gvariant;
       monospace-font-name = "Hack Nerd Font Mono 11";
       show-battery-percentage = true;
       toolkit-accessibility = false;
-    };
-
-    "org/gnome/desktop/notifications" = {
-      application-children = [ "io-elementary-appcenter" "slack" ];
-    };
-
-    "org/gnome/desktop/notifications/application/brave-browser" = {
-      application-id = "brave-browser.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/gnome-network-panel" = {
-      application-id = "gnome-network-panel.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/io-elementary-appcenter" = {
-      application-id = "io.elementary.appcenter.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/org-gnome-evolution-alarm-notify" = {
-      application-id = "org.gnome.Evolution-alarm-notify.desktop";
-    };
-
-    "org/gnome/desktop/notifications/application/slack" = {
-      application-id = "slack.desktop";
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
@@ -148,8 +117,8 @@ with lib.hm.gvariant;
       move-to-workspace-9 = [ "<Shift><Super>9" ];
       switch-applications = [ "<Alt>Tab" ];
       switch-applications-backward = [ "<Shift><Alt>Tab" ];
-      switch-input-source = [ ];
-      switch-input-source-backward = [ ];
+      switch-input-source = [];
+      switch-input-source-backward = [];
       switch-to-workspace-1 = [ "<Super>1" ];
       switch-to-workspace-10 = [ "<Super>0" ];
       switch-to-workspace-2 = [ "<Super>2" ];
@@ -170,59 +139,24 @@ with lib.hm.gvariant;
       titlebar-font = "Hack Nerd Font 10";
     };
 
-    "org/gnome/evolution-data-server" = {
-      migrated = true;
-      network-monitor-gio-name = "";
+    "org/gnome/eog/ui" = {
+      sidebar = false;
     };
 
-    "org/gnome/file-roller/dialogs/extract" = {
-      recreate-folders = true;
-      skip-newer = false;
+    "org/gnome/eog/view" = {
+      background-color = "rgb(0,0,0)";
+      use-background-color = true;
     };
 
-    "org/gnome/file-roller/listing" = {
-      list-mode = "as-folder";
-      name-column-width = 250;
-      show-path = false;
-      sort-method = "name";
-      sort-type = "ascending";
-    };
-
-    "org/gnome/file-roller/ui" = {
-      sidebar-width = 200;
-      window-height = 473;
-      window-width = 954;
-    };
-
-    "org/gnome/gedit/plugins" = {
-      active-plugins = [ "docinfo" "sort" "filebrowser" "modelines" "spell" ];
-    };
-
-    "org/gnome/gedit/plugins/filebrowser" = {
-      root = "file:///";
-      tree-view = true;
-      virtual-root = "file:///home/callum/repos/ansible/tasks";
-    };
-
-    "org/gnome/gedit/preferences/ui" = {
-      show-tabs-mode = "auto";
-    };
-
-    "org/gnome/gedit/state/file-chooser" = {
-      open-recent = false;
-    };
-
-    "org/gnome/gedit/state/window" = {
-      bottom-panel-size = 140;
-      side-panel-active-page = "GeditWindowDocumentsPanel";
-      side-panel-size = 200;
-      size = mkTuple [ 1912 998 ];
-      state = 87040;
+    "org/gnome/gnome-screenshot" = {
+      delay = 0;
+      include-pointer = false;
     };
 
     "org/gnome/mutter" = {
       dynamic-workspaces = false;
-      experimental-features = [ ];
+      edge-tiling = false;
+      experimental-features = [];
       workspaces-only-on-primary = true;
     };
 
@@ -230,11 +164,6 @@ with lib.hm.gvariant;
       default-folder-viewer = "icon-view";
       search-filter-time-type = "last_modified";
       search-view = "list-view";
-    };
-
-    "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 954 473 ];
-      maximized = false;
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
@@ -245,6 +174,12 @@ with lib.hm.gvariant;
     "org/gnome/settings-daemon/plugins/media-keys" = {
       calculator = [ "<Super>c" ];
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/PopLaunch1" = {
+      binding = "Launch1";
+      command = "gnome-control-center wifi";
+      name = "WiFi";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
@@ -263,12 +198,6 @@ with lib.hm.gvariant;
       binding = "<Super>x";
       command = "gnome-session-quit --power-off";
       name = "Shutdown";
-    };
-
-    "org/gnome/shell" = {
-      favorite-apps = [ "firefox.desktop" "org.gnome.Nautilus.desktop" "org.gnome.Terminal.desktop" "io.elementary.appcenter.desktop" "io.elementary.installer.desktop" "gnome-control-center.desktop" ];
-      had-bluetooth-devices-setup = true;
-      welcome-dialog-last-shown-version = "40.5";
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
@@ -296,7 +225,7 @@ with lib.hm.gvariant;
       show-title = false;
       smart-gaps = true;
       tile-by-default = true;
-      toggle-stacking-global = [ ];
+      toggle-stacking-global = [];
     };
 
     "org/gnome/shell/extensions/user-theme" = {
@@ -304,8 +233,13 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/keybindings" = {
-      focus-active-notification = [ ];
+      focus-active-notification = [];
       toggle-overview = [ "<Super>w" ];
+    };
+
+    "org/gnome/shell/weather" = {
+      automatic-location = true;
+      locations = "[<(uint32 2, <('Amsterdam', 'EHAM', true, [(0.91280719879303418, 0.083194033496160544)], [(0.91367986341903151, 0.085812027374152042)])>)>]";
     };
 
     "org/gnome/system/location" = {
@@ -316,11 +250,20 @@ with lib.hm.gvariant;
       show-extensions-notice = false;
     };
 
+    "org/gtk/gtk4/settings/debug" = {
+      inspector-warning = true;
+    };
+
+    "org/gtk/settings/color-chooser" = {
+      custom-colors = [ (mkTuple [ 1.0 1.0 ]) ];
+      selected-color = mkTuple [ true 0.9607843137254902 ];
+    };
+
     "org/gtk/settings/file-chooser" = {
       clock-format = "24h";
       date-format = "regular";
       location-mode = "path-bar";
-      show-hidden = false;
+      show-hidden = true;
       show-size-column = true;
       show-type-column = true;
       sidebar-width = 150;
@@ -328,8 +271,6 @@ with lib.hm.gvariant;
       sort-directories-first = true;
       sort-order = "ascending";
       type-format = "category";
-      window-position = mkTuple [ 798 27 ];
-      window-size = mkTuple [ 1096 856 ];
     };
 
   };
