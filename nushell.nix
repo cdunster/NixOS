@@ -6,6 +6,9 @@
       starship init nu | save ~/.cache/starship/init.nu
     '';
     configFile.text = ''
+      let-env config = {
+          show_banner: false
+      }
       source ~/.cache/starship/init.nu
     '';
   };
