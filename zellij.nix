@@ -2,6 +2,7 @@
   programs.zellij = {
     enable = true;
     settings = {
+      pane_frames = false;
       themes.dracula = {
         fg = [248 248 242];
         bg = [40 42 54];
