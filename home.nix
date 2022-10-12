@@ -75,9 +75,9 @@
     theme = "Dracula";
     settings = {
       font_size = "14.0";
-      font_family      = "Hack Nerd Font";
-      bold_font        = "auto";
-      italic_font      = "auto";
+      font_family = "Hack Nerd Font";
+      bold_font = "auto";
+      italic_font = "auto";
       bold_italic_font = "auto";
     };
   };
