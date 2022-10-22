@@ -18,6 +18,9 @@
           }]
         }
       }
+
+      alias lg = lazygit
+
       source ~/.cache/starship/init.nu
     '';
   };
