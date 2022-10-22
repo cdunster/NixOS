@@ -131,8 +131,22 @@
             key = [ { Char = "n"; } ];
           }
           {
+            action = [ { SwitchToMode = "RenamePane"; } { PaneNameInput = [ 0 ]; } ];
+            key = [ { Char = "r"; } ];
+          }
+          {
             action = [ "CloseFocus" { SwitchToMode = "Locked"; } ];
             key = [ { Char = "x"; } ];
+          }
+        ];
+        renamepane = [
+          {
+            action = [ { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "\n"; } ];
+          }
+          {
+            action = [ "UndoRenamePane" { SwitchToMode = "Locked"; } ];
+            key = [ "Esc" ];
           }
         ];
         tab = global_binds ++ [
@@ -141,8 +155,22 @@
             key = [ { Char = "n"; } ];
           }
           {
+            action = [ { SwitchToMode = "RenameTab"; } { TabNameInput = [ 0 ]; } ];
+            key = [ { Char = "r"; } ];
+          }
+          {
             action = [ "CloseTab" { SwitchToMode = "Locked"; } ];
             key = [ { Char = "x"; } ];
+          }
+        ];
+        renametab = [
+          {
+            action = [ { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "\n"; } ];
+          }
+          {
+            action = [ "UndoRenameTab" { SwitchToMode = "Locked"; } ];
+            key = [ "Esc" ];
           }
         ];
       };
