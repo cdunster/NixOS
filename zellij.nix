@@ -87,12 +87,12 @@
             key = [ { Char = "r"; } ];
           }
           {
-            action = [ { NewPane = null; } { SwitchToMode = "Locked"; } ];
-            key = [ { Char = "n"; } ];
+            action = [ { SwitchToMode = "Tab"; } ];
+            key = [ { Char = "t"; } ];
           }
           {
-            action = [ { NewTab = null; } { SwitchToMode = "Locked"; } ];
-            key = [ { Char = "t"; } ];
+            action = [ { NewPane = null; } { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "n"; } ];
           }
           {
             action = [ "ToggleFocusFullscreen" { SwitchToMode = "Locked"; } ];
@@ -132,6 +132,16 @@
           }
           {
             action = [ "CloseFocus" { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "x"; } ];
+          }
+        ];
+        tab = global_binds ++ [
+          {
+            action = [ { NewTab = null; } { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "n"; } ];
+          }
+          {
+            action = [ "CloseTab" { SwitchToMode = "Locked"; } ];
             key = [ { Char = "x"; } ];
           }
         ];
