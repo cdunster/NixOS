@@ -94,6 +94,14 @@
             action = [ { NewTab = null; } { SwitchToMode = "Locked"; } ];
             key = [ { Char = "t"; } ];
           }
+          {
+            action = [ "ToggleFocusFullscreen" { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "z"; } ];
+          }
+          {
+            action = [ "ToggleFloatingPanes" { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "f"; } ];
+          }
         ];
         locked = global_binds ++ [
           {
