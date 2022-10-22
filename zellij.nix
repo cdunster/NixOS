@@ -77,7 +77,7 @@
           ];
       in {
         unbind = true;
-        normal = global_binds ++ [
+        Normal = global_binds ++ [
           {
             action = [ { SwitchToMode = "Pane"; } ];
             key = [ { Char = "p"; } ];
@@ -103,13 +103,13 @@
             key = [ { Char = "f"; } ];
           }
         ];
-        locked = global_binds ++ [
+        Locked = global_binds ++ [
           {
             action = [ { SwitchToMode = "Normal"; } ];
             key = [ { Alt = " "; } ];
           }
         ];
-        pane = global_binds ++ [
+        Pane = global_binds ++ [
           {
             action = [ { NewPane = "Left"; } { SwitchToMode = "Locked"; } ];
             key = [ { Char = "h"; } "Left" ];
@@ -139,7 +139,7 @@
             key = [ { Char = "x"; } ];
           }
         ];
-        renamepane = [
+        RenamePane = [
           {
             action = [ { SwitchToMode = "Locked"; } ];
             key = [ { Char = "\n"; } ];
@@ -149,7 +149,7 @@
             key = [ "Esc" ];
           }
         ];
-        tab = global_binds ++ [
+        Tab = global_binds ++ [
           {
             action = [ { NewTab = null; } { SwitchToMode = "Locked"; } ];
             key = [ { Char = "n"; } ];
@@ -163,7 +163,7 @@
             key = [ { Char = "x"; } ];
           }
         ];
-        renametab = [
+        RenameTab = [
           {
             action = [ { SwitchToMode = "Locked"; } ];
             key = [ { Char = "\n"; } ];
