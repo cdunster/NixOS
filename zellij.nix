@@ -126,6 +126,14 @@
             action = [ { NewPane = "Right"; } { SwitchToMode = "Locked"; } ];
             key = [ { Char = "l"; } "Right" ];
           }
+          {
+            action = [ { NewPane = null; } { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "n"; } ];
+          }
+          {
+            action = [ "CloseFocus" { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "x"; } ];
+          }
         ];
       };
     };
