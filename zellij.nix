@@ -104,6 +104,10 @@
             action = [ "ToggleFloatingPanes" { SwitchToMode = "Locked"; } ];
             key = [ { Char = "f"; } ];
           }
+          {
+            action = [ "Quit" ];
+            key = [ { Char = "q"; } ];
+          }
         ];
         Locked = global_binds ++ [
           {
