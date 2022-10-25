@@ -20,6 +20,7 @@
       };
       theme = "dracula";
       default_mode = "Locked";
+      default_layout = "compact";
       keybinds =
       let
         movement_binds = [
@@ -221,5 +222,9 @@
         ];
       };
     };
+  };
+
+  xdg.configFile = {
+    "zellij/layouts/compact.yaml".source = ./zellij/compact.yaml;
   };
 }
