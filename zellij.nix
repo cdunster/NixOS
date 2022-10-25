@@ -161,6 +161,10 @@
             key = [ { Char = "n"; } ];
           }
           {
+            action = [ { NewTab = { name = "lazygit"; run = { command = { cmd = "lazygit"; }; }; }; } { SwitchToMode = "Locked"; } ];
+            key = [ { Char = "g"; } ];
+          }
+          {
             action = [ { SwitchToMode = "RenameTab"; } { TabNameInput = [ 0 ]; } ];
             key = [ { Char = "r"; } ];
           }
