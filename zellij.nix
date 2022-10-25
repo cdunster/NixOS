@@ -89,6 +89,10 @@
             key = [ { Char = "t"; } ];
           }
           {
+            action = [ { SwitchToMode = "EnterSearch"; } { SearchInput = [ 0 ]; } ];
+            key = [ { Char = "/"; } ];
+          }
+          {
             action = [ { NewPane = null; } { SwitchToMode = "Locked"; } ];
             key = [ { Char = "n"; } ];
           }
@@ -181,6 +185,34 @@
           {
             action = [ "UndoRenameTab" { SwitchToMode = "Locked"; } ];
             key = [ "Esc" ];
+          }
+        ];
+        EnterSearch = [
+          {
+            action = [ { SwitchToMode = "Locked"; } ];
+            key = [ "Esc" ];
+          }
+          {
+            action = [ { SwitchToMode = "Search"; } ];
+            key = [ { Char = "\n"; } ];
+          }
+        ];
+        Search = global_binds ++ [
+          {
+            action = [ { SwitchToMode = "Locked"; } ];
+            key = [ "Esc" ];
+          }
+          {
+            action = [ { Search = "Down"; } ];
+            key = [ { Char = "n"; } ];
+          }
+          {
+            action = [ { Search = "Up"; } ];
+            key = [ { Char = "N"; } ];
+          }
+          {
+            action = [ { SwitchToMode = "EnterSearch"; } { SearchInput = [ 0 ]; } ];
+            key = [ { Char = "/"; } ];
           }
         ];
       };
