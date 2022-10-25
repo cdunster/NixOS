@@ -68,16 +68,14 @@
         ];
         global_binds =
           movement_binds
-          ++ resize_binds
-          ++ [
-            {
-              action = [ { SwitchToMode = "Locked"; } ];
-              key = [ "Esc" ];
-            }
-          ];
+          ++ resize_binds;
       in {
         unbind = true;
         Normal = global_binds ++ [
+          {
+            action = [ { SwitchToMode = "Locked"; } ];
+            key = [ "Esc" ];
+          }
           {
             action = [ { SwitchToMode = "Pane"; } ];
             key = [ { Char = "p"; } ];
@@ -110,6 +108,10 @@
           }
         ];
         Pane = global_binds ++ [
+          {
+            action = [ { SwitchToMode = "Locked"; } ];
+            key = [ "Esc" ];
+          }
           {
             action = [ { NewPane = "Left"; } { SwitchToMode = "Locked"; } ];
             key = [ { Char = "h"; } "Left" ];
@@ -150,6 +152,10 @@
           }
         ];
         Tab = global_binds ++ [
+          {
+            action = [ { SwitchToMode = "Locked"; } ];
+            key = [ "Esc" ];
+          }
           {
             action = [ { NewTab = null; } { SwitchToMode = "Locked"; } ];
             key = [ { Char = "n"; } ];
