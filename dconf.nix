@@ -73,6 +73,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
+      speed = 0.184;
       two-finger-scrolling-enabled = true;
     };
 
