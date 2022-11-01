@@ -54,7 +54,8 @@
     rust-analyzer                               # Rust
 
     # Work
-    teams   # Microsoft Teams - Proprietary IM.
+    teams         # Microsoft Teams - Proprietary IM.
+    lazydocker    # Manage docker stuff the lazy way.
   ];
 
   fonts.fontconfig.enable = true;
