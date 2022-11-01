@@ -208,6 +208,10 @@ with lib.hm.gvariant;
       sleep-inactive-battery-type = "suspend";
     };
 
+    "org/gnome/shell" = {
+      welcome-dialog-last-shown-version = "42.3.1";
+    };
+
     "org/gnome/shell/extensions/dash-to-dock" = {
       dock-fixed = false;
       extend-height = false;
