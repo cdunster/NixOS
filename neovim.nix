@@ -34,6 +34,13 @@
       set updatetime=300          "Better user experience.
       set wildmode=longest,list   "Enable bash-like tab completions.
       let g:mapleader=' '         "Set <SPC> to be the leader key for keybindings.
+
+      lua << EOF
+        require("which-key").register({
+            [">"] = { ">gv", "Increase indent" },
+            ["<"] = { "<gv", "Decrease indent" },
+        }, { mode = "v" })
+      EOF
     '';
     plugins =
       with pkgs.vimPlugins;
