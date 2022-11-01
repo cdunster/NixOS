@@ -99,6 +99,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/keybindings" = {
+      activate-window-menu = [ ];
       cycle-windows = [ "<Super>Tab" ];
       cycle-windows-backward = [ "<Shift><Super>Tab" ];
       move-to-monitor-down = [ "<Shift><Super>j" ];
