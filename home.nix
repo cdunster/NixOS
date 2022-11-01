@@ -52,22 +52,9 @@
     sumneko-lua-language-server                 # Lua
     nodePackages.vscode-css-languageserver-bin  # CSS
     rust-analyzer                               # Rust
-
-    # Work Tools
-    stm32cubemx   # CubeMX tool for STM32 uCs
-    slack         # Proprietary IM tool
   ];
 
   fonts.fontconfig.enable = true;
-
-  xdg.desktopEntries = {
-    stm32cubemx = {
-      name = "STM32CubeMX";
-      exec = "stm32cubemx";
-      terminal = false;
-      categories = [ "Application" ];
-    };
-  };
 
   programs.kitty = {
     enable = true;
