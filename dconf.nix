@@ -200,6 +200,14 @@ with lib.hm.gvariant;
       name = "Shutdown";
     };
 
+    "org/gnome/settings-daemon/plugins/power" = {
+      ambient-enabled = false;
+      sleep-inactive-ac-timeout = 1800;
+      sleep-inactive-ac-type = "suspend";
+      sleep-inactive-battery-timeout = 1800;
+      sleep-inactive-battery-type = "suspend";
+    };
+
     "org/gnome/shell/extensions/dash-to-dock" = {
       dock-fixed = false;
       extend-height = false;
