@@ -52,6 +52,9 @@
     sumneko-lua-language-server                 # Lua
     nodePackages.vscode-css-languageserver-bin  # CSS
     rust-analyzer                               # Rust
+
+    # Work
+    teams   # Microsoft Teams - Proprietary IM.
   ];
 
   fonts.fontconfig.enable = true;
