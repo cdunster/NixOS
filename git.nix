@@ -3,24 +3,11 @@
   programs.git = {
     enable = true;
     userName = "Callum Dunster";
+    userEmail = "cdunster@users.noreply.github.com";
     lfs.enable = true;
     ignores = [
       "Session.vim"
       ".cache"
-    ];
-    includes = [
-      {
-        condition = "gitdir:~/repos/work/";
-        contents = {
-          user.email = "callum.dunster@evbox.com";
-        };
-      }
-      {
-        condition = "gitdir:~/repos/personal/";
-        contents = {
-          user.email = "cdunster@users.noreply.github.com";
-        };
-      }
     ];
     extraConfig = {
       credential.helper = "store";
