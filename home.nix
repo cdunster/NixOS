@@ -103,4 +103,6 @@
   programs.bat.enable = true;
   programs.exa.enable = true;
   programs.brave.enable = true;
+
+  services.dropbox.enable = true;
 }
