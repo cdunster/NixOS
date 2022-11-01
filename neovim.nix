@@ -175,6 +175,13 @@
 
         # Support PICO-8 development
         pico8-vim
+
+        # VimWiki for writting wikis and notes in markdown.
+        {
+          plugin = vimwiki;
+          type = "lua";
+          config = "require('config.vimwiki').config()";
+        }
       ];
   };
 
