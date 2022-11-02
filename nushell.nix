@@ -2,6 +2,9 @@
   programs.nushell = {
     enable = true;
     envFile.text = ''
+      let-env SHELL = "${config.home.sessionVariables.SHELL}"
+      let-env EDITOR = "${config.home.sessionVariables.EDITOR}"
+
       mkdir ~/.cache/starship
       starship init nu | save ~/.cache/starship/init.nu
     '';
