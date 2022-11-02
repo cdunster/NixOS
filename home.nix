@@ -21,8 +21,6 @@
   # The version of Home-manager used.
   home.stateVersion = "22.11";
 
-  home.sessionVariables.SHELL = "${pkgs.nushell}";
-
   home.packages = with pkgs; [
     # Nice WM for non-Pop!_OS systems:
     # gnomeExtensions.material-shell

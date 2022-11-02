@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   programs.nushell = {
     enable = true;
     envFile.text = ''
@@ -24,4 +24,6 @@
       source ~/.cache/starship/init.nu
     '';
   };
+
+  home.sessionVariables.SHELL = "${config.home.homeDirectory}/.nix-profile/bin/nu";
 }
