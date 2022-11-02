@@ -1,5 +1,4 @@
-# Configure Neovim using home-manager.
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   programs.neovim = {
     enable = true;
     extraConfig = ''
@@ -194,5 +193,5 @@
 
   xdg.configFile."nvim/lua/config".source = ./nvim/lua/config;
 
-  home.sessionVariables.EDITOR = "${pkgs.neovim}/bin/nvim";
+  home.sessionVariables.EDITOR = "${config.home.homeDirectory}/.nix-profile/bin/nvim";
 }
