@@ -8,6 +8,7 @@
     ignores = [
       "Session.vim"
       ".cache"
+      ".direnv"
     ];
     extraConfig = {
       credential.helper = "store";
