@@ -218,7 +218,10 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/emoji-selector" = {
-      always-show = false;
+      always-show = true;
+      emojisize = 20;
+      nbcols = 15;
+      position = "top";
     };
 
     "org/gnome/shell/extensions/pop-cosmic" = {
