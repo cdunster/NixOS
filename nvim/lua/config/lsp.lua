@@ -98,6 +98,12 @@ M.config = function()
         on_attach = on_attach,
         capabilities = capabilities,
     })
+
+    -- Protobuf LSP config for Nix.
+    lsp.bufls.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+    })
 end
 
 return M

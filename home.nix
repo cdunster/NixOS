@@ -51,6 +51,7 @@
     nodePackages.vscode-css-languageserver-bin  # CSS
     rust-analyzer                               # Rust
     rnix-lsp                                    # Nix
+    buf-language-server                         # Protobuf
 
     # Work
     teams         # Microsoft Teams - Proprietary IM.
