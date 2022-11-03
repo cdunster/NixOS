@@ -26,37 +26,37 @@
     # gnomeExtensions.material-shell
 
     # Utilities
-    xclip                           # CLI clipboard manager
-    fd                              # Find files and directories
-    ripgrep                         # Search content of files
-    grex                            # Get regex from results
-    gnomeExtensions.emoji-selector  # Select emojis with nice gnome UI
-    gnome.gnome-tweaks              # Extra settings for tweaking gnome
+    xclip # CLI clipboard manager
+    fd # Find files and directories
+    ripgrep # Search content of files
+    grex # Get regex from results
+    gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
+    gnome.gnome-tweaks # Extra settings for tweaking gnome
 
     # Fonts
     (nerdfonts.override { fonts = [ "Hack" ]; })
 
     # Nix tools
-    dconf2nix         # Convert dconf files to Nix files
-    nixgl.nixGLIntel  # OpenGL wrapper: needed for running some applications
-    nixpkgs-fmt       # Format Nix files the nixpkgs' way
+    dconf2nix # Convert dconf files to Nix files
+    nixgl.nixGLIntel # OpenGL wrapper: needed for running some applications
+    nixpkgs-fmt # Format Nix files the nixpkgs' way
 
     # Applications
-    spotify   # Proprietary music streaming
+    spotify # Proprietary music streaming
 
     # LSPs
-    clang-tools                                 # C/C++
-    nodePackages.pyright                        # Python
-    sumneko-lua-language-server                 # Lua
-    nodePackages.vscode-css-languageserver-bin  # CSS
-    rust-analyzer                               # Rust
-    rnix-lsp                                    # Nix
-    buf-language-server                         # Protobuf
+    clang-tools # C/C++
+    nodePackages.pyright # Python
+    sumneko-lua-language-server # Lua
+    nodePackages.vscode-css-languageserver-bin # CSS
+    rust-analyzer # Rust
+    rnix-lsp # Nix
+    buf-language-server # Protobuf
 
     # Work
-    teams         # Microsoft Teams - Proprietary IM.
-    lazydocker    # Manage docker stuff the lazy way.
-    awscli2       # Manage AWS from the command line.
+    teams # Microsoft Teams - Proprietary IM.
+    lazydocker # Manage docker stuff the lazy way.
+    awscli2 # Manage AWS from the command line.
   ];
 
   fonts.fontconfig.enable = true;
