@@ -106,6 +106,10 @@
             key = [ { Char = "f"; } ];
           }
           {
+            action = [ "Detach" ];
+            key = [ { Char = "d"; } ];
+          }
+          {
             action = [ "Quit" ];
             key = [ { Char = "q"; } ];
           }
