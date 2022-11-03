@@ -37,6 +37,13 @@ local on_attach = function(client, bufnr)
             ["s"] = { "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "List workspace code symbols" },
         },
     }, { prefix = "<leader>c" })
+
+    --Format on save if the LSP supports it.
+    if client and client.server_capabilities.documentFormattingProvider then
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            callback = function() vim.lsp.buf.format() end,
+        })
+    end
 end
 
 local M = {}
@@ -67,7 +74,7 @@ M.config = function()
                     },
                     diagnostics = {
                         enable = true,
-                        disabled = {"unresolved-proc-macro"},
+                        disabled = { "unresolved-proc-macro" },
                     },
                 },
             },
