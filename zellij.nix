@@ -143,6 +143,22 @@
               key = [{ Char = "l"; } "Right"];
             }
             {
+              action = [{ MovePane = "Left"; }];
+              key = [{ Char = "H"; }];
+            }
+            {
+              action = [{ MovePane = "Down"; }];
+              key = [{ Char = "J"; }];
+            }
+            {
+              action = [{ MovePane = "Up"; }];
+              key = [{ Char = "K"; }];
+            }
+            {
+              action = [{ MovePane = "Right"; }];
+              key = [{ Char = "L"; }];
+            }
+            {
               action = [{ NewPane = null; } { SwitchToMode = "Locked"; }];
               key = [{ Char = "n"; }];
             }
