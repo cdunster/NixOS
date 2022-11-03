@@ -50,6 +50,7 @@
     sumneko-lua-language-server                 # Lua
     nodePackages.vscode-css-languageserver-bin  # CSS
     rust-analyzer                               # Rust
+    rnix-lsp                                    # Nix
 
     # Work
     teams         # Microsoft Teams - Proprietary IM.
