@@ -55,6 +55,7 @@
     # Work
     teams         # Microsoft Teams - Proprietary IM.
     lazydocker    # Manage docker stuff the lazy way.
+    awscli2       # Manage AWS from the command line.
   ];
 
   fonts.fontconfig.enable = true;
