@@ -105,6 +105,7 @@
   programs.bat.enable = true;
   programs.exa.enable = true;
   programs.brave.enable = true;
+  programs.zoxide.enable = true;
 
   services.dropbox.enable = true;
 }
