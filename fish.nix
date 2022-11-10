@@ -54,6 +54,14 @@
           end
         '';
       };
+      _zoxide_zi = {
+        body = ''
+          zi
+
+          commandline --function repaint
+          commandline --replace ""
+        '';
+      };
       lf = {
         description = "If file; print content to stdout, else list directory.";
         argumentNames = "path";
@@ -73,6 +81,7 @@
 
       bind \cf _fzf_open_file_nvim
       bind \cg _fzf_live_grep
+      bind \cp _zoxide_zi
     '';
   };
 
