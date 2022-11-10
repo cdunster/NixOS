@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ config, pkgs, ... }: {
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -110,4 +110,6 @@
       bind \cs _fzf_tmux_sessions
     '';
   };
+
+  home.sessionVariables.SHELL = "${config.home.homeDirectory}/.nix-profile/bin/fish";
 }
