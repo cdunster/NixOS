@@ -26,8 +26,8 @@ M.config = function()
             { name = 'vsnip' },
             { name = "crates" },
             { name = "path" },
-            { name = "buffer" },
-            { name = "spell" },
+            { name = "buffer", keyword_length = 3 },
+            { name = "spell", keyword_length = 3 },
         },
     })
 

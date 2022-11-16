@@ -20,7 +20,7 @@
       set mouse=a                 "Enable the mouse for all modes.
       set clipboard+=unnamedplus  "Use the system clipboard.
       set scrolloff=4             "Context lines around cursor when scrolling.
-      set nospell spelllang=en_gb "Disable built-in spell checking (replaced by plugin).
+      set spell spelllang=en_gb   "Enable spell checking. Set language to proper English.
       set list lcs+=space:·       "Show whitespace characters.
       set hidden                  "Keep buffers open in the background.
       set signcolumn=yes          "Always show the signcolumn.
