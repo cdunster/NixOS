@@ -14,7 +14,9 @@ M.config = function()
             ["<C-space>"] = cmp.mapping.complete(),
             ["<CR>"] = cmp.mapping.confirm({ select = true }),
             ['<Tab>'] = cmp.mapping.select_next_item(),
+            ['<Down>'] = cmp.mapping.select_next_item(),
             ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+            ['<Up>'] = cmp.mapping.select_prev_item(),
         },
         sources = {
             -- These are in order of priority. (Top source shown first).
