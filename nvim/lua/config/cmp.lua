@@ -32,13 +32,15 @@ M.config = function()
     -- Jump between snippet placeholders in insert mode.
     wk.register({
         ["<Tab>"] = { "vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'", "Select next snippet placeholder" },
-        ["<S-Tab>"] = { "vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'", "Select previous snippet placeholder" },
+        ["<S-Tab>"] = { "vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'",
+            "Select previous snippet placeholder" },
     }, { mode = "i", expr = true, noremap = false })
 
     -- Jump between snippet placeholders in select mode.
     wk.register({
         ["<Tab>"] = { "vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'", "Select next snippet placeholder" },
-        ["<S-Tab>"] = { "vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'", "Select previous snippet placeholder" },
+        ["<S-Tab>"] = { "vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'",
+            "Select previous snippet placeholder" },
     }, { mode = "s", expr = true, noremap = false })
 end
 
