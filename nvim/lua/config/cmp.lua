@@ -11,7 +11,7 @@ M.config = function()
             end,
         },
         mapping = {
-            ["<C-space>"] = cmp.mapping.complete(),
+            ['<C-space>'] = cmp.mapping.complete(),
             ['<CR>'] = cmp.mapping.confirm({
                 behavior = cmp.ConfirmBehavior.Replace,
                 select = true,
