@@ -17,6 +17,8 @@ M.config = function()
             ['<Down>'] = cmp.mapping.select_next_item(),
             ['<S-Tab>'] = cmp.mapping.select_prev_item(),
             ['<Up>'] = cmp.mapping.select_prev_item(),
+            ['<C-d>'] = cmp.mapping.scroll_docs(4),
+            ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         },
         sources = {
             -- These are in order of priority. (Top source shown first).
