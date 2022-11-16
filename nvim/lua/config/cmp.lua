@@ -1,7 +1,7 @@
 local M = {}
 
 M.config = function()
-    vim.o.completeopt = 'menu,menuone,noselect'
+    vim.opt.completeopt = 'menu,menuone,noselect'
 
     local cmp = require("cmp")
     cmp.setup({
