@@ -133,6 +133,7 @@
         cmp-buffer
         cmp-path
         cmp-spell
+        cmp-cmdline
         cmp-vsnip
         vim-vsnip
         {

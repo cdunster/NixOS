@@ -33,6 +33,15 @@ M.config = function()
         },
     })
 
+    -- Use commandline and path as a source for commands.
+    cmp.setup.cmdline(':', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources(
+            { { name = 'path' } },
+            { { name = 'cmdline', keyword_length = 2 } }
+        )
+    })
+
     local wk = require("which-key")
 
     -- Jump between snippet placeholders in insert mode.
