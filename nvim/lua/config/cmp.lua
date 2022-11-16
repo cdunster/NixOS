@@ -27,7 +27,6 @@ M.config = function()
             -- These are in order of priority. (Top source shown first).
             { name = 'nvim_lsp' },
             { name = 'vsnip' },
-            { name = "crates" },
             { name = "path" },
             { name = "buffer", keyword_length = 3 },
             { name = "spell", keyword_length = 3 },
