@@ -12,7 +12,10 @@ M.config = function()
         },
         mapping = {
             ["<C-space>"] = cmp.mapping.complete(),
-            ["<CR>"] = cmp.mapping.confirm({ select = true }),
+            ['<CR>'] = cmp.mapping.confirm({
+                behavior = cmp.ConfirmBehavior.Replace,
+                select = true,
+            }),
             ['<Tab>'] = cmp.mapping.select_next_item(),
             ['<Down>'] = cmp.mapping.select_next_item(),
             ['<S-Tab>'] = cmp.mapping.select_prev_item(),
