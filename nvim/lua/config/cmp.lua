@@ -33,6 +33,22 @@ M.config = function()
         },
     })
 
+    -- Use buffer as a source when searching.
+    cmp.setup.cmdline('/', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+            { name = 'buffer' }
+        }
+    })
+
+    -- Use buffer as a source when reverse searching.
+    cmp.setup.cmdline('?', {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+            { name = 'buffer' }
+        }
+    })
+
     -- Use commandline and path as a source for commands.
     cmp.setup.cmdline(':', {
         mapping = cmp.mapping.preset.cmdline(),
