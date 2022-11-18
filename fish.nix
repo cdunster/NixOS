@@ -17,6 +17,16 @@
           sha256 = "WywEGAGaRwfHJpT+B3oKoyrnLJZxURTQ+MK9e5Asxl0=";
         };
       }
+      {
+        # Completions for direnv (and others).
+        name = "fish-completions";
+        src = pkgs.fetchFromGitHub {
+          owner = "etcusrvar";
+          repo = "fish-completions";
+          rev = "master";
+          sha256 = "ouqtaf22Wji57yULCxxTiisW7zkKRPOeZSkhdPQ+i1o=";
+        };
+      }
     ];
     functions = {
       _fzf_open_file_nvim = {
