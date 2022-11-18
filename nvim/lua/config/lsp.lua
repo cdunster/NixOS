@@ -39,11 +39,13 @@ local on_attach = function(client, bufnr)
     }, { prefix = "<leader>c" })
 
     --Format on save if the LSP supports it.
-    if client and client.server_capabilities.documentFormattingProvider then
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            callback = function() vim.lsp.buf.format() end,
-        })
-    end
+    vim.api.nvim_create_autocmd("BufWritePre", {
+        callback = function()
+            if client and client.server_capabilities.documentFormattingProvider then
+                vim.lsp.buf.format()
+            end
+        end,
+    })
 end
 
 local M = {}
