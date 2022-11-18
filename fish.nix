@@ -4,6 +4,7 @@
     shellAliases = {
       lg = "lazygit";
       ll = "exa -lah";
+      ls = "exa";
     };
     shellAbbrs = {
       d = "pushd";
