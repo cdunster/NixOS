@@ -14,7 +14,7 @@ M.config = function()
             ['<C-space>'] = cmp.mapping.complete(),
             ['<CR>'] = cmp.mapping.confirm({
                 behavior = cmp.ConfirmBehavior.Replace,
-                select = true,
+                select = false,
             }),
             ['<Tab>'] = cmp.mapping.select_next_item(),
             ['<Down>'] = cmp.mapping.select_next_item(),
