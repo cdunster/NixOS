@@ -6,10 +6,6 @@
       ll = "exa -lah";
       ls = "exa";
     };
-    shellAbbrs = {
-      d = "pushd";
-      ".." = "popd";
-    };
     plugins = [
       {
         name = "dracula-fish";
