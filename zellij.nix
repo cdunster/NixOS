@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       pane_frames = false;
-      copy_on_select = false;
+      copy_on_select = true;
       themes.dracula = {
         fg = [ 248 248 242 ];
         bg = [ 40 42 54 ];
