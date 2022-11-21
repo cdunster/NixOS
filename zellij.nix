@@ -91,6 +91,10 @@
               key = [{ Char = "t"; }];
             }
             {
+              action = [{ SwitchToMode = "Scroll"; }];
+              key = [{ Char = "s"; }];
+            }
+            {
               action = [{ SwitchToMode = "EnterSearch"; } { SearchInput = [ 0 ]; }];
               key = [{ Char = "/"; }];
             }
@@ -239,6 +243,32 @@
             {
               action = [{ SwitchToMode = "EnterSearch"; } { SearchInput = [ 0 ]; }];
               key = [{ Char = "/"; }];
+            }
+          ];
+          Scroll = global_binds ++ [
+            {
+              action = [{ SwitchToMode = "Locked"; }];
+              key = [ "Esc" ];
+            }
+            {
+              action = [ "ScrollDown" ];
+              key = [{ Char = "j"; } "Down"];
+            }
+            {
+              action = [ "ScrollUp" ];
+              key = [{ Char = "k"; } "Up"];
+            }
+            {
+              action = [ "PageScrollDown" ];
+              key = [{ Ctrl = "f"; } "PageDown"];
+            }
+            {
+              action = [ "PageScrollUp" ];
+              key = [{ Ctrl = "b"; } "PageUp"];
+            }
+            {
+              action = [ "EditScrollback" { SwitchToMode = "Locked"; } ];
+              key = [{ Char = "e"; }];
             }
           ];
         };
