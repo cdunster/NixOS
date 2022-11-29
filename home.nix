@@ -33,6 +33,7 @@
     rargs # Batch CLI stuff (xargs + awk)
     gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
     gnome.gnome-tweaks # Extra settings for tweaking gnome
+    slides # Slideshow in the terminal using Markdown
 
     # Fonts
     (nerdfonts.override { fonts = [ "Hack" ]; })
