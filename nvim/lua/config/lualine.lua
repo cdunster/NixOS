@@ -22,7 +22,7 @@ M.config = function()
         },
         sections = {
             lualine_a = { 'mode' },
-            lualine_b = { { 'filetype', icon_only = true, colored = false }, 'filename', 'diagnostics' },
+            lualine_b = { { 'filetype', icon_only = true, colored = false }, { 'filename', path = 1 }, 'diagnostics' },
             lualine_c = { 'lsp_progress' },
             lualine_x = {},
             lualine_y = { 'diff', 'branch' },
@@ -30,7 +30,7 @@ M.config = function()
         },
         inactive_sections = {
             lualine_a = { 'mode' },
-            lualine_b = { { 'filetype', icon_only = true, colored = false }, 'filename', 'diagnostics' },
+            lualine_b = { { 'filetype', icon_only = true, colored = false }, { 'filename', path = 1 }, 'diagnostics' },
             lualine_c = { 'lsp_progress' },
             lualine_x = {},
             lualine_y = {},
