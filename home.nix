@@ -59,6 +59,7 @@
     teams # Microsoft Teams - Proprietary IM.
     lazydocker # Manage docker stuff the lazy way.
     awscli2 # Manage AWS from the command line.
+    vscode # Proprietary code/text editor from Microsoft.
   ];
 
   fonts.fontconfig.enable = true;
