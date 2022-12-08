@@ -72,6 +72,11 @@ with lib.hm.gvariant;
       toolkit-accessibility = false;
     };
 
+    "org/gnome/desktop/peripherals/mouse" = {
+      accel-profile = "flat";
+      speed = 0.4779411764705883;
+    };
+
     "org/gnome/desktop/peripherals/touchpad" = {
       speed = 0.184;
       two-finger-scrolling-enabled = true;
