@@ -56,15 +56,15 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       clock-format = "24h";
       clock-show-weekday = true;
-      color-scheme = "prefer-light";
-      cursor-theme = "Pop";
+      color-scheme = "prefer-dark";
+      cursor-theme = "Dracula-cursors";
       document-font-name = "Hack Nerd Font 11";
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
       font-name = "Hack Nerd Font 10";
       gtk-im-module = "gtk-im-context-simple";
-      gtk-theme = "Pop";
+      gtk-theme = "Dracula";
       icon-theme = "Pop";
       locate-pointer = false;
       monospace-font-name = "Hack Nerd Font Mono 11";
@@ -252,7 +252,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/user-theme" = {
-      name = "Pop";
+      name = "Dracula";
     };
 
     "org/gnome/shell/keybindings" = {
