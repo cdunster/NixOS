@@ -35,7 +35,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-      picture-options = "zoom";
+      picture-options = "stretched";
       picture-uri = "file:///home/callum/.local/share/backgrounds/mr_robot.jpg";
       picture-uri-dark = "file:///home/callum/.local/share/backgrounds/mr_robot.jpg";
       primary-color = "#000000000000";
@@ -85,7 +85,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/screensaver" = {
       color-shading-type = "solid";
       lock-delay = mkUint32 0;
-      picture-options = "zoom";
+      picture-options = "stretched";
       picture-uri = "file:///home/callum/.local/share/backgrounds/mr_robot.jpg";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
