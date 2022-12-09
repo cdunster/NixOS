@@ -75,6 +75,13 @@
         plenary-nvim
         telescope-ui-select-nvim
 
+        # Better "alternative file" navigation
+        {
+          plugin = harpoon;
+          type = "lua";
+          config = "require('config.harpoon').config()";
+        }
+
         # Git
         {
           plugin = vim-fugitive;
