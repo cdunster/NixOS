@@ -69,7 +69,7 @@
   programs.kitty = {
     enable = true;
     package = pkgs.writeShellScriptBin "kitty" ''
-      ${pkgs.nixgl.nixGLIntel}/bin/nixGLIntel ${pkgs.kitty}/bin/kitty ${pkgs.zellij}/bin/zellij
+      ${pkgs.nixgl.nixGLIntel}/bin/nixGLIntel ${pkgs.kitty}/bin/kitty
     '';
     theme = "Dracula";
     settings = {
