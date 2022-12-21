@@ -91,6 +91,9 @@
       bind \cg _fzf_live_grep
       bind \cp _zoxide_zi
     '';
+    interactiveShellInit = ''
+      if not set -q ZELLIJ; exec zellij; end
+    '';
   };
 
   home.sessionVariables.SHELL = "${config.home.homeDirectory}/.nix-profile/bin/fish";
