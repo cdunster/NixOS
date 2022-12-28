@@ -16,7 +16,7 @@
   programs.home-manager.enable = true;
 
   # Add the background image.
-  home.file.".local/share/backgrounds/mr_robot.jpg".source = ./images/mr_robot.jpg;
+  home.file.".local/share/backgrounds/".source = ./images/backgrounds;
 
   # The version of Home-manager used.
   home.stateVersion = "22.11";
