@@ -36,6 +36,7 @@
     gnome.gnome-shell-extensions # Allow customising the gnome shell with gnome-tweaks
     dracula-theme # Dracula theme for the gnome shell
     slides # Slideshow in the terminal using Markdown
+    glow # Render Markdown in the CLI
 
     # Fonts
     (nerdfonts.override { fonts = [ "Hack" ]; })
