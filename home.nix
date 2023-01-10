@@ -10,6 +10,7 @@
     ./taskwarrior.nix
     ./nushell.nix
     ./zellij.nix
+    ./helix.nix
   ];
 
   # Let home-manager manage its own installation.
