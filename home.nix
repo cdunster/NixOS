@@ -36,7 +36,6 @@
     gnome-extension-manager # Find, install, and manager gnome extensions
     gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
     gnome.gnome-tweaks # Extra settings for tweaking gnome
-    gnome.gnome-shell-extensions # Allow customising the gnome shell with gnome-tweaks
     dracula-theme # Dracula theme for the gnome shell
     slides # Slideshow in the terminal using Markdown
     glow # Render Markdown in the CLI
