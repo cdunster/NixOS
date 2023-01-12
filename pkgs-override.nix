@@ -44,4 +44,9 @@ final: prev: {
 
     passthru.tests.version = testers.testVersion { package = zellij; };
   };
+
+  gnome-user-themes-v49 = prev.gnomeExtensions.user-themes.override {
+    version = "49";
+    sha256 = "0ykaw2602iixn87fc65h6vwxzlcjidpp9hpcsmf66r0f6xibgpah";
+  };
 }
