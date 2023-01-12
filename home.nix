@@ -32,6 +32,7 @@
     ripgrep # Search content of files
     grex # Get regex from results
     rargs # Batch CLI stuff (xargs + awk)
+    evince # Gnome based document viewer
     gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
     gnome.gnome-tweaks # Extra settings for tweaking gnome
     gnome.gnome-shell-extensions # Allow customising the gnome shell with gnome-tweaks
