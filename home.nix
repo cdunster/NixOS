@@ -35,9 +35,9 @@
     evince # Gnome based document viewer
     gnome-extension-manager # Find, install, and manager gnome extensions
     gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
-    gnome.gnome-tweaks # Extra settings for tweaking gnome
     gnome-user-themes-v49 # Enable custom gnome shell themes (fixed to v49 as it works with gnome v42)
     dracula-theme # Dracula theme for the gnome shell
+    gnome.gnome-tweaks # Extra settings for tweaking gnome
     slides # Slideshow in the terminal using Markdown
     glow # Render Markdown in the CLI
 
