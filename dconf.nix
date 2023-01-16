@@ -160,6 +160,17 @@ with lib.hm.gvariant;
       use-background-color = true;
     };
 
+    "org/gnome/gedit/preferences/editor" = {
+      insert-spaces = true;
+      scheme = "dracula";
+      tabs-size = mkUint32 4;
+      wrap-last-split-mode = "word";
+    };
+
+    "org/gnome/gedit/preferences/ui" = {
+      show-tabs-mode = "auto";
+    };
+
     "org/gnome/gnome-screenshot" = {
       delay = 0;
       include-pointer = false;
