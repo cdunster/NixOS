@@ -72,9 +72,6 @@
 
   programs.kitty = {
     enable = true;
-    package = pkgs.writeShellScriptBin "kitty" ''
-      ${pkgs.nixgl.nixGLIntel}/bin/nixGLIntel ${pkgs.kitty}/bin/kitty
-    '';
     theme = "Dracula";
     settings = {
       font_size = "13.0";

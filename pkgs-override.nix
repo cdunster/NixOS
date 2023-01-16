@@ -49,4 +49,8 @@ final: prev: {
     version = "49";
     sha256 = "0ykaw2602iixn87fc65h6vwxzlcjidpp9hpcsmf66r0f6xibgpah";
   };
+
+  kitty = final.writeShellScriptBin "kitty" ''
+    ${prev.nixgl.nixGLIntel}/bin/nixGLIntel ${prev.kitty}/bin/kitty
+  '';
 }
