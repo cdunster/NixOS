@@ -50,6 +50,11 @@ final: prev: {
     sha256 = "0ykaw2602iixn87fc65h6vwxzlcjidpp9hpcsmf66r0f6xibgpah";
   };
 
+  gnome-auto-move-windows-v49 = prev.gnomeExtensions.auto-move-windows.override {
+    version = "49";
+    sha256 = "031ppsjqv3y81wcjjsm14rqfh0l7vvaavy01hlqfyglpk8vlfvml";
+  };
+
   kitty = final.writeShellScriptBin "kitty" ''
     ${prev.nixgl.nixGLIntel}/bin/nixGLIntel ${prev.kitty}/bin/kitty
   '';
