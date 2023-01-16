@@ -5,6 +5,10 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "com/mattjakeman/ExtensionManager" = {
+      last-used-version = "0.4.0";
+    };
+
     "com/system76/hidpi" = {
       mode = "hidpi";
     };
