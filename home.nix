@@ -42,7 +42,7 @@
     glow # Render Markdown in the CLI
 
     # Fonts
-    (nerdfonts.override { fonts = [ "Hack" ]; })
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
 
     # Nix tools
     dconf2nix # Convert dconf files to Nix files
@@ -74,8 +74,8 @@
     enable = true;
     theme = "Dracula";
     settings = {
-      font_size = "13.0";
-      font_family = "Hack Nerd Font";
+      font_size = "12.0";
+      font_family = "FiraCode Nerd Font";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
