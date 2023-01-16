@@ -43,7 +43,7 @@
     glow # Render Markdown in the CLI
 
     # Fonts
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
 
     # Nix tools
     dconf2nix # Convert dconf files to Nix files

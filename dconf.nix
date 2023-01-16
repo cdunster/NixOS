@@ -58,16 +58,16 @@ with lib.hm.gvariant;
       clock-show-weekday = true;
       color-scheme = "prefer-dark";
       cursor-theme = "Dracula-cursors";
-      document-font-name = "FiraCode Nerd Font 11";
+      document-font-name = "JetBrainsMono Nerd Font 11";
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
-      font-name = "FiraCode Nerd Font 10";
+      font-name = "JetBrainsMono Nerd Font 10";
       gtk-im-module = "gtk-im-context-simple";
       gtk-theme = "Dracula";
       icon-theme = "Pop";
       locate-pointer = false;
-      monospace-font-name = "FiraCode Nerd Font Mono 11";
+      monospace-font-name = "JetBrainsMono Nerd Font Mono 11";
       show-battery-percentage = true;
       toolkit-accessibility = false;
     };
@@ -144,7 +144,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:close";
       num-workspaces = 10;
-      titlebar-font = "FiraCode Nerd Font 10";
+      titlebar-font = "JetBrainsMono Nerd Font 10";
     };
 
     "org/gnome/eog/ui" = {
