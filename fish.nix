@@ -70,6 +70,17 @@
           commandline --replace ""
         '';
       };
+      _open_neovim = {
+        body = ''
+          if test -e Session.vim
+              nvim -S Session.vim
+          else if test -e ../Session.vim
+              nvim -S ../Session.vim
+          else
+              nvim -c Obsession
+          end
+        '';
+      };
       lf = {
         description = "If file; print content to stdout, else list directory.";
         argumentNames = "path";
@@ -90,6 +101,7 @@
       bind \cf _fzf_open_file_nvim
       bind \cg _fzf_live_grep
       bind \cp _zoxide_zi
+      bind \cn _open_neovim
     '';
     interactiveShellInit = ''
       if not set -q TMUX; exec tmux; end
