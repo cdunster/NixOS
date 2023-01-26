@@ -7,7 +7,7 @@
     escapeTime = 20;
     terminal = "screen-256color";
     tmuxinator.enable = true;
-    prefix = "C-Space";
+    prefix = "M-Space";
     plugins = with pkgs.tmuxPlugins; [
       {
         plugin = dracula;
