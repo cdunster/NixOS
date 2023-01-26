@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   programs.neovim = {
     enable = true;
+    defaultEditor = true;
     extraConfig = ''
       "Show relative linenumbers when focused.
       :augroup numbertoggle
@@ -200,5 +201,4 @@
   xdg.configFile."nvim/lua/config".source = ./nvim/lua/config;
   xdg.configFile."nvim/ftplugin".source = ./nvim/ftplugin;
 
-  home.sessionVariables.EDITOR = "${config.home.homeDirectory}/.nix-profile/bin/nvim";
 }
