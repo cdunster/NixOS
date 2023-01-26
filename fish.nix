@@ -92,7 +92,7 @@
       bind \cp _zoxide_zi
     '';
     interactiveShellInit = ''
-      if not set -q ZELLIJ; exec zellij; end
+      if not set -q TMUX; exec tmux; end
     '';
   };
 
