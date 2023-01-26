@@ -31,6 +31,8 @@
 
       bind M-p split-pane -c "#{pane_current_path}"
 
+      bind M-t new-window -c "#{pane_current_path}"
+
       bind M-s new-session
 
       bind -n M-h select-pane -L
