@@ -31,6 +31,9 @@
 
       bind M-p split-pane -c "#{pane_current_path}"
 
+      bind t switch-client -Ttab
+      bind -Ttab g new-window -n lazygit -c "#{pane_current_path}" lazygit
+
       bind M-t new-window -c "#{pane_current_path}"
 
       bind M-s new-session
