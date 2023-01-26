@@ -26,8 +26,8 @@
     extraConfig = ''
       set -g mouse on
 
-      bind v split-window -v -l 30%
-      bind h split-window -h
+      bind v split-window -v -l 30% -c "#{pane_current_path}"
+      bind h split-window -h -c "#{pane_current_path}"
 
       bind n new-session
 
