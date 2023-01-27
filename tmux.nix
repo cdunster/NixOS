@@ -51,10 +51,15 @@
       bind -n M-] select-window -n
       bind -n M-[ select-window -p
 
-      bind -r C-h resize-pane -L
-      bind -r C-j resize-pane -D
-      bind -r C-k resize-pane -U
-      bind -r C-l resize-pane -R
+      bind -n M-H resize-pane -L
+      bind -n M-J resize-pane -D
+      bind -n M-K resize-pane -U
+      bind -n M-L resize-pane -R
+
+      bind -n M-S-Left resize-pane -L
+      bind -n M-S-Down resize-pane -D
+      bind -n M-S-Up resize-pane -U
+      bind -n M-S-Right resize-pane -R
     '';
   };
 
