@@ -42,6 +42,7 @@
     gnome.gnome-tweaks # Extra settings for tweaking gnome
     slides # Slideshow in the terminal using Markdown
     glow # Render Markdown in the CLI
+    asciidoctor-with-extensions # Convert asciidoc files into other formats
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
