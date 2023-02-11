@@ -168,6 +168,9 @@
           config = "require('config.cmp').config()";
         }
 
+        # Convert tools into language servers.
+        null-ls-nvim
+
         # Comment-out lines
         vim-commentary
 
