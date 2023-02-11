@@ -28,7 +28,7 @@ M.config = function()
             { name = 'nvim_lsp' },
             { name = 'vsnip' },
             { name = "path" },
-            { name = "buffer", keyword_length = 3 },
+            { name = "buffer", keyword_length = 2 },
             { name = "spell", keyword_length = 3 },
         },
     })
