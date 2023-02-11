@@ -71,6 +71,15 @@
             sha256 = "05sbipvsrv4zbgg6k0glr0syj9q5zipp6wylhffln6awq8r7n3j9";
           };
         };
+        wiki-vim = buildVimPlugin {
+          name = "wiki.vim";
+          src = pkgs.fetchFromGitHub {
+            owner = "lervag";
+            repo = "wiki.vim";
+            rev = "83761e3c2afc588dd9b99c67992b6fae3f6c7403";
+            sha256 = "000cja95nypdzp8mhcbz2lm1kvm92anp3pycn7may4pc1i069r4l";
+          };
+        };
       in
       [
         # Automatic session management.
@@ -205,11 +214,11 @@
           config = "require('config.vim-asciidoctor').config()";
         }
 
-        # VimWiki for writting wikis and notes in markdown.
+        # Write wikis, notes, and journal entries in a markup language
         {
-          plugin = vimwiki;
+          plugin = wiki-vim;
           type = "lua";
-          config = "require('config.vimwiki').config()";
+          config = "require('config.wikivim').config()";
         }
       ];
   };
