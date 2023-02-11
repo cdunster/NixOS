@@ -21,7 +21,8 @@
       set mouse=a                 "Enable the mouse for all modes.
       set clipboard+=unnamedplus  "Use the system clipboard.
       set scrolloff=4             "Context lines around cursor when scrolling.
-      set spell spelllang=en_gb   "Enable spell checking. Set language to proper English.
+      set nospell                 "Disable built-in spell-checking (replaced by spelunker).
+      set spelllang=en_gb         "Set language to proper English.
       set list lcs+=space:·       "Show whitespace characters.
       set hidden                  "Keep buffers open in the background.
       set signcolumn=yes          "Always show the signcolumn.
@@ -158,7 +159,6 @@
         cmp-nvim-lsp
         cmp-buffer
         cmp-path
-        cmp-spell
         cmp-cmdline
         cmp-vsnip
         vim-vsnip
