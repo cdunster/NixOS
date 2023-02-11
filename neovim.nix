@@ -62,6 +62,15 @@
             sha256 = "a4/A6Ja7hl44+vLx/27/CepsfCenEOapf125y5bArVY=";
           };
         };
+        vim-asciidoctor = buildVimPlugin {
+          name = "vim-asciidoctor";
+          src = pkgs.fetchFromGitHub {
+            owner = "habamax";
+            repo = "vim-asciidoctor";
+            rev = "f553311b5db03440eb8d7035434d0405e4a2c559";
+            sha256 = "05sbipvsrv4zbgg6k0glr0syj9q5zipp6wylhffln6awq8r7n3j9";
+          };
+        };
       in
       [
         # Automatic session management.
@@ -188,6 +197,13 @@
 
         # Support PICO-8 development
         pico8-vim
+
+        # Better syntax highlighting for asciidocs and other asciidoctor commands.
+        {
+          plugin = vim-asciidoctor;
+          type = "lua";
+          config = "require('config.vim-asciidoctor').config()";
+        }
 
         # VimWiki for writting wikis and notes in markdown.
         {
