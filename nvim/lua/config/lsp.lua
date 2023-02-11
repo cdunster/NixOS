@@ -91,8 +91,29 @@ M.config = function()
 
     -- sumneko LSP config for Lua.
     lsp.sumneko_lua.setup({
+        on_init = function(client)
+            if client.workspace_folders[1].name == "/home/callum/.config/nixpkgs/nvim/lua/" then
+                client.config.settings.Lua.runtime.version = 'LuaJIT'
+                client.config.settings.Lua.diagnostics.globals = { 'vim' }
+                client.config.settings.Lua.workspace.library = vim.api.nvim_get_runtime_file("", true)
+                client.config.settings.Lua.workspace.checkThirdParty = false
+            end
+
+            client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
+            return true
+        end,
         on_attach = on_attach,
         capabilities = capabilities,
+        settings = {
+            Lua = {
+                runtime = {},
+                diagnostics = {},
+                workspace = {},
+                telemetry = {
+                    enable = false,
+                }
+            },
+        },
     })
 
     -- vscode-css-languageserver for CSS.
