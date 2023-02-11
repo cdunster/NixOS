@@ -41,7 +41,7 @@ M.config = function()
     wk.register({
         name = "+spelunker",
         ["g"] = { "<Plug>(add-spelunker-good-nmap)", "Add good word" },
-        ["b"] = { "<Plug>(add-spell-bad-nmap)", "Add bad word" },
+        ["b"] = { "<Plug>(add-spelunker-bad-nmap)", "Add bad word" },
         ["u"] = {
             name = "+undo",
             ["g"] = { "<Plug>(undo-spelunker-good-nmap)", "Undo adding last good word" },
