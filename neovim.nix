@@ -190,7 +190,7 @@
         # Colour schemes
         tokyonight-nvim
         {
-          plugin = dracula-vim;
+          plugin = dracula-nvim;
           type = "viml";
           config = "colorscheme dracula";
         }
