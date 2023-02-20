@@ -43,6 +43,7 @@
     slides # Slideshow in the terminal using Markdown
     glow # Render Markdown in the CLI
     asciidoctor-with-extensions # Convert asciidoc files into other formats
+    pandoc # Powerful document conversion tool
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
