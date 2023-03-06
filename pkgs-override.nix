@@ -2,11 +2,11 @@ final: prev: {
   # This override is needed because:
   # 1. From v0.32.0 the config format was changed to KDL which is not yet supported by Nix/home-manager.
   # 2. Recent version seem to lag on startup querying for colour and pixel size.
-  zellij = with final; rustPlatform.buildRustPackage rec {
+  zellij = prev.rustPlatform.buildRustPackage rec {
     pname = "zellij";
     version = "0.31.4";
 
-    src = fetchFromGitHub {
+    src = prev.fetchFromGitHub {
       owner = "zellij-org";
       repo = "zellij";
       rev = "v${version}";
@@ -15,13 +15,13 @@ final: prev: {
 
     cargoSha256 = "sha256-bKOY1r5SxAI9D+9YkYhX2l+pm2kZ6GEU2cf5NFqhuSU=";
 
-    nativeBuildInputs = [
+    nativeBuildInputs = with prev; [
       mandown
       installShellFiles
       pkg-config
     ];
 
-    buildInputs = [
+    buildInputs = with prev; [
       openssl
     ] ++ lib.optionals stdenv.isDarwin [
       libiconv
@@ -42,7 +42,7 @@ final: prev: {
         --zsh <($out/bin/zellij setup --generate-completion zsh)
     '';
 
-    passthru.tests.version = testers.testVersion { package = zellij; };
+    passthru.tests.version = prev.testers.testVersion { package = prev.zellij; };
   };
 
   # This override is required because Pop!_OS 22.04 uses GNOME 42.5
@@ -58,7 +58,7 @@ final: prev: {
   };
 
   # This override is required for Kitty to work with OpenGL
-  kitty = final.writeShellScriptBin "kitty" ''
+  kitty = prev.writeShellScriptBin "kitty" ''
     ${prev.nixgl.nixGLIntel}/bin/nixGLIntel ${prev.kitty}/bin/kitty
   '';
 }
