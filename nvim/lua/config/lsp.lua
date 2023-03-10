@@ -92,8 +92,8 @@ M.config = function()
         capabilities = capabilities,
     })
 
-    -- sumneko LSP config for Lua.
-    lsp.sumneko_lua.setup({
+    -- Lua LS LSP config.
+    lsp.lua_ls.setup({
         on_init = function(client)
             if next(vim.fs.find("source/main.lua", { upward = true })) then
                 client.config.settings.Lua.runtime.nonstandardSymbol = { "+=", "-=", "*=", "/=" }
@@ -137,7 +137,7 @@ M.config = function()
         capabilities = capabilities,
     })
 
-    -- Protobuf LSP config for Nix.
+    -- Protobuf LSP config.
     lsp.bufls.setup({
         on_attach = on_attach,
         capabilities = capabilities,
