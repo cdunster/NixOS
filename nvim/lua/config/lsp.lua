@@ -142,16 +142,6 @@ M.config = function()
         on_attach = on_attach,
         capabilities = capabilities,
     })
-
-    -- Null-LS for making things that are not language servers, language servers.
-    local null_ls = require("null-ls")
-    null_ls.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-        sources = {
-            null_ls.builtins.completion.spell, -- Built-in vim-spell for autocompletion.
-        },
-    })
 end
 
 return M
