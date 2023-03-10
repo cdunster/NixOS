@@ -31,6 +31,7 @@
     xclip # CLI clipboard manager
     fd # Find files and directories
     ripgrep # Search content of files
+    ranger # Explore directories and files in the terminal
     grex # Get regex from results
     rargs # Batch CLI stuff (xargs + awk)
     evince # Gnome based document viewer
