@@ -26,6 +26,8 @@
     extraConfig = ''
       set -g mouse on
 
+      unbind -T copy-mode-vi MouseDragEnd1Pane
+
       bind v split-window -v -l 30% -c "#{pane_current_path}"
       bind h split-window -h -c "#{pane_current_path}"
 
