@@ -57,6 +57,7 @@
 
     # Applications
     spotify # Proprietary music streaming
+    gimp # Edit photos for freeeeeee
 
     # LSPs
     clang-tools # C/C++
