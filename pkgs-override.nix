@@ -58,7 +58,5 @@ final: prev: {
   };
 
   # This override is required for Kitty to work with OpenGL
-  kitty = prev.writeShellScriptBin "kitty" ''
-    ${prev.nixgl.nixGLIntel}/bin/nixGLIntel ${prev.kitty}/bin/kitty
-  '';
+  kitty = prev.wrapWithNixGLIntel prev.kitty;
 }

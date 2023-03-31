@@ -24,6 +24,7 @@
         config.allowUnfree = true;
         overlays = [
           nixgl.overlay
+          (import ./nixgl-wrapper.nix)
           (import ./pkgs-override.nix)
         ];
       };
