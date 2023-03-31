@@ -59,4 +59,7 @@ final: prev: {
 
   # This override is required for Kitty to work with OpenGL
   kitty = prev.wrapWithNixGLIntel prev.kitty;
+
+  # This override is required for FreeCAD to work with OpenGL
+  freecad = prev.wrapWithNixGLIntel prev.freecad;
 }

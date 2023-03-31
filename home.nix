@@ -58,6 +58,7 @@
     # Applications
     spotify # Proprietary music streaming
     gimp # Edit photos for freeeeeee
+    freecad # 3D CAD software for freeeeeee
 
     # LSPs
     clang-tools # C/C++
