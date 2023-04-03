@@ -30,20 +30,7 @@ let
       paths = (map wrapBin binFiles) ++ [ package ];
     };
 
-  wrappers =
-    let
-      replacePrefix = lib.replaceStrings [ "wrapWithNixGL" ] [ "nixGL" ];
-    in
-    lib.genAttrs [
-      "wrapWithNixGLNvidia"
-      "wrapWithNixGLIntel"
-      "wrapWithNixGLDefault"
-    ]
-      (name: wrapWithNixGL final.${replacePrefix name});
 in
 {
-  nixGLNvidia = prev.nixgl.nixGLNvidia;
-  nixGLIntel = prev.nixgl.nixGLIntel;
-  nixGLDefault = prev.nixgl.nixGLDefault;
-  inherit wrapWithNixGL;
-} // wrappers
+  wrapWithNixGLIntel = wrapWithNixGL prev.nixgl.nixGLIntel;
+}
