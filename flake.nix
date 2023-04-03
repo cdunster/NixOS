@@ -1,11 +1,11 @@
 {
-  description = "NixOS configuration";
+  description = "NixOS and home-manager configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "nixpkgs";
+    flake-utils.url = "flake-utils";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.utils.follows = "flake-utils";
     };
@@ -16,38 +16,38 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixgl, ... }@attrs:
+  outputs = { self, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import nixpkgs {
+      pkgs = import inputs.nixpkgs {
         inherit system;
         config.allowUnfree = true;
         overlays = [
-          nixgl.overlay
+          inputs.nixgl.overlay
           (import ./nixgl-wrapper.nix)
           (import ./pkgs-override.nix)
         ];
       };
     in
     {
-      nixosConfigurations.MiNixOS = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.MiNixOS = inputs.nixpkgs.lib.nixosSystem {
         inherit system pkgs;
-        specialArgs = attrs;
+        specialArgs = inputs;
         modules = [
           ./configuration.nix
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.callum = import ./home.nix;
-            home-manager.extraSpecialArgs = attrs;
+            home-manager.extraSpecialArgs = inputs;
           }
         ];
       };
 
-      homeConfigurations.callum = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.callum = inputs.home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = attrs;
+        extraSpecialArgs = inputs;
         modules = [
           {
             home = {
