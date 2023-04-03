@@ -52,7 +52,6 @@
 
     # Nix tools
     dconf2nix # Convert dconf files to Nix files
-    nixgl.nixGLIntel # OpenGL wrapper: needed for running some applications
     nixpkgs-fmt # Format Nix files the nixpkgs' way
 
     # Applications
