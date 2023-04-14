@@ -46,6 +46,7 @@
     asciidoctor-with-extensions # Convert asciidoc files into other formats
     pandoc # Powerful document conversion tool
     plantuml # Create UML diagrams with a markup language
+    nodePackages.mermaid-cli # Create nicer looking diagrams with a markup language
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
