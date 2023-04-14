@@ -3,16 +3,13 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs";
-    flake-utils.url = "flake-utils";
     home-manager = {
       url = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.utils.follows = "flake-utils";
     };
     nixgl = {
       url = "github:guibou/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
     };
   };
 
