@@ -54,7 +54,7 @@ with lib.hm.gvariant;
       current = mkUint32 0;
       per-window = false;
       sources = [ (mkTuple [ "xkb" "us+euro" ]) ];
-      xkb-options = [ "caps:escape_shifted_capslock" ];
+      xkb-options = [ "caps:none" ];
     };
 
     "org/gnome/desktop/interface" = {
