@@ -70,7 +70,6 @@
     buf-language-server # Protobuf
 
     # Work
-    teams # Microsoft Teams - Proprietary IM.
     teams-for-linux # Unofficial Linux wrapper for Microsoft Teams PWA.
     lazydocker # Manage docker stuff the lazy way.
     awscli2 # Manage AWS from the command line.
