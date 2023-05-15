@@ -24,8 +24,15 @@
   home.stateVersion = "22.11";
 
   home.packages = with pkgs; [
-    # Nice WM for non-Pop!_OS systems:
-    # gnomeExtensions.material-shell
+    # Gnome
+    # gnomeExtensions.material-shell # Nice WM for non-Pop!_OS systems:
+    evince # Gnome based document viewer
+    gnome-extension-manager # Find, install, and manager gnome extensions
+    gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
+    gnome-auto-move-windows-v49 # Move an application to a set window when opened (fixed to v49 as it works with gnome v42)
+    gnome-user-themes-v49 # Enable custom gnome shell themes (fixed to v49 as it works with gnome v42)
+    dracula-theme # Dracula theme for the gnome shell
+    gnome.gnome-tweaks # Extra settings for tweaking gnome
 
     # Utilities
     xclip # CLI clipboard manager
@@ -34,13 +41,6 @@
     ranger # Explore directories and files in the terminal
     grex # Get regex from results
     rargs # Batch CLI stuff (xargs + awk)
-    evince # Gnome based document viewer
-    gnome-extension-manager # Find, install, and manager gnome extensions
-    gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
-    gnome-auto-move-windows-v49 # Move an application to a set window when opened (fixed to v49 as it works with gnome v42)
-    gnome-user-themes-v49 # Enable custom gnome shell themes (fixed to v49 as it works with gnome v42)
-    dracula-theme # Dracula theme for the gnome shell
-    gnome.gnome-tweaks # Extra settings for tweaking gnome
     slides # Slideshow in the terminal using Markdown
     glow # Render Markdown in the CLI
     asciidoctor-with-extensions # Convert asciidoc files into other formats
