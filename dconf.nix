@@ -253,7 +253,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/pop-cosmic" = {
       show-applications-button = false;
-      show-workspaces-button = false;
+      show-workspaces-button = true;
     };
 
     "org/gnome/shell/extensions/pop-shell" = {
