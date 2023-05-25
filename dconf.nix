@@ -13,6 +13,10 @@ with lib.hm.gvariant;
       mode = "hidpi";
     };
 
+    "org/gnome/Weather" = {
+      locations = "[<(uint32 2, <('Amsterdam', 'EHAM', true, [(0.91280719879303418, 0.083194033496160544)], [(0.91367986341903151, 0.085812027374152042)])>)>]";
+    };
+
     "org/gnome/calculator" = {
       accuracy = 9;
       angle-units = "degrees";
