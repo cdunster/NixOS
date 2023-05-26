@@ -29,6 +29,7 @@
     evince # Gnome based document viewer
     gnome-extension-manager # Find, install, and manager gnome extensions
     gnomeExtensions.emoji-selector # Select emojis with nice gnome UI
+    gnomeExtensions.sound-output-device-chooser # Audio device selector in the gnome quick settings
     gnome-auto-move-windows-v49 # Move an application to a set window when opened (fixed to v49 as it works with gnome v42)
     gnome-user-themes-v49 # Enable custom gnome shell themes (fixed to v49 as it works with gnome v42)
     dracula-theme # Dracula theme for the gnome shell
