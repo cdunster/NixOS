@@ -57,9 +57,7 @@ final: prev: {
     sha256 = "031ppsjqv3y81wcjjsm14rqfh0l7vvaavy01hlqfyglpk8vlfvml";
   };
 
-  # This override is required for Kitty to work with OpenGL
   kitty = prev.wrapWithNixGLIntel prev.kitty;
 
-  # This override is required for FreeCAD to work with OpenGL
   freecad = prev.wrapWithNixGLIntel prev.freecad;
 }
