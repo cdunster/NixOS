@@ -60,4 +60,6 @@ final: prev: {
   kitty = prev.wrapWithNixGLIntel prev.kitty;
 
   freecad = prev.wrapWithNixGLIntel prev.freecad;
+
+  bloomrpc = prev.wrapWithNixGLIntel prev.bloomrpc;
 }
