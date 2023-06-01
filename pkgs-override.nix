@@ -47,13 +47,13 @@ final: prev: {
 
   # This override is required because Pop!_OS 22.04 uses GNOME 42.5
   gnome-user-themes-v49 = prev.gnomeExtensions.user-themes.override {
-    version = "49";
+    version = 49;
     sha256 = "0ykaw2602iixn87fc65h6vwxzlcjidpp9hpcsmf66r0f6xibgpah";
   };
 
   # This override is required because Pop!_OS 22.04 uses GNOME 42.5
   gnome-auto-move-windows-v49 = prev.gnomeExtensions.auto-move-windows.override {
-    version = "49";
+    version = 49;
     sha256 = "031ppsjqv3y81wcjjsm14rqfh0l7vvaavy01hlqfyglpk8vlfvml";
   };
 
