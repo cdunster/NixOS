@@ -32,6 +32,7 @@
     gnome42Extensions."sound-output-device-chooser@kgshank.net" # Audio device selector in the gnome quick settings
     gnome42Extensions."auto-move-windows@gnome-shell-extensions.gcampax.github.com" # Move an application to a set window when opened
     gnome42Extensions."user-theme@gnome-shell-extensions.gcampax.github.com" # Enable custom gnome shell themes
+    gnome42Extensions."bluetooth-quick-connect@bjarosze.gmail.com" # Bluetooth device selector in the gnome quick settings
     dracula-theme # Dracula theme for the gnome shell
     gnome.gnome-tweaks # Extra settings for tweaking gnome
 

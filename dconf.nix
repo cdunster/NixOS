@@ -232,12 +232,17 @@ with lib.hm.gvariant;
     "org/gnome/shell" = {
       disable-user-extensions = false;
       disabled-extensions = [ "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "places-menu@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" ];
-      enabled-extensions = [ "ding@rastersoft.com" "pop-cosmic@system76.com" "pop-shell@system76.com" "system76-power@system76.com" "ubuntu-appindicators@ubuntu.com" "cosmic-dock@system76.com" "cosmic-workspaces@system76.com" "popx11gestures@system76.com" "emoji-selector@maestroschan.fr" "user-theme@gnome-shell-extensions.gcampax.github.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "sound-output-device-chooser@kgshank.net" ];
+      enabled-extensions = [ "ding@rastersoft.com" "pop-cosmic@system76.com" "pop-shell@system76.com" "system76-power@system76.com" "ubuntu-appindicators@ubuntu.com" "cosmic-dock@system76.com" "cosmic-workspaces@system76.com" "popx11gestures@system76.com" "emoji-selector@maestroschan.fr" "user-theme@gnome-shell-extensions.gcampax.github.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "sound-output-device-chooser@kgshank.net" "bluetooth-quick-connect@bjarosze.gmail.com" ];
       welcome-dialog-last-shown-version = "42.3.1";
     };
 
     "org/gnome/shell/extensions/auto-move-windows" = {
       application-list = [ "spotify.desktop:10" "teams.desktop:1" ];
+    };
+
+    "org/gnome/shell/extensions/bluetooth-quick-connect" = {
+      keep-menu-on-toggle = true;
+      show-battery-value-on = true;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
