@@ -177,6 +177,13 @@
         # Better UI hooks for user input/output in nvim
         dressing-nvim
 
+        # Better nvim notifications with a slick UI
+        {
+          plugin = nvim-notify;
+          type = "lua";
+          config = "require('config.notify').config()";
+        }
+
         # Better spellchecking (supports camelCase, snake_case, etc.).
         {
           plugin = vim-spelunker;
