@@ -174,6 +174,9 @@
         # Better motions for words i.e. camelCase, snake_case, etc.
         vim-wordmotion
 
+        # Better UI hooks for user input/output in nvim
+        dressing-nvim
+
         # Better spellchecking (supports camelCase, snake_case, etc.).
         {
           plugin = vim-spelunker;
