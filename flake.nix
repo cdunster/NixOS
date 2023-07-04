@@ -48,7 +48,7 @@
         modules = [
           {
             home = {
-              username = "Callum";
+              username = "callum";
               homeDirectory = "/home/callum";
             };
           }
