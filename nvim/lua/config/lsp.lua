@@ -131,8 +131,8 @@ M.config = function()
         capabilities = capabilities,
     })
 
-    -- rnix LSP config for Nix.
-    lsp.rnix.setup({
+    -- nixd LSP config for Nix.
+    lsp.nixd.setup({
         on_attach = on_attach,
         capabilities = capabilities,
     })

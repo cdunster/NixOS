@@ -68,7 +68,7 @@
     lua-language-server # Lua
     nodePackages.vscode-css-languageserver-bin # CSS
     rust-analyzer # Rust
-    rnix-lsp # Nix
+    nixd # Nix
     buf-language-server # Protobuf
 
     # Work
