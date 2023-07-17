@@ -31,7 +31,7 @@
     functions = {
       _fzf_open_file_nvim = {
         body = ''
-          set _selected (fzf --multi --preview="_fzf_preview_file {}" --header="Open in nvim:")
+          set _selected (fzf --multi --preview="bat {1} --color=always" --header="Open in nvim:")
           if test -n "$_selected"
               nvim $_selected
           end
