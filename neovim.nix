@@ -139,6 +139,7 @@
               tree-sitter-css
               tree-sitter-yaml
               tree-sitter-markdown
+              tree-sitter-bash
             ]
           ));
           type = "lua";
