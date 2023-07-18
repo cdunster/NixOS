@@ -1,3 +1,12 @@
+vim.cmd [[
+      "Show relative linenumbers when focused.
+      :augroup numbertoggle
+      :  autocmd!
+      :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+      :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+      :augroup END
+]]
+
 vim.opt.ignorecase = true               -- Enable case insensitive matching.
 vim.opt.smartcase = true                -- Enable smart-case matching (match case insensitively unless upper-case used).
 vim.opt.tabstop = 4                     -- Size of a tab.

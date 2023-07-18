@@ -2,14 +2,6 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    extraConfig = ''
-      "Show relative linenumbers when focused.
-      :augroup numbertoggle
-      :  autocmd!
-      :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-      :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-      :augroup END
-    '';
     extraLuaConfig = ''
       require('config.custom_bindings')
       require('config.settings')
