@@ -50,4 +50,14 @@ final: prev: {
   freecad = prev.wrapWithNixGLIntel prev.freecad;
 
   bloomrpc = prev.wrapWithNixGLIntel prev.bloomrpc;
+
+  teams-for-linux = prev.teams-for-linux.overrideAttrs (old: rec {
+    version = "1.0.93";
+    src = prev.fetchFromGitHub {
+      owner = "IsmaelMartinez";
+      repo = "teams-for-linux";
+      rev = "v${version}";
+      sha256 = "sha256-mWLjGednrKnEIvrL2iHQP3xoCb6SxptzbE40aJ5wH1U=";
+    };
+  });
 }
