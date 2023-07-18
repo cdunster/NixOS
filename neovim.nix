@@ -156,6 +156,13 @@
         lsp_signature-nvim
         rust-tools-nvim # Advanced LSP features for Rust.
 
+        # Display LSP progress in bottom right.
+        {
+          plugin = fidget-nvim;
+          type = "lua";
+          config = "require('fidget').setup{ text = { spinner = 'dots_pulse' } }";
+        }
+
         # Autocomplete and Snippets
         cmp-nvim-lsp
         cmp-buffer
@@ -193,7 +200,6 @@
         }
 
         # Better statusline. Requires devicons.
-        lualine-lsp-progress
         {
           plugin = lualine-nvim;
           type = "lua";
