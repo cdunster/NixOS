@@ -33,13 +33,9 @@
       set wildmode=longest,list   "Enable bash-like tab completions.
       let g:mapleader=' '         "Set <SPC> to be the leader key for keybindings.
       let g:maplocalleader=','    "Set ',' to be the local leader key for language specific keybindings.
-
-      lua << EOF
-        require("which-key").register({
-            [">"] = { ">gv", "Increase indent" },
-            ["<"] = { "<gv", "Decrease indent" },
-        }, { mode = "v" })
-      EOF
+    '';
+    extraLuaConfig = ''
+      require('config.custom_bindings')
     '';
     plugins =
       with pkgs.vimPlugins;
@@ -241,6 +237,7 @@
   };
 
   xdg.configFile."nvim/lua/plugins".source = ./nvim/lua/plugins;
+  xdg.configFile."nvim/lua/config".source = ./nvim/lua/config;
   xdg.configFile."nvim/ftplugin".source = ./nvim/ftplugin;
 
   # This is a bit meta and very hacky but I want the spell file to be writeable.
