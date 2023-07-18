@@ -54,8 +54,8 @@ M.config = function()
         ["t"] = "Open default wiki index file in new tab",
         ["s"] = "List available wiki index files",
         ["i"] = "Open default diary index file",
-        ["c"] = { "<cmd>lua require('config.vimwiki').new_file()<CR>", "Create new wiki file" },
-    }, { prefix = "<leader>w"})
+        ["c"] = { "<cmd>lua require('plugins.vimwiki').new_file()<CR>", "Create new wiki file" },
+    }, { prefix = "<leader>w" })
 
     wk.register({
         name = "+diary",
@@ -64,7 +64,7 @@ M.config = function()
         ["t"] = "Open today's entry in new tab",
         ["m"] = "Open tomorrow's entry",
         ["y"] = "Open yesterday's entry",
-    }, { prefix = "<leader>w<leader>"})
+    }, { prefix = "<leader>w<leader>" })
 end
 
 return M

@@ -90,7 +90,7 @@
         {
           plugin = telescope-nvim;
           type = "lua";
-          config = "require('config.telescope').config()";
+          config = "require('plugins.telescope').config()";
         }
         plenary-nvim
         telescope-ui-select-nvim
@@ -99,19 +99,19 @@
         {
           plugin = harpoon;
           type = "lua";
-          config = "require('config.harpoon').config()";
+          config = "require('plugins.harpoon').config()";
         }
 
         # Git
         {
           plugin = vim-fugitive;
           type = "lua";
-          config = "require('config.fugitive').config()";
+          config = "require('plugins.fugitive').config()";
         }
         {
           plugin = gitsigns-nvim;
           type = "lua";
-          config = "require('config.gitsigns').config()";
+          config = "require('plugins.gitsigns').config()";
         }
 
         # WhichKey
@@ -143,7 +143,7 @@
             ]
           ));
           type = "lua";
-          config = "require('config.treesitter').config()";
+          config = "require('plugins.treesitter').config()";
         }
         nvim-treesitter-textobjects
 
@@ -151,7 +151,7 @@
         {
           plugin = nvim-lspconfig;
           type = "lua";
-          config = "require('config.lsp').config()";
+          config = "require('plugins.lsp').config()";
         }
         lsp_signature-nvim
         rust-tools-nvim # Advanced LSP features for Rust.
@@ -173,7 +173,7 @@
         {
           plugin = nvim-cmp;
           type = "lua";
-          config = "require('config.cmp').config()";
+          config = "require('plugins.cmp').config()";
         }
 
         # Comment-out lines
@@ -189,21 +189,21 @@
         {
           plugin = nvim-notify;
           type = "lua";
-          config = "require('config.notify').config()";
+          config = "require('plugins.notify').config()";
         }
 
         # Better spellchecking (supports camelCase, snake_case, etc.).
         {
           plugin = vim-spelunker;
           type = "lua";
-          config = "require('config.spelunker').config()";
+          config = "require('plugins.spelunker').config()";
         }
 
         # Better statusline. Requires devicons.
         {
           plugin = lualine-nvim;
           type = "lua";
-          config = "require('config.lualine').config()";
+          config = "require('plugins.lualine').config()";
         }
 
         # Font icons in Neovim.
@@ -228,19 +228,19 @@
         {
           plugin = vim-asciidoctor;
           type = "lua";
-          config = "require('config.vim-asciidoctor').config()";
+          config = "require('plugins.vim-asciidoctor').config()";
         }
 
         # Write wikis, notes, and journal entries in a markup language
         {
           plugin = wiki-vim;
           type = "lua";
-          config = "require('config.wikivim').config()";
+          config = "require('plugins.wikivim').config()";
         }
       ];
   };
 
-  xdg.configFile."nvim/lua/config".source = ./nvim/lua/config;
+  xdg.configFile."nvim/lua/plugins".source = ./nvim/lua/plugins;
   xdg.configFile."nvim/ftplugin".source = ./nvim/ftplugin;
 
   # This is a bit meta and very hacky but I want the spell file to be writeable.

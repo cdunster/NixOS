@@ -26,8 +26,8 @@ M.config = function()
         ["P"] = { "<cmd>Git push<cr>", "Git push" },
         ["f"] = {
             name = "+file",
-            ["r"] = { "<cmd>lua require('config.fugitive').git_rename()<cr>", "Git rename file" },
-            ["m"] = { "<cmd>lua require('config.fugitive').git_move()<cr>", "Git move file" },
+            ["r"] = { "<cmd>lua require('plugins.fugitive').git_rename()<cr>", "Git rename file" },
+            ["m"] = { "<cmd>lua require('plugins.fugitive').git_move()<cr>", "Git move file" },
             ["d"] = { "<cmd>GDelete<cr>", "Git delete file" },
         },
     }, { prefix = "<leader>g" })
