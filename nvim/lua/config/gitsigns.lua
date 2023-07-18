@@ -3,7 +3,6 @@ local M = {}
 M.config = function()
     require("gitsigns").setup({
         current_line_blame = true,
-        keymaps = { }, -- Remove default keymaps.
     })
 
     local wk = require("which-key")
