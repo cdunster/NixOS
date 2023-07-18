@@ -1,25 +1,25 @@
-vim.cmd [[
-      set ignorecase              "Enable case insensitive matching.
-      set smartcase               "Enable smart-case matching (match case insensitively unless upper-case used).
-      set tabstop=4               "Size of a tab.
-      set softtabstop=4           "See multiple spaces as a tab.
-      set expandtab               "Converts tabs to spaces.
-      set shiftwidth=4            "Auto-indented width.
-      set number relativenumber   "Enable line numbers.
-      set termguicolors           "Enable full GUI colours in the terminal.
-      set mouse=a                 "Enable the mouse for all modes.
-      set clipboard+=unnamedplus  "Use the system clipboard.
-      set scrolloff=4             "Context lines around cursor when scrolling.
-      set nospell                 "Disable built-in spell-checking (replaced by spelunker).
-      set spelllang=en_gb         "Set language to proper English.
-      set list lcs+=space:·       "Show whitespace characters.
-      set hidden                  "Keep buffers open in the background.
-      set signcolumn=yes          "Always show the signcolumn.
-      set nohlsearch              "Disable highlighting the search results.
-      set nowrap                  "Don't wrap long lines onto multiple lines.
-      set timeoutlen=300          "Set the time to wait for a mapped sequence to complete.
-      set updatetime=300          "Better user experience.
-      set wildmode=longest,list   "Enable bash-like tab completions.
-      let g:mapleader=' '         "Set <SPC> to be the leader key for keybindings.
-      let g:maplocalleader=','    "Set ',' to be the local leader key for language specific keybindings.
-]]
+vim.opt.ignorecase = true               -- Enable case insensitive matching.
+vim.opt.smartcase = true                -- Enable smart-case matching (match case insensitively unless upper-case used).
+vim.opt.tabstop = 4                     -- Size of a tab.
+vim.opt.softtabstop = 4                 -- See multiple spaces as a tab.
+vim.opt.expandtab = true                -- Converts tabs to spaces.
+vim.opt.shiftwidth = 4                  -- Auto-indented width.
+vim.opt.number = true                   -- Enable line numbers.
+vim.opt.relativenumber = true           -- Enable relative line numbers.
+vim.opt.termguicolors = true            -- Enable full GUI colours in the terminal.
+vim.opt.mouse = 'a'                     -- Enable the mouse for all modes.
+vim.opt.clipboard:append('unnamedplus') -- Use the system clipboard.
+vim.opt.scrolloff = 4                   -- Context lines around cursor when scrolling.
+vim.opt.spell = false                   -- Disable built-in spell-checking (replaced by spelunker).
+vim.opt.spelllang = 'en_gb'             -- Set language to proper English.
+vim.opt.list = true                     -- Show whitespace characters.
+vim.opt.lcs:append({ space = '·' })     -- Add spaces to the list of displayed whitespace characters.
+vim.opt.hidden = true                   -- Keep buffers open in the background.
+vim.opt.signcolumn = 'yes'              -- Always show the signcolumn.
+vim.opt.hlsearch = false                -- Disable highlighting the search results.
+vim.opt.wrap = false                    -- Don't wrap long lines onto multiple lines.
+vim.opt.timeoutlen = 300                -- Set the time to wait for a mapped sequence to complete.
+vim.opt.updatetime = 300                -- Better user experience.
+vim.opt.wildmode = 'longest,list'       -- Enable bash-like tab completions.
+vim.g.mapleader = ' '                   -- Set <SPC> to be the leader key for keybindings.
+vim.g.maplocalleader = ','              -- Set ',' to be the local leader key for language specific keybindings.
