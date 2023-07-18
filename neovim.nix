@@ -182,8 +182,8 @@
         tokyonight-nvim
         {
           plugin = dracula-nvim;
-          type = "viml";
-          config = "colorscheme dracula";
+          type = "lua";
+          config = "vim.cmd.colorscheme('dracula')";
         }
 
         # Support PICO-8 development
