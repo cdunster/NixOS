@@ -1,11 +1,15 @@
-vim.cmd [[
-      "Show relative linenumbers when focused.
-      :augroup numbertoggle
-      :  autocmd!
-      :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-      :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-      :augroup END
-]]
+-- Show relative linenumbers when focused.
+local numbertoggle = vim.api.nvim_create_augroup('numbertoggle', { clear = true })
+vim.api.nvim_create_autocmd({ 'BufEnter', 'FocusGained', 'InsertLeave' }, {
+    pattern = '*',
+    group = numbertoggle,
+    callback = function() vim.opt.relativenumber = true end,
+})
+vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter' }, {
+    pattern = '*',
+    group = numbertoggle,
+    callback = function() vim.opt.relativenumber = false end,
+})
 
 vim.opt.ignorecase = true               -- Enable case insensitive matching.
 vim.opt.smartcase = true                -- Enable smart-case matching (match case insensitively unless upper-case used).
