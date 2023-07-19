@@ -46,6 +46,16 @@
             sha256 = "000cja95nypdzp8mhcbz2lm1kvm92anp3pycn7may4pc1i069r4l";
           };
         };
+        fidget-nvim-legacy = buildVimPlugin {
+          name = "fidget.nvim";
+          version = "legacy";
+          src = pkgs.fetchFromGitHub {
+            owner = "j-hui";
+            repo = "fidget.nvim";
+            rev = "0ba1e16d07627532b6cae915cc992ecac249fb97";
+            sha256 = "01rrjxlg4xjfs8la0cfcnf5z36s5fdxqzfs4mc0zdz1bn5z60qmf";
+          };
+        };
       in
       [
         # Automatic session management.
@@ -123,7 +133,7 @@
 
         # Display LSP progress in bottom right.
         {
-          plugin = fidget-nvim;
+          plugin = fidget-nvim-legacy;
           type = "lua";
           config = "require('fidget').setup{ text = { spinner = 'dots_pulse' } }";
         }
