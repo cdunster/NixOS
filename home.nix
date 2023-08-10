@@ -79,6 +79,7 @@
     vscode # Proprietary code/text editor from Microsoft.
     bloomrpc # GUI client for gRPC (like postman for gRPC)
     sqlitebrowser # A database browser for SQLite
+    saleae-logic-2 # Logic analyser
   ];
 
   fonts.fontconfig.enable = true;
