@@ -25,6 +25,7 @@
     ];
     extraConfig = ''
       set -g mouse on
+      set -sa terminal-features ',xterm-kitty:RGB'
 
       unbind -T copy-mode-vi MouseDragEnd1Pane
 
