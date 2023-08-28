@@ -5,7 +5,7 @@
     clock24 = true;
     baseIndex = 1;
     escapeTime = 20;
-    terminal = "screen-256color";
+    terminal = "tmux-256color";
     tmuxinator.enable = true;
     prefix = "M-Space";
     plugins = with pkgs.tmuxPlugins; [
