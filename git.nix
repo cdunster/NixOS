@@ -5,6 +5,10 @@
     userName = "Callum Dunster";
     userEmail = "cdunster@users.noreply.github.com";
     lfs.enable = true;
+    signing = {
+      key = null;
+      signByDefault = true;
+    };
     ignores = [
       "Session.vim"
       ".cache"
