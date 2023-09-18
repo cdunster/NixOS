@@ -111,7 +111,7 @@
   };
 
   programs.bat.enable = true;
-  programs.exa.enable = true;
+  programs.eza.enable = true;
   programs.brave.enable = true;
   programs.zoxide.enable = true;
 }

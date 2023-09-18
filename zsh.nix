@@ -10,8 +10,8 @@
     syntaxHighlighting.enable = true;
     shellAliases = {
       lg = "lazygit";
-      ll = "exa -lah";
-      ls = "exa";
+      ll = "eza -lah";
+      ls = "eza";
       cd = "z";
     };
   };
