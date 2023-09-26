@@ -157,6 +157,14 @@
         # Better motions for words i.e. camelCase, snake_case, etc.
         vim-wordmotion
 
+        # Run unit tests from within Neovim.
+        {
+          plugin = neotest;
+          type = "lua";
+          config = "require('plugins.neotest').config()";
+        }
+        neotest-rust # Add Rust support for neotest (above)
+
         # Better UI hooks for user input/output in nvim
         dressing-nvim
 
