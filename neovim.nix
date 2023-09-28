@@ -190,7 +190,6 @@
         }
 
         # Colour schemes
-        tokyonight-nvim
         {
           plugin = dracula-nvim;
           type = "lua";
