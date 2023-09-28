@@ -19,15 +19,6 @@
             sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
           };
         };
-        pico8-vim = buildVimPlugin {
-          name = "PICO-8.vim";
-          src = pkgs.fetchFromGitHub {
-            owner = "Bakudankun";
-            repo = "PICO-8.vim";
-            rev = "4bd67ee62f3650c8d107eab7a9878defb903f0e2";
-            sha256 = "a4/A6Ja7hl44+vLx/27/CepsfCenEOapf125y5bArVY=";
-          };
-        };
         vim-asciidoctor = buildVimPlugin {
           name = "vim-asciidoctor";
           src = pkgs.fetchFromGitHub {
@@ -195,9 +186,6 @@
           type = "lua";
           config = "vim.cmd.colorscheme('dracula')";
         }
-
-        # Support PICO-8 development
-        pico8-vim
 
         # Better syntax highlighting for asciidocs and other asciidoctor commands.
         {
