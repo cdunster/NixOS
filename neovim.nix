@@ -19,15 +19,6 @@
             sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
           };
         };
-        vim-asciidoctor = buildVimPlugin {
-          name = "vim-asciidoctor";
-          src = pkgs.fetchFromGitHub {
-            owner = "habamax";
-            repo = "vim-asciidoctor";
-            rev = "f553311b5db03440eb8d7035434d0405e4a2c559";
-            sha256 = "05sbipvsrv4zbgg6k0glr0syj9q5zipp6wylhffln6awq8r7n3j9";
-          };
-        };
         wiki-vim = buildVimPlugin {
           name = "wiki.vim";
           src = pkgs.fetchFromGitHub {
@@ -185,13 +176,6 @@
           plugin = dracula-nvim;
           type = "lua";
           config = "vim.cmd.colorscheme('dracula')";
-        }
-
-        # Better syntax highlighting for asciidocs and other asciidoctor commands.
-        {
-          plugin = vim-asciidoctor;
-          type = "lua";
-          config = "require('plugins.vim-asciidoctor').config()";
         }
 
         # Write wikis, notes, and journal entries in a markup language
