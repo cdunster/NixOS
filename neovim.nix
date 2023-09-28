@@ -19,15 +19,6 @@
             sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
           };
         };
-        wiki-vim = buildVimPlugin {
-          name = "wiki.vim";
-          src = pkgs.fetchFromGitHub {
-            owner = "lervag";
-            repo = "wiki.vim";
-            rev = "83761e3c2afc588dd9b99c67992b6fae3f6c7403";
-            sha256 = "000cja95nypdzp8mhcbz2lm1kvm92anp3pycn7may4pc1i069r4l";
-          };
-        };
         fidget-nvim-legacy = buildVimPlugin {
           name = "fidget.nvim";
           version = "legacy";
@@ -176,13 +167,6 @@
           plugin = dracula-nvim;
           type = "lua";
           config = "vim.cmd.colorscheme('dracula')";
-        }
-
-        # Write wikis, notes, and journal entries in a markup language
-        {
-          plugin = wiki-vim;
-          type = "lua";
-          config = "require('plugins.wikivim').config()";
         }
       ];
   };
