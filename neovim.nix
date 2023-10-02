@@ -130,6 +130,7 @@
           config = "require('plugins.neotest').config()";
         }
         neotest-rust # Add Rust support for neotest (above)
+        nvim-coverage # Show coverage in the gutter
 
         # Better UI hooks for user input/output in nvim
         dressing-nvim

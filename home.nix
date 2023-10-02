@@ -50,6 +50,7 @@
     pandoc # Powerful document conversion tool
     plantuml # Create UML diagrams with a markup language
     nodePackages.mermaid-cli # Create nicer looking diagrams with a markup language
+    grcov # Code coverage report generator
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
