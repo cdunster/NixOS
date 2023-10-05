@@ -29,6 +29,15 @@
             sha256 = "01rrjxlg4xjfs8la0cfcnf5z36s5fdxqzfs4mc0zdz1bn5z60qmf";
           };
         };
+        neotest-rust = buildVimPlugin {
+          name = "neotest-rust";
+          src = pkgs.fetchFromGitHub {
+            owner = "cdunster";
+            repo = "neotest-rust";
+            rev = "c5e2306cd0ddfcf34c520b085639be720c81e056";
+            sha256 = "1bw863kfildcmpzqz70lzq8arl4yb3k38qcg8wdlv7gyvkaw4f8w";
+          };
+        };
       in
       [
         # Automatic session management.

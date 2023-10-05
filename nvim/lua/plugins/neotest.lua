@@ -13,8 +13,9 @@ M.config = function()
         adapters = {
             require("neotest-rust")({
                 args = {
-                    -- Needed to exclude this way because the plugin uses the `--workspace` option
-                    "--exclude=rocsys-embedded-gpio-mini",
+                    "--remap-path-prefix",
+                    "--lcov",
+                    "--output-path=lcov.info",
                 },
             })
         }
