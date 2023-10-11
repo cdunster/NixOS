@@ -3,7 +3,7 @@ final: prev:
 let
   lib = prev.lib;
 
-  wrapWithNixGL = with builtins; wrapper: package:
+  nixWrapper = with builtins; wrapper: postFix: package:
     let
       getBinFiles = pkg:
         lib.pipe "${lib.getBin pkg}/bin" [
@@ -26,11 +26,12 @@ let
         '';
     in
     final.symlinkJoin {
-      name = "${package.name}-nixgl";
+      name = "${package.name}${postFix}";
       paths = (map wrapBin binFiles) ++ [ package ];
     };
 
 in
 {
-  wrapWithNixGLIntel = wrapWithNixGL prev.nixgl.nixGLIntel;
+  wrapWithNixGLIntel = nixWrapper prev.nixgl.nixGLIntel "-nixgl";
+  wrapWithNixVulkanIntel = nixWrapper prev.nixgl.nixVulkanIntel "-nixvulkan";
 }
