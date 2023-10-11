@@ -51,7 +51,7 @@ final: prev: {
 
   bloomrpc = prev.wrapWithNixGLIntel prev.bloomrpc;
 
-  godot_4 = prev.wrapWithNixGLIntel (prev.godot_4.overrideAttrs {
+  godot_4 = prev.wrapWithNixVulkanIntel (prev.godot_4.overrideAttrs {
     installPhase = ''
       mkdir -p "$out/bin"
       cp bin/godot.* $out/bin/godot4
