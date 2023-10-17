@@ -63,7 +63,6 @@
     spotify # Proprietary music streaming
     gimp # Edit photos for freeeeeee
     freecad # 3D CAD software for freeeeeee
-    godot_4 # Free and open game engine
 
     # LSPs
     clang-tools # C/C++
