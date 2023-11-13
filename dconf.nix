@@ -35,6 +35,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Weather" = {
+      automatic-location = true;
       locations = "[<(uint32 2, <('Rijswijk, South Holland', '', false, [(0.90835009039569248, 0.075377654980920278)], @a(dd) [])>)>, <(uint32 2, <('Amsterdam', 'EHAM', true, [(0.91280719879303418, 0.083194033496160544)], [(0.91367986341903151, 0.085812027374152042)])>)>]";
     };
 
