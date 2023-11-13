@@ -559,6 +559,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/pop-cosmic" = {
+      overlay-key-action = "LAUNCHER";
       show-applications-button = false;
       show-workspaces-button = false;
     };
