@@ -610,7 +610,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/system/location" = {
-      enabled = false;
+      enabled = true;
     };
 
     "org/gnome/terminal/legacy" = {
