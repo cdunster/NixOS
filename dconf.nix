@@ -97,7 +97,7 @@ with lib.hm.gvariant;
       color-scheme = "prefer-dark";
       cursor-theme = "Dracula-cursors";
       document-font-name = "JetBrainsMono Nerd Font 11";
-      enable-hot-corners = true;
+      enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
       font-name = "JetBrainsMono Nerd Font 10";
