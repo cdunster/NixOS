@@ -38,6 +38,15 @@
             sha256 = "1bw863kfildcmpzqz70lzq8arl4yb3k38qcg8wdlv7gyvkaw4f8w";
           };
         };
+        vim-godot = buildVimPlugin {
+          name = "vim-godot";
+          src = pkgs.fetchFromGitHub {
+            owner = "habamax";
+            repo = "vim-godot";
+            rev = "d748a46be5195256f6b2c767ef32de87b05ae8f7";
+            sha256 = "0icsy983ivw409afv19mw2qi7axil8a21r0dwlfxcj9wqcaf1cbj";
+          };
+        };
       in
       [
         # Automatic session management.
@@ -90,6 +99,7 @@
               tree-sitter-yaml
               tree-sitter-markdown
               tree-sitter-bash
+              tree-sitter-gdscript
             ]
           ));
           type = "lua";
@@ -170,6 +180,13 @@
           plugin = nvim-web-devicons;
           type = "lua";
           config = "require('nvim-web-devicons').setup()";
+        }
+
+        # Better GDScript support for the Godot engine.
+        {
+          plugin = vim-godot;
+          type = "lua";
+          config = "require('plugins.vim-godot').config()";
         }
 
         # Colour schemes
