@@ -273,7 +273,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/screensaver" = {
       color-shading-type = "solid";
-      lock-delay = mkUint32 0;
+      lock-delay = mkUint32 30;
       picture-options = "zoom";
       picture-uri = "file:///home/callum/.local/share/backgrounds/deer_sunset.jpg";
       primary-color = "#000000000000";
