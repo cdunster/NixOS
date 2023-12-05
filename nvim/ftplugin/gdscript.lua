@@ -1,6 +1,5 @@
 -- Language specific bindings for GDScript.
 
-vim.opt_local.foldmethod = "expr"
 vim.opt_local.tabstop = 4
 
 require("which-key").register({
