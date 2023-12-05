@@ -67,4 +67,6 @@ final: prev: {
       cp icon.png "$out/share/icons/godot.png"
     '';
   });
+
+  anki-bin = prev.wrapWithNixGLIntel prev.anki-bin;
 }
