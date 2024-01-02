@@ -16,19 +16,11 @@
   outputs = { self, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = import inputs.nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
-        overlays = [
-          inputs.nixgl.overlay
-          (import ./nixgl-wrapper.nix)
-          (import ./pkgs-override.nix)
-        ];
-      };
     in
     {
       nixosConfigurations.MiNixOS = inputs.nixpkgs.lib.nixosSystem {
-        inherit system pkgs;
+        inherit system;
+        pkgs = import inputs.nixpkgs { inherit system; };
         specialArgs = inputs;
         modules = [
           ./configuration.nix
@@ -43,7 +35,15 @@
       };
 
       homeConfigurations.callum = inputs.home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+          overlays = [
+            inputs.nixgl.overlay
+            (import ./nixgl-wrapper.nix)
+            (import ./pkgs-override.nix)
+          ];
+        };
         extraSpecialArgs = inputs;
         modules = [
           {
