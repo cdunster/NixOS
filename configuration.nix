@@ -113,7 +113,7 @@
     isNormalUser = true;
     description = "Callum";
     shell = pkgs.fish;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "networkmanager" "wheel" ];
   };
 
   # This value determines the NixOS release from which the default
