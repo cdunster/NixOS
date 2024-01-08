@@ -14,7 +14,7 @@
           owner = "dracula";
           repo = "fish";
           rev = "master";
-          sha256 = "WywEGAGaRwfHJpT+B3oKoyrnLJZxURTQ+MK9e5Asxl0=";
+          sha256 = "Hyq4EfSmWmxwCYhp3O8agr7VWFAflcUe8BUKh50fNfY=";
         };
       }
       {
