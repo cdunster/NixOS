@@ -4,7 +4,6 @@
     ./dconf.nix
     ./kitty.nix
     ./fish.nix
-    ./zsh.nix
     ./starship.nix
     ./neovim.nix
     ./git.nix
