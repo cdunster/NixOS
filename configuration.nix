@@ -18,7 +18,7 @@
   # boot.loader.grub.device = "/dev/sda";
   # boot.loader.grub.useOSProber = true;
 
-  # Use the EFI boot loader.
+  # Use the EFI bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
