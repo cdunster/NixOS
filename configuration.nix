@@ -1,5 +1,9 @@
 { config, pkgs, lib, ... }:
 {
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
   nix = {
     package = pkgs.nixUnstable;
     extraOptions = ''
@@ -8,10 +12,6 @@
       keep-derivations = true
     '';
   };
-
-  imports = [
-    ./hardware-configuration.nix
-  ];
 
   # Use the EFI boot loader.
   boot.loader.systemd-boot.enable = true;
