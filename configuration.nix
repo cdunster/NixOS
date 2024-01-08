@@ -111,6 +111,7 @@
   # Define user accounts.
   users.users.callum = {
     isNormalUser = true;
+    description = "Callum";
     shell = pkgs.fish;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
