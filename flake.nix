@@ -20,7 +20,10 @@
     {
       nixosConfigurations.MiNixOS = inputs.nixpkgs.lib.nixosSystem {
         inherit system;
-        pkgs = import inputs.nixpkgs { inherit system; };
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
         specialArgs = inputs;
         modules = [
           ./configuration.nix
