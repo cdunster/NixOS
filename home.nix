@@ -8,7 +8,6 @@
     ./neovim.nix
     ./git.nix
     ./tmux.nix
-    ./helix.nix
   ];
 
   # Let home-manager manage its own installation.
