@@ -8,7 +8,6 @@
     ./neovim.nix
     ./git.nix
     ./tmux.nix
-    ./zellij.nix
     ./helix.nix
   ];
 
