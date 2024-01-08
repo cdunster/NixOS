@@ -18,6 +18,7 @@
       credential.helper = "store";
       init.defaultBranch = "main";
       pull.ff = "only";
+      safe.directory = [ "/etc/nixos" ];
     };
   };
 }
