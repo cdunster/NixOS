@@ -8,7 +8,6 @@
     ./neovim.nix
     ./git.nix
     ./tmux.nix
-    ./taskwarrior.nix
     ./nushell.nix
     ./zellij.nix
     ./helix.nix
