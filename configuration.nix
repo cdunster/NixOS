@@ -109,7 +109,6 @@
 
   # System level packages to install (available for all users).
   environment.systemPackages = with pkgs; [
-    kitty
   ];
 
   # Enable the fish shell.
