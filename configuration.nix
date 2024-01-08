@@ -31,6 +31,8 @@
   # Enable WiFi.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  # Enable networking
+  networking.networkmanager.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
