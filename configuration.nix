@@ -74,12 +74,12 @@
     gnome-tour
     gnome-connections
   ]) ++ (with pkgs.gnome; [
-    cheese
-    geary
+    cheese # webcam tool
+    geary # email reader
     gnome-music
-    gedit
-    epiphany
-    totem
+    gedit # text editor
+    epiphany # web browser
+    totem # video player
     gnome-contacts
     gnome-weather
     gnome-terminal
