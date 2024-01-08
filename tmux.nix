@@ -6,7 +6,6 @@
     baseIndex = 1;
     escapeTime = 20;
     terminal = "tmux-256color";
-    tmuxinator.enable = true;
     prefix = "M-Space";
     plugins = with pkgs.tmuxPlugins; [
       {
@@ -66,10 +65,5 @@
       bind -n M-S-Up resize-pane -U
       bind -n M-S-Right resize-pane -R
     '';
-  };
-
-  # Source tmuxinator project definition files.
-  xdg.configFile = {
-    "tmuxinator/home-manager.yml".source = ./tmuxinator/home-manager.yml;
   };
 }

@@ -1,6 +1,0 @@
-name: home-manager
-root: ~/.config/home-manager/
-
-windows:
-  - editor: nvim -S
-  - lazygit: lazygit
