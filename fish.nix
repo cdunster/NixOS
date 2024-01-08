@@ -107,6 +107,4 @@
       if not set -q TMUX; exec tmux; end
     '';
   };
-
-  home.sessionVariables.SHELL = "${config.home.homeDirectory}/.nix-profile/bin/fish";
 }
