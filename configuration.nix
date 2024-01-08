@@ -80,7 +80,12 @@
     gedit # text editor
     epiphany # web browser
     totem # video player
+    gnome-characters
     gnome-contacts
+    tali # poker game
+    iagno # go game
+    hitori # sudoku game
+    atomix # puzzle game
     gnome-weather
     gnome-terminal
   ]);
