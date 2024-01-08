@@ -70,19 +70,20 @@
   };
 
   # Exclude these packages from the Gnome install.
-  environment.gnome.excludePackages = with pkgs; [
-    gnome.cheese
-    gnome.geary
-    gnome.gnome-music
-    gnome.gedit
-    gnome.epiphany
-    gnome.totem
+  environment.gnome.excludePackages = (with pkgs; [
     gnome-tour
-    gnome.gnome-contacts
-    gnome.gnome-weather
     gnome-connections
-    gnome.gnome-terminal
-  ];
+  ]) ++ (with pkgs.gnome; [
+    cheese
+    geary
+    gnome-music
+    gedit
+    epiphany
+    totem
+    gnome-contacts
+    gnome-weather
+    gnome-terminal
+  ]);
 
   # Override default packages (removes nano and others).
   environment.defaultPackages = [ ];
