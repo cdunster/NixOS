@@ -105,4 +105,6 @@
   programs.eza.enable = true;
   programs.brave.enable = true;
   programs.zoxide.enable = true;
+  programs.gpg.enable = true;
+  services.gpg-agent.enable = true;
 }
