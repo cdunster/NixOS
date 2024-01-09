@@ -329,6 +329,7 @@ with lib.hm.gvariant;
       action-middle-click-titlebar = "none";
       button-layout = "appmenu:close";
       num-workspaces = 10;
+      resize-with-right-button = true;
       titlebar-font = "JetBrainsMono Nerd Font 10";
     };
 
