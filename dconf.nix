@@ -509,6 +509,7 @@ with lib.hm.gvariant;
       calculator = [ "<Super>c" ];
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
       screensaver = [ "<Super>Escape" ];
+      www = [ "<Super>b" ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/PopLaunch1" = {
