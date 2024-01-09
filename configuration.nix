@@ -61,6 +61,7 @@
   environment.gnome.excludePackages = (with pkgs; [
     gnome-tour
     gnome-connections
+    gnome-console # GNOME terminal emulator
   ]) ++ (with pkgs.gnome; [
     cheese # webcam tool
     geary # email reader
