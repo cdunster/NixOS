@@ -450,6 +450,11 @@ with lib.hm.gvariant;
       workspaces-only-on-primary = true;
     };
 
+    "org/gnome/mutter/keybindings" = {
+      toggle-tiled-left = [ ];
+      toggle-tiled-right = [ ];
+    };
+
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       search-filter-time-type = "last_modified";
