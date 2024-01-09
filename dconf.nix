@@ -607,6 +607,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/keybindings" = {
       focus-active-notification = [ ];
+      toggle-message-tray = [ "<Super>v" ];
       toggle-overview = [ "<Super>w" ];
     };
 
