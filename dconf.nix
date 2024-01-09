@@ -559,11 +559,45 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/dash-to-dock" = {
+      always-center-icons = true;
+      apply-custom-theme = false;
+      background-opacity = 0.0;
+      click-action = "cycle-windows";
+      custom-theme-shrink = true;
+      dance-urgent-applications = true;
+      dash-max-icon-size = 48;
+      disable-overview-on-startup = true;
       dock-fixed = false;
-      extend-height = false;
+      dock-position = "LEFT";
+      extend-height = true;
+      height-fraction = 0.9;
+      hide-tooltip = false;
+      hot-keys = false;
       intellihide = true;
+      intellihide-mode = "FOCUS_APPLICATION_WINDOWS";
+      isolate-locations = false;
+      isolate-monitors = false;
+      isolate-workspaces = false;
       manualhide = true;
+      middle-click-action = "launch";
       multi-monitor = true;
+      preferred-monitor = -2;
+      preferred-monitor-by-connector = "eDP-1";
+      preview-size-scale = 0.0;
+      running-indicator-style = "SEGMENTED";
+      scroll-to-focused-application = false;
+      shift-click-action = "minimize";
+      shift-middle-click-action = "launch";
+      show-favorites = true;
+      show-icons-emblems = true;
+      show-mounts = true;
+      show-mounts-only-mounted = true;
+      show-running = true;
+      show-show-apps-button = true;
+      show-trash = false;
+      show-windows-preview = false;
+      transparency-mode = "DEFAULT";
+      workspace-agnostic-urgent-windows = false;
     };
 
     "org/gnome/shell/extensions/emoji-selector" = {
