@@ -73,6 +73,7 @@
     sqlitebrowser # A database browser for SQLite
     saleae-logic-2 # Logic analyser
     balena-cli # Manage Balena through a CLI
+    awscli2 # Manage AWS instances through a CLI
   ];
 
   fonts.fontconfig.enable = true;
