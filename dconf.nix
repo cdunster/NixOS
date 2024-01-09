@@ -324,6 +324,7 @@ with lib.hm.gvariant;
       switch-to-workspace-9 = [ "<Super>9" ];
       switch-to-workspace-down = [ "<Primary><Super>Down" "<Primary><Super>KP_Down" ];
       switch-to-workspace-up = [ "<Primary><Super>Up" "<Primary><Super>KP_Up" ];
+      toggle-maximized = [ "<Super>m" ];
     };
 
     "org/gnome/desktop/wm/preferences" = {
