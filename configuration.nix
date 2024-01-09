@@ -115,12 +115,18 @@
     defaultEditor = true;
   };
 
+  # Enable docker in rootless configuration.
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   # Define user accounts.
   users.users.callum = {
     isNormalUser = true;
     description = "Callum";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   # This value determines the NixOS release from which the default
