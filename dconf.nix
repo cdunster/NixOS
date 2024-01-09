@@ -357,7 +357,7 @@ with lib.hm.gvariant;
       sidebar-page = "thumbnails";
       sidebar-size = 132;
       sizing-mode = "automatic";
-      window-ratio = mkTuple [ 1.6026179452892437 0.6188456850794559 ];
+      window-ratio = mkTuple [ 1.602618 0.618846 ];
     };
 
     "org/gnome/evolution-data-server" = {
