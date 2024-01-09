@@ -286,7 +286,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/sound" = {
       allow-volume-above-100-percent = true;
-      theme-name = "Pop";
+      theme-name = "freedesktop";
     };
 
     "org/gnome/desktop/wm/keybindings" = {
