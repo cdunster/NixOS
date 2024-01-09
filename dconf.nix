@@ -10,7 +10,7 @@ with lib.hm.gvariant;
     };
 
     "com/mattjakeman/ExtensionManager" = {
-      last-used-version = "0.4.0";
+      last-used-version = "0.4.2";
     };
 
     "com/system76/hidpi" = {
