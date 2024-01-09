@@ -53,6 +53,7 @@
     gimp # Edit photos for freeeeeee
     freecad # 3D CAD software for freeeeeee
     anki-bin # Free spaced repetition learning tool
+    godot_4 # Create games for freeeeeee
 
     # LSPs
     clang-tools # C/C++
