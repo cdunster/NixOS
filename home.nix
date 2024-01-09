@@ -72,6 +72,7 @@
     bloomrpc # GUI client for gRPC (like postman for gRPC)
     sqlitebrowser # A database browser for SQLite
     saleae-logic-2 # Logic analyser
+    balena-cli # Manage Balena through a CLI
   ];
 
   fonts.fontconfig.enable = true;
