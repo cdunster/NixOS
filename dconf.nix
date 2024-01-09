@@ -455,6 +455,10 @@ with lib.hm.gvariant;
       toggle-tiled-right = [ ];
     };
 
+    "org/gnome/mutter/wayland/keybindings" = {
+      restore-shortcuts = [ ];
+    };
+
     "org/gnome/nautilus/preferences" = {
       default-folder-viewer = "icon-view";
       search-filter-time-type = "last_modified";
