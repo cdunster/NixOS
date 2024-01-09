@@ -31,7 +31,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.callum = import ./home.nix;
+            home-manager.users.callum = import ./nixos-home.nix;
             home-manager.extraSpecialArgs = inputs;
           }
         ];
