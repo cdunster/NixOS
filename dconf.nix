@@ -508,6 +508,7 @@ with lib.hm.gvariant;
     "org/gnome/settings-daemon/plugins/media-keys" = {
       calculator = [ "<Super>c" ];
       custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" ];
+      screensaver = [ "<Super>Escape" ];
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/PopLaunch1" = {
