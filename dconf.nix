@@ -617,7 +617,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/pop-shell" = {
-      activate-launcher = [ "<Super>space" ];
+      activate-launcher = [ ];
       active-hint = false;
       gap-inner = mkUint32 1;
       gap-outer = mkUint32 1;
@@ -659,7 +659,7 @@ with lib.hm.gvariant;
       switch-to-application-8 = [ ];
       switch-to-application-9 = [ ];
       toggle-message-tray = [ "<Super>v" ];
-      toggle-overview = [ "<Super>w" ];
+      toggle-overview = [ "<Super>w" "<Super>space" ];
     };
 
     "org/gnome/shell/weather" = {
