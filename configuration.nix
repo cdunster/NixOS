@@ -62,11 +62,11 @@
     gnome-tour
     gnome-connections
     gnome-console # GNOME terminal emulator
+    gedit # text editor
   ]) ++ (with pkgs.gnome; [
     cheese # webcam tool
     geary # email reader
     gnome-music
-    gedit # text editor
     epiphany # web browser
     totem # video player
     gnome-characters
