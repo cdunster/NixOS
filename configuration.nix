@@ -22,6 +22,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable Plymouth for GUI boot screen.
+  boot.initrd.systemd.enable = true;
+  boot.plymouth = {
+    enable = true;
+    theme = "breeze";
+  };
+  boot.kernelParams = [ "quiet" ];
+
   # Set the system time zone.
   time.timeZone = "Europe/Amsterdam";
 
