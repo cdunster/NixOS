@@ -127,6 +127,9 @@
     setSocketVariable = true;
   };
 
+  # Enable VirtualBox.
+  virtualisation.virtualbox.host.enable = true;
+
   # Enable udev and add custom rules.
   services.udev = {
     enable = true;
@@ -149,7 +152,7 @@
     isNormalUser = true;
     description = "Callum";
     shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
   };
 
   # This value determines the NixOS release from which the default
