@@ -148,11 +148,18 @@
   };
 
   # Define user accounts.
-  users.users.callum = {
-    isNormalUser = true;
-    description = "Callum";
-    shell = pkgs.fish;
-    extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
+  users.users = {
+    callum = {
+      isNormalUser = true;
+      description = "Callum";
+      shell = pkgs.fish;
+      extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
+    };
+    # Create a user to be used when testing with `build-vm`.
+    # nixosvmtest = {
+    #   isNormalUser = true;
+    #   initialPassword = "test";
+    # };
   };
 
   # This value determines the NixOS release from which the default
