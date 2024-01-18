@@ -5,7 +5,6 @@
       lg = "lazygit";
       ll = "eza -lah";
       ls = "eza";
-      cd = "z";
     };
     plugins = [
       {
