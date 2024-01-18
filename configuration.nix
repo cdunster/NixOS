@@ -115,6 +115,12 @@
     defaultEditor = true;
   };
 
+  # Enable the GNU Privacy Guard agent for managing GPG keys.
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryFlavor = "gtk2";
+  };
+
   # Enable docker in rootless configuration.
   virtualisation.docker.rootless = {
     enable = true;
