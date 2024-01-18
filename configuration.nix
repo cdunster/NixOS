@@ -127,6 +127,23 @@
     setSocketVariable = true;
   };
 
+  # Enable udev and add custom rules.
+  services.udev = {
+    enable = true;
+    packages =
+      let
+        createRule = file:
+          pkgs.writeTextFile {
+            name = builtins.baseNameOf file;
+            text = builtins.readFile file;
+            destination = "/etc/udev/rules.d/" + builtins.baseNameOf file;
+          };
+      in
+      [
+        (createRule ./udev-rules/69-probe-rs.rules)
+      ];
+  };
+
   # Define user accounts.
   users.users.callum = {
     isNormalUser = true;
