@@ -63,7 +63,15 @@
     # Use Gnome.
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
+
+    # Enable automatic login for a user.
+    displayManager.autoLogin.enable = true;
+    displayManager.autoLogin.user = "callum";
   };
+
+  # Required workaround for autoLogin.
+  systemd.services."getty@tty1".enable = false;
+  systemd.services."autovt@tty1".enable = false;
 
   # Exclude these packages from the Gnome install.
   environment.gnome.excludePackages = (with pkgs; [
