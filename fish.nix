@@ -76,7 +76,13 @@
           else if test -e ../Session.vim
               nvim -S ../Session.vim
           else
-              nvim -c Obsession
+            read -n 1 -l -P 'No Session.vim found, create one? [Y/n] ' _answer
+            commandline --function repaint
+
+            switch $_answer
+                case "" Y y
+                    nvim -c Obsession
+            end
           end
         '';
       };
