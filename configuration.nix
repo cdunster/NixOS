@@ -54,8 +54,10 @@
     enable = true;
 
     # Configure keyboard layout.
-    layout = "us";
-    xkbOptions = "eurosign:e";
+    xkb = {
+      layout = "us";
+      options = "eurosign:e";
+    };
 
     # Enable touchpad support.
     libinput.enable = true;
