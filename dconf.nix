@@ -545,6 +545,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/power" = {
       ambient-enabled = false;
+      power-button-action = "hibernate";
       sleep-inactive-ac-timeout = 1800;
       sleep-inactive-ac-type = "suspend";
       sleep-inactive-battery-timeout = 1800;
