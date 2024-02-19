@@ -98,6 +98,7 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/interface" = {
       clock-format = "24h";
+      clock-show-seconds = true;
       clock-show-weekday = true;
       color-scheme = "prefer-dark";
       cursor-theme = "Dracula-cursors";
