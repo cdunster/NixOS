@@ -44,6 +44,7 @@
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    cdunster.wps-fonts
 
     # Nix tools
     dconf2nix # Convert dconf files to Nix files
@@ -55,6 +56,7 @@
     freecad # 3D CAD software for freeeeeee
     anki-bin # Free spaced repetition learning tool
     godot_4 # Create games for freeeeeee
+    wpsoffice # A free office suit
 
     # LSPs
     clang-tools # C/C++
