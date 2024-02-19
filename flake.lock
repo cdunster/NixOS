@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "cdunster-nixpkgs": {
+      "locked": {
+        "lastModified": 1708005989,
+        "narHash": "sha256-y0CO3Y17LciD3Vvv+cVR/jUpqjixwqi5HG1J0cIapug=",
+        "owner": "cdunster",
+        "repo": "nixpkgs",
+        "rev": "21fe88d8fb287f6c55326c286d5a26bba34678e1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cdunster",
+        "ref": "wps-fonts",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "locked": {
         "lastModified": 1659877975,
@@ -71,6 +87,7 @@
     },
     "root": {
       "inputs": {
+        "cdunster-nixpkgs": "cdunster-nixpkgs",
         "home-manager": "home-manager",
         "nixgl": "nixgl",
         "nixpkgs": "nixpkgs"

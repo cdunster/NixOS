@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs";
+    cdunster-nixpkgs.url = "github:cdunster/nixpkgs?ref=wps-fonts";
     home-manager = {
       url = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,6 +24,9 @@
         pkgs = import inputs.nixpkgs {
           inherit system;
           config.allowUnfree = true;
+          overlays = [
+            (final: _prev: { cdunster = import inputs.cdunster-nixpkgs { system = final.system; }; })
+          ];
         };
         specialArgs = inputs;
         modules = [
