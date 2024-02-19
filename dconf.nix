@@ -84,6 +84,10 @@ with lib.hm.gvariant;
       show-weekdate = true;
     };
 
+    "org/gnome/desktop/datetime" = {
+      automatic-timezone = true;
+    };
+
     "org/gnome/desktop/input-sources" = {
       current = mkUint32 0;
       mru-sources = [ (mkTuple [ "xkb" "us+euro" ]) (mkTuple [ "ibus" "mozc-jp" ]) ];
