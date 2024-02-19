@@ -69,6 +69,7 @@
 
     # Work
     teams-for-linux # Unofficial Linux wrapper for Microsoft Teams PWA.
+    slack # Linux Slack messaging app
     lazydocker # Manage docker stuff the lazy way.
     awscli2 # Manage AWS from the command line.
     vscode # Proprietary code/text editor from Microsoft.
