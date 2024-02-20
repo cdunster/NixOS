@@ -36,11 +36,13 @@
       bind t switch-client -Ttab
       bind -Ttab g new-window -n lazygit -c "#{pane_current_path}" lazygit
 
-      bind M-g new-window -n lazygit -c "#{pane_current_path}" lazygit
+      bind -n M-g new-window -n lazygit -c "#{pane_current_path}" lazygit
+      bind -n M-s split-window -h -c "#{pane_current_path}"
+      bind -n M-v split-window -v -l 30% -c "#{pane_current_path}"
 
       bind M-t new-window -c "#{pane_current_path}"
 
-      bind M-s new-session
+      bind M-n new-session
 
       bind M-w popup -E -h 90% -w 90% nvim -c "cd ~/wiki" -c WikiJournal
 
