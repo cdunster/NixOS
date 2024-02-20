@@ -686,7 +686,7 @@ with lib.hm.gvariant;
       show-size-column = true;
       show-type-column = true;
       sidebar-width = 186;
-      sort-column = "size";
+      sort-column = "name";
       sort-directories-first = false;
       sort-order = "ascending";
       type-format = "category";
