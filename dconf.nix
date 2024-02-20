@@ -545,7 +545,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/auto-move-windows" = {
-      application-list = [ "spotify.desktop:10" "teams.desktop:1" ];
+      application-list = [ "spotify.desktop:10" "teams-for-linux.desktop:1" "slack.desktop:2" "brave-browser.desktop:3" ];
     };
 
     "org/gnome/shell/extensions/bluetooth-quick-connect" = {
