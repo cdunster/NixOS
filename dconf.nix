@@ -302,6 +302,7 @@ with lib.hm.gvariant;
       cycle-windows = [ "<Super>Tab" ];
       cycle-windows-backward = [ "<Shift><Super>Tab" ];
       minimize = [ ];
+      move-to-workspace-last = [ "<Shift><Super>n" ];
       move-to-workspace-left = [ "<Shift><Super>h" ];
       move-to-workspace-right = [ "<Shift><Super>l" ];
       switch-applications = [ "<Alt>Tab" ];
