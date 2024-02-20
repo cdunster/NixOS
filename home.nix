@@ -21,7 +21,6 @@
 
   home.packages = with pkgs; [
     # Gnome
-    # gnomeExtensions.material-shell # Nice WM for non-Pop!_OS systems:
     gnome-extension-manager # Find, install, and manager gnome extensions
     dracula-theme # Dracula theme for the gnome shell
     gnome.gnome-tweaks # Extra settings for tweaking gnome
