@@ -2,9 +2,9 @@
 
 require("which-key").register({
     name = "+Rust lang",
-    ["r"] = { "<cmd>lua require('rust-tools.runnables').runnables()<cr>", "List Rust runnables" },
-    ["d"] = { "<cmd>lua require('rust-tools.debuggables').debuggables()<cr>", "List Rust debuggables" },
-    ["e"] = { "<cmd>lua require('rust-tools.expand_macro').expand_macro()<cr>", "Recursively expand macro" },
-    ["o"] = { "<cmd>lua require('rust-tools.open_cargo_toml').open_cargo_toml()<cr>", "Open Cargo.toml" },
-    ["J"] = { "<cmd>lua require('rust-tools.join_lines').join_lines()<cr>", "Join lines" },
+    ["r"] = { function() vim.cmd.RustLsp('runnables') end, "List Rust runnables" },
+    ["d"] = { function() vim.cmd.RustLsp('debuggables') end, "List Rust debuggables" },
+    ["e"] = { function() vim.cmd.RustLsp('expandMacro') end, "Recursively expand macro" },
+    ["o"] = { function() vim.cmd.RustLsp('openCargo') end, "Open Cargo.toml" },
+    ["J"] = { function() vim.cmd.RustLsp('joinLines') end, "Join lines" },
 }, { prefix = "<localleader>", buffer = 0 })

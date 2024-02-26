@@ -114,7 +114,7 @@
           config = "require('plugins.lsp').config()";
         }
         lsp_signature-nvim
-        rust-tools-nvim # Advanced LSP features for Rust.
+        rustaceanvim # Advanced LSP features for Rust.
 
         # Display LSP progress in bottom right.
         {

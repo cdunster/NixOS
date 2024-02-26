@@ -67,12 +67,12 @@ M.config = function()
         filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
     })
 
-    -- Use rust-tools plugin for Rust.
-    require('rust-tools').setup({
+    -- Use rustaceanvim plugin for Rust.
+    vim.g.rustaceanvim = {
         server = {
             on_attach = on_attach,
             capabilities = capabilities,
-            settings = {
+            default_settings = {
                 ["rust-analyzer"] = {
                     checkOnSave = {
                         command = "clippy"
@@ -84,7 +84,7 @@ M.config = function()
                 },
             },
         },
-    })
+    }
 
     -- pyright LSP config for Python.
     lsp.pyright.setup({
