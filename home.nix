@@ -40,6 +40,7 @@
     nodePackages.mermaid-cli # Create nicer looking diagrams with a markup language
     grcov # Code coverage report generator
     xxd # Hex dumper
+    vscode-extensions.vadimcn.vscode-lldb.adapter # Better LLDB debugging
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })

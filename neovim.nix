@@ -123,6 +123,9 @@
           config = "require('fidget').setup{ text = { spinner = 'dots_pulse' } }";
         }
 
+        # Debug applications via the Debug Adaptor Protocol.
+        nvim-dap
+
         # Autocomplete and Snippets
         cmp-nvim-lsp
         cmp-buffer
