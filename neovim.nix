@@ -124,7 +124,10 @@
         }
 
         # Debug applications via the Debug Adaptor Protocol.
-        nvim-dap
+        {
+          plugin = vimspector;
+          config = "let g:vimspector_enable_mappings = 'HUMAN'";
+        }
 
         # Autocomplete and Snippets
         cmp-nvim-lsp
