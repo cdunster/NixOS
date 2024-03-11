@@ -24,8 +24,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "cdunster";
             repo = "neotest-rust";
-            rev = "c5e2306cd0ddfcf34c520b085639be720c81e056";
-            sha256 = "1bw863kfildcmpzqz70lzq8arl4yb3k38qcg8wdlv7gyvkaw4f8w";
+            rev = "0c11d5a0e966d660048e0153cbe31d021521cf91";
+            hash = "sha256-YiP1AOyI22sBk+5o502cs5Mu6lxgs00Nis2rlDm6TuA=";
           };
         };
         vim-godot = buildVimPlugin {
