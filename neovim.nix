@@ -19,16 +19,6 @@
             sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
           };
         };
-        fidget-nvim-legacy = buildVimPlugin {
-          name = "fidget.nvim";
-          version = "legacy";
-          src = pkgs.fetchFromGitHub {
-            owner = "j-hui";
-            repo = "fidget.nvim";
-            rev = "0ba1e16d07627532b6cae915cc992ecac249fb97";
-            sha256 = "01rrjxlg4xjfs8la0cfcnf5z36s5fdxqzfs4mc0zdz1bn5z60qmf";
-          };
-        };
         neotest-rust = buildVimPlugin {
           name = "neotest-rust";
           src = pkgs.fetchFromGitHub {
@@ -118,9 +108,9 @@
 
         # Display LSP progress in bottom right.
         {
-          plugin = fidget-nvim-legacy;
+          plugin = fidget-nvim;
           type = "lua";
-          config = "require('fidget').setup{ text = { spinner = 'dots_pulse' } }";
+          config = "require('fidget').setup()";
         }
 
         # Debug applications via the Debug Adaptor Protocol.
