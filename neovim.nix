@@ -191,6 +191,13 @@
           type = "lua";
           config = "vim.cmd.colorscheme('dracula')";
         }
+
+        # Horizontally centre buffer content in floating window.
+        {
+          plugin = zen-mode-nvim;
+          type = "lua";
+          config = "require('plugins.zen-mode').config()";
+        }
       ];
   };
 
