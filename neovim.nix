@@ -198,6 +198,9 @@
           type = "lua";
           config = "require('plugins.zen-mode').config()";
         }
+
+        # Highlight only code being worked on (works with zen-mode).
+        twilight-nvim
       ];
   };
 
