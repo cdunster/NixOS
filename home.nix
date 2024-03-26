@@ -40,6 +40,7 @@
     nodePackages.mermaid-cli # Create nicer looking diagrams with a markup language
     grcov # Code coverage report generator
     xxd # Hex dumper
+    usbutils # lsusb and other utilities
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
