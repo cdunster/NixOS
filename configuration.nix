@@ -165,6 +165,7 @@
       in
       [
         (createRule ./udev-rules/69-probe-rs.rules)
+        (createRule ./udev-rules/90-saleae-logic.rules)
       ];
   };
 
