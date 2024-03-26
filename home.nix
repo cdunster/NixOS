@@ -78,6 +78,7 @@
     saleae-logic-2 # Logic analyser
     balena-cli # Manage Balena through a CLI
     awscli2 # Manage AWS instances through a CLI
+    picoscope # Tool for using the Picoscope a digital oscilloscope
   ];
 
   fonts.fontconfig.enable = true;
