@@ -79,6 +79,7 @@
     balena-cli # Manage Balena through a CLI
     awscli2 # Manage AWS instances through a CLI
     picoscope # Tool for using the Picoscope a digital oscilloscope
+    arduino # IDE and libraries for working with Arduino boards
   ];
 
   fonts.fontconfig.enable = true;
