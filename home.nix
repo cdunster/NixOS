@@ -20,11 +20,6 @@
   home.stateVersion = "22.11";
 
   home.packages = with pkgs; [
-    # Gnome
-    gnome-extension-manager # Find, install, and manager gnome extensions
-    dracula-theme # Dracula theme for the gnome shell
-    gnome-tweaks # Extra settings for tweaking gnome
-
     # Utilities
     xclip # CLI clipboard manager
     fd # Find files and directories
