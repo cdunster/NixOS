@@ -63,7 +63,7 @@
             targets.genericLinux.enable = true;
           }
           ./home.nix
-          ./gnome-non-nixos.nix
+          ./non-nixos-gnome.nix
         ];
       };
     };
