@@ -1,5 +1,9 @@
-# Add packages and options for non-NixOS systems.
-{ pkgs, ... }: {
+# Gnome packages and options for non-NixOS systems (Pop!_OS).
+{ config, pkgs, ... }: {
+  imports = [
+    ./gnome.nix # The general Gnome packages for all systems.
+  ];
+
   home.packages = with pkgs; [
     # Gnome
     evince # Gnome based document viewer
