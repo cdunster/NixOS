@@ -12,6 +12,7 @@
       url = "github:guibou/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, ... }@inputs:
@@ -26,6 +27,7 @@
           config.allowUnfree = true;
           overlays = [
             (final: _prev: { cdunster = import inputs.cdunster-nixpkgs { system = final.system; config = final.config; }; })
+            (final: _prev: { hyprland-nixpkgs = import inputs.hyprland.inputs.nixpkgs { system = final.system; config = final.config; }; })
           ];
         };
         specialArgs = { inherit inputs; };

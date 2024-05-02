@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -144,6 +144,24 @@
   programs.gnupg.agent = {
     enable = true;
     pinentryFlavor = "gtk2";
+  };
+
+  # Enable the Hyprland Wayland compositor.
+  programs.hyprland = {
+    enable = true;
+    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+  };
+
+  # Hint to electron apps to use wayland:
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # Use mesa drivers from Hyprland nixpkgs. (Required to use Hyprland from flake).
+  hardware.opengl = {
+    package = pkgs.hyprland-nixpkgs.mesa.drivers;
+
+    # Also add 32-bit support (e.g for Steam)
+    driSupport32Bit = true;
+    package32 = pkgs.hyprland-nixpkgs.pkgsi686Linux.mesa.drivers;
   };
 
   # Enable docker in rootless configuration.
