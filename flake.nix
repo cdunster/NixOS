@@ -25,7 +25,7 @@
           inherit system;
           config.allowUnfree = true;
           overlays = [
-            (final: _prev: { cdunster = import inputs.cdunster-nixpkgs { system = final.system; }; })
+            (final: _prev: { cdunster = import inputs.cdunster-nixpkgs { system = final.system; config = final.config; }; })
           ];
         };
         specialArgs = inputs;
