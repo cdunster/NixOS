@@ -2,11 +2,11 @@
   "nodes": {
     "cdunster-nixpkgs": {
       "locked": {
-        "lastModified": 1708005989,
-        "narHash": "sha256-y0CO3Y17LciD3Vvv+cVR/jUpqjixwqi5HG1J0cIapug=",
+        "lastModified": 1713526940,
+        "narHash": "sha256-YpmZyTbierTxS7S7HFuBovIb23YxWREGPyhp7el+ctI=",
         "owner": "cdunster",
         "repo": "nixpkgs",
-        "rev": "21fe88d8fb287f6c55326c286d5a26bba34678e1",
+        "rev": "738fe3c1d496aa86599b2950377640cb0c84db01",
         "type": "github"
       },
       "original": {
@@ -38,11 +38,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1708988456,
-        "narHash": "sha256-RCz7Xe64tN2zgWk+MVHkzg224znwqknJ1RnB7rVqUWw=",
+        "lastModified": 1714515075,
+        "narHash": "sha256-azMK7aWH0eUc3IqU4Fg5rwZdB9WZBvimOGG3piqvtsY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "1d085ea4444d26aa52297758b333b449b2aa6fca",
+        "rev": "6d3b6dc9222c12b951169becdf4b0592ee9576ef",
         "type": "github"
       },
       "original": {
@@ -58,11 +58,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1685908677,
-        "narHash": "sha256-E4zUPEUFyVWjVm45zICaHRpfGepfkE9Z2OECV9HXfA4=",
+        "lastModified": 1713543440,
+        "narHash": "sha256-lnzZQYG0+EXl/6NkGpyIz+FEOc/DSEG57AP1VsdeNrM=",
         "owner": "guibou",
         "repo": "nixGL",
-        "rev": "489d6b095ab9d289fe11af0219a9ff00fe87c7c5",
+        "rev": "310f8e49a149e4c9ea52f1adf70cdc768ec53f8a",
         "type": "github"
       },
       "original": {
@@ -73,12 +73,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1709069307,
+        "lastModified": 0,
         "narHash": "sha256-ER6N232jucnqu4+AK80RdmgBDuk61FAqmp36EMqkQns=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "9c1ea5e3a2a2578792438cba233f2763593e19c5",
-        "type": "github"
+        "path": "/nix/store/8dlqxmnbaz3kgk8j5l7zz0zkz2h9x18b-source",
+        "type": "path"
       },
       "original": {
         "id": "nixpkgs",

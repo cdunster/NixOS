@@ -44,7 +44,7 @@
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    cdunster.wps-fonts
+    cdunster.ttf-wps-fonts
 
     # Nix tools
     dconf2nix # Convert dconf files to Nix files
