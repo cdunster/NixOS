@@ -6,10 +6,6 @@
 
   nix = {
     package = pkgs.nixUnstable;
-    settings = {
-      substituters = [ "https://hyprland.cachix.org" ];
-      trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-    };
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
@@ -147,22 +143,10 @@
   };
 
   # Enable the Hyprland Wayland compositor.
-  programs.hyprland = {
-    enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-  };
+  programs.hyprland.enable = true;
 
   # Hint to electron apps to use wayland:
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
-  # Use mesa drivers from Hyprland nixpkgs. (Required to use Hyprland from flake).
-  hardware.opengl = {
-    package = pkgs.hyprland-nixpkgs.mesa.drivers;
-
-    # Also add 32-bit support (e.g for Steam)
-    driSupport32Bit = true;
-    package32 = pkgs.hyprland-nixpkgs.pkgsi686Linux.mesa.drivers;
-  };
 
   # Enable docker in rootless configuration.
   virtualisation.docker.rootless = {
