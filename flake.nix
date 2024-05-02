@@ -28,7 +28,7 @@
             (final: _prev: { cdunster = import inputs.cdunster-nixpkgs { system = final.system; config = final.config; }; })
           ];
         };
-        specialArgs = inputs;
+        specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
           inputs.home-manager.nixosModules.home-manager
