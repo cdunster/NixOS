@@ -5,9 +5,9 @@
   ];
 
   home.packages = with pkgs; [
-    wofi
-    dolphin
-    swaybg
-    grimblast
+    wofi # Application runner
+    dolphin # File browser
+    swaybg # Used for setting the background image
+    grimblast # Used for screenshots in Hyprland
   ];
 }
