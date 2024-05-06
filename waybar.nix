@@ -24,6 +24,9 @@
         ];
         modules-right = [
           "custom/left-arrow-dark"
+          "bluetooth"
+          "custom/left-arrow-light"
+          "custom/left-arrow-dark"
           "pulseaudio"
           "custom/left-arrow-light"
           "custom/left-arrow-dark"
@@ -77,6 +80,15 @@
           tooltip = false;
         };
 
+        bluetooth = {
+          format = " {status}";
+          format-connected = " {device_alias}";
+          format-connected-battery = " {device_alias} {device_battery_percentage}%";
+          tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+        };
         pulseaudio = {
           format = "{icon} {volume:2}%";
           format-bluetooth = "{icon}  {volume}%";
@@ -150,6 +162,7 @@
       #clock.1,
       #clock.2,
       #clock.3,
+      #bluetooth,
       #pulseaudio,
       #memory,
       #cpu,
@@ -176,6 +189,9 @@
         padding: 0 3px;
       }
 
+      #bluetooth {
+        color: #0082FC;
+      }
       #pulseaudio {
         color: #268bd2;
       }
@@ -193,6 +209,7 @@
       }
 
       #clock,
+      #bluetooth,
       #pulseaudio,
       #memory,
       #cpu,
