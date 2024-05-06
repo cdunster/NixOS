@@ -6,8 +6,7 @@
         ",preferred,auto,1"
       ];
       exec-once = [
-        # Set the background image.
-        "swaybg -i ${./images/backgrounds/deer_sunset.jpg} -m center"
+        "hyprpaper"
       ];
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
