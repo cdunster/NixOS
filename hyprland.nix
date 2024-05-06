@@ -28,6 +28,8 @@
         "SUPER, M, exit"
         "SUPER, F, exec, $fileManager"
         "SUPER, G, togglefloating"
+        "SUPER SHIFT, G, togglefloating"
+        "SUPER SHIFT, G, pin"
         "SUPER, R, exec, $menu"
 
         ", Print, exec, grimblast copy area"
