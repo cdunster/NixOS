@@ -7,9 +7,9 @@
     attrs = {
       background = {
         monitor = "";
-        path = "${./images/backgrounds/deer_sunset.jpg}";
+        path = "screenshot";
         color = "rgba(25, 20, 20, 1.0)";
-        blur_passes = 0; # 0 disables blurring
+        blur_passes = 2;
         blur_size = 7;
         noise = 0.0117;
         contrast = 0.8916;
