@@ -1,6 +1,7 @@
 { config, pkgs, ... }: {
   imports = [
     ./hyprland.nix # Use Hyprland, as the Wayland compositor.
+    ./hyprlock.nix # Use Hyprlock as the lockscreen for Hyprland.
     ./waybar.nix # Use Waybar as the statusbar for Wayland.
     ./kanshi.nix # Use Kanshi for dynamic control of monitors on Wayland.
   ];

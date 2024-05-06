@@ -29,6 +29,7 @@
         "ALT SHIFT, Tab, workspace, -1"
         "SUPER, Tab, focuscurrentorlast"
 
+        "SUPER, Escape, exec, hyprlock"
         "SUPER, T, exec, $terminal"
         "SUPER, B, exec, $browser"
         "SUPER, Q, killactive"
