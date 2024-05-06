@@ -11,7 +11,7 @@
       ];
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
-      "$menu" = "wofi --show drun";
+      "$menu" = "wofi --show drun --allow-images";
       "$browser" = "brave";
       bindm = [
         "SUPER, mouse:272, movewindow"
