@@ -101,7 +101,7 @@
             ];
           };
           scroll-step = 5;
-          on-click = "pamixer -t";
+          on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           on-click-right = "pavucontrol";
         };
         memory = {
