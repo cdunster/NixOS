@@ -76,7 +76,7 @@
           tooltip = false;
         };
         "clock#3" = {
-          format = "{:%m-%d}";
+          format = "{:%b %d}";
           tooltip = false;
         };
 
