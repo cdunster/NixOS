@@ -8,6 +8,7 @@
       exec-once = [
         "hyprpaper"
       ];
+      misc.disable_hyprland_logo = true;
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
       "$menu" = "wofi --show drun --allow-images";
