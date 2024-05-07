@@ -11,6 +11,7 @@
       {
         preload = "${wallpaperPath}";
         wallpaper = ",${wallpaperPath}";
+        splash = false;
       };
   };
 }
