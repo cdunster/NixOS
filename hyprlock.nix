@@ -9,7 +9,7 @@
         monitor = "";
         path = "screenshot";
         color = "rgba(25, 20, 20, 1.0)";
-        blur_passes = 2;
+        blur_passes = 3;
         blur_size = 7;
         noise = 0.0117;
         contrast = 0.8916;
