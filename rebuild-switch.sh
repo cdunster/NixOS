@@ -1,6 +1,6 @@
 #!/bin/sh
 today=`date +%Y.%m.%d`
-last_commit=`git log -1 --pretty=%B`
+last_commit=`(git log -1 --pretty=%B | tr -dc '[:alnum:] & :_.-')`
 branch=`(git branch 2>/dev/null | sed -n '/^\* / { s|^\* ||; p; }')`
 revision=`git describe --always --dirty`
 export NIXOS_PROFILE="$branch"
