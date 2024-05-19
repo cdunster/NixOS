@@ -107,10 +107,7 @@
           format-muted = "MUTE";
           format-icons = {
             headphones = "";
-            default = [
-              ""
-              ""
-            ];
+            default = [ "" "" ];
           };
           scroll-step = 5;
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
@@ -131,13 +128,7 @@
             critical = 15;
           };
           format = "{icon} {capacity}%";
-          format-icons = [
-            ""
-            ""
-            ""
-            ""
-            ""
-          ];
+          format-icons = [ "" "" "" "" "" ];
         };
         disk = {
           interval = 5;
