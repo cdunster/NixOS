@@ -6,6 +6,9 @@
     ./wayland.nix # Add support for Wayland.
   ];
 
+  # For managing networks in the system tray.
+  services.network-manager-applet.enable = true;
+
   home.packages = with pkgs; [
   ];
 }
