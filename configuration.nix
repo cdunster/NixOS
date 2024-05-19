@@ -37,7 +37,7 @@
   networking.hostName = "MiNixOS";
 
   # Enable WiFi.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
   # Enable bluetooth.
   hardware.bluetooth.enable = true;
