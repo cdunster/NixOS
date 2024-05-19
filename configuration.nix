@@ -42,6 +42,12 @@
   # Enable WiFi.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  # Enable bluetooth.
+  hardware.bluetooth.enable = true;
+
+  # Manage bluetooth with the blueman utility.
+  services.blueman.enable = true;
+
   # Enable networking.
   networking.networkmanager.enable = true;
 
