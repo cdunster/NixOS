@@ -80,6 +80,18 @@
           tooltip = false;
         };
 
+        network = {
+          format = "{ifname}";
+          format-wifi = "{icon} {essid}";
+          format-icons = [ "󰤯" "󰤟" "󰤢" "󰤥" "󰤨" ];
+          format-ethernet = "{ipaddr}/{cidr} 󰊗";
+          format-disconnected = "󰤮";
+          tooltip-format = "{ifname} via {gwaddr} 󰊗";
+          tooltip-format-wifi = "{icons} ({signalStrength}%) {essid}";
+          tooltip-format-ethernet = "{ifname} ";
+          tooltip-format-disconnected = "Disconnected";
+          max-length = 50;
+        };
         bluetooth = {
           format = " {status}";
           format-connected = " {device_alias}";
@@ -162,6 +174,7 @@
       #clock.1,
       #clock.2,
       #clock.3,
+      #network,
       #bluetooth,
       #pulseaudio,
       #memory,
@@ -189,6 +202,9 @@
         padding: 0 3px;
       }
 
+      #network {
+        color: #aaaaaa;
+      }
       #bluetooth {
         color: #0082FC;
       }
@@ -209,6 +225,7 @@
       }
 
       #clock,
+      #network,
       #bluetooth,
       #pulseaudio,
       #memory,
