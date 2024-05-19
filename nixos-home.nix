@@ -5,4 +5,7 @@
     ./home-nixos-gnome.nix # Use Gnome with NixOS specific settings and packages.
     ./wayland.nix # Add support for Wayland.
   ];
+
+  # For managing networks in the system tray.
+  services.network-manager-applet.enable = true;
 }
