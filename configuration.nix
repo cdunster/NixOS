@@ -42,7 +42,7 @@
   # Enable WiFi.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Enable networking
+  # Enable networking.
   networking.networkmanager.enable = true;
 
   # Select internationalisation properties.
