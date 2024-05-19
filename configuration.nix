@@ -41,6 +41,12 @@
     networkmanager.enable = true;
   };
 
+  # Enable bluetooth.
+  hardware.bluetooth.enable = true;
+
+  # Manage bluetooth with the blueman utility.
+  services.blueman.enable = true;
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
 
