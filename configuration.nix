@@ -39,6 +39,9 @@
 
     # Enable networking.
     networkmanager.enable = true;
+
+    # Enable WiFi.
+    wireless.enable = true; # Enables wireless support via wpa_supplicant.
   };
 
   # Enable bluetooth.
