@@ -24,9 +24,6 @@
         ];
         modules-right = [
           "custom/left-arrow-dark"
-          "bluetooth"
-          "custom/left-arrow-light"
-          "custom/left-arrow-dark"
           "pulseaudio"
           "custom/left-arrow-light"
           "custom/left-arrow-dark"
