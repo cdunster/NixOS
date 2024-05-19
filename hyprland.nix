@@ -34,7 +34,7 @@
         "SUPER, T, exec, $terminal"
         "SUPER, B, exec, $browser"
         "SUPER, Q, killactive"
-        "SUPER, M, exit"
+        "SUPER, X, exit"
         "SUPER, F, exec, $fileManager"
         "SUPER, G, togglefloating"
         "SUPER SHIFT, G, togglefloating"
