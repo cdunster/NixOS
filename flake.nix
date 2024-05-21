@@ -13,6 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     catppuccin.url = "github:catppuccin/nix"; # The catppuccin theme for everything
+    ags.url = "github:Aylur/ags"; # A customisable shell for Wayland
   };
 
   outputs = { ... }@inputs: {

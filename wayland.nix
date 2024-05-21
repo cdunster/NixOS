@@ -6,6 +6,7 @@
     ./hyprpaper.nix # Use Hyprpaper as the background setter for Hyprland.
     ./waybar.nix # Use Waybar as the statusbar for Wayland.
     ./kanshi.nix # Use Kanshi for dynamic control of monitors on Wayland.
+    ./ags.nix # Customisable shell for Wayland.
   ];
 
   home.packages = with pkgs; [
