@@ -100,8 +100,11 @@ function Volume() {
         return `audio-volume-${icons[icon]}-symbolic`
     }
 
-    const icon = Widget.Icon({
-        icon: Utils.watch(getIcon(), audio.speaker, getIcon),
+    const icon = Widget.Button({
+        on_clicked: () => audio.speaker.is_muted = !audio.speaker.is_muted,
+        child: Widget.Icon({
+            icon: Utils.watch(getIcon(), audio.speaker, getIcon),
+        })
     })
 
     const slider = Widget.Slider({
