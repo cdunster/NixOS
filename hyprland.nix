@@ -7,6 +7,7 @@
       ];
       exec-once = [
         "hyprpaper"
+        "ags"
       ];
       misc.disable_hyprland_logo = true;
       "$terminal" = "kitty";
