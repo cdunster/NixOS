@@ -14,14 +14,17 @@
       "$fileManager" = "dolphin";
       "$menu" = "ags -t app_launcher";
       "$browser" = "brave";
+      # (m) Mouse binds, these rely on mouse movement.
       bindm = [
         "SUPER, mouse:272, movewindow"
         "SUPER, mouse:273, resizewindow"
       ];
+      # (l) Binds that still work when the screen is locked.
       bindl = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ", XF86AudioRaiseVolume, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ 0"
       ];
+      # (e) Binds that repeat when held and (l) still work when the screen is locked.
       bindel = [
         ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
