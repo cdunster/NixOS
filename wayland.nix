@@ -9,6 +9,7 @@
   ];
 
   home.packages = with pkgs; [
+    wl-clipboard # Clipboard manager for Wayland
     dolphin # File browser
     grimblast # Used for screenshots in Hyprland
     kanshi # Used to reload/switch monitor profiles
