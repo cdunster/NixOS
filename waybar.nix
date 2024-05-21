@@ -100,8 +100,8 @@
         };
         pulseaudio = {
           format = "{icon} {volume:2}%";
-          format-bluetooth = "{icon}  {volume}%";
-          format-muted = "MUTE";
+          format-bluetooth = " {icon} {volume}%";
+          format-muted = "󰸈 {volume:2}%";
           format-icons = {
             headphones = "";
             default = [ "" "" ];
