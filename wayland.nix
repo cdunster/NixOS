@@ -9,7 +9,6 @@
   ];
 
   home.packages = with pkgs; [
-    wofi # Application runner
     dolphin # File browser
     grimblast # Used for screenshots in Hyprland
     kanshi # Used to reload/switch monitor profiles
