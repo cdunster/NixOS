@@ -171,7 +171,6 @@ function Center() {
     return Widget.Box({
         spacing: 8,
         children: [
-            Media(),
             Clock(),
             Notification(),
         ],
@@ -183,6 +182,7 @@ function Right() {
         hpack: "end",
         spacing: 8,
         children: [
+            Media(),
             Volume(),
             BatteryLabel(),
             SysTray(),
