@@ -12,7 +12,7 @@
       misc.disable_hyprland_logo = true;
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
-      "$menu" = "wofi --show drun --allow-images";
+      "$menu" = "ags -t app_launcher";
       "$browser" = "brave";
       bindm = [
         "SUPER, mouse:272, movewindow"
