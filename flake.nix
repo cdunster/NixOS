@@ -12,6 +12,7 @@
       url = "github:guibou/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    ags.url = "github:Aylur/ags"; # A customisable shell for Wayland
   };
 
   outputs = { self, ... }@inputs:
