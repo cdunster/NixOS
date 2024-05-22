@@ -47,6 +47,15 @@ function Clock() {
 }
 
 
+function Calender() {
+    return Widget.Calendar({
+        showDayNames: true,
+        showHeading: true,
+        showWeekNumbers: true,
+    })
+}
+
+
 const central = Widget.Window({
     name: "central",
     visible: false,
@@ -54,6 +63,7 @@ const central = Widget.Window({
     child: Widget.Box({
         vertical: true,
         children: [
+            Calender(),
             MediaPlayer(),
         ],
     }),
