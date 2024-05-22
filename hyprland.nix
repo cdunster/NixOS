@@ -13,6 +13,7 @@
       misc.disable_hyprland_logo = true;
       windowrulev2 = [
         "float,class:(org.gnome.Calculator)"
+        "float,title:^(Brave)$"
       ];
       # Global variables for the config.
       "$terminal" = "kitty";
