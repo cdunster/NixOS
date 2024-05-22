@@ -48,6 +48,7 @@
         "SUPER, T, exec, $terminal"
         "SUPER, B, exec, $browser"
         "SUPER, C, exec, $calculator"
+        "SUPER, V, exec, ags -t central"
         "SUPER, Q, killactive"
         "SUPER, X, exit"
         "SUPER, F, exec, $fileManager"
