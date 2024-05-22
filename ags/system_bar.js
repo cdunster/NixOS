@@ -84,6 +84,7 @@ function Volume() {
     const icon = Widget.Button({
         on_clicked: () => audio.speaker.is_muted = !audio.speaker.is_muted,
         child: Widget.Icon({
+            class_name: "icon",
             icon: Utils.watch(getIcon(), audio.speaker, getIcon),
         })
     })
@@ -98,7 +99,7 @@ function Volume() {
     })
 
     return Widget.Box({
-        class_name: "volume",
+        class_name: audio.speaker.bind('volume').as(vol => 'volume ' + (vol > 1.0 ? 'overamplified' : 'normal')),
         css: "min-width: 180px",
         children: [icon, slider],
     })
