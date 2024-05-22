@@ -11,6 +11,9 @@
         "ags"
       ];
       misc.disable_hyprland_logo = true;
+      windowrulev2 = [
+        "float,class:(org.gnome.Calculator)"
+      ];
       # Global variables for the config.
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
