@@ -11,6 +11,7 @@
         "ags"
       ];
       misc.disable_hyprland_logo = true;
+      # Global variables for the config.
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
       "$menu" = "ags -t app_launcher";
