@@ -4,6 +4,8 @@ const audio = await Service.import("audio")
 const battery = await Service.import("battery")
 const systemtray = await Service.import("systemtray")
 
+import { MediaPlayer } from "./media_player.js"
+
 const date = Variable("", {
     poll: [1000, 'date "+%H:%M:%S %a %b %d %Y"'],
 })
@@ -45,24 +47,17 @@ function Clock() {
 }
 
 
-function Media() {
-    const label = Utils.watch("", mpris, "player-changed", () => {
-        if (mpris.players[0]) {
-            const { track_artists, track_title } = mpris.players[0]
-            return `${track_artists.join(", ")} - ${track_title}`
-        } else {
-            return "Nothing is playing"
-        }
-    })
-
-    return Widget.Button({
-        class_name: "media",
-        on_primary_click: () => mpris.getPlayer("")?.playPause(),
-        on_scroll_up: () => mpris.getPlayer("")?.next(),
-        on_scroll_down: () => mpris.getPlayer("")?.previous(),
-        child: Widget.Label({ label }),
-    })
-}
+const central = Widget.Window({
+    name: "central",
+    visible: false,
+    anchor: ["top"],
+    child: Widget.Box({
+        vertical: true,
+        children: [
+            MediaPlayer(),
+        ],
+    }),
+})
 
 
 function Volume() {
@@ -153,11 +148,14 @@ function Left() {
 }
 
 function Center() {
-    return Widget.Box({
-        spacing: 8,
-        children: [
-            Clock(),
-        ],
+    return Widget.Button({
+        on_clicked: () => central.visible = !central.visible,
+        child: Widget.Box({
+            spacing: 8,
+            children: [
+                Clock(),
+            ],
+        }),
     })
 }
 
@@ -166,7 +164,6 @@ function Right() {
         hpack: "end",
         spacing: 8,
         children: [
-            Media(),
             Volume(),
             BatteryLabel(),
             SysTray(),
