@@ -41,6 +41,14 @@ highlight {
     min-height: 10px;
 }
 
+.volume.overamplified .icon {
+    color: @warning_color;
+}
+
+.volume.overamplified slider {
+    background-color: @warning_color;
+}
+
 /********************************************************************/
 /* Notification popup styling */
 /********************************************************************/
