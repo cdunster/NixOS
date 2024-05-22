@@ -2,6 +2,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
+      general.layout = "master";
       monitor = [
         ",preferred,auto,1"
       ];
