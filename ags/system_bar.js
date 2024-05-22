@@ -56,7 +56,7 @@ function Calender() {
 }
 
 
-const central = Widget.Window({
+export const CENTRAL = Widget.Window({
     name: "central",
     visible: false,
     anchor: ["top"],
@@ -159,7 +159,7 @@ function Left() {
 
 function Center() {
     return Widget.Button({
-        on_clicked: () => central.visible = !central.visible,
+        on_clicked: () => CENTRAL.visible = !CENTRAL.visible,
         child: Widget.Box({
             spacing: 8,
             children: [
