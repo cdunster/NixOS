@@ -9,6 +9,7 @@
       exec-once = [
         "hyprpaper"
         "ags"
+        "hypridle"
       ];
       misc.disable_hyprland_logo = true;
       windowrulev2 = [
