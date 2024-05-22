@@ -15,6 +15,7 @@
       "$fileManager" = "dolphin";
       "$menu" = "ags -t app_launcher";
       "$browser" = "brave";
+      "$calculator" = "gnome-calculator";
       # (m) Mouse binds, these rely on mouse movement.
       bindm = [
         "SUPER, mouse:272, movewindow"
@@ -41,6 +42,7 @@
         "SUPER, Escape, exec, hyprlock"
         "SUPER, T, exec, $terminal"
         "SUPER, B, exec, $browser"
+        "SUPER, C, exec, $calculator"
         "SUPER, Q, killactive"
         "SUPER, X, exit"
         "SUPER, F, exec, $fileManager"
