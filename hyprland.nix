@@ -70,6 +70,12 @@
         "SUPER SHIFT, G, pin"
         "SUPER, R, exec, $menu"
 
+        # Open work applications
+        "SUPER SHIFT, W, exec, [workspace 1 silent;noanim] teams-for-linux"
+        "SUPER SHIFT, W, exec, [workspace 2 silent;noanim] slack"
+        "SUPER SHIFT, W, exec, [workspace 4 silent;noanim] $terminal"
+        "SUPER SHIFT, W, exec, [workspace 3] $browser"
+
         ", Print, exec, grimblast copy area"
       ]
       ++ (
