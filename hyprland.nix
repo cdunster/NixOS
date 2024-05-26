@@ -14,7 +14,10 @@
         "ags"
         "hypridle"
       ];
-      misc.disable_hyprland_logo = true;
+      misc = {
+        disable_hyprland_logo = true;
+        new_window_takes_over_fullscreen = 2; # Opening a new window over a full-screen one un-full-screens it.
+      };
       windowrulev2 = [
         "float,class:(org.gnome.Calculator)"
         "float,title:^(Brave)$"
@@ -55,6 +58,7 @@
         "SUPER, B, exec, $browser"
         "SUPER, C, exec, $calculator"
         "SUPER, V, exec, ags -t central"
+        "SUPER, Z, fullscreen, 1" # Maximise the current window
         "SUPER, Q, killactive"
         "SUPER, X, exit"
         "SUPER, F, exec, $fileManager"
