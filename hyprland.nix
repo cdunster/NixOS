@@ -2,7 +2,10 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      general.layout = "master";
+      general = {
+        layout = "master";
+        gaps_out = 10;
+      };
       monitor = [
         ",preferred,auto,1"
       ];
