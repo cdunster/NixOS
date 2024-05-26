@@ -21,6 +21,9 @@
       windowrulev2 = [
         "float,class:(org.gnome.Calculator)"
         "float,title:^(Brave)$"
+        "workspace 1,class:(teams-for-linux)"
+        "workspace 2,class:(Slack)"
+        "workspace 10,title:(Spotify)"
       ];
       # Global variables for the config.
       "$terminal" = "kitty";
