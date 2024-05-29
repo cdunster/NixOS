@@ -302,6 +302,16 @@ with lib.hm.gvariant;
       cycle-windows = [ "<Super>Tab" ];
       cycle-windows-backward = [ "<Shift><Super>Tab" ];
       minimize = [ ];
+      move-to-workspace-1 = [ "<Shift><Super>1" ];
+      move-to-workspace-10 = [ "<Shift><Super>0" ];
+      move-to-workspace-2 = [ "<Shift><Super>2" ];
+      move-to-workspace-3 = [ "<Shift><Super>3" ];
+      move-to-workspace-4 = [ "<Shift><Super>4" ];
+      move-to-workspace-5 = [ "<Shift><Super>5" ];
+      move-to-workspace-6 = [ "<Shift><Super>6" ];
+      move-to-workspace-7 = [ "<Shift><Super>7" ];
+      move-to-workspace-8 = [ "<Shift><Super>8" ];
+      move-to-workspace-9 = [ "<Shift><Super>9" ];
       move-to-workspace-last = [ "<Shift><Super>n" ];
       move-to-workspace-left = [ "<Shift><Super>h" ];
       move-to-workspace-right = [ "<Shift><Super>l" ];
@@ -309,7 +319,18 @@ with lib.hm.gvariant;
       switch-applications-backward = [ "<Shift><Alt>Tab" ];
       switch-input-source = [ ];
       switch-input-source-backward = [ ];
+      switch-to-workspace-1 = [ "<Super>1" ];
+      switch-to-workspace-10 = [ "<Super>0" ];
+      switch-to-workspace-2 = [ "<Super>2" ];
+      switch-to-workspace-3 = [ "<Super>3" ];
+      switch-to-workspace-4 = [ "<Super>4" ];
+      switch-to-workspace-5 = [ "<Super>5" ];
+      switch-to-workspace-6 = [ "<Super>6" ];
+      switch-to-workspace-7 = [ "<Super>7" ];
+      switch-to-workspace-8 = [ "<Super>8" ];
+      switch-to-workspace-9 = [ "<Super>9" ];
       switch-to-workspace-down = [ "<Primary><Super>Down" "<Primary><Super>KP_Down" ];
+      switch-to-workspace-last = [ "<Super>n" ];
       switch-to-workspace-left = [ "<Control><Super>h" ];
       switch-to-workspace-right = [ "<Control><Super>l" ];
       switch-to-workspace-up = [ "<Primary><Super>Up" "<Primary><Super>KP_Up" ];
@@ -539,14 +560,14 @@ with lib.hm.gvariant;
       disable-user-extensions = false;
       disabled-extensions = [ "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "places-menu@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" ];
       enabled-extensions = [ "pop-shell@system76.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "dash-to-dock@micxgx.gmail.com" ];
-      favorite-apps = [ "teams-for-linux.desktop" "slack.desktop" "brave-browser.desktop" "kitty.desktop" ];
+      favorite-apps = [ ];
       had-bluetooth-devices-setup = true;
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "42.3.1";
     };
 
     "org/gnome/shell/extensions/auto-move-windows" = {
-      application-list = [ "spotify.desktop:1" "teams-for-linux.desktop:2" "slack.desktop:3" "brave-browser.desktop:4" ];
+      application-list = [ "spotify.desktop:10" "teams-for-linux.desktop:1" "slack.desktop:2" "brave-browser.desktop:3" ];
     };
 
     "org/gnome/shell/extensions/bluetooth-quick-connect" = {
@@ -643,6 +664,15 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/keybindings" = {
       focus-active-notification = [ ];
+      switch-to-application-1 = [ ];
+      switch-to-application-2 = [ ];
+      switch-to-application-3 = [ ];
+      switch-to-application-4 = [ ];
+      switch-to-application-5 = [ ];
+      switch-to-application-6 = [ ];
+      switch-to-application-7 = [ ];
+      switch-to-application-8 = [ ];
+      switch-to-application-9 = [ ];
       toggle-message-tray = [ "<Super>v" ];
       toggle-overview = [ "<Super>w" "<Super>space" ];
     };
