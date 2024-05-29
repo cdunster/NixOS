@@ -516,7 +516,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
       calculator = [ "<Super>c" ];
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" ];
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" ];
       screensaver = [ "<Super>Escape" ];
       www = [ "<Super>b" ];
     };
@@ -543,6 +543,12 @@ with lib.hm.gvariant;
       binding = "<Super>x";
       command = "gnome-session-quit --power-off";
       name = "Shutdown";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3" = {
+      binding = "<Shift><Super>w";
+      command = "teams-for-linux & slack & brave";
+      name = "Open Work Apps";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
