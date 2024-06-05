@@ -674,7 +674,7 @@ with lib.hm.gvariant;
       switch-to-application-8 = [ ];
       switch-to-application-9 = [ ];
       toggle-message-tray = [ "<Super>v" ];
-      toggle-overview = [ "<Super>w" "<Super>space" ];
+      toggle-overview = [ "<Super>w" "<Super>r" ];
     };
 
     "org/gnome/shell/weather" = {
