@@ -5,7 +5,7 @@
   ];
 
   nix = {
-    package = pkgs.nixUnstable;
+    package = pkgs.nixVersions.latest;
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
@@ -52,26 +52,28 @@
     keyMap = "us";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver = {
-    enable = true;
-
-    # Configure keyboard layout.
-    xkb = {
-      layout = "us";
-      options = "eurosign:e";
-    };
-
+  services = {
     # Enable touchpad support.
     libinput.enable = true;
-
-    # Use Gnome.
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
 
     # Enable automatic login for a user.
     displayManager.autoLogin.enable = true;
     displayManager.autoLogin.user = "callum";
+
+    # Enable the X11 windowing system.
+    xserver = {
+      enable = true;
+
+      # Configure keyboard layout.
+      xkb = {
+        layout = "us";
+        options = "eurosign:e";
+      };
+
+      # Use Gnome.
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
+    };
   };
 
   # Required workaround for autoLogin.
@@ -142,7 +144,6 @@
   # Enable the GNU Privacy Guard agent for managing GPG keys.
   programs.gnupg.agent = {
     enable = true;
-    pinentryFlavor = "gtk2";
   };
 
   # Enable docker in rootless configuration.

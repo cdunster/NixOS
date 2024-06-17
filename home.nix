@@ -60,7 +60,7 @@
 
     # LSPs
     clang-tools # C/C++
-    nodePackages.pyright # Python
+    pyright # Python
     lua-language-server # Lua
     nodePackages.vscode-css-languageserver-bin # CSS
     rust-analyzer # Rust

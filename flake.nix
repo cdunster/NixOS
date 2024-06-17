@@ -2,7 +2,7 @@
   description = "NixOS and home-manager configuration";
 
   inputs = {
-    nixpkgs.url = "nixpkgs";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     cdunster-nixpkgs.url = "github:cdunster/nixpkgs?ref=wps-fonts";
     home-manager = {
       url = "home-manager";
