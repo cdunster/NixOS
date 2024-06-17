@@ -30,6 +30,9 @@
   };
   boot.kernelParams = [ "quiet" ];
 
+  # Allow emulating ARM (for building RPi images).
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   # Set the system time zone.
   time.timeZone = "Europe/Amsterdam";
 
