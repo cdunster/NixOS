@@ -87,7 +87,6 @@
     gnome-console # GNOME terminal emulator
     gedit # text editor
   ]) ++ (with pkgs.gnome; [
-    cheese # webcam tool
     geary # email reader
     gnome-music
     epiphany # web browser
