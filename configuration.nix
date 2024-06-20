@@ -90,7 +90,6 @@
     geary # email reader
     gnome-music
     epiphany # web browser
-    totem # video player
     gnome-characters
     gnome-contacts
     tali # poker game
