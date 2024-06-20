@@ -57,6 +57,7 @@
     anki-bin # Free spaced repetition learning tool
     godot_4 # Create games for freeeeeee
     wpsoffice # A free office suit
+    obs-studio # Video/Screen recording and streaming app
 
     # LSPs
     clang-tools # C/C++
