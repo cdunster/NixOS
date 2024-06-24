@@ -41,6 +41,7 @@
     grcov # Code coverage report generator
     xxd # Hex dumper
     usbutils # lsusb and other utilities
+    vlc # VLC media player
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
