@@ -201,6 +201,13 @@
 
         # Highlight only code being worked on (works with zen-mode).
         twilight-nvim
+
+        # Edit filesystem in a buffer.
+        {
+          plugin = oil-nvim;
+          type = "lua";
+          config = "require('oil').setup()";
+        }
       ];
   };
 
