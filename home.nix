@@ -42,6 +42,7 @@
     xxd # Hex dumper
     usbutils # lsusb and other utilities
     vlc # VLC media player
+    zoom-us # Video conferencing software
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
