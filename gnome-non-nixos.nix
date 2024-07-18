@@ -1,5 +1,5 @@
 # Add packages and options for non-NixOS systems.
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [
     # Gnome
     evince # Gnome based document viewer

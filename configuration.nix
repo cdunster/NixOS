@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -126,8 +126,7 @@
   services.printing.enable = true;
 
   # System level packages to install (available for all users).
-  environment.systemPackages = with pkgs; [
-  ];
+  environment.systemPackages = [ ];
 
   # Enable the fish shell.
   programs.fish.enable = true;

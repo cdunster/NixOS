@@ -1,5 +1,5 @@
 # Manage user accounts with home-manager.
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   imports = [
     ./dconf.nix
     ./kitty.nix
