@@ -23,7 +23,7 @@
     # Gnome
     gnome-extension-manager # Find, install, and manager gnome extensions
     dracula-theme # Dracula theme for the gnome shell
-    gnome.gnome-tweaks # Extra settings for tweaking gnome
+    gnome-tweaks # Extra settings for tweaking gnome
 
     # Utilities
     xclip # CLI clipboard manager
@@ -55,7 +55,7 @@
     # Applications
     spotify # Proprietary music streaming
     gimp # Edit photos for freeeeeee
-    freecad # 3D CAD software for freeeeeee
+    # freecad # 3D CAD software for freeeeeee
     anki-bin # Free spaced repetition learning tool
     godot_4 # Create games for freeeeeee
     wpsoffice # A free office suit
@@ -65,7 +65,7 @@
     clang-tools # C/C++
     pyright # Python
     lua-language-server # Lua
-    nodePackages.vscode-css-languageserver-bin # CSS
+    vscode-langservers-extracted # HTML/CSS/JSON/ESLint
     rust-analyzer # Rust
     nixd # Nix
     buf-language-server # Protobuf

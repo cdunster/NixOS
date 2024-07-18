@@ -86,10 +86,11 @@
     gnome-connections
     gnome-console # GNOME terminal emulator
     gedit # text editor
-  ]) ++ (with pkgs.gnome; [
     geary # email reader
-    gnome-music
     epiphany # web browser
+    gnome-terminal
+  ]) ++ (with pkgs.gnome; [
+    gnome-music
     gnome-characters
     gnome-contacts
     tali # poker game
@@ -97,14 +98,12 @@
     hitori # sudoku game
     atomix # puzzle game
     gnome-weather
-    gnome-terminal
   ]);
 
   # Override default packages (removes nano and others).
   environment.defaultPackages = [ ];
 
   # Enable sound.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
