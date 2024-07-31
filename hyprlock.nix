@@ -1,10 +1,7 @@
-{ lib, pkgs, ... }: {
-  home.packages = with pkgs;[
-    hyprlock
-  ];
-
-  xdg.configFile."hypr/hyprlock.conf".text = lib.hm.generators.toHyprconf {
-    attrs = {
+{ ... }: {
+  programs.hyprlock = {
+    enable = true;
+    settings = {
       background = {
         monitor = "";
         path = "screenshot";
