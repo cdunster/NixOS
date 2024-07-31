@@ -31,6 +31,7 @@
         ./hardware-configuration.nix
         ./configuration.nix
         ./nixos-gnome.nix
+        ./nixos-hyprland.nix
         inputs.catppuccin.nixosModules.catppuccin
         inputs.home-manager.nixosModules.home-manager
         {

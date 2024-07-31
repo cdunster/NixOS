@@ -121,12 +121,6 @@
     enable = true;
   };
 
-  # Enable the Hyprland Wayland compositor.
-  programs.hyprland.enable = true;
-
-  # Hint to electron apps to use wayland:
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
   # Enable docker in rootless configuration.
   virtualisation.docker.rootless = {
     enable = true;
