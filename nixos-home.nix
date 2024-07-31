@@ -2,7 +2,7 @@
 { config, pkgs, ... }: {
   imports = [
     ./home.nix # Import the standard settings for all systems.
-    ./nixos-gnome.nix # Use Gnome with NixOS specific settings and packages.
+    ./home-nixos-gnome.nix # Use Gnome with NixOS specific settings and packages.
   ];
 
   home.packages = with pkgs; [
