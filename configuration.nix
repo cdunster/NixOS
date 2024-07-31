@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-  imports = [
-    ./hardware-configuration.nix
-  ];
-
   nix = {
     package = pkgs.nixVersions.latest;
     extraOptions = ''

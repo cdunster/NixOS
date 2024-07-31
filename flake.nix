@@ -30,6 +30,7 @@
         };
         specialArgs = { inherit inputs; };
         modules = [
+          ./hardware-configuration.nix
           ./configuration.nix
           ./nixos-gnome.nix
           inputs.home-manager.nixosModules.home-manager
