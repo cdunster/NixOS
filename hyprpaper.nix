@@ -1,10 +1,7 @@
-{ lib, pkgs, ... }: {
-  home.packages = with pkgs;[
-    hyprpaper
-  ];
-
-  xdg.configFile."hypr/hyprpaper.conf".text = lib.hm.generators.toHyprconf {
-    attrs =
+{ ... }: {
+  services.hyprpaper = {
+    enable = true;
+    settings =
       let
         wallpaperPath = ./images/backgrounds/deer_sunset.jpg;
       in
