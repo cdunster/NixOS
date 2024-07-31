@@ -33,7 +33,6 @@
         modules = [
           ./hardware-configuration.nix
           ./configuration.nix
-          ./nixos-gnome.nix
           ./nixos-hyprland.nix
           inputs.home-manager.nixosModules.home-manager
           {
