@@ -59,46 +59,11 @@
     # Enable automatic login for a user.
     displayManager.autoLogin.enable = true;
     displayManager.autoLogin.user = "callum";
-
-    # Enable the X11 windowing system.
-    xserver = {
-      enable = true;
-
-      # Configure keyboard layout.
-      xkb = {
-        layout = "us";
-        options = "eurosign:e";
-      };
-
-      # Use Gnome.
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
-    };
   };
 
   # Required workaround for autoLogin.
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-
-  # Exclude these packages from the Gnome install.
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-tour
-    gnome-connections
-    gnome-console # GNOME terminal emulator
-    gedit # text editor
-    geary # email reader
-    epiphany # web browser
-    gnome-terminal
-  ]) ++ (with pkgs.gnome; [
-    gnome-music
-    gnome-characters
-    gnome-contacts
-    tali # poker game
-    iagno # go game
-    hitori # sudoku game
-    atomix # puzzle game
-    gnome-weather
-  ]);
 
   # Override default packages (removes nano and others).
   environment.defaultPackages = [ ];
