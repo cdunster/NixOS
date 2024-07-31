@@ -1,10 +1,7 @@
-{ lib, pkgs, ... }: {
-  home.packages = with pkgs;[
-    hypridle
-  ];
-
-  xdg.configFile."hypr/hypridle.conf".text = lib.hm.generators.toHyprconf {
-    attrs = {
+{ ... }: {
+  services.hypridle = {
+    enable = true;
+    settings = {
       general = {
         lock_cmd = "pidof hyprlock || hyprlock"; # Avoid starting multiple hyprlock instances.
         before_sleep_cmd = "loginctl lock-session"; # Lock before suspend.
