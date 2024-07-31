@@ -33,6 +33,7 @@
         modules = [
           ./configuration.nix
           ./nixos-gnome.nix
+          ./nixos-hyprland.nix
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
