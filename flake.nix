@@ -31,6 +31,7 @@
         };
         specialArgs = { inherit inputs; };
         modules = [
+          ./hardware-configuration.nix
           ./configuration.nix
           ./nixos-gnome.nix
           ./nixos-hyprland.nix
