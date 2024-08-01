@@ -108,7 +108,9 @@
   services.printing.enable = true;
 
   # System level packages to install (available for all users).
-  environment.systemPackages = [ ];
+  environment.systemPackages = with pkgs; [
+    iwgtk # GUI application to manage WiFi connection via iwd backend
+  ];
 
   # Enable the fish shell.
   programs.fish.enable = true;

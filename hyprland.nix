@@ -21,6 +21,7 @@
       windowrulev2 = [
         "float,class:(org.gnome.Calculator)"
         "float,title:^(Brave)$"
+        "float,class:^(iwgtk)$"
         "workspace 1,class:(teams-for-linux)"
         "workspace 2,class:(Slack)"
         "workspace 10,title:(Spotify)"
