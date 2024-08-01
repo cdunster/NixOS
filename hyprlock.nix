@@ -16,8 +16,8 @@
       };
       input-field = {
         monitor = "";
-        size = "200, 50";
-        outline_thickness = 3;
+        size = "300, 50";
+        outline_thickness = 2;
       };
     };
   };
