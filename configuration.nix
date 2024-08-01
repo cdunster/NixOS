@@ -32,14 +32,16 @@
   # Set the system time zone.
   time.timeZone = "Europe/Amsterdam";
 
-  # Set the system host name.
-  networking.hostName = "MiNixOS";
+  networking = {
+    # Set the system host name.
+    hostName = "MiNixOS";
 
-  # Enable WiFi.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    # Enable WiFi.
+    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Enable networking.
-  networking.networkmanager.enable = true;
+    # Enable networking.
+    networkmanager.enable = true;
+  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
