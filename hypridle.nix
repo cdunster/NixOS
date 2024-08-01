@@ -22,12 +22,12 @@
         }
 
         {
-          timeout = 300;
+          timeout = 180;
           on-timeout = "loginctl lock-session"; # Lock screen when timeout has passed
         }
 
         {
-          timeout = 330;
+          timeout = 180;
           on-timeout = "hyprctl dispatch dpms off"; # Screen off when timeout has passed
           on-resume = "hyprctl dispatch dpms on"; # Screen on when activity is detected after timeout has fired.
         }
