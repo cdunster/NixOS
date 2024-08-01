@@ -14,6 +14,16 @@
         vibrancy = 0.1696;
         vibrancy_darkness = 0.0;
       };
+      label = {
+        monitor = "";
+        text = "$TIME";
+        text_align = "center";
+        font_size = 128;
+        font_family = "Unifont";
+        position = "0, -100";
+        halign = "center";
+        valign = "top";
+      };
       input-field = {
         monitor = "";
         size = "300, 50";
