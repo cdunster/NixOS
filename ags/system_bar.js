@@ -110,6 +110,7 @@ function Volume() {
         class_name: audio.speaker.bind('volume').as(vol => 'volume ' + (vol > 1.0 ? 'overamplified' : 'normal')),
         css: "min-width: 180px",
         children: [icon, slider],
+        tooltip_text: audio.speaker.bind('volume').as(vol => Math.floor(vol * 100) + '%'),
     })
 }
 
