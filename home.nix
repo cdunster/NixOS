@@ -38,6 +38,7 @@
     usbutils # lsusb and other utilities
     vlc # VLC media player
     zoom-us # Video conferencing software
+    gnome-font-viewer # For viewing installed fonts
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
