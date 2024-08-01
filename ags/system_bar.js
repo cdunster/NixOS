@@ -131,6 +131,7 @@ function BatteryLabel() {
                 value,
             }),
         ],
+        tooltip_text: battery.bind("percent").as(bat => bat + '%'),
     })
 }
 
