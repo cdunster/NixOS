@@ -2,7 +2,6 @@ const hyprland = await Service.import("hyprland")
 const audio = await Service.import("audio")
 const battery = await Service.import("battery")
 const systemtray = await Service.import("systemtray")
-const network = await Service.import('network')
 
 import { MediaPlayer } from "./media_player.js"
 
@@ -135,13 +134,6 @@ function BatteryLabel() {
     })
 }
 
-const WifiIndicator = () => Widget.Button({
-    child: Widget.Icon().hook(network.wifi, self => {
-        self.icon = network.wifi.icon_name,
-        self.tooltip_text = network.wifi.ssid
-    }),
-    on_clicked: () => Utils.subprocess(['iwgtk']),
-})
 
 function SysTray() {
     const items = systemtray.bind("items")
@@ -188,7 +180,6 @@ function Right() {
         children: [
             Volume(),
             BatteryLabel(),
-            WifiIndicator(),
             SysTray(),
         ],
     })

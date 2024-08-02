@@ -8,4 +8,7 @@
 
   # For managing bluetooth devices in the system tray.
   services.blueman-applet.enable = true;
+
+  # For managing networks in the system tray.
+  services.network-manager-applet.enable = true;
 }
