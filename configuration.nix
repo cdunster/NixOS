@@ -37,13 +37,10 @@
     hostName = "MiNixOS";
 
     # Enable WiFi.
-    wireless.iwd.enable = true; # Enables wireless support via iwd.
+    wireless.enable = true; # Enables wireless support via wpa_supplicant.
 
     # Enable networking.
-    networkmanager = {
-      enable = true;
-      wifi.backend = "iwd";
-    };
+    networkmanager.enable = true;
   };
 
   # Enable bluetooth.
