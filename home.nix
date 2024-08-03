@@ -84,6 +84,7 @@
     zoom-us # Video conferencing software
     dconf-editor # GUI for editing dconf entries
     gnome-font-viewer # For viewing installed fonts
+    dconf-editor # GUI for editing dconf entries
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
