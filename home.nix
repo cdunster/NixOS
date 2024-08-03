@@ -39,6 +39,7 @@
     vlc # VLC media player
     zoom-us # Video conferencing software
     gnome-font-viewer # For viewing installed fonts
+    dconf-editor # GUI for editing dconf entries
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
