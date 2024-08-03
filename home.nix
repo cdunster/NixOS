@@ -38,6 +38,7 @@
     usbutils # lsusb and other utilities
     vlc # VLC media player
     zoom-us # Video conferencing software
+    dconf-editor # GUI for editing dconf entries
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
