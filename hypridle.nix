@@ -22,7 +22,7 @@
         }
 
         {
-          timeout = 180;
+          timeout = 150;
           on-timeout = "loginctl lock-session"; # Lock screen when timeout has passed
         }
 
