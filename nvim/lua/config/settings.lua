@@ -34,5 +34,6 @@ vim.opt.wrap = false                    -- Don't wrap long lines onto multiple l
 vim.opt.timeoutlen = 300                -- Set the time to wait for a mapped sequence to complete.
 vim.opt.updatetime = 300                -- Better user experience.
 vim.opt.wildmode = 'longest,list'       -- Enable bash-like tab completions.
+vim.opt.cmdheight = 0                   -- Hide the command line (where commands are entered and messages are shown).
 vim.g.mapleader = ' '                   -- Set <SPC> to be the leader key for keybindings.
 vim.g.maplocalleader = ','              -- Set ',' to be the local leader key for language specific keybindings.
