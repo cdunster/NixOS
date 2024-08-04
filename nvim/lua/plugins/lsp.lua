@@ -127,10 +127,12 @@ M.config = function()
     })
 
     -- vscode-css-languageserver for CSS.
+    local css_capabilities = capabilities
+    css_capabilities.textDocument.completion.completionItem.snippetSupport = true
+
     lsp.cssls.setup({
-        cmd = { "css-languageserver", "--stdio" },
         on_attach = on_attach,
-        capabilities = capabilities,
+        capabilities = css_capabilities,
     })
 
     -- nixd LSP config for Nix.
