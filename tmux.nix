@@ -49,8 +49,6 @@
 
       bind M-n new-session
 
-      bind M-w popup -E -h 90% -w 90% nvim -c "cd ~/wiki" -c WikiJournal
-
       bind -n M-h select-pane -L
       bind -n M-j select-pane -D
       bind -n M-k select-pane -U
