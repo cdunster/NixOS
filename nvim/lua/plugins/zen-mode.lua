@@ -7,8 +7,8 @@ M.config = function()
         },
     })
 
-    require("which-key").register({
-        ["<leader>z"] = { "<cmd>ZenMode<cr>", "Toggle zen mode" },
+    require("which-key").add({
+        { "<leader>z", "<cmd>ZenMode<cr>", desc = "Toggle zen mode" },
     })
 end
 
