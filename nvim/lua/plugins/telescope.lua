@@ -15,15 +15,13 @@ M.config = function()
     })
     require("telescope").load_extension("ui-select")
 
-    local wk = require("which-key")
-
-    wk.register({
-        ["f"] = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Find a file in working dir" },
-        ["/"] = { "<cmd>lua require('telescope.builtin').live_grep()<cr>", "Search file content in working dir" },
-        ["*"] = { "<cmd>lua require('telescope.builtin').grep_string()<cr>", "Search current string in working dir" },
-        ["b"] = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "List open buffers" },
-        ["<leader>"] = { "<cmd>lua require('telescope.builtin').resume()<cr>", "Resume last telescope picker" },
-    }, { prefix = "<leader>" })
+    require("which-key").add({
+        { "<leader>f",        require('telescope.builtin').find_files,  desc = "Find a file in working dir" },
+        { "<leader>/",        require('telescope.builtin').live_grep,   desc = "Search file content in working dir" },
+        { "<leader>*",        require('telescope.builtin').grep_string, desc = "Search current string in working dir" },
+        { "<leader>b",        require('telescope.builtin').buffers,     desc = "List open buffers" },
+        { "<leader><leader>", require('telescope.builtin').resume,      desc = "Resume last telescope picker" },
+    })
 end
 
 return M

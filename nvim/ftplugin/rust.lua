@@ -1,10 +1,11 @@
 -- Language specific bindings for Rust.
 
-require("which-key").register({
-    name = "+Rust lang",
-    ["r"] = { function() vim.cmd.RustLsp('runnables') end, "List Rust runnables" },
-    ["d"] = { function() vim.cmd.RustLsp('debuggables') end, "List Rust debuggables" },
-    ["e"] = { function() vim.cmd.RustLsp('expandMacro') end, "Recursively expand macro" },
-    ["o"] = { function() vim.cmd.RustLsp('openCargo') end, "Open Cargo.toml" },
-    ["J"] = { function() vim.cmd.RustLsp('joinLines') end, "Join lines" },
-}, { prefix = "<localleader>", buffer = 0 })
+require("which-key").add({
+    buffer = 0,
+    { "<localleader>",  group = "+Rust lang" },
+    { "<localleader>r", function() vim.cmd.RustLsp('runnables') end,   desc = "List Rust runnables" },
+    { "<localleader>d", function() vim.cmd.RustLsp('debuggables') end, desc = "List Rust debuggables" },
+    { "<localleader>e", function() vim.cmd.RustLsp('expandMacro') end, desc = "Recursively expand macro" },
+    { "<localleader>o", function() vim.cmd.RustLsp('openCargo') end,   desc = "Open Cargo.toml" },
+    { "<localleader>J", function() vim.cmd.RustLsp('joinLines') end,   desc = "Join lines" },
+})

@@ -1,79 +1,82 @@
 local M = {}
 
 M.config = function()
-
     -- Check spelling in buffer after pause instead of read/write.
     vim.g.spelunker_check_type = 2
 
     -- Override highlight setting.
-    vim.cmd[[highlight SpelunkerSpellBad cterm=undercurl ctermfg=LightRed gui=undercurl guisp=LightRed]]
-    vim.cmd[[highlight SpelunkerComplexOrCompoundWord cterm=undercurl ctermfg=LightRed gui=undercurl guisp=LightRed]]
+    vim.cmd [[highlight SpelunkerSpellBad cterm=undercurl ctermfg=LightRed gui=undercurl guisp=LightRed]]
+    vim.cmd [[highlight SpelunkerComplexOrCompoundWord cterm=undercurl ctermfg=LightRed gui=undercurl guisp=LightRed]]
 
-    local wk = require("which-key")
-    wk.register({
-        name = "+spelunker",
-        ["c"] = "Enter correction",
-        ["C"] = "Enter correction for all",
-        ["f"] = "Correct with first suggestion",
-        ["F"] = "Correct all with first suggestion",
-        ["G"] = "Add temporary good word",
-        ["g"] = "Add good word",
-        ["L"] = "Correct all from list",
-        ["l"] = "Correct from list",
-        ["N"] = "Next misspelled word",
-        ["P"] = "Previous misspelled word",
-        ["T"] = "Spelunker toggle",
-        ["t"] = "Spelunker toggle in buffer",
-        ["W"] = "Add temporary bad word",
-        ["w"] = "Add bad word",
-        ["u"] = {
-            name = "+undo",
-            ["g"] = "Undo adding good word",
-            ["w"] = "Undo adding bad word",
-        },
-        ["U"] = {
-            name = "+undo temporary",
-            ["G"] = "Undo adding temporary good word",
-            ["W"] = "Undo adding temporary bad word",
-        },
-    }, { prefix = "Z" })
-
-    wk.register({
-        name = "+spelunker",
-        ["g"] = { "<Plug>(add-spelunker-good-nmap)", "Add good word" },
-        ["b"] = { "<Plug>(add-spelunker-bad-nmap)", "Add bad word" },
-        ["u"] = {
-            name = "+undo",
-            ["g"] = { "<Plug>(undo-spelunker-good-nmap)", "Undo adding last good word" },
-            ["b"] = { "<Plug>(undo-spelunker-bad-nmap)", "Undo adding last bad word" },
-        },
-        ["G"] = { "<Plug>(add-temporary-spelunker-good-nmap)", "Add temporary good word" },
-        ["B"] = { "<Plug>(add-temporary-spelunker-bad-nmap)", "Add temporary bad word" },
-        ["U"] = {
-            name = "+undo temporary",
-            ["G"] = { "<Plug>(undo-temporary-spelunker-good-nmap)", "Undo adding last temporary good word" },
-            ["B"] = { "<Plug>(undo-temporary-spelunker-bad-nmap)", "Undo adding last temporary bad word" },
+    require("which-key").add({
+        {
+            { "Z",  group = "+spelunker" },
+            { "Zc", desc = "Enter correction" },
+            { "ZC", desc = "Enter correction for all" },
+            { "Zf", desc = "Correct with first suggestion" },
+            { "ZF", desc = "Correct all with first suggestion" },
+            { "ZG", desc = "Add temporary good word" },
+            { "Zg", desc = "Add good word" },
+            { "ZL", desc = "Correct all from list" },
+            { "Zl", desc = "Correct from list" },
+            { "ZN", desc = "Next misspelled word" },
+            { "ZP", desc = "Previous misspelled word" },
+            { "ZT", desc = "Spelunker toggle" },
+            { "Zt", desc = "Spelunker toggle in buffer" },
+            { "ZW", desc = "Add temporary bad word" },
+            { "Zw", desc = "Add bad word" },
+            {
+                { "Zu",  group = "+undo" },
+                { "Zug", desc = "Undo adding good word" },
+                { "Zuw", desc = "Undo adding bad word" },
+            },
+            {
+                { "ZU",  group = "+undo temporary" },
+                { "ZUG", desc = "Undo adding temporary good word" },
+                { "ZUW", desc = "Undo adding temporary bad word" },
+            },
         },
 
-        ["l"] = { "<Plug>(spelunker-correct-from-list)", "Correct from list" },
-        ["L"] = { "<Plug>(spelunker-correct-all-from-list)", "Correct all from list" },
+        {
+            { "<leader>s",  group = "+spelunker" },
+            { "<leader>sg", "<Plug>(add-spelunker-good-nmap)", desc = "Add good word" },
+            { "<leader>sb", "<Plug>(add-spelunker-bad-nmap)",  desc = "Add bad word" },
 
-        ["c"] = { "<Plug>(spelunker-correct)", "Enter correction" },
-        ["C"] = { "<Plug>(spelunker-correct-all)", "Enter correction for all" },
+            {
+                { "<leader>su",  group = "+undo" },
+                { "<leader>sug", "<Plug>(undo-spelunker-good-nmap)", desc = "Undo adding last good word" },
+                { "<leader>sub", "<Plug>(undo-spelunker-bad-nmap)",  desc = "Undo adding last bad word" },
+            },
 
-        ["f"] = { "<Plug>(spelunker-correct-feeling-lucky)", "Correct with first suggestion" },
-        ["F"] = { "<Plug>(spelunker-correct-all-feeling-lucky)", "Correct all with first suggestion" },
+            { "<leader>sG", "<Plug>(add-temporary-spelunker-good-nmap)", desc = "Add temporary good word" },
+            { "<leader>sB", "<Plug>(add-temporary-spelunker-bad-nmap)",  desc = "Add temporary bad word" },
 
-        ["n"] = { "<Plug>(spelunker-jump-next)", "Jump to next bad word" },
-        ["N"] = { "<Plug>(spelunker-jump-prev)", "Jump to previous bad word" },
+            {
+                { "<leader>sU",  group = "+undo temporary" },
+                { "<leader>sUG", "<Plug>(undo-temporary-spelunker-good-nmap)", desc = "Undo adding last temporary good word" },
+                { "<leader>sUB", "<Plug>(undo-temporary-spelunker-bad-nmap)",  desc = "Undo adding last temporary bad word" },
+            },
 
-        ["t"] = { "<Plug>(spelunker-toggle-buffer)", "Toggle spelunker in buffer" },
-        ["T"] = { "<Plug>(spelunker-toggle)", "Toggle spelunker" },
-    }, { prefix = "<leader>s" })
+            { "<leader>sl", "<Plug>(spelunker-correct-from-list)",         desc = "Correct from list" },
+            { "<leader>sL", "<Plug>(spelunker-correct-all-from-list)",     desc = "Correct all from list" },
 
-    wk.register({
-        ["]s"] = { "<Plug>(spelunker-jump-next)", "Next bad word" },
-        ["[s"] = { "<Plug>(spelunker-jump-prev)", "Previous bad word" },
+            { "<leader>sc", "<Plug>(spelunker-correct)",                   desc = "Enter correction" },
+            { "<leader>sC", "<Plug>(spelunker-correct-all)",               desc = "Enter correction for all" },
+
+            { "<leader>sf", "<Plug>(spelunker-correct-feeling-lucky)",     desc = "Correct with first suggestion" },
+            { "<leader>sF", "<Plug>(spelunker-correct-all-feeling-lucky)", desc = "Correct all with first suggestion" },
+
+            { "<leader>sn", "<Plug>(spelunker-jump-next)",                 desc = "Jump to next bad word" },
+            { "<leader>sN", "<Plug>(spelunker-jump-prev)",                 desc = "Jump to previous bad word" },
+
+            { "<leader>st", "<Plug>(spelunker-toggle-buffer)",             desc = "Toggle spelunker in buffer" },
+            { "<leader>sT", "<Plug>(spelunker-toggle)",                    desc = "Toggle spelunker" },
+        },
+
+        {
+            { "]s", "<Plug>(spelunker-jump-next)", desc = "Next bad word" },
+            { "[s", "<Plug>(spelunker-jump-prev)", desc = "Previous bad word" },
+        },
     })
 end
 

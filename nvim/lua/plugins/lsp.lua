@@ -4,39 +4,39 @@ local on_attach = function(client, bufnr)
 
     local wk = require("which-key")
 
-    --Use K to show documentation in preview window.
-    wk.register({
-        ["K"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Peek token documentation" },
-    })
+    require("which-key").add({
+        --Use K to show documentation in preview window.
+        { "K", vim.lsp.buf.hover, desc = "Peek token documentation" },
 
-    --Navigate diagnostics.
-    wk.register({
-        ["[d"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Previous diagnostic" },
-        ["]d"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Next diagnostic" },
-    })
-
-    --Code navigation. With g prefix.
-    wk.register({
-        ["d"] = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Go to definition" },
-        ["y"] = { "<cmd>lua require('telescope.builtin').lsp_type_definitions()<CR>", "Go to type definition" },
-        ["i"] = { "<cmd>lua require('telescope.builtin').lsp_implementations()<CR>", "Go to implementation" },
-        ["r"] = { "<cmd>lua require('telescope.builtin').lsp_references()<CR>", "List references" },
-    }, { prefix = "g" })
-
-    --Code action bindings with <leader>+c.
-    wk.register({
-        name = "+code",
-        ["r"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename token" },
-        ["a"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "List line code actions" },
-        ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics({ bufnr = 0 })<CR>", "List buffer diagnostics" },
-        ["o"] = { "<cmd>lua require('telescope.builtin').treesitter()<CR>", "Show buffer code outline" },
-        ["s"] = { "<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>", "List buffer code symbols" },
-        ["w"] = {
-            name = "+workspace",
-            ["d"] = { "<cmd>lua require('telescope.builtin').diagnostics()<CR>", "List workspace diagnostics" },
-            ["s"] = { "<cmd>lua require('telescope.builtin').lsp_workspace_symbols()<CR>", "List workspace code symbols" },
+        --Navigate diagnostics.
+        {
+            { "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", desc = "Previous diagnostic" },
+            { "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next diagnostic" },
         },
-    }, { prefix = "<leader>c" })
+
+        --Code navigation. With g prefix.
+        {
+            { "gd", vim.lsp.buf.definition,                            desc = "Go to definition" },
+            { "gy", require('telescope.builtin').lsp_type_definitions, desc = "Go to type definition" },
+            { "gi", require('telescope.builtin').lsp_implementations,  desc = "Go to implementation" },
+            { "gr", require('telescope.builtin').lsp_references,       desc = "List references" },
+        },
+
+        --Code action bindings with <leader>+c.
+        {
+            { "<leader>c",  group = "+code" },
+            { "<leader>cr", vim.lsp.buf.rename,                                                     desc = "Rename token" },
+            { "<leader>ca", vim.lsp.buf.code_action,                                                desc = "List line code actions" },
+            { "<leader>cd", function() require('telescope.builtin').diagnostics({ bufnr = 0 }) end, desc = "List buffer diagnostics" },
+            { "<leader>co", require('telescope.builtin').treesitter,                                desc = "Show buffer code outline" },
+            { "<leader>cs", require('telescope.builtin').lsp_document_symbols,                      desc = "List buffer code symbols" },
+            {
+                { "<leader>cw",  group = "+workspace" },
+                { "<leader>cwd", require('telescope.builtin').diagnostics,           desc = "List workspace diagnostics" },
+                { "<leader>cws", require('telescope.builtin').lsp_workspace_symbols, desc = "List workspace code symbols" },
+            },
+        },
+    })
 
     --Format on save if the LSP supports it.
     if client.supports_method("textDocument/formatting") then

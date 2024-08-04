@@ -5,35 +5,38 @@ M.config = function()
         current_line_blame = true,
     })
 
-    local wk = require("which-key")
-    wk.register({
-        ["]g"] = { "<cmd>lua require('gitsigns.actions').next_hunk()<CR>", "Next git hunk" },
-        ["[g"] = { "<cmd>lua require('gitsigns.actions').prev_hunk()<CR>", "Previous git hunk" },
+    require("which-key").add({
+        { "]g", require('gitsigns.actions').next_hunk, desc = "Next git hunk" },
+        { "[g", require('gitsigns.actions').prev_hunk, desc = "Previous git hunk" },
+
+        {
+            { "<leader>g",  group = "+git" },
+            { "<leader>gs", require('gitsigns').stage_hunk,      desc = "Stage current hunk" },
+            { "<leader>gS", require('gitsigns').stage_buffer,    desc = "Stage current buffer" },
+            { "<leader>gu", require('gitsigns').undo_stage_hunk, desc = "Undo staging last hunk" },
+            { "<leader>gr", require('gitsigns').reset_hunk,      desc = "Reset current hunk" },
+            { "<leader>gR", require('gitsigns').reset_buffer,    desc = "Reset current buffer" },
+            { "<leader>gp", require('gitsigns').preview_hunk,    desc = "Preview current hunk" },
+        },
+
+        {
+            mode = "o",
+            { "ih", require('gitsigns.actions').select_hunk, desc = "Select git hunk" },
+        },
+
+        {
+            mode = "x",
+            { "ih", require('gitsigns.actions').select_hunk, desc = "Select git hunk" },
+        },
+
+
+        {
+            mode = "v",
+            { "<leader>g",  group = "+git" },
+            { "<leader>gs", function() require('gitsigns').stage_hunk({ vim.fn.line('.'), vim.fn.line('v') }) end, desc = "Stage selected hunk(s)" },
+            { "<leader>gr", function() require('gitsigns').reset_hunk({ vim.fn.line('.'), vim.fn.line('v') }) end, desc = "Reset selected hunk(s)" },
+        },
     })
-
-    wk.register({
-        ["ih"] = { ":<C-U>lua require('gitsigns.actions').select_hunk()<CR>", "Select git hunk" },
-    }, { mode = "o" })
-
-    wk.register({
-        ["ih"] = { ":<C-U>lua require('gitsigns.actions').select_hunk()<CR>", "Select git hunk" },
-    }, { mode = "x" })
-
-    wk.register({
-        name = "+git",
-        ["s"] = { "<cmd>lua require('gitsigns').stage_hunk()<CR>", "Stage current hunk" },
-        ["S"] = { "<cmd>lua require('gitsigns').stage_buffer()<CR>", "Stage current buffer" },
-        ["u"] = { "<cmd>lua require('gitsigns').undo_stage_hunk()<CR>", "Undo staging last hunk" },
-        ["r"] = { "<cmd>lua require('gitsigns').reset_hunk()<CR>", "Reset current hunk" },
-        ["R"] = { "<cmd>lua require('gitsigns').reset_buffer()<CR>", "Reset current buffer" },
-        ["p"] = { "<cmd>lua require('gitsigns').preview_hunk()<CR>", "Preview current hunk" },
-    }, { prefix = "<leader>g" })
-
-    wk.register({
-        name = "+git",
-        ["s"] = { "<cmd>lua require('gitsigns').stage_hunk({vim.fn.line('.'), vim.fn.line('v')})<CR>", "Stage selected hunk(s)" },
-        ["r"] = { "<cmd>lua require('gitsigns').reset_hunk({vim.fn.line('.'), vim.fn.line('v')})<CR>", "Reset selected hunk(s)" },
-    }, { mode = "v", prefix = "<leader>g" })
 end
 
 return M

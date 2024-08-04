@@ -38,32 +38,32 @@ M.config = function()
         },
     }
 
-    local wk = require("which-key")
-    wk.register({
-        ["]]"] = "Next function start",
-        ["]["] = "Next function end",
-        ["[["] = "Previous function start",
-        ["[]"] = "Previous function end",
+    require("which-key").add({
+        { "]]", desc = "Next function start" },
+        { "][", desc = "Next function end" },
+        { "[[", desc = "Previous function start" },
+        { "[]", desc = "Previous function end" },
+
+        {
+            mode = "x",
+            { "af", desc = "a function" },
+            { "if", desc = "inner function" },
+            { "ac", desc = "a comment" },
+            { "a,", desc = "a parameter" },
+            { "i,", desc = "inner parameter" },
+            { "aa", desc = "a statement" },
+        },
+
+        {
+            mode = "o",
+            { "af", desc = "a function" },
+            { "if", desc = "inner function" },
+            { "ac", desc = "a comment" },
+            { "a,", desc = "a parameter" },
+            { "i,", desc = "inner parameter" },
+            { "aa", desc = "a statement" },
+        },
     })
-
-    wk.register({
-        ["af"] = "a function",
-        ["if"] = "inner function",
-        ["ac"] = "a comment",
-        ["a,"] = "a parameter",
-        ["i,"] = "inner parameter",
-        ["aa"] = "a statement",
-    }, { mode = "x" })
-
-    wk.register({
-        ["af"] = "a function",
-        ["if"] = "inner function",
-        ["ac"] = "a comment",
-        ["a,"] = "a parameter",
-        ["i,"] = "inner parameter",
-        ["aa"] = "a statement",
-    }, { mode = "o" })
-
 end
 
 return M

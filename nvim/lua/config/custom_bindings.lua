@@ -1,4 +1,5 @@
-require("which-key").register({
-    [">"] = { ">gv", "Increase indent" },
-    ["<"] = { "<gv", "Decrease indent" },
-}, { mode = "v" })
+require("which-key").add({
+    mode = "v",
+    { "<", "<gv", desc = "Decrease indent" },
+    { ">", ">gv", desc = "Increase indent" },
+})
