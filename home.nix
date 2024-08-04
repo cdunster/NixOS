@@ -23,9 +23,11 @@
   catppuccin = {
     enable = true;
     flavor = "frappe";
+    accent = "blue";
     pointerCursor = {
       enable = true;
       flavor = "frappe";
+      accent = "blue";
     };
   };
 
@@ -35,9 +37,11 @@
     catppuccin = {
       enable = true;
       flavor = "frappe";
+      accent = "blue";
       icon = {
         enable = true;
         flavor = "frappe";
+        accent = "blue";
       };
     };
     gtk3.extraConfig = {

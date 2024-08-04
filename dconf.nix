@@ -108,7 +108,7 @@ with lib.hm.gvariant;
       font-hinting = "slight";
       font-name = "JetBrainsMono Nerd Font 10";
       gtk-im-module = "gtk-im-context-simple";
-      gtk-theme = "catppuccin-frappe-mauve-standard+normal";
+      gtk-theme = "catppuccin-frappe-blue-standard+normal";
       icon-theme = "Papirus-Dark";
       locate-pointer = false;
       monospace-font-name = "JetBrainsMono Nerd Font Mono 11";
