@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   programs.kitty = {
     enable = true;
-    theme = "Dracula";
     settings = {
       font_size = "12.0";
       font_family = "JetBrains Mono Nerd Font";
