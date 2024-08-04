@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
     wl-clipboard # Clipboard manager for Wayland
     playerctl # Media controller
-    dolphin # File browser
+    nautilus # File browser
     grimblast # Used for screenshots in Hyprland
     kanshi # Used to reload/switch monitor profiles
     brightnessctl # Control the brightness of keyboards and displays
