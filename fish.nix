@@ -8,15 +8,6 @@
     };
     plugins = [
       {
-        name = "dracula-fish";
-        src = pkgs.fetchFromGitHub {
-          owner = "dracula";
-          repo = "fish";
-          rev = "master";
-          sha256 = "Hyq4EfSmWmxwCYhp3O8agr7VWFAflcUe8BUKh50fNfY=";
-        };
-      }
-      {
         # Completions for direnv (and others).
         name = "fish-completions";
         src = pkgs.fetchFromGitHub {

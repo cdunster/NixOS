@@ -185,13 +185,6 @@
           config = "require('plugins.vim-godot').config()";
         }
 
-        # Colour schemes
-        {
-          plugin = dracula-nvim;
-          type = "lua";
-          config = "vim.cmd.colorscheme('dracula')";
-        }
-
         # Horizontally centre buffer content in floating window.
         {
           plugin = zen-mode-nvim;

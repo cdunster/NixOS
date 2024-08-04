@@ -1,4 +1,5 @@
 { pkgs, ... }: {
+
   programs.tmux = {
     enable = true;
     keyMode = "vi";
@@ -8,20 +9,24 @@
     terminal = "tmux-256color";
     prefix = "M-Space";
     plugins = with pkgs.tmuxPlugins; [
-      {
-        plugin = dracula;
-        extraConfig = ''
-          # Available plugins: battery, cpu-usage, git, gpu-usage, ram-usage, network, network-bandwidth, network-ping, weather, time
-          set -g @dracula-plugins "cpu-usage ram-usage"
-
-          set -g @dracula-show-powerline true
-          set -g @dracula-show-left-icon session
-          set -g @dracula-show-flags true
-          set -g @dracula-left-icon-padding 0
-
-        '';
-      }
+      cpu
     ];
+    catppuccin.extraConfig = ''
+      set -g @catppuccin_status_modules_right "session directory cpu date_time"
+
+      set -g @catppuccin_window_status_enable "yes"
+      set -g @catppuccin_window_left_separator ""
+      set -g @catppuccin_window_middle_separator " "
+      set -g @catppuccin_window_right_separator "█"
+      set -g @catppuccin_window_default_text "#W"
+      set -g @catppuccin_window_current_text "#W"
+
+      set -g @catppuccin_status_left_separator ""
+      set -g @catppuccin_status_right_separator ""
+      set -g @catppuccin_status_connect_separator "no"
+
+      set -g @catppuccin_status_background "#{thm_black}"
+    '';
     extraConfig = ''
       set -g mouse on
       set -sa terminal-features ',xterm-kitty:RGB'

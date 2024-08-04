@@ -101,15 +101,15 @@ with lib.hm.gvariant;
       clock-show-seconds = true;
       clock-show-weekday = true;
       color-scheme = "prefer-dark";
-      cursor-theme = "Dracula-cursors";
+      cursor-theme = "catppuccin-frappe-dark-cursors";
       document-font-name = "JetBrainsMono Nerd Font 11";
       enable-hot-corners = false;
       font-antialiasing = "grayscale";
       font-hinting = "slight";
       font-name = "JetBrainsMono Nerd Font 10";
       gtk-im-module = "gtk-im-context-simple";
-      gtk-theme = "Dracula";
-      icon-theme = "Pop";
+      gtk-theme = "catppuccin-frappe-mauve-standard+normal";
+      icon-theme = "Papirus-Dark";
       locate-pointer = false;
       monospace-font-name = "JetBrainsMono Nerd Font Mono 11";
       show-battery-percentage = true;
@@ -403,13 +403,6 @@ with lib.hm.gvariant;
       virtual-root = "file:///media/callum/flash-boot";
     };
 
-    "org/gnome/gedit/preferences/editor" = {
-      insert-spaces = true;
-      scheme = "dracula";
-      tabs-size = mkUint32 4;
-      wrap-last-split-mode = "word";
-    };
-
     "org/gnome/gedit/preferences/ui" = {
       show-tabs-mode = "auto";
     };
@@ -656,10 +649,6 @@ with lib.hm.gvariant;
       show-input-slider = true;
       show-output-devices = true;
       show-profiles = false;
-    };
-
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "Dracula";
     };
 
     "org/gnome/shell/keybindings" = {

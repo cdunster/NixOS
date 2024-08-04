@@ -19,6 +19,35 @@
   # The version of Home-manager used.
   home.stateVersion = "22.11";
 
+  # System theme
+  catppuccin = {
+    enable = true;
+    flavor = "frappe";
+    pointerCursor = {
+      enable = true;
+      flavor = "frappe";
+    };
+  };
+
+  # GTK system theme
+  gtk = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "frappe";
+      icon = {
+        enable = true;
+        flavor = "frappe";
+      };
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+  };
+
   home.packages = with pkgs; [
     # Utilities
     xclip # CLI clipboard manager

@@ -12,9 +12,10 @@
       url = "github:guibou/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    catppuccin.url = "github:catppuccin/nix"; # The catppuccin theme for everything
   };
 
-  outputs = { self, ... }@inputs:
+  outputs = { ... }@inputs:
     let
       system = "x86_64-linux";
     in
@@ -33,11 +34,17 @@
           ./hardware-configuration.nix
           ./configuration.nix
           ./nixos-gnome.nix
+          inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.callum = import ./nixos-home.nix;
+            home-manager.users.callum = {
+              imports = [
+                ./nixos-home.nix
+                inputs.catppuccin.homeManagerModules.catppuccin
+              ];
+            };
             home-manager.extraSpecialArgs = { inherit inputs; };
           }
         ];
@@ -66,6 +73,7 @@
           }
           ./home.nix
           ./non-nixos-gnome.nix
+          inputs.catppuccin.homeManagerModules.catppuccin
         ];
       };
     };
