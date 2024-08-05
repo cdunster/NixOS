@@ -113,7 +113,13 @@
     arduino # IDE and libraries for working with Arduino boards
   ];
 
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      sansSerif = [ "JetBrainsMono Nerd Font 10" ];
+      monospace = [ "JetBrainsMono Nerd Font Mono 11" ];
+    };
+  };
 
   programs.lazygit = {
     enable = true;
