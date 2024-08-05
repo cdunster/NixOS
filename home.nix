@@ -27,7 +27,7 @@
     pointerCursor = {
       enable = true;
       flavor = "frappe";
-      accent = "blue";
+      accent = "dark";
     };
   };
 
