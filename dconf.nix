@@ -271,6 +271,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
+      disable-while-typing = true;
       natural-scroll = false;
       speed = 0.184;
       tap-to-click = true;
