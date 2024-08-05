@@ -4,7 +4,7 @@
     settings = {
       background = {
         monitor = "";
-        path = "screenshot";
+        path = "${./images/backgrounds/deer_sunset.jpg}";
         color = "rgba(25, 20, 20, 1.0)";
         blur_passes = 3;
         blur_size = 12;
