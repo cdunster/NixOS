@@ -5,6 +5,10 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "ca/desrt/dconf-editor" = {
+      show-warning = false;
+    };
+
     "com/github/donadigo/eddy" = {
       mime-types = [ "application/vnd.debian.binary-package" "application/x-deb" ];
     };
