@@ -14,20 +14,33 @@
         vibrancy = 0.1696;
         vibrancy_darkness = 0.0;
       };
-      label = {
-        monitor = "";
-        text = "$TIME";
-        text_align = "center";
-        font_size = 128;
-        font_family = "Unifont";
-        position = "0, -100";
-        halign = "center";
-        valign = "top";
-      };
+      label = [
+        {
+          monitor = "";
+          text = "cmd[update:1000] date \"+%T\"";
+          text_align = "center";
+          font_size = 128;
+          font_family = "JetBrainsMono";
+          position = "0, 10";
+          halign = "center";
+          valign = "center";
+        }
+        {
+          monitor = "";
+          text = "cmd[update:1000] date \"+%A %B %d %Y\"";
+          text_align = "center";
+          font_size = 18;
+          font_family = "JetBrainsMono";
+          position = "0, -80";
+          halign = "center";
+          valign = "center";
+        }
+      ];
       input-field = {
         monitor = "";
         size = "300, 50";
         outline_thickness = 2;
+        position = "0, -130";
       };
     };
   };
