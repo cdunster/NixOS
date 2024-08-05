@@ -22,6 +22,12 @@
         }
 
         {
+          timeout = 20;
+          on-timeout = "pidof hyprlock && hyprctl dispatch dpms off"; # Screen off if the session is locked.
+          on-resume = "hyprctl dispatch dpms on"; # Screen on when activity is detected again.
+        }
+
+        {
           timeout = 60;
           on-timeout = "hyprctl dispatch dpms off"; # Screen off when timeout has passed
           on-resume = "hyprctl dispatch dpms on"; # Screen on when activity is detected after timeout has fired.
