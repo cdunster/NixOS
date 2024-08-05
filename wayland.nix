@@ -15,5 +15,6 @@
     grimblast # Used for screenshots in Hyprland
     kanshi # Used to reload/switch monitor profiles
     brightnessctl # Control the brightness of keyboards and displays
+    pavucontrol # GTK based GUI to control PulseAudio devices and channels
   ];
 }
