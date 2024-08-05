@@ -90,6 +90,7 @@ function Volume() {
 
     const icon = Widget.Button({
         on_clicked: () => audio.speaker.is_muted = !audio.speaker.is_muted,
+        on_secondary_click: () => Utils.subprocess(['pavucontrol']),
         child: Widget.Icon({
             class_name: "icon",
             icon: Utils.watch(getIcon(), audio.speaker, getIcon),
