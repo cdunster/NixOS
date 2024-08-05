@@ -29,6 +29,14 @@ with lib.hm.gvariant;
       capture-mode = "picture";
     };
 
+    "org/blueman/network" = {
+      nap-enable = false;
+    };
+
+    "org/blueman/plugins/powermanager" = {
+      auto-power-on = true;
+    };
+
     "org/gnome/Geary" = {
       migrated-config = true;
     };
