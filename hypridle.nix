@@ -9,14 +9,14 @@
       };
       listener = [
         {
-          timeout = 30;
+          timeout = 60;
           on-timeout = "brightnessctl -s set 10"; # Set monitor backlight to minimum, avoid 0 on OLED monitor.
           on-resume = "brightnessctl -r"; # Monitor backlight restore.
         }
 
         {
           # Turn off keyboard backlight.
-          timeout = 30;
+          timeout = 60;
           on-timeout = "brightnessctl -sd rgb:kbd_backlight set 0"; # Turn off keyboard backlight.
           on-resume = "brightnessctl -rd rgb:kbd_backlight"; # Turn on keyboard backlight.
         }
