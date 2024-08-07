@@ -125,13 +125,11 @@ function BatteryLabel() {
         visible: battery.bind("available"),
         children: [
             Widget.Icon({ icon }),
-            Widget.LevelBar({
-                widthRequest: 140,
-                vpack: "center",
-                value,
+            Widget.Label({
+                label: battery.bind("percent").as(bat => bat + '%'),
+                css: "padding-left: 2px",
             }),
         ],
-        tooltip_text: battery.bind("percent").as(bat => bat + '%'),
     })
 }
 
