@@ -101,6 +101,7 @@
     godot_4 # Create games for freeeeeee
     wpsoffice # A free office suit
     obs-studio # Video/Screen recording and streaming app
+    evince # Gnome's document viewer
 
     # LSPs
     clang-tools # C/C++
