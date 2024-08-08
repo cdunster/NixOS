@@ -8,7 +8,7 @@
     xkb = {
       layout = "us";
       variant = "euro";
-      options = "eurosign:e";
+      options = "caps:none";
     };
 
     # Use Gnome.
