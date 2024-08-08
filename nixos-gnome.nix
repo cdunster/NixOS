@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+  # Enable managing dconf with NixOS and home-manager modules.
+  programs.dconf.enable = true;
+
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
