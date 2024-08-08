@@ -52,6 +52,13 @@
     };
   };
 
+  # Qt system theme
+  qt.style.catppuccin = {
+    enable = true;
+    flavor = "frappe";
+    accent = "blue";
+  };
+
   home.packages = with pkgs; [
     # Utilities
     xclip # CLI clipboard manager
