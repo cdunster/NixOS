@@ -7,6 +7,7 @@
     # Configure keyboard layout.
     xkb = {
       layout = "us";
+      variant = "euro";
       options = "eurosign:e";
     };
 
