@@ -16,6 +16,9 @@
   # Add the background image.
   home.file.".local/share/backgrounds/".source = ./images/backgrounds;
 
+  # Add user profile picture.
+  home.file.".face".source = ./images/backgrounds/deer_sunset.jpg;
+
   # The version of Home-manager used.
   home.stateVersion = "22.11";
 
