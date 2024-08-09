@@ -38,13 +38,10 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       clock-show-seconds = true;
       clock-show-weekday = true;
-      color-scheme = "prefer-dark";
       cursor-theme = "catppuccin-frappe-dark-cursors";
       document-font-name = "JetBrainsMono Nerd Font 11";
       enable-hot-corners = false;
       font-name = "JetBrainsMono Nerd Font 10";
-      gtk-theme = "catppuccin-frappe-blue-standard+normal";
-      icon-theme = "Papirus-Dark";
       monospace-font-name = "JetBrainsMono Nerd Font Mono 10";
       show-battery-percentage = true;
     };
@@ -149,7 +146,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      enabled-extensions = [ "pop-shell@system76.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" ];
+      enabled-extensions = [ "pop-shell@system76.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" ];
       favorite-apps = [ ];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "46.3.1";
@@ -168,10 +165,6 @@ with lib.hm.gvariant;
       tile-by-default = true;
       toggle-stacking-global = [ ];
       toggle-tiling = [ ];
-    };
-
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "catppuccin-frappe-blue-standard+normal";
     };
 
     "org/gnome/shell/keybindings" = {
