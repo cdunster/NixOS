@@ -16,7 +16,6 @@
   boot.loader.grub.efiSupport = true;
 
   # Use the EFI bootloader.
-  boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
@@ -38,9 +37,6 @@
     # Set the system host name.
     hostName = "MiNixOS";
 
-    # Enable WiFi.
-    # wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
     # Enable networking.
     networkmanager.enable = true;
   };
@@ -49,7 +45,6 @@
   i18n.defaultLocale = "en_GB.UTF-8";
   console = {
     font = "Lat2-Terminus16";
-    keyMap = "us";
   };
 
   services = {
@@ -83,9 +78,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
