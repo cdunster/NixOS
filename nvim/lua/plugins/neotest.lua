@@ -21,14 +21,14 @@ M.config = function()
         }
     })
 
-    require("which-key").register({
-        name = "+test",
-        ["r"] = { require("neotest").run.run, "Run all tests" },
-        ["f"] = { function() require("neotest").run.run(vim.fn.expand("%")) end, "Run all tests in current file" },
-        ["o"] = { require("neotest").output.open, "Open the output of the closest test" },
-        ["s"] = { require("neotest").summary.toggle, "Toggle the summary panel" },
-        ["c"] = { function() require("coverage").load(true) end, "Load the code coverage" },
-    }, { prefix = "<leader>t" })
+    require("which-key").add({
+        { "<leader>t",  group = "+test" },
+        { "<leader>tr", require("neotest").run.run,                                    desc = "Run all tests" },
+        { "<leader>tf", function() require("neotest").run.run(vim.fn.expand("%")) end, desc = "Run all tests in current file" },
+        { "<leader>to", require("neotest").output.open,                                desc = "Open the output of the closest test" },
+        { "<leader>ts", require("neotest").summary.toggle,                             desc = "Toggle the summary panel" },
+        { "<leader>tc", function() require("coverage").load(true) end,                 desc = "Load the code coverage" },
+    })
 end
 
 return M

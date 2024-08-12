@@ -70,7 +70,6 @@
           config = ''
             require('which-key').setup {
                 plugins = { spelling = true },
-                key_labels = { ['<leader>'] = 'SPC', ['<space>'] = 'SPC' },
                 layout = { spacing = 5 },
             }'';
         }
@@ -183,13 +182,6 @@
           plugin = vim-godot;
           type = "lua";
           config = "require('plugins.vim-godot').config()";
-        }
-
-        # Colour schemes
-        {
-          plugin = dracula-nvim;
-          type = "lua";
-          config = "vim.cmd.colorscheme('dracula')";
         }
 
         # Horizontally centre buffer content in floating window.

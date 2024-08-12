@@ -16,15 +16,54 @@
   # Add the background image.
   home.file.".local/share/backgrounds/".source = ./images/backgrounds;
 
+  # Add user profile picture.
+  home.file.".face".source = ./images/backgrounds/deer_sunset.jpg;
+
   # The version of Home-manager used.
   home.stateVersion = "22.11";
 
-  home.packages = with pkgs; [
-    # Gnome
-    gnome-extension-manager # Find, install, and manager gnome extensions
-    dracula-theme # Dracula theme for the gnome shell
-    gnome-tweaks # Extra settings for tweaking gnome
+  # System theme
+  catppuccin = {
+    enable = true;
+    flavor = "frappe";
+    accent = "blue";
+    pointerCursor = {
+      enable = true;
+      flavor = "frappe";
+      accent = "dark";
+    };
+  };
 
+  # GTK system theme
+  gtk = {
+    enable = true;
+    catppuccin = {
+      enable = true;
+      flavor = "frappe";
+      accent = "blue";
+      icon = {
+        enable = true;
+        flavor = "frappe";
+        accent = "blue";
+      };
+      gnomeShellTheme = true;
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+  };
+
+  # Qt system theme
+  qt.style.catppuccin = {
+    enable = true;
+    flavor = "frappe";
+    accent = "blue";
+  };
+
+  home.packages = with pkgs; [
     # Utilities
     xclip # CLI clipboard manager
     fd # Find files and directories
@@ -43,6 +82,7 @@
     usbutils # lsusb and other utilities
     vlc # VLC media player
     zoom-us # Video conferencing software
+    dconf-editor # GUI for editing dconf entries
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -84,7 +124,13 @@
     arduino # IDE and libraries for working with Arduino boards
   ];
 
-  fonts.fontconfig.enable = true;
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      sansSerif = [ "JetBrainsMono Nerd Font 10" ];
+      monospace = [ "JetBrainsMono Nerd Font Mono 11" ];
+    };
+  };
 
   programs.lazygit = {
     enable = true;

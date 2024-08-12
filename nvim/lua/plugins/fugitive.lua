@@ -16,21 +16,20 @@ M.git_rename = function()
 end
 
 M.config = function()
-    local wk = require("which-key")
+    require("which-key").add({
+        { "<leader>g",  group = "+git" },
+        { "<leader>gg", "<cmd>Git<cr>",        desc = "Git status" },
+        { "<leader>gd", "<cmd>Gdiffsplit<cr>", desc = "Git diff all changes" },
+        { "<leader>gb", "<cmd>Git blame<cr>",  desc = "Git blame file" },
+        { "<leader>gP", "<cmd>Git push<cr>",   desc = "Git push" },
 
-    wk.register({
-        name = "+git",
-        ["g"] = { "<cmd>Git<cr>", "Git status" },
-        ["d"] = { "<cmd>Gdiffsplit<cr>", "Git diff all changes" },
-        ["b"] = { "<cmd>Git blame<cr>", "Git blame file" },
-        ["P"] = { "<cmd>Git push<cr>", "Git push" },
-        ["f"] = {
-            name = "+file",
-            ["r"] = { "<cmd>lua require('plugins.fugitive').git_rename()<cr>", "Git rename file" },
-            ["m"] = { "<cmd>lua require('plugins.fugitive').git_move()<cr>", "Git move file" },
-            ["d"] = { "<cmd>GDelete<cr>", "Git delete file" },
+        {
+            { "<leader>gf",  group = "+file" },
+            { "<leader>gfr", require('plugins.fugitive').git_rename, desc = "Git rename file" },
+            { "<leader>gfm", require('plugins.fugitive').git_move,   desc = "Git move file" },
+            { "<leader>gfd", "<cmd>GDelete<cr>",                     desc = "Git delete file" },
         },
-    }, { prefix = "<leader>g" })
+    })
 end
 
 return M

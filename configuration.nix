@@ -1,9 +1,5 @@
 { pkgs, ... }:
 {
-  imports = [
-    ./hardware-configuration.nix
-  ];
-
   nix = {
     package = pkgs.nixVersions.latest;
     extraOptions = ''
@@ -16,12 +12,12 @@
   # Use the GRUB bootloader.
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
-  # boot.loader.grub.useOSProber = true;
+  boot.loader.grub.useOSProber = true;
   boot.loader.grub.efiSupport = true;
 
   # Use the EFI bootloader.
-  # boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.efiSysMountPoint = "/boot";
 
   # Enable Plymouth for GUI boot screen.
   boot.initrd.systemd.enable = true;
@@ -37,20 +33,31 @@
   # Set the system time zone.
   time.timeZone = "Europe/Amsterdam";
 
-  # Set the system host name.
-  networking.hostName = "MiNixOS";
+  networking = {
+    # Set the system host name.
+    hostName = "MiNixOS";
 
-  # Enable WiFi.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Enable networking
-  networking.networkmanager.enable = true;
+    # Enable networking.
+    networkmanager.enable = true;
+  };
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "en_GB.UTF-8";
+    LC_IDENTIFICATION = "en_GB.UTF-8";
+    LC_MEASUREMENT = "en_GB.UTF-8";
+    LC_MONETARY = "en_GB.UTF-8";
+    LC_NAME = "en_GB.UTF-8";
+    LC_NUMERIC = "en_GB.UTF-8";
+    LC_PAPER = "en_GB.UTF-8";
+    LC_TELEPHONE = "en_GB.UTF-8";
+    LC_TIME = "en_GB.UTF-8";
+  };
+
   console = {
     font = "Lat2-Terminus16";
-    keyMap = "us";
   };
 
   services = {
@@ -60,46 +67,11 @@
     # Enable automatic login for a user.
     displayManager.autoLogin.enable = true;
     displayManager.autoLogin.user = "callum";
-
-    # Enable the X11 windowing system.
-    xserver = {
-      enable = true;
-
-      # Configure keyboard layout.
-      xkb = {
-        layout = "us";
-        options = "eurosign:e";
-      };
-
-      # Use Gnome.
-      displayManager.gdm.enable = true;
-      desktopManager.gnome.enable = true;
-    };
   };
 
   # Required workaround for autoLogin.
   systemd.services."getty@tty1".enable = false;
   systemd.services."autovt@tty1".enable = false;
-
-  # Exclude these packages from the Gnome install.
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-tour
-    gnome-connections
-    gnome-console # GNOME terminal emulator
-    gedit # text editor
-    geary # email reader
-    epiphany # web browser
-    gnome-terminal
-  ]) ++ (with pkgs.gnome; [
-    gnome-music
-    gnome-characters
-    gnome-contacts
-    tali # poker game
-    iagno # go game
-    hitori # sudoku game
-    atomix # puzzle game
-    gnome-weather
-  ]);
 
   # Override default packages (removes nano and others).
   environment.defaultPackages = [ ];
@@ -119,9 +91,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
