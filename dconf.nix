@@ -146,7 +146,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      enabled-extensions = [ "pop-shell@system76.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" ];
+      enabled-extensions = [ "pop-shell@system76.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "trayIconsReloaded@selfmade.pl" ];
       favorite-apps = [ ];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "46.3.1";
@@ -165,6 +165,17 @@ with lib.hm.gvariant;
       tile-by-default = true;
       toggle-stacking-global = [ ];
       toggle-tiling = [ ];
+    };
+
+    "org/gnome/shell/extensions/trayIconsReloaded" = {
+      icon-margin-horizontal = 4;
+      icon-padding-horizontal = 0;
+      icon-size = 16;
+      icons-limit = 10;
+      invoke-to-workspace = false;
+      position-weight = 1;
+      tray-margin-left = 0;
+      tray-position = "left";
     };
 
     "org/gnome/shell/keybindings" = {
