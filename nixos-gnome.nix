@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./autorandr.nix # Use autorandr to automatically configure monitors.
+  ];
+
   # Enable managing dconf with NixOS and home-manager modules.
   programs.dconf.enable = true;
 
