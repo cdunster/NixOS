@@ -77,6 +77,8 @@ with lib.hm.gvariant;
       move-to-workspace-up = [ "<Shift><Super>k" ];
       switch-applications = [ "<Alt>Tab" ];
       switch-applications-backward = [ "<Shift><Alt>Tab" ];
+      switch-group = [ "<Super>Above_Tab" "<Alt>Above_Tab" ];
+      switch-group-backward = [ "<Shift><Super>Above_Tab" "<Shift><Alt>Above_Tab" ];
       switch-input-source = [ ];
       switch-input-source-backward = [ ];
       switch-to-workspace-1 = [ "<Super>1" ];
