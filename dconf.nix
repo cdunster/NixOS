@@ -180,6 +180,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/keybindings" = {
+      focus-active-notification = [ ];
       open-new-window-application-1 = [ ];
       open-new-window-application-2 = [ ];
       open-new-window-application-3 = [ ];
