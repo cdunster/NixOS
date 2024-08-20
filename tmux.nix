@@ -15,14 +15,15 @@
       set -g @catppuccin_status_modules_right "session directory cpu date_time"
 
       set -g @catppuccin_window_status_enable "yes"
-      set -g @catppuccin_window_left_separator ""
-      set -g @catppuccin_window_middle_separator " "
-      set -g @catppuccin_window_right_separator "█"
+      set -g @catppuccin_window_separator ""
+      set -g @catppuccin_window_left_separator " "
+      set -g @catppuccin_window_middle_separator "▌"
+      set -g @catppuccin_window_right_separator ""
       set -g @catppuccin_window_default_text "#W"
       set -g @catppuccin_window_current_text "#W"
 
-      set -g @catppuccin_status_left_separator ""
-      set -g @catppuccin_status_right_separator ""
+      set -g @catppuccin_status_left_separator " "
+      set -g @catppuccin_status_right_separator ""
       set -g @catppuccin_status_connect_separator "no"
 
       set -g @catppuccin_status_background "#{thm_black}"
