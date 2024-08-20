@@ -12,17 +12,23 @@
       cpu
     ];
     catppuccin.extraConfig = ''
-      set -g @catppuccin_status_modules_right "session directory cpu date_time"
+      set -g @catppuccin_status_modules_left "session directory"
+      set -g @catppuccin_status_modules_right "cpu date_time"
 
       set -g @catppuccin_window_status_enable "yes"
       set -g @catppuccin_icon_window_last ""
       set -g @catppuccin_icon_window_current ""
       set -g @catppuccin_window_separator ""
       set -g @catppuccin_window_left_separator " "
-      set -g @catppuccin_window_middle_separator "▌"
+      set -g @catppuccin_window_middle_separator " | "
       set -g @catppuccin_window_right_separator ""
       set -g @catppuccin_window_default_text "#W"
       set -g @catppuccin_window_current_text "#W"
+
+      set -g @catppuccin_window_default_fill "none"
+      set -g @catppuccin_window_current_fill "all"
+      set -g @catppuccin_window_current_color "#{thm_blue}"
+      set -g @catppuccin_status_justify "absolute-centre"
 
       set -g @catppuccin_directory_icon "󰉖"
       set -g @catppuccin_session_icon ""
