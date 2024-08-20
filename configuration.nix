@@ -2,6 +2,14 @@
 {
   nix = {
     package = pkgs.nixVersions.latest;
+    settings = {
+      substituters = [
+        "https://holochain-ci.cachix.org"
+      ];
+      trusted-public-keys = [
+        "holochain-ci.cachix.org-1:5IUSkZc0aoRS53rfkvH9Kid40NpyjwCMCzwRTXy+QN8="
+      ];
+    };
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
