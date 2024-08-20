@@ -33,13 +33,8 @@
   # Set the system time zone.
   time.timeZone = "Europe/Amsterdam";
 
-  networking = {
-    # Set the system host name.
-    hostName = "MiNixOS";
-
-    # Enable networking.
-    networkmanager.enable = true;
-  };
+  # Enable networking.
+  networking.networkmanager.enable = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_GB.UTF-8";
