@@ -170,7 +170,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/auto-move-windows" = {
-      application-list = [ "spotify.desktop:1" "teams-for-linux.desktop:2" "slack.desktop:3" ];
+      application-list = [ "spotify.desktop:1" ];
     };
 
     "org/gnome/shell/extensions/pop-shell" = {

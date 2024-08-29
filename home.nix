@@ -110,18 +110,7 @@
     buf-language-server # Protobuf
 
     # Work
-    teams-for-linux # Unofficial Linux wrapper for Microsoft Teams PWA.
-    slack # Linux Slack messaging app
-    lazydocker # Manage docker stuff the lazy way.
-    awscli2 # Manage AWS from the command line.
     vscode # Proprietary code/text editor from Microsoft.
-    bloomrpc # GUI client for gRPC (like postman for gRPC)
-    sqlitebrowser # A database browser for SQLite
-    saleae-logic-2 # Logic analyser
-    balena-cli # Manage Balena through a CLI
-    awscli2 # Manage AWS instances through a CLI
-    picoscope # Tool for using the Picoscope a digital oscilloscope
-    arduino # IDE and libraries for working with Arduino boards
     mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
   ];
 
