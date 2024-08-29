@@ -13,6 +13,10 @@ with lib.hm.gvariant;
       last-used-version = "0.5.1";
     };
 
+    "org/gnome/calculator" = {
+      button-mode = "programming";
+    };
+
     "org/gnome/desktop/applications/terminal" = {
       exec = "/home/callum/.nix-profile/bin/kitty";
       exec-arg = "";
