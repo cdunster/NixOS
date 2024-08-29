@@ -29,7 +29,6 @@
     gnome-connections
     gnome-console # GNOME terminal emulator
     gedit # text editor
-    geary # email reader
     epiphany # web browser
     gnome-terminal
   ]) ++ (with pkgs.gnome; [
