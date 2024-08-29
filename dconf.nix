@@ -17,6 +17,10 @@ with lib.hm.gvariant;
       button-mode = "programming";
     };
 
+    "org/gnome/calendar" = {
+      active-view = "month";
+    };
+
     "org/gnome/desktop/applications/terminal" = {
       exec = "/home/callum/.nix-profile/bin/kitty";
       exec-arg = "";
