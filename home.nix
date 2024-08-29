@@ -122,6 +122,7 @@
     awscli2 # Manage AWS instances through a CLI
     picoscope # Tool for using the Picoscope a digital oscilloscope
     arduino # IDE and libraries for working with Arduino boards
+    mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
   ];
 
   fonts.fontconfig = {
