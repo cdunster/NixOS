@@ -182,6 +182,7 @@ with lib.hm.gvariant;
       activate-launcher = [ ];
       fullscreen-launcher = true;
       mouse-cursor-focus-location = mkUint32 4;
+      mouse-cursor-follows-active-window = true;
       show-title = false;
       smart-gaps = true;
       tile-by-default = true;
