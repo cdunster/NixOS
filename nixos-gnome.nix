@@ -19,7 +19,12 @@
     };
 
     # Use the GNOME Display Manager (GDM).
-    displayManager.gdm.enable = true;
+    displayManager.gdm = {
+      enable = true;
+
+      # Disable the use of Wayland with GNOME (use X11 instead).
+      wayland = false;
+    };
 
     # Use the GNOME Desktop Environment.
     desktopManager.gnome.enable = true;
