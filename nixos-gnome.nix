@@ -18,8 +18,10 @@
       options = "caps:none";
     };
 
-    # Use Gnome.
+    # Use the GNOME Display Manager (GDM).
     displayManager.gdm.enable = true;
+
+    # Use the GNOME Desktop Environment.
     desktopManager.gnome.enable = true;
   };
 
