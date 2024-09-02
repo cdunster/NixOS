@@ -175,7 +175,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/auto-move-windows" = {
-      application-list = [ "spotify.desktop:1" ];
+      application-list = [ "spotify.desktop:1" "Mattermost.desktop:2" ];
     };
 
     "org/gnome/shell/extensions/pop-shell" = {
