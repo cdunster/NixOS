@@ -13,6 +13,11 @@ with lib.hm.gvariant;
       last-used-version = "0.5.1";
     };
 
+    "org/gnome/Geary" = {
+      autoselect = false;
+      run-in-background = true;
+    };
+
     "org/gnome/calculator" = {
       button-mode = "programming";
     };
