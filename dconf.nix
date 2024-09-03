@@ -23,7 +23,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/calendar" = {
-      active-view = "month";
+      active-view = "week";
     };
 
     "org/gnome/desktop/applications/terminal" = {
