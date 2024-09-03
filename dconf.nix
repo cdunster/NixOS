@@ -117,6 +117,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/wm/preferences" = {
+      auto-raise = true;
+      focus-mode = "mouse";
       num-workspaces = 5;
       resize-with-right-button = true;
     };
