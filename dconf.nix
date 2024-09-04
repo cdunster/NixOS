@@ -171,6 +171,10 @@ with lib.hm.gvariant;
       name = "Shutdown";
     };
 
+    "org/gnome/settings-daemon/plugins/power" = {
+      power-button-action = "interactive";
+    };
+
     "org/gnome/shell" = {
       enabled-extensions = [ "pop-shell@system76.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "trayIconsReloaded@selfmade.pl" ];
       favorite-apps = [ ];
