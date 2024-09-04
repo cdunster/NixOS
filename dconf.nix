@@ -173,6 +173,8 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/power" = {
       power-button-action = "interactive";
+      sleep-inactive-ac-type = "nothing";
+      sleep-inactive-battery-type = "nothing";
     };
 
     "org/gnome/shell" = {
