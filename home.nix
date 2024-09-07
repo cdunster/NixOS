@@ -101,6 +101,7 @@
     wpsoffice # A free office suit
     obs-studio # Video/Screen recording and streaming app
     discord # Chat desktop app for gamers and communities
+    ledger-live-desktop # Desktop app to control and update Ledger Nano X HW wallet
 
     # LSPs
     clang-tools # C/C++
