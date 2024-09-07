@@ -100,6 +100,7 @@
     godot_4 # Create games for freeeeeee
     wpsoffice # A free office suit
     obs-studio # Video/Screen recording and streaming app
+    discord # Chat desktop app for gamers and communities
 
     # LSPs
     clang-tools # C/C++
