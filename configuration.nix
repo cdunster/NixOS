@@ -23,8 +23,14 @@
   # boot.loader.grub.useOSProber = true;
   # boot.loader.grub.efiSupport = true;
 
+  # Use lanzaboote as the bootloader to allow the use of Secure Boot.
+  boot.loader.systemd-boot.enable = false;
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/etc/secureboot";
+  };
+
   # Use the EFI bootloader.
-  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 

@@ -18,6 +18,12 @@
 
     # The catppuccin theme for everything
     catppuccin.url = "github:catppuccin/nix";
+
+    # Enable Secure Boot on NixOS.
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { ... }@inputs:
@@ -45,6 +51,7 @@
           ./nixos-gnome.nix
           inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.home-manager
+          inputs.lanzaboote.nixosModules.lanzaboote
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
