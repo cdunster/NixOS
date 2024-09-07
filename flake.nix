@@ -3,16 +3,21 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
+
     cdunster-nixpkgs.url = "github:cdunster/nixpkgs?ref=wps-fonts";
+
     home-manager = {
       url = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nixgl = {
       url = "github:guibou/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix"; # The catppuccin theme for everything
+
+    # The catppuccin theme for everything
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = { ... }@inputs:
