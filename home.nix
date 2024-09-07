@@ -156,4 +156,5 @@
   programs.brave.enable = true;
   programs.zoxide.enable = true;
   programs.gpg.enable = true;
+  programs.bash.enable = true;
 }
