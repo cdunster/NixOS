@@ -152,6 +152,7 @@
       [
         (createRule ./udev-rules/69-probe-rs.rules)
         (createRule ./udev-rules/90-saleae-logic.rules)
+        (createRule ./udev-rules/90-ledger-nano-x.rules)
       ];
   };
 

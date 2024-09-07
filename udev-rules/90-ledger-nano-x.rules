@@ -1,0 +1,2 @@
+# Blue, NanoS, Aramis, HW.2, Nano X, NanoSP, Stax, Ledger Test,
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="2c97", TAG+="uaccess", TAG+="udev-acl"
