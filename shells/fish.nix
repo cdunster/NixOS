@@ -1,11 +1,6 @@
 { pkgs, ... }: {
   programs.fish = {
     enable = true;
-    shellAliases = {
-      lg = "lazygit";
-      ll = "eza -lah";
-      ls = "eza";
-    };
     plugins = [
       {
         # Completions for direnv (and others).

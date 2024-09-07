@@ -3,7 +3,7 @@
   imports = [
     ./dconf.nix
     ./kitty.nix
-    ./fish.nix
+    ./shells
     ./starship.nix
     ./neovim.nix
     ./git.nix
@@ -156,5 +156,4 @@
   programs.brave.enable = true;
   programs.zoxide.enable = true;
   programs.gpg.enable = true;
-  programs.bash.enable = true;
 }
