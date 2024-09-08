@@ -117,6 +117,9 @@
   # Enable the fish shell.
   programs.fish.enable = true;
 
+  # Enable z shell.
+  programs.zsh.enable = true;
+
   # Enable neovim and set as default editor.
   programs.neovim = {
     enable = true;
