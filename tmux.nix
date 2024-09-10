@@ -15,7 +15,7 @@
       set -g @catppuccin_status_modules_left "session directory"
       set -g @catppuccin_status_modules_right "cpu date_time"
 
-      set -g @catppuccin_window_status_enable "yes"
+      set -g @catppuccin_window_status "icon"
       set -g @catppuccin_icon_window_last ""
       set -g @catppuccin_icon_window_current ""
       set -g @catppuccin_window_separator ""

@@ -38,7 +38,6 @@
     gedit # text editor
     epiphany # web browser
     gnome-terminal
-  ]) ++ (with pkgs.gnome; [
     gnome-music
     gnome-characters
     gnome-contacts
