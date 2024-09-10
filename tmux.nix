@@ -18,7 +18,6 @@
       set -g @catppuccin_window_status "icon"
       set -g @catppuccin_icon_window_last ""
       set -g @catppuccin_icon_window_current ""
-      set -g @catppuccin_window_separator ""
       set -g @catppuccin_window_left_separator " "
       set -g @catppuccin_window_middle_separator " | "
       set -g @catppuccin_window_right_separator ""
