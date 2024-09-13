@@ -210,6 +210,14 @@
           type = "lua";
           config = "require('oil').setup()";
         }
+
+        # orgmode-like note taking in Neovim.
+        {
+          plugin = neorg;
+          type = "lua";
+          config = "require('plugins.neorg').config()";
+        }
+        neorg-telescope
       ];
   };
 
