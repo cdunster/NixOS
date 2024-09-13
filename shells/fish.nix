@@ -94,8 +94,5 @@
       bind \cp _zoxide_zi
       bind \cn _open_neovim
     '';
-    interactiveShellInit = ''
-      if not set -q TMUX; exec tmux; end
-    '';
   };
 }

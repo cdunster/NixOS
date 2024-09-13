@@ -9,5 +9,8 @@
       bold_italic_font = "auto";
       hide_window_decorations = "yes";
     };
+    extraConfig = "startup_session launch.conf";
   };
+
+  xdg.configFile."kitty/launch.conf".text = ''launch sh -c "tmux"'';
 }
