@@ -65,6 +65,7 @@
 
   home.packages = with pkgs; [
     # Utilities
+    clang # Modern C/C++ compiler
     xclip # CLI clipboard manager
     fd # Find files and directories
     ripgrep # Search content of files
