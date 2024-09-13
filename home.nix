@@ -8,6 +8,7 @@
     ./neovim.nix
     ./git.nix
     ./tmux.nix
+    ./wezterm.nix
   ];
 
   # Let home-manager manage its own installation.
