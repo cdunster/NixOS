@@ -13,4 +13,13 @@ config.window_frame = {
 
 config.window_decorations = 'NONE' -- Hide the window titlebar, NONE is the only one that works
 
+config.colors = {
+    tab_bar = {
+        active_tab = {
+            bg_color = '#303446',
+            fg_color = '#c6d0f5',
+        },
+    },
+}
+
 return config
