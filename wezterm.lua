@@ -26,6 +26,26 @@ local act = wezterm.action
 
 config.keys = {
     {
+        key = 'h',
+        mods = 'ALT',
+        action = act.ActivatePaneDirection 'Left',
+    },
+    {
+        key = 'j',
+        mods = 'ALT',
+        action = act.ActivatePaneDirection 'Down',
+    },
+    {
+        key = 'k',
+        mods = 'ALT',
+        action = act.ActivatePaneDirection 'Up',
+    },
+    {
+        key = 'l',
+        mods = 'ALT',
+        action = act.ActivatePaneDirection 'Right',
+    },
+    {
         key = 'g',
         mods = 'ALT',
         action = act.SpawnCommandInNewTab {
