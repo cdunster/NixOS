@@ -46,6 +46,19 @@ config.keys = {
         action = act.ActivatePaneDirection 'Right',
     },
     {
+        key = 's',
+        mods = 'ALT',
+        action = act.SplitHorizontal {},
+    },
+    {
+        key = 'v',
+        mods = 'ALT',
+        action = act.SplitPane {
+            direction = 'Down',
+            size = { Percent = 30 },
+        },
+    },
+    {
         key = 'g',
         mods = 'ALT',
         action = act.SpawnCommandInNewTab {
