@@ -11,4 +11,6 @@ config.window_frame = {
     font = wezterm.font 'JetBrainsMono NF', -- The font of the tabs
 }
 
+config.window_decorations = 'NONE' -- Hide the window titlebar, NONE is the only one that works
+
 return config
