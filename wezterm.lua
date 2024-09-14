@@ -22,11 +22,13 @@ config.colors = {
     },
 }
 
+local act = wezterm.action
+
 config.keys = {
     {
         key = 'g',
         mods = 'ALT',
-        action = wezterm.action.SpawnCommandInNewTab {
+        action = act.SpawnCommandInNewTab {
             args = { 'lazygit' },
         },
     },
