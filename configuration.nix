@@ -47,6 +47,9 @@
   # Install firmware updates distributed through LVFS.
   services.fwupd.enable = true;
 
+  # Enable fingerprint reader support.
+  services.fprintd.enable = true;
+
   # Allow emulating ARM (for building RPi images).
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
