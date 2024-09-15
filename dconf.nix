@@ -52,6 +52,11 @@ with lib.hm.gvariant;
       automatic-timezone = true;
     };
 
+    "org/gnome/desktop/input-sources" = {
+      sources = [ (mkTuple [ "xkb" "us+euro" ]) ];
+      xkb-options = [ "caps:none" ];
+    };
+
     "org/gnome/desktop/interface" = {
       clock-show-seconds = true;
       clock-show-weekday = true;
