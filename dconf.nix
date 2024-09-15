@@ -31,7 +31,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/applications/terminal" = {
-      exec = "/home/callum/.nix-profile/bin/kitty";
+      exec = "/etc/profiles/per-user/callum/bin/wezterm";
       exec-arg = "";
     };
 
@@ -155,8 +155,8 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Super>t";
-      command = "kitty";
-      name = "Open kitty terminal";
+      command = "wezterm";
+      name = "Open WezTerm terminal";
     };
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
