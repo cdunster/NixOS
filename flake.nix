@@ -29,6 +29,8 @@
       url = "github:nvim-neorg/nixpkgs-neorg-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = { ... }@inputs:
@@ -39,6 +41,7 @@
       # To be used with `builtins.mapAttrs`, takes the host name from the set attribute name, discards the content and returns a `nixosSystem` with the same name.
       # e.g. `{ hostOne { foo = 42; }; }` becomes `{ hostOne = nixosSystem { ... }; }`.
       createSystem = hostName: _: inputs.nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         modules = [
           {
             nixpkgs = {
