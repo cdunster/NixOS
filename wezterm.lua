@@ -59,6 +59,11 @@ config.keys = {
         },
     },
     {
+        key = 'z',
+        mods = 'ALT',
+        action = act.TogglePaneZoomState,
+    },
+    {
         key = 'g',
         mods = 'ALT',
         action = act.SpawnCommandInNewTab {
