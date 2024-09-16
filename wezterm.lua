@@ -46,6 +46,26 @@ config.keys = {
         action = act.ActivatePaneDirection 'Right',
     },
     {
+        key = 'LeftArrow',
+        mods = 'ALT',
+        action = act.ActivatePaneDirection 'Left',
+    },
+    {
+        key = 'DownArrow',
+        mods = 'ALT',
+        action = act.ActivatePaneDirection 'Down',
+    },
+    {
+        key = 'UpArrow',
+        mods = 'ALT',
+        action = act.ActivatePaneDirection 'Up',
+    },
+    {
+        key = 'RightArrow',
+        mods = 'ALT',
+        action = act.ActivatePaneDirection 'Right',
+    },
+    {
         key = 's',
         mods = 'ALT',
         action = act.SplitHorizontal {},
