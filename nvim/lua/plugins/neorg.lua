@@ -11,6 +11,19 @@ M.config = function()
         { "<leader>nr", "<cmd>Neorg return<CR>",                    desc = "Close all Neorg files" },
     })
 
+    vim.api.nvim_create_autocmd("Filetype", {
+        pattern = "norg",
+        callback = function()
+            require("which-key").add({
+                { "<localleader>c", group = "+code block" },
+                { "<localleader>i", group = "+insert" },
+                { "<localleader>l", group = "+list" },
+                { "<localleader>n", group = "+notes" },
+                { "<localleader>t", group = "+todo" },
+            })
+        end,
+    })
+
     require("neorg").setup({
         load = {
             ["core.defaults"] = {},
