@@ -41,6 +41,12 @@ M.config = function()
                     default_workspace = "notes",
                 },
             },
+            ["core.esupports.metagen"] = {
+                config = {
+                    author = "Callum Dunster",
+                    timezone = "implicit-local", -- The timezone is currently wrong so just remove it.
+                },
+            },
             ["core.summary"] = {},
             ["core.integrations.telescope"] = {},
         },
