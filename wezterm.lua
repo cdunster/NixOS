@@ -25,6 +25,12 @@ config.colors = {
 local act = wezterm.action
 
 config.keys = {
+    -- Disable default binding to enter full screen mode.
+    {
+        key = 'Enter',
+        mods = 'ALT',
+        action = act.DisableDefaultAssignment,
+    },
     {
         key = 'h',
         mods = 'ALT',
