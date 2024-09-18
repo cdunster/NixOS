@@ -41,6 +41,7 @@ M.config = function()
                     default_workspace = "notes",
                 },
             },
+            ["core.summary"] = {},
             ["core.integrations.telescope"] = {},
         },
     })
