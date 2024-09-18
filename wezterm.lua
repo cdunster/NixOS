@@ -96,6 +96,17 @@ config.keys = {
             args = { 'lazygit' },
         },
     },
+    {
+        key = 'n',
+        mods = 'ALT | SHIFT',
+        action = act.SwitchToWorkspace {
+            name = 'notes',
+            spawn = {
+                args = { 'nvim', '-S' },
+                cwd = '/home/callum/repos/notes',
+            },
+        },
+    },
     -- Prompt for a name to use for a new workspace and switch to it.
     {
         key = 'n',
