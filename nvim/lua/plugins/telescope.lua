@@ -2,10 +2,16 @@ local M = {}
 
 M.config = function()
     require("telescope").setup({
+        defaults = {
+            cache_picker = {
+                num_pickers = 5,
+                ignore_empty_prompt = true,
+            },
+        },
         pickers = {
             find_files = {
                 find_command = { "fd", "--type=f", "--hidden", "--exclude=.git" }
-            }
+            },
         },
         extensions = {
             ["ui-select"] = {
@@ -23,7 +29,7 @@ M.config = function()
         { "<leader>b",        require('telescope.builtin').buffers,            desc = "List open buffers" },
         { "<leader>q",        require('telescope.builtin').quickfix,           desc = "List quick-fixes in telescope" },
         { "<leader>Q",        require('telescope.builtin').quickfixhistory,    desc = "List quick-fix history in telescope" },
-        { "<leader><leader>", require('telescope.builtin').resume,             desc = "Resume last telescope picker" },
+        { "<leader><leader>", require('telescope.builtin').pickers,            desc = "List previously open telescope pickers" },
 
         { ":",                require('telescope').extensions.cmdline.cmdline, desc = "Open the cmdline in a telescope window" },
     })
