@@ -18,7 +18,11 @@ M.config = function()
                 { "<localleader>c", group = "+code block" },
                 { "<localleader>i", group = "+insert" },
                 { "<localleader>l", group = "+list" },
-                { "<localleader>n", group = "+notes" },
+                {
+                    { "<localleader>n",  group = "+notes" },
+                    -- Re-bind new note for norg files only.
+                    { "<localleader>nn", "<Plug>(neorg.dirman.new-note)", desc = "New note" },
+                },
                 { "<localleader>t", group = "+todo" },
             })
         end,
