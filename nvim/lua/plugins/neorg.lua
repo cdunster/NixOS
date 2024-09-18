@@ -1,6 +1,9 @@
 local M = {}
 
 M.config = function()
+    -- Bind with keymap first to disable default binding.
+    vim.keymap.set("n", "<leader>n", "<Plug>(neorg.dirman.new-note)", {})
+
     require("which-key").add({
         { "<leader>n",  group = "+neorg" },
         { "<leader>nn", "<Plug>(neorg.dirman.new-note)",            desc = "New note" },
