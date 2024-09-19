@@ -3,10 +3,7 @@ local M = {}
 M.config = function()
     require("telescope").setup({
         defaults = {
-            cache_picker = {
-                num_pickers = 5,
-                ignore_empty_prompt = true,
-            },
+            cache_picker = { num_pickers = 5 },
         },
         pickers = {
             find_files = {
