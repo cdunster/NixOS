@@ -125,6 +125,7 @@ config.keys = {
                     window:perform_action(
                         act.SwitchToWorkspace {
                             name = line,
+                            spawn = { cwd = '/home/callum' },
                         },
                         pane
                     )
