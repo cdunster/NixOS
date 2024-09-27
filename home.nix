@@ -114,7 +114,6 @@
     buf-language-server # Protobuf
 
     # Work
-    vscode # Proprietary code/text editor from Microsoft.
     mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
   ];
 
@@ -124,6 +123,15 @@
       sansSerif = [ "JetBrainsMono Nerd Font 10" ];
       monospace = [ "JetBrainsMono Nerd Font Mono 11" ];
     };
+  };
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      vscodevim.vim
+      rust-lang.rust-analyzer
+      vadimcn.vscode-lldb
+    ];
   };
 
   programs.lazygit = {
