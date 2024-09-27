@@ -183,6 +183,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/power" = {
+      ambient-enabled = false;
       power-button-action = "interactive";
       sleep-inactive-ac-type = "nothing";
       sleep-inactive-battery-type = "nothing";
