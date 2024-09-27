@@ -102,6 +102,7 @@
     obs-studio # Video/Screen recording and streaming app
     discord # Chat desktop app for gamers and communities
     ledger-live-desktop # Desktop app to control and update Ledger Nano X HW wallet
+    inkscape # Vector graphics for freeeeeee
 
     # LSPs
     clang-tools # C/C++
