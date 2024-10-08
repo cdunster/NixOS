@@ -200,6 +200,10 @@ with lib.hm.gvariant;
       application-list = [ "spotify.desktop:1" "Mattermost.desktop:2" ];
     };
 
+    "org/gnome/shell/extensions/freon" = {
+      panel-box-index = 1;
+    };
+
     "org/gnome/shell/extensions/pop-shell" = {
       activate-launcher = [ ];
       fullscreen-launcher = true;
