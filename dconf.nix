@@ -160,7 +160,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Super>t";
-      command = "wezterm start --always-new-process";
+      command = "wezterm";
       name = "Open WezTerm terminal";
     };
 
