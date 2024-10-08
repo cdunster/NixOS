@@ -64,6 +64,7 @@ with lib.hm.gvariant;
       document-font-name = "JetBrainsMono Nerd Font 11";
       enable-hot-corners = false;
       font-name = "JetBrainsMono Nerd Font 10";
+      gtk-enable-primary-paste = false;
       monospace-font-name = "JetBrainsMono Nerd Font Mono 10";
       show-battery-percentage = true;
     };
