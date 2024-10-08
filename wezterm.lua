@@ -1,32 +1,27 @@
-local wezterm = require 'wezterm'
+local wezterm = require('wezterm')
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Catppuccin Frappe'
-config.font = wezterm.font 'JetBrainsMono NF'
-
-config.front_end = 'WebGpu' -- Fix weird bug where all text is shown as blocks
-
+config.color_scheme = 'Catppuccin Frappe'                 -- Use the built-in Catppuccin colour scheme
+config.font = wezterm.font 'JetBrainsMono NF'             -- Use the JetBrainsMono Nerd Font system font
+config.front_end = 'WebGpu'                               -- Fix weird bug where all text is shown as blocks
 config.window_frame = {
-    font = wezterm.font 'JetBrainsMono NF', -- The font of the tabs
+    font = wezterm.font 'JetBrainsMono NF',               -- The font of the tab title
 }
-
-config.window_decorations = 'NONE' -- Hide the window titlebar, NONE is the only one that works
-
+config.window_decorations = 'NONE'                        -- Hide the window titlebar, NONE is the only one that works
 config.colors = {
     tab_bar = {
         active_tab = {
-            bg_color = '#303446',
-            fg_color = '#c6d0f5',
+            bg_color = '#303446', -- Use the Catppuccin Frappe background colour for the tab background
+            fg_color = '#c6d0f5', -- Use the Catppuccin Frappe foreground colour for the tab foreground / title text
         },
     },
 }
 
 local act = wezterm.action
-
 config.keys = {
-    -- Disable default binding to enter full screen mode.
     {
+        -- Disable default binding to enter full screen mode.
         key = 'Enter',
         mods = 'ALT',
         action = act.DisableDefaultAssignment,
@@ -107,8 +102,8 @@ config.keys = {
             },
         },
     },
-    -- Prompt for a name to use for a new workspace and switch to it.
     {
+        -- Prompt for a name to use for a new workspace and switch to it.
         key = 'n',
         mods = 'ALT',
         action = act.PromptInputLine {
@@ -133,8 +128,8 @@ config.keys = {
             end),
         },
     },
-    -- List all workspaces in the launcher and allow activating one.
     {
+        -- List all workspaces in the launcher and allow activating one.
         key = 'w',
         mods = 'ALT',
         action = act.ShowLauncherArgs {
