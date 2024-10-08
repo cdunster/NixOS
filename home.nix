@@ -113,6 +113,10 @@
     nixd # Nix
     buf-language-server # Protobuf
 
+    # DAPs Debuggers
+    lldb # The debugger for the LLVM Project (lldb-dap)
+    llvm # Compiler tools for the LLVM Project (llvm-symbolizer)
+
     # Work
     mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
   ];

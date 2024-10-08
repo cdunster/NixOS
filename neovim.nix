@@ -7,7 +7,6 @@
       require('config.settings')
     '';
     plugins =
-      with pkgs.vimPlugins;
       with pkgs.vimUtils;
       let
         vim-spelunker = buildVimPlugin {
@@ -47,7 +46,7 @@
           };
         };
       in
-      [
+      with pkgs.vimPlugins; [
         # Automatic session management.
         vim-obsession
 
@@ -124,9 +123,12 @@
 
         # Debug applications via the Debug Adaptor Protocol.
         {
-          plugin = vimspector;
-          config = "let g:vimspector_enable_mappings = 'HUMAN'";
+          plugin = nvim-dap;
+          type = "lua";
+          config = "require('plugins.dap').config()";
         }
+        nvim-nio
+        nvim-dap-ui
 
         # Autocomplete and Snippets
         cmp-nvim-lsp
