@@ -5,5 +5,6 @@
     gnome-tweaks # Extra settings for tweaking gnome
     gnomeExtensions.tray-icons-reloaded # Show notification icons in the system tray/bar
     gnomeExtensions.system-monitor # Show system stats in the system tray/bar
+    gnomeExtensions.freon # System stats such as temps
   ];
 }
