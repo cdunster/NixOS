@@ -8,6 +8,7 @@
     ./neovim.nix
     ./git.nix
     ./tmux.nix
+    ./wezterm.nix
   ];
 
   # Let home-manager manage its own installation.
@@ -162,11 +163,6 @@
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
-  };
-
-  programs.wezterm = {
-    enable = true;
-    extraConfig = builtins.readFile ./wezterm.lua;
   };
 
   programs.bat.enable = true;
