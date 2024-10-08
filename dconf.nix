@@ -211,6 +211,10 @@ with lib.hm.gvariant;
       toggle-tiling = [ ];
     };
 
+    "org/gnome/shell/extensions/system-monitor" = {
+      show-swap = false;
+    };
+
     "org/gnome/shell/extensions/trayIconsReloaded" = {
       icon-margin-horizontal = 4;
       icon-padding-horizontal = 0;
