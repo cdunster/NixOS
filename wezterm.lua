@@ -10,6 +10,7 @@ config.unix_domains = {
 }
 
 config.default_gui_startup_args = { 'connect', 'unix' }   -- Connect to the WezTerm unix domain by default
+config.mux_env_remove = {}                                -- By default the mux-server removes SSH_AUTH_SOCK which breaks ssh
 config.color_scheme = 'Catppuccin Frappe'                 -- Use the built-in Catppuccin colour scheme
 config.font = wezterm.font 'JetBrainsMono NF'             -- Use the JetBrainsMono Nerd Font system font
 config.front_end = 'WebGpu'                               -- Fix weird bug where all text is shown as blocks
