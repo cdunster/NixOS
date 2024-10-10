@@ -36,15 +36,6 @@
             sha256 = "0icsy983ivw409afv19mw2qi7axil8a21r0dwlfxcj9wqcaf1cbj";
           };
         };
-        telescope-cmdline-nvim = buildVimPlugin {
-          name = "telescope-cmdline.nvim";
-          src = pkgs.fetchFromGitHub {
-            owner = "jonarrien";
-            repo = "telescope-cmdline.nvim";
-            rev = "0.1.0";
-            sha256 = "sha256-WIpscQW+SfCHjcvLSf6N2FzxgptaU3fojFVmxZB8PVY=";
-          };
-        };
       in
       with pkgs.vimPlugins; [
         # Automatic session management.
@@ -58,7 +49,6 @@
         }
         plenary-nvim
         telescope-ui-select-nvim
-        telescope-cmdline-nvim
 
         # Git
         {
