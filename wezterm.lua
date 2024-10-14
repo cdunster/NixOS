@@ -19,6 +19,7 @@ config.window_frame = {
 }
 config.window_decorations = 'NONE'                        -- Hide the window titlebar, NONE is the only one that works
 config.adjust_window_size_when_changing_font_size = false -- Using a tiling WM so window should stay a fixed size
+config.use_resize_increments = true                       -- Snap the window size to a multiple of the terminal cell size
 config.colors = {
     tab_bar = {
         active_tab = {
