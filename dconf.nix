@@ -191,7 +191,6 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      enabled-extensions = [ "pop-shell@system76.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "trayIconsReloaded@selfmade.pl" "system-monitor@gnome-shell-extensions.gcampax.github.com" "freon@UshakovVasilii_Github.yahoo.com" ];
       favorite-apps = [ ];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "46.3.1";
