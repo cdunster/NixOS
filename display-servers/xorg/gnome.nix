@@ -1,23 +1,6 @@
 { pkgs, ... }:
 {
-  imports = [
-    ./autorandr.nix # Use autorandr to automatically configure monitors
-  ];
-
-  # Enable managing dconf with NixOS and home-manager modules
-  programs.dconf.enable = true;
-
-  # Enable the X11 windowing system.
   services.xserver = {
-    enable = true;
-
-    # Configure keyboard layout
-    xkb = {
-      layout = "us";
-      variant = "euro";
-      options = "caps:none";
-    };
-
     # Use the GNOME Display Manager (GDM)
     displayManager.gdm = {
       enable = true;
