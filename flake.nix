@@ -57,7 +57,7 @@
           }
           ./hosts/${hostName}
           ./configuration.nix
-          ./nixos-gnome.nix
+          ./display-servers
           inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.home-manager
           inputs.lanzaboote.nixosModules.lanzaboote

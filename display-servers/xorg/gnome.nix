@@ -1,36 +1,36 @@
 { pkgs, ... }:
 {
   imports = [
-    ./autorandr.nix # Use autorandr to automatically configure monitors.
+    ./autorandr.nix # Use autorandr to automatically configure monitors
   ];
 
-  # Enable managing dconf with NixOS and home-manager modules.
+  # Enable managing dconf with NixOS and home-manager modules
   programs.dconf.enable = true;
 
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
 
-    # Configure keyboard layout.
+    # Configure keyboard layout
     xkb = {
       layout = "us";
       variant = "euro";
       options = "caps:none";
     };
 
-    # Use the GNOME Display Manager (GDM).
+    # Use the GNOME Display Manager (GDM)
     displayManager.gdm = {
       enable = true;
 
-      # Disable the use of Wayland with GNOME (use X11 instead).
+      # Disable the use of Wayland with GNOME (use X11 instead)
       wayland = false;
     };
 
-    # Use the GNOME Desktop Environment.
+    # Use the GNOME Desktop Environment
     desktopManager.gnome.enable = true;
   };
 
-  # Exclude these packages from the Gnome install.
+  # Exclude these packages from the GNOME install
   environment.gnome.excludePackages = (with pkgs; [
     gnome-tour
     gnome-connections
