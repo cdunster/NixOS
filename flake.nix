@@ -35,7 +35,7 @@
 
       # Takes each attribute from the passed set, discards the value and returns a `nixosSystem` with the same name.
       # e.g. `{ hostOne = { foo = 42; }; }` becomes `{ hostOne = nixosSystem { ... }; }`.
-      createSystem = hostName: _: inputs.nixpkgs.lib.nixosSystem {
+      mkNixosSystem = hostName: _: inputs.nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
           {
@@ -71,6 +71,6 @@
       };
     in
     {
-      nixosConfigurations = builtins.mapAttrs createSystem hostsAsSet;
+      nixosConfigurations = builtins.mapAttrs mkNixosSystem hostsAsSet;
     };
 }
