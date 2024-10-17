@@ -1,6 +1,7 @@
 { inputs, pkgs, ... }:
 {
   imports = [
+    inputs.catppuccin.nixosModules.catppuccin
     ./display-servers
   ];
 

@@ -43,7 +43,6 @@
           }
           ./hosts/${hostName}
           ./configuration.nix
-          inputs.catppuccin.nixosModules.catppuccin
           inputs.lanzaboote.nixosModules.lanzaboote
           ./home-manager
         ];
