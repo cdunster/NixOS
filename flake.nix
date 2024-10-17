@@ -40,7 +40,6 @@
         modules = [
           {
             nixpkgs = {
-              config.allowUnfree = true;
               overlays = [
                 (_final: prev: { cdunster = import inputs.cdunster-nixpkgs { system = prev.system; config = prev.config; }; })
                 inputs.neorg-overlay.overlays.default

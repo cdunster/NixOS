@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+  # Allow proprietary/unfree packages to be installed
+  nixpkgs.config.allowUnfree = true;
+
   # Nix configuration
   nix = {
     # Set nixpkgs version to the latest unstable version
