@@ -1,7 +1,18 @@
-# Manage user accounts with home-manager
-{ ... }: {
+# This is actually the NixOS module used to enable and setup home-manager
+{ inputs, ... }: {
   imports = [
-    ./home.nix # Import the standard settings for all systems.
-    ./gnome.nix # Add packages required for GNOME DE
+    inputs.home-manager.nixosModules.home-manager
+    {
+      home-manager.useGlobalPkgs = true;
+      home-manager.useUserPackages = true;
+      home-manager.users.callum = {
+        imports = [
+          ./home.nix # Import the standard settings for all systems.
+          ./gnome.nix # Add packages required for GNOME DE
+          inputs.catppuccin.homeManagerModules.catppuccin
+        ];
+      };
+      home-manager.backupFileExtension = "bak";
+    }
   ];
 }

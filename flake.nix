@@ -54,19 +54,8 @@
           ./configuration.nix
           ./display-servers
           inputs.catppuccin.nixosModules.catppuccin
-          inputs.home-manager.nixosModules.home-manager
           inputs.lanzaboote.nixosModules.lanzaboote
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.callum = {
-              imports = [
-                ./home-manager
-                inputs.catppuccin.homeManagerModules.catppuccin
-              ];
-            };
-            home-manager.backupFileExtension = "bak";
-          }
+          ./home-manager
         ];
       };
     in
