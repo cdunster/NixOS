@@ -2,6 +2,7 @@
 {
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
+    inputs.lanzaboote.nixosModules.lanzaboote
     ./display-servers
   ];
 
