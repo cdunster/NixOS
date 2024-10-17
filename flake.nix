@@ -39,14 +39,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           {
-            nixpkgs = {
-              overlays = [
-                (_final: prev: { cdunster = import inputs.cdunster-nixpkgs { system = prev.system; config = prev.config; }; })
-                inputs.neorg-overlay.overlays.default
-              ];
-            };
-          }
-          {
             networking.hostName = "${hostName}";
           }
           ./hosts/${hostName}
