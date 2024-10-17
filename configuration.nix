@@ -4,6 +4,7 @@
     inputs.catppuccin.nixosModules.catppuccin
     inputs.lanzaboote.nixosModules.lanzaboote
     ./display-servers
+    ./home-manager
   ];
 
   # Allow proprietary/unfree packages to be installed

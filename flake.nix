@@ -43,7 +43,6 @@
           }
           ./hosts/${hostName}
           ./configuration.nix
-          ./home-manager
         ];
       };
     in
