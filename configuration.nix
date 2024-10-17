@@ -1,5 +1,9 @@
 { inputs, pkgs, ... }:
 {
+  imports = [
+    ./display-servers
+  ];
+
   # Allow proprietary/unfree packages to be installed
   nixpkgs.config.allowUnfree = true;
 
