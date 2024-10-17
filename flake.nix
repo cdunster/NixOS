@@ -61,7 +61,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.callum = {
               imports = [
-                ./nixos-home.nix
+                ./home-manager/nixos-home.nix
                 inputs.catppuccin.homeManagerModules.catppuccin
               ];
             };
