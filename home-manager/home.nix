@@ -5,7 +5,7 @@
     ./kitty.nix
     ./shells
     ./starship.nix
-    ./neovim.nix
+    ./neovim
     ./git.nix
     ./tmux.nix
     ./wezterm.nix
