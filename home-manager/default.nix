@@ -1,4 +1,4 @@
-# Manage user accounts with home-manager for NixOS systems.
+# Manage user accounts with home-manager
 { ... }: {
   imports = [
     ./home.nix # Import the standard settings for all systems.
