@@ -31,7 +31,7 @@
   outputs = { ... }@inputs:
     let
       # Get all of the hosts from the hosts directory, returning them as a set i.e. `{ hostOne = { ... }; hostTwo = { ... }; }`.
-      allHostsAsSet = inputs.nixpkgs.lib.filesystem.packagesFromDirectoryRecursive { inherit (inputs.nixpkgs.lib) callPackage; directory = ./hosts; };
+      allHostsAsSet = inputs.nixpkgs.lib.filesystem.packagesFromDirectoryRecursive { inherit (inputs.nixpkgs.lib) callPackage; directory = ./nixos/hosts; };
 
       # Takes each attribute from the passed set, discards the value and returns a `nixosSystem` with the same name.
       # e.g. `{ hostOne = { foo = 42; }; }` becomes `{ hostOne = nixosSystem { ... }; }`.
@@ -50,9 +50,9 @@
           {
             networking.hostName = "${hostName}";
           }
-          ./hosts/${hostName}
-          ./configuration.nix
-          ./display-servers
+          ./nixos/hosts/${hostName}
+          ./nixos/configuration.nix
+          ./nixos/display-servers
           inputs.catppuccin.nixosModules.catppuccin
           inputs.home-manager.nixosModules.home-manager
           inputs.lanzaboote.nixosModules.lanzaboote
