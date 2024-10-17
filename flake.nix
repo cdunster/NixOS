@@ -11,11 +11,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixgl = {
-      url = "github:guibou/nixGL";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # The catppuccin theme for everything
     catppuccin.url = "github:catppuccin/nix";
 
@@ -77,31 +72,5 @@
     in
     {
       nixosConfigurations = builtins.mapAttrs createSystem hostsAsSet;
-
-      homeConfigurations.callum = inputs.home-manager.lib.homeManagerConfiguration {
-        pkgs = import inputs.nixpkgs {
-          config.allowUnfree = true;
-          overlays = [
-            inputs.nixgl.overlay
-            (import ./nixgl-wrapper.nix)
-            (import ./pkgs-override.nix)
-          ];
-        };
-        extraSpecialArgs = inputs;
-        modules = [
-          {
-            home = {
-              username = "callum";
-              homeDirectory = "/home/callum";
-            };
-          }
-          {
-            targets.genericLinux.enable = true;
-          }
-          ./home.nix
-          ./non-nixos-gnome.nix
-          inputs.catppuccin.homeManagerModules.catppuccin
-        ];
-      };
     };
 }
