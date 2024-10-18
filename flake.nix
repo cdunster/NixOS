@@ -30,8 +30,8 @@
 
   outputs = { ... }@inputs:
     let
-      # Get all of the hosts from the hosts directory, returning them as a set i.e. `{ hostOne = { ... }; hostTwo = { ... }; }`.
-      allHostsAsSet = inputs.nixpkgs.lib.filesystem.packagesFromDirectoryRecursive { inherit (inputs.nixpkgs.lib) callPackage; directory = ./hosts; };
+      # Get all of the hosts from the hosts directory, returning them as a set.
+      allHostsAsSet = builtins.readDir ./hosts;
 
       # Takes each attribute from the passed set, discards the value and returns a `nixosSystem` with the same name.
       # e.g. `{ hostOne = { foo = 42; }; }` becomes `{ hostOne = nixosSystem { ... }; }`.
