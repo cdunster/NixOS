@@ -38,9 +38,7 @@
       mkNixosSystem = hostName: _: inputs.nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs; };
         modules = [
-          {
-            networking.hostName = "${hostName}";
-          }
+          { networking.hostName = "${hostName}"; }
           ./hosts/${hostName}
           ./configuration.nix
         ];
