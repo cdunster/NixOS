@@ -1,4 +1,6 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, lib, config, ... }:
+
+with lib;
 {
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
@@ -6,6 +8,20 @@
     ./display-servers
     ./home-manager
   ];
+
+  options.hostOptions = {
+    userName = mkOption {
+      type = types.nonEmptyStr;
+      default = "Callum";
+      description = "The displayed full name of the system user";
+    };
+
+    user = mkOption {
+      type = types.str;
+      default = toLower config.hostOptions.userName;
+      description = "The used name of the system user";
+    };
+  };
 
   config = {
     # Allow proprietary/unfree packages to be installed
@@ -114,7 +130,7 @@
 
       # Enable automatic login for a user.
       displayManager.autoLogin.enable = true;
-      displayManager.autoLogin.user = "callum";
+      displayManager.autoLogin.user = config.hostOptions.user;
     };
 
     # Required workaround for autoLogin.
@@ -193,9 +209,9 @@
 
     # Define user accounts.
     users.users = {
-      callum = {
+      ${config.hostOptions.user} = {
         isNormalUser = true;
-        description = "Callum";
+        description = config.hostOptions.userName;
         shell = pkgs.fish;
         extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
       };
