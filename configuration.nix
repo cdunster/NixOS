@@ -21,6 +21,8 @@ with lib;
       default = toLower config.hostOptions.userName;
       description = "The used name of the system user";
     };
+
+    enableVmUser = mkEnableOption "Enable the test user used inside a VM";
   };
 
   config = {
@@ -216,10 +218,10 @@ with lib;
         extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
       };
       # Create a user to be used when testing with `build-vm`.
-      # nixosvmtest = {
-      #   isNormalUser = true;
-      #   initialPassword = "test";
-      # };
+      nixosvmtest = mkIf config.hostOptions.enableVmUser {
+        isNormalUser = true;
+        initialPassword = "test";
+      };
     };
 
     # This value determines the NixOS release from which the default
