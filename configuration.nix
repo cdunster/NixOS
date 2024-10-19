@@ -23,11 +23,17 @@ with lib;
     };
 
     enableVmUser = mkEnableOption "Enable the test user used inside a VM";
+
+    allowUnfreePackages = mkOption {
+      type = types.bool;
+      default = true;
+      description = "Allow installation of proprietary/unfree packages";
+    };
   };
 
   config = {
     # Allow proprietary/unfree packages to be installed
-    nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.allowUnfree = config.hostOptions.allowUnfreePackages;
 
     # Additional overlays to be added to nixpkgs
     nixpkgs.overlays = [
