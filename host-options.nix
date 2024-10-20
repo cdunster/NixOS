@@ -1,5 +1,5 @@
 # Define all of the custom hostOptions used to configure the system for a particular host.
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
 with lib;
 {
@@ -28,6 +28,18 @@ with lib;
       type = types.bool;
       default = true;
       description = "Allow installation of proprietary/unfree packages";
+    };
+
+    shells = mkOption {
+      type = types.nonEmptyListOf (types.enum [ "fish" "bash" "zsh" ]);
+      default = [ "fish" "bash" ];
+      description = "The list of shells to install. Element 0 is considered the default unless overridden with defaultShellPackage";
+    };
+
+    defaultShellPackage = mkOption {
+      type = types.shellPackage;
+      default = pkgs."${builtins.elemAt config.hostOptions.shells 0}";
+      description = "The package to use as the default shell";
     };
 
     neovim = {

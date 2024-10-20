@@ -1,5 +1,9 @@
-{ pkgs, ... }: {
-  programs.fish = {
+{ pkgs, lib, config, ... }:
+let
+  cfg = config.hostOptions;
+in
+{
+  programs.fish = lib.mkIf (builtins.elem "fish" cfg.shells) {
     enable = true;
     plugins = [
       {

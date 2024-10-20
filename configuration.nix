@@ -121,10 +121,10 @@ in
   environment.systemPackages = [ ];
 
   # Enable the fish shell.
-  programs.fish.enable = true;
+  programs.fish.enable = builtins.elem "fish" cfg.shells;
 
   # Enable z shell.
-  programs.zsh.enable = true;
+  programs.zsh.enable = builtins.elem "zsh" cfg.shells;
 
   # Enable neovim and set as default editor.
   programs.neovim = {
@@ -170,7 +170,7 @@ in
     ${cfg.user} = {
       isNormalUser = true;
       description = cfg.userName;
-      shell = pkgs.fish;
+      shell = cfg.defaultShellPackage;
       extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
     };
     # Create a user to be used when testing with `build-vm`.
