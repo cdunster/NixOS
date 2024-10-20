@@ -42,6 +42,16 @@ with lib;
       description = "The package to use as the default shell";
     };
 
+    desktopEnvironment = {
+      gnome = {
+        enable = mkOption {
+          type = types.bool;
+          default = true;
+          description = "Enable the GNOME desktop environment";
+        };
+      };
+    };
+
     neovim = {
       enableNeorg = mkOption {
         type = types.bool;
