@@ -18,6 +18,12 @@ with lib;
 
     enableVmUser = mkEnableOption "Enable the test user used inside a VM";
 
+    bootloader = mkOption {
+      type = types.enum [ "grub" "systemd-boot" "lanzaboote" ];
+      default = "lanzaboote";
+      description = "The type of bootloader to use";
+    };
+
     allowUnfreePackages = mkOption {
       type = types.bool;
       default = true;

@@ -1,17 +1,24 @@
-{ inputs, ... }: {
+{ inputs, lib, config, ... }:
+let
+  cfg = config.hostOptions;
+in
+{
   imports = [
     inputs.lanzaboote.nixosModules.lanzaboote
   ];
 
   # Use the GRUB bootloader.
-  # boot.loader.grub.enable = true;
-  # boot.loader.grub.device = "nodev";
-  # boot.loader.grub.useOSProber = true;
-  # boot.loader.grub.efiSupport = true;
+  boot.loader.grub = lib.mkIf (cfg.bootloader == "grub") {
+    enable = true;
+    device = "nodev";
+    useOSProber = true;
+    efiSupport = true;
+  };
+
+  boot.loader.systemd-boot.enable = cfg.bootloader == "systemd-boot";
 
   # Use lanzaboote as the bootloader to allow the use of Secure Boot.
-  boot.loader.systemd-boot.enable = false;
-  boot.lanzaboote = {
+  boot.lanzaboote = lib.mkIf (cfg.bootloader == "lanzaboote") {
     enable = true;
     pkiBundle = "/etc/secureboot";
   };
