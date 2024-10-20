@@ -123,7 +123,9 @@ in
 
     # Work
     mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
-  ] ++ cfg.extraHomePackages;
+  ]
+  # Install `sbctl`, a Secure Boot key manager if lanzaboote is enabled
+  ++ lib.optional (cfg.bootloader == "lanzaboote") pkgs.sbctl;
 
   fonts.fontconfig = {
     enable = true;
