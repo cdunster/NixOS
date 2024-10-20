@@ -1,5 +1,9 @@
 # Manage user accounts with home-manager.
-{ pkgs, ... }: {
+{ pkgs, config, ... }:
+let
+  cfg = config.hostOptions;
+in
+{
   imports = [
     ./dconf.nix
     ./kitty.nix
@@ -120,7 +124,7 @@
 
     # Work
     mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
-  ];
+  ] ++ cfg.extraHomePackages;
 
   fonts.fontconfig = {
     enable = true;

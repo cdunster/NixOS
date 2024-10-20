@@ -31,5 +31,11 @@ with lib;
         description = "Enable the Neorg plugins";
       };
     };
+
+    extraHomePackages = mkOption {
+      type = types.listOf types.package;
+      default = [ ];
+      description = "A list of extra packages to be installed via home-manager";
+    };
   };
 }
