@@ -1,4 +1,8 @@
-{ inputs, pkgs, lib, config, ... }: {
+{ inputs, pkgs, lib, config, ... }:
+let
+  cfg = config.hostOptions;
+in
+{
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     ./bootloader.nix
@@ -7,7 +11,7 @@
   ];
 
   # Allow proprietary/unfree packages to be installed
-  nixpkgs.config.allowUnfree = config.hostOptions.allowUnfreePackages;
+  nixpkgs.config.allowUnfree = cfg.allowUnfreePackages;
 
   # Additional overlays to be added to nixpkgs
   nixpkgs.overlays = [
@@ -15,7 +19,7 @@
     (_final: prev: { cdunster = import inputs.cdunster-nixpkgs { system = prev.system; config = prev.config; }; })
   ]
   # Used to install the latest version of neorg
-  ++ lib.optional config.hostOptions.neovim.enableNeorg inputs.neorg-overlay.overlays.default
+  ++ lib.optional cfg.neovim.enableNeorg inputs.neorg-overlay.overlays.default
   ;
 
   # Nix configuration
@@ -84,7 +88,7 @@
 
     # Enable automatic login for a user.
     displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = config.hostOptions.user;
+    displayManager.autoLogin.user = cfg.user;
   };
 
   # Required workaround for autoLogin.
@@ -163,14 +167,14 @@
 
   # Define user accounts.
   users.users = {
-    ${config.hostOptions.user} = {
+    ${cfg.user} = {
       isNormalUser = true;
-      description = config.hostOptions.userName;
+      description = cfg.userName;
       shell = pkgs.fish;
       extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
     };
     # Create a user to be used when testing with `build-vm`.
-    nixosvmtest = lib.mkIf config.hostOptions.enableVmUser {
+    nixosvmtest = lib.mkIf cfg.enableVmUser {
       isNormalUser = true;
       initialPassword = "test";
     };
