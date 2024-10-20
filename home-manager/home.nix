@@ -88,7 +88,6 @@ in
     vlc # VLC media player
     zoom-us # Video conferencing software
     dconf-editor # GUI for editing dconf entries
-    sbctl # A Secure Boot key manager.
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })

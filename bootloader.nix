@@ -1,4 +1,4 @@
-{ inputs, lib, config, ... }:
+{ inputs, pkgs, lib, config, ... }:
 let
   cfg = config.hostOptions;
 in
@@ -22,6 +22,9 @@ in
     enable = true;
     pkiBundle = "/etc/secureboot";
   };
+
+  # Install `sbctl`, a Secure Boot key manager is lanzaboote is enabled
+  hostOptions.extraHomePackages = lib.optional (cfg.bootloader == "lanzaboote") pkgs.sbctl;
 
   # Use the EFI bootloader.
   boot.loader.efi.canTouchEfiVariables = true;
