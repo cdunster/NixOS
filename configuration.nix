@@ -13,10 +13,11 @@
   nixpkgs.overlays = [
     # My personal fork of nixpkgs (used for the `ttf-wps-fonts` package) accessable via `cdunster.<package>`
     (_final: prev: { cdunster = import inputs.cdunster-nixpkgs { system = prev.system; config = prev.config; }; })
-
+  ]
+  ++ (lib.optionals config.hostOptions.neovim.enableNeorg [
     # Used to install the latest version of neorg
     inputs.neorg-overlay.overlays.default
-  ];
+  ]);
 
   # Nix configuration
   nix = {
