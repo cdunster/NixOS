@@ -5,6 +5,7 @@
 
     # Display Managers, Desktop Environments, and Window Managers
     ./gnome.nix # The GNOME DM/DE using X11
+    ./awesome.nix # The Awesome Tiling Window Manager for X11
   ];
 
   # Enable managing dconf with NixOS and home-manager modules

@@ -50,6 +50,14 @@ with lib;
           description = "Enable the GNOME desktop environment";
         };
       };
+
+      awesome = {
+        enable = mkOption {
+          type = types.bool;
+          default = true;
+          description = "Enable the Awesome Window Manager";
+        };
+      };
     };
 
     neovim = {

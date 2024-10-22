@@ -13,6 +13,7 @@ in
     ./git.nix
     ./tmux.nix
     ./wezterm
+    ./awesome
   ];
 
   # Let home-manager manage its own installation.
