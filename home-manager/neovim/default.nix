@@ -1,4 +1,8 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, lib, ... }:
+let
+  cfg = config.hostOptions.neovim;
+in
+{
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -202,7 +206,8 @@
           type = "lua";
           config = "require('oil').setup()";
         }
-
+      ]
+      ++ (lib.optionals cfg.enableNeorg [
         # orgmode-like note taking in Neovim.
         {
           plugin = neorg;
@@ -210,7 +215,7 @@
           config = "require('plugins.neorg').config()";
         }
         neorg-telescope
-      ];
+      ]);
   };
 
   xdg.configFile."nvim/lua/plugins".source = ./nvim/lua/plugins;

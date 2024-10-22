@@ -1,5 +1,9 @@
-{ pkgs, ... }: {
-  programs.zsh = {
+{ pkgs, lib, config, ... }:
+let
+  cfg = config.hostOptions;
+in
+{
+  programs.zsh = lib.mkIf (builtins.elem "zsh" cfg.shells) {
     enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;

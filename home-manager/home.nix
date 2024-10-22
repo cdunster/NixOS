@@ -1,14 +1,18 @@
 # Manage user accounts with home-manager.
-{ pkgs, ... }: {
+{ pkgs, config, ... }:
+let
+  cfg = config.hostOptions;
+in
+{
   imports = [
     ./dconf.nix
     ./kitty.nix
     ./shells
     ./starship.nix
-    ./neovim.nix
+    ./neovim
     ./git.nix
     ./tmux.nix
-    ./wezterm.nix
+    ./wezterm
   ];
 
   # Let home-manager manage its own installation.
@@ -47,7 +51,7 @@
         flavor = "frappe";
         accent = "blue";
       };
-      gnomeShellTheme = true;
+      gnomeShellTheme = cfg.desktopEnvironment.gnome.enable;
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
@@ -84,7 +88,6 @@
     vlc # VLC media player
     zoom-us # Video conferencing software
     dconf-editor # GUI for editing dconf entries
-    sbctl # A Secure Boot key manager.
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
@@ -120,7 +123,9 @@
 
     # Work
     mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
-  ];
+  ]
+  # Install `sbctl`, a Secure Boot key manager if lanzaboote is enabled
+  ++ lib.optional (cfg.bootloader == "lanzaboote") pkgs.sbctl;
 
   fonts.fontconfig = {
     enable = true;

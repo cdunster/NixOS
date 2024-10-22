@@ -1,7 +1,33 @@
-{ pkgs, ... }:
+{ inputs, pkgs, lib, config, ... }:
+let
+  cfg = config.hostOptions;
+in
 {
+  imports = [
+    inputs.catppuccin.nixosModules.catppuccin
+    ./bootloader.nix
+    ./display-servers
+    ./home-manager
+  ];
+
+  # Allow proprietary/unfree packages to be installed
+  nixpkgs.config.allowUnfree = cfg.allowUnfreePackages;
+
+  # Additional overlays to be added to nixpkgs
+  nixpkgs.overlays = [
+    # My personal fork of nixpkgs (used for the `ttf-wps-fonts` package) accessable via `cdunster.<package>`
+    (_final: prev: { cdunster = import inputs.cdunster-nixpkgs { system = prev.system; config = prev.config; }; })
+  ]
+  # Used to install the latest version of neorg
+  ++ lib.optional cfg.neovim.enableNeorg inputs.neorg-overlay.overlays.default
+  ;
+
+  # Nix configuration
   nix = {
+    # Set nixpkgs version to the latest unstable version
     package = pkgs.nixVersions.latest;
+
+    # Settings added to /etc/nix/nix.conf
     settings = {
       substituters = [
         "https://holochain-ci.cachix.org"
@@ -12,6 +38,8 @@
         "holochain-wind-tunnel.cachix.org-1:tnSm+7Y3hDKOc9xLdoVMuInMA2AQ0R/99Ucz5edYGJw="
       ];
     };
+
+    # Extra lines to be added to /etc/nix/nix.conf
     extraOptions = ''
       experimental-features = nix-command flakes
       keep-outputs = true
@@ -19,39 +47,11 @@
     '';
   };
 
-  # Use the GRUB bootloader.
-  # boot.loader.grub.enable = true;
-  # boot.loader.grub.device = "nodev";
-  # boot.loader.grub.useOSProber = true;
-  # boot.loader.grub.efiSupport = true;
-
-  # Use lanzaboote as the bootloader to allow the use of Secure Boot.
-  boot.loader.systemd-boot.enable = false;
-  boot.lanzaboote = {
-    enable = true;
-    pkiBundle = "/etc/secureboot";
-  };
-
-  # Use the EFI bootloader.
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot";
-
-  # Enable Plymouth for GUI boot screen.
-  boot.initrd.systemd.enable = true;
-  boot.plymouth = {
-    enable = true;
-    theme = "breeze";
-  };
-  boot.kernelParams = [ "quiet" ];
-
   # Install firmware updates distributed through LVFS.
   services.fwupd.enable = true;
 
   # Enable fingerprint reader support.
   services.fprintd.enable = true;
-
-  # Allow emulating ARM (for building RPi images).
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
   # Set the system time zone.
   time.timeZone = "Europe/Amsterdam";
@@ -88,7 +88,7 @@
 
     # Enable automatic login for a user.
     displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "callum";
+    displayManager.autoLogin.user = cfg.user;
   };
 
   # Required workaround for autoLogin.
@@ -121,10 +121,10 @@
   environment.systemPackages = [ ];
 
   # Enable the fish shell.
-  programs.fish.enable = true;
+  programs.fish.enable = builtins.elem "fish" cfg.shells;
 
   # Enable z shell.
-  programs.zsh.enable = true;
+  programs.zsh.enable = builtins.elem "zsh" cfg.shells;
 
   # Enable neovim and set as default editor.
   programs.neovim = {
@@ -167,17 +167,17 @@
 
   # Define user accounts.
   users.users = {
-    callum = {
+    ${cfg.user} = {
       isNormalUser = true;
-      description = "Callum";
-      shell = pkgs.fish;
+      description = cfg.userName;
+      shell = cfg.defaultShellPackage;
       extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
     };
     # Create a user to be used when testing with `build-vm`.
-    # nixosvmtest = {
-    #   isNormalUser = true;
-    #   initialPassword = "test";
-    # };
+    nixosvmtest = lib.mkIf cfg.enableVmUser {
+      isNormalUser = true;
+      initialPassword = "test";
+    };
   };
 
   # This value determines the NixOS release from which the default
@@ -188,4 +188,3 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 }
-
