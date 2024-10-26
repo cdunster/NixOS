@@ -14,7 +14,11 @@
             eDP-1 = fingerprints.laptop;
           };
           config = {
-            eDP-1.enable = true;
+            eDP-1 = {
+              enable = true;
+              mode = "2880x1920";
+              rate = "120.00";
+            };
           };
         };
         "docked-home" = {
