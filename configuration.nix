@@ -6,7 +6,7 @@ in
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     ./bootloader.nix
-    ./display-servers
+    ./desktop-envs
     ./home-manager
   ];
 

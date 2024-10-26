@@ -4,7 +4,13 @@ let
 in
 {
   config = lib.mkIf cfg.enable {
+    # Enable managing dconf with NixOS and home-manager modules
+    programs.dconf.enable = true;
+
     services.xserver = {
+      # Enable the X11 display server
+      enable = true;
+
       # Use the GNOME Display Manager (GDM)
       displayManager.gdm = {
         enable = true;
@@ -15,6 +21,13 @@ in
 
       # Use the GNOME Desktop Environment
       desktopManager.gnome.enable = true;
+
+      # Configure keyboard layout
+      xkb = {
+        layout = "us";
+        variant = "euro";
+        options = "caps:none";
+      };
     };
 
     # Exclude these packages from the GNOME install
