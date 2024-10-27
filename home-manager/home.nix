@@ -7,7 +7,6 @@ in
   imports = [
     ./dconf.nix
     ./kitty.nix
-    ./shells
     ./starship.nix
     ./neovim
     ./git.nix
