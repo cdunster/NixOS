@@ -11,7 +11,6 @@ in
   programs.bash.enable = builtins.elem "bash" cfg.shells;
 
   imports = [
-    ./fish.nix
     ./zsh.nix
   ];
 }

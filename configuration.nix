@@ -6,6 +6,7 @@ in
   imports = [
     inputs.catppuccin.nixosModules.catppuccin
     ./bootloader.nix
+    ./shells
     ./desktop-envs
     ./home-manager
   ];
@@ -119,9 +120,6 @@ in
 
   # System level packages to install (available for all users).
   environment.systemPackages = [ ];
-
-  # Enable the fish shell.
-  programs.fish.enable = builtins.elem "fish" cfg.shells;
 
   # Enable z shell.
   programs.zsh.enable = builtins.elem "zsh" cfg.shells;
