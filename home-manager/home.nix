@@ -1,7 +1,6 @@
 # Manage user accounts with home-manager.
 { pkgs, ... }: {
   imports = [
-    ./starship.nix
     ./git.nix
   ];
 

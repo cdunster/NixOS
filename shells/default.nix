@@ -4,6 +4,9 @@ let
 in
 {
   imports = [
+    # Utilities and tooling for multiple shells
+    ./utils/starship.nix # The starship cross-shell prompt
+
     ./bash.nix
     ./fish.nix
     ./zsh.nix
