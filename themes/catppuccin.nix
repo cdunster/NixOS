@@ -7,6 +7,13 @@ in
     inputs.catppuccin.nixosModules.catppuccin
   ];
 
+  # System theme
+  catppuccin = {
+    enable = true;
+    flavor = "frappe";
+    accent = "blue";
+  };
+
   home-manager.users.${cfg.user} = {
     imports = [
       inputs.catppuccin.homeManagerModules.catppuccin
