@@ -8,6 +8,7 @@ in
     ./bootloader.nix
     ./shells
     ./desktop-envs
+    ./neovim
     ./home-manager
   ];
 
@@ -18,10 +19,7 @@ in
   nixpkgs.overlays = [
     # My personal fork of nixpkgs (used for the `ttf-wps-fonts` package) accessable via `cdunster.<package>`
     (_final: prev: { cdunster = import inputs.cdunster-nixpkgs { system = prev.system; config = prev.config; }; })
-  ]
-  # Used to install the latest version of neorg
-  ++ lib.optional cfg.neovim.enableNeorg inputs.neorg-overlay.overlays.default
-  ;
+  ];
 
   # Nix configuration
   nix = {
@@ -116,12 +114,6 @@ in
 
   # System level packages to install (available for all users).
   environment.systemPackages = [ ];
-
-  # Enable neovim and set as default editor.
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
 
   # Enable the GNU Privacy Guard agent for managing GPG keys.
   programs.gnupg.agent = {
