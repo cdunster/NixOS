@@ -1,14 +1,18 @@
-{ lib, config, ... }:
+{ pkgs, lib, config, ... }:
 
 with lib;
 
 let
-  cfg = config.hostOptions;
+  cfg = config.hostOptions.shells.bash;
+  user = config.hostOptions.user;
 in
 {
-  config = mkIf (builtins.elem "bash" cfg.shells) {
+  config = mkIf cfg.enable {
+    # Set the default shell of the main user to bash
+    users.users.${user}.shell = mkIf cfg.default pkgs.bash;
+
     # Configure the bash shell via home-manager
-    home-manager.users.${cfg.user}.programs.bash = {
+    home-manager.users.${user}.programs.bash = {
       enable = true;
     };
   };

@@ -3,15 +3,19 @@
 with lib;
 
 let
-  cfg = config.hostOptions;
+  cfg = config.hostOptions.shells.fish;
+  user = config.hostOptions.user;
 in
 {
-  config = mkIf (builtins.elem "fish" cfg.shells) {
+  config = mkIf cfg.enable {
     # Enable the fish shell
     programs.fish.enable = true;
 
+    # Set the default shell of the main user to fish
+    users.users.${user}.shell = mkIf cfg.default config.programs.fish.package;
+
     # Configure the fish shell via home-manager
-    home-manager.users.${cfg.user}.programs.fish = {
+    home-manager.users.${user}.programs.fish = {
       enable = true;
       plugins = [
         {

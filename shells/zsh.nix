@@ -3,15 +3,19 @@
 with lib;
 
 let
-  cfg = config.hostOptions;
+  cfg = config.hostOptions.shells.zsh;
+  user = config.hostOptions.user;
 in
 {
-  config = mkIf (builtins.elem "zsh" cfg.shells) {
+  config = mkIf cfg.enable {
     # Enable the z-shell
     programs.zsh.enable = true;
 
+    # Set the default shell of the main user to zsh
+    users.users.${user}.shell = mkIf cfg.default pkgs.zsh;
+
     # Configure the zsh shell via home-manager
-    home-manager.users.${cfg.user}.programs.zsh = {
+    home-manager.users.${user}.programs.zsh = {
       enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;

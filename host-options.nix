@@ -1,5 +1,5 @@
 # Define all of the custom hostOptions used to configure the system for a particular host.
-{ pkgs, lib, config, ... }:
+{ lib, config, ... }:
 
 with lib;
 {
@@ -31,15 +31,21 @@ with lib;
     };
 
     shells = mkOption {
-      type = types.nonEmptyListOf (types.enum [ "fish" "bash" "zsh" ]);
-      default = [ "fish" "bash" ];
-      description = "The list of shells to install. Element 0 is considered the default unless overridden with defaultShellPackage";
-    };
-
-    defaultShellPackage = mkOption {
-      type = types.shellPackage;
-      default = pkgs."${builtins.elemAt config.hostOptions.shells 0}";
-      description = "The package to use as the default shell";
+      type = types.attrsOf (types.submodule {
+        options = {
+          enable = mkEnableOption "Enable this shell";
+          default = mkEnableOption "Set this shell as the default shell";
+        };
+      });
+      default = {
+        fish = {
+          enable = true;
+          default = true;
+        };
+        bash.enable = true;
+        zsh.enable = false;
+      };
+      description = "A set of shells to enable. Only one shell can be the default";
     };
 
     desktopEnvironment = {
