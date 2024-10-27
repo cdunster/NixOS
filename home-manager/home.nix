@@ -1,9 +1,5 @@
 # Manage user accounts with home-manager.
 { pkgs, ... }: {
-  imports = [
-    ./git.nix
-  ];
-
   # Let home-manager manage its own installation.
   programs.home-manager.enable = true;
 

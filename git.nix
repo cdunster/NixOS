@@ -1,6 +1,9 @@
-# Configure git using home-manager.
-{ pkgs, ... }: {
-  programs.git = {
+{ config, ... }:
+let
+  user = config.hostOptions.user;
+in
+{
+  home-manager.users.${user}.programs.git = {
     enable = true;
     userName = "Callum Dunster";
     userEmail = "cdunster@users.noreply.github.com";

@@ -11,6 +11,7 @@ in
     ./dconf
     ./themes
     ./neovim
+    ./git.nix
     ./home-manager
   ];
 
