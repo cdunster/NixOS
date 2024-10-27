@@ -121,9 +121,6 @@ in
   # System level packages to install (available for all users).
   environment.systemPackages = [ ];
 
-  # Enable z shell.
-  programs.zsh.enable = builtins.elem "zsh" cfg.shells;
-
   # Enable neovim and set as default editor.
   programs.neovim = {
     enable = true;
