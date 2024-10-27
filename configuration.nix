@@ -170,7 +170,6 @@ in
     ${cfg.user} = {
       isNormalUser = true;
       description = cfg.userName;
-      shell = cfg.defaultShellPackage;
       extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
     };
     # Create a user to be used when testing with `build-vm`.
