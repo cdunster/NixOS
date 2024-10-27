@@ -8,7 +8,6 @@ in
     ./dconf.nix
     ./kitty.nix
     ./starship.nix
-    ./neovim
     ./git.nix
     ./tmux.nix
     ./wezterm
