@@ -4,10 +4,10 @@ let
 in
 {
   imports = [
-    inputs.catppuccin.nixosModules.catppuccin
     ./bootloader.nix
     ./shells
     ./desktop-envs
+    ./themes
     ./neovim
     ./home-manager
   ];

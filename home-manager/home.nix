@@ -25,47 +25,6 @@ in
   # The version of Home-manager used.
   home.stateVersion = "22.11";
 
-  # System theme
-  catppuccin = {
-    enable = true;
-    flavor = "frappe";
-    accent = "blue";
-    pointerCursor = {
-      enable = true;
-      flavor = "frappe";
-      accent = "dark";
-    };
-  };
-
-  # GTK system theme
-  gtk = {
-    enable = true;
-    catppuccin = {
-      enable = true;
-      flavor = "frappe";
-      accent = "blue";
-      icon = {
-        enable = true;
-        flavor = "frappe";
-        accent = "blue";
-      };
-      gnomeShellTheme = cfg.desktopEnvironment.gnome.enable;
-    };
-    gtk3.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
-    gtk4.extraConfig = {
-      gtk-application-prefer-dark-theme = 1;
-    };
-  };
-
-  # Qt system theme
-  qt.style.catppuccin = {
-    enable = true;
-    flavor = "frappe";
-    accent = "blue";
-  };
-
   home.packages = with pkgs; [
     # Utilities
     clang # Modern C/C++ compiler

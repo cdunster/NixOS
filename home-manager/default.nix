@@ -15,7 +15,6 @@
             config.hostOptions = config.hostOptions;
           }
           ./home.nix # Import the standard settings for all systems.
-          inputs.catppuccin.homeManagerModules.catppuccin
         ];
       };
       home-manager.backupFileExtension = "bak";
