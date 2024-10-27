@@ -12,7 +12,7 @@ in
     ./themes
     ./neovim
     ./git.nix
-    ./home-manager
+    ./home-manager.nix
   ];
 
   # Allow proprietary/unfree packages to be installed
