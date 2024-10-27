@@ -7,6 +7,7 @@ in
     ./bootloader.nix
     ./shells
     ./desktop-envs
+    ./dconf
     ./themes
     ./neovim
     ./home-manager

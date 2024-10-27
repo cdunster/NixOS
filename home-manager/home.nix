@@ -5,7 +5,6 @@ let
 in
 {
   imports = [
-    ./dconf.nix
     ./kitty.nix
     ./starship.nix
     ./git.nix
@@ -44,14 +43,12 @@ in
     usbutils # lsusb and other utilities
     vlc # VLC media player
     zoom-us # Video conferencing software
-    dconf-editor # GUI for editing dconf entries
 
     # Fonts
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     cdunster.ttf-wps-fonts
 
     # Nix tools
-    dconf2nix # Convert dconf files to Nix files
     nixpkgs-fmt # Format Nix files the nixpkgs' way
 
     # Applications
