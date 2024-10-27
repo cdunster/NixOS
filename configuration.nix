@@ -6,6 +6,7 @@ in
   imports = [
     ./bootloader.nix
     ./shells
+    ./terminals
     ./desktop-envs
     ./dconf
     ./themes

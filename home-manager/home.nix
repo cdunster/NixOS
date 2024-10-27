@@ -1,11 +1,8 @@
 # Manage user accounts with home-manager.
 { pkgs, ... }: {
   imports = [
-    ./kitty.nix
     ./starship.nix
     ./git.nix
-    ./tmux.nix
-    ./wezterm
   ];
 
   # Let home-manager manage its own installation.
