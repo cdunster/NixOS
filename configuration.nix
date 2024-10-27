@@ -112,9 +112,6 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # System level packages to install (available for all users).
-  environment.systemPackages = [ ];
-
   # Enable the GNU Privacy Guard agent for managing GPG keys.
   programs.gnupg.agent = {
     enable = true;
