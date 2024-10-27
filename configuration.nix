@@ -79,10 +79,6 @@ in
     LC_ALL = "en_GB.UTF-8";
   };
 
-  console = {
-    font = "Lat2-Terminus16";
-  };
-
   services = {
     # Enable touchpad support.
     libinput.enable = true;
