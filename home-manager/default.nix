@@ -15,7 +15,6 @@
             config.hostOptions = config.hostOptions;
           }
           ./home.nix # Import the standard settings for all systems.
-          ./gnome.nix # Add packages required for GNOME DE
           inputs.catppuccin.homeManagerModules.catppuccin
         ];
       };
