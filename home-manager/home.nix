@@ -1,9 +1,5 @@
 # Manage user accounts with home-manager.
-{ pkgs, config, ... }:
-let
-  cfg = config.hostOptions;
-in
-{
+{ pkgs, ... }: {
   imports = [
     ./kitty.nix
     ./starship.nix
@@ -77,9 +73,7 @@ in
 
     # Work
     mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
-  ]
-  # Install `sbctl`, a Secure Boot key manager if lanzaboote is enabled
-  ++ lib.optional (cfg.bootloader == "lanzaboote") pkgs.sbctl;
+  ];
 
   fonts.fontconfig = {
     enable = true;
