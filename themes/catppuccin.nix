@@ -21,9 +21,7 @@ in
 
     # System theme
     catppuccin = {
-      enable = true;
-      flavor = "frappe";
-      accent = "blue";
+      inherit (config.catppuccin) enable flavor accent;
       pointerCursor = {
         enable = true;
         accent = "dark";
