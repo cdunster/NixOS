@@ -47,10 +47,6 @@ in
       vlc # VLC media player
       zoom-us # Video conferencing software
 
-      # Fonts
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-      cdunster.ttf-wps-fonts
-
       # Nix tools
       nixpkgs-fmt # Format Nix files the nixpkgs' way
 
@@ -81,14 +77,6 @@ in
       # Work
       mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
     ];
-
-    fonts.fontconfig = {
-      enable = true;
-      defaultFonts = {
-        sansSerif = [ "JetBrainsMono Nerd Font 10" ];
-        monospace = [ "JetBrainsMono Nerd Font Mono 11" ];
-      };
-    };
 
     programs.vscode = {
       enable = true;
