@@ -38,12 +38,8 @@ in
         icon.enable = true;
         gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
       };
-      gtk3.extraConfig = {
-        gtk-application-prefer-dark-theme = 1;
-      };
-      gtk4.extraConfig = {
-        gtk-application-prefer-dark-theme = 1;
-      };
+      gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
+      gtk4.extraConfig.gtk-application-prefer-dark-theme = true;
     };
 
     # Qt system theme
