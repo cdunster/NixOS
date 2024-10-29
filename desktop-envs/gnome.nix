@@ -1,15 +1,11 @@
 { pkgs, lib, config, ... }: {
-  options.hostOptions.desktopEnvironment.gnome = with lib; {
-    enable = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable the GNOME desktop environment";
-    };
+  options.hostOptions.desktopEnvironments.gnome = with lib; {
+    enable = mkEnableOption "Enable the GNOME desktop environment";
   };
 
   config =
     let
-      cfg = config.hostOptions.desktopEnvironment.gnome;
+      cfg = config.hostOptions.desktopEnvironments.gnome;
     in
     lib.mkIf cfg.enable {
       # Enable managing dconf with NixOS and home-manager modules

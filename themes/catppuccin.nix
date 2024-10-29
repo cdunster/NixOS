@@ -43,7 +43,7 @@ in
           flavor = "frappe";
           accent = "blue";
         };
-        gnomeShellTheme = cfg.desktopEnvironment.gnome.enable;
+        gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
       };
       gtk3.extraConfig = {
         gtk-application-prefer-dark-theme = 1;

@@ -13,5 +13,6 @@
       enable = true;
       default = true;
     };
+    desktopEnvironments.gnome.enable = true;
   };
 }
