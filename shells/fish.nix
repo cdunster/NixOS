@@ -3,17 +3,8 @@
 with lib;
 {
   options.hostOptions.shells.fish = {
-    enable = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable the fish shell";
-    };
-
-    default = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Make fish the default shell. Only one shell can be specified as the default";
-    };
+    enable = mkEnableOption "Enable the fish shell";
+    default = mkEnableOption "Make fish the default shell. Only one shell can be specified as the default";
   };
 
   config =

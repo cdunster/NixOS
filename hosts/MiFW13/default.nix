@@ -9,5 +9,9 @@
     userName = "Callum";
     allowUnfreePackages = true;
     bootloader = "lanzaboote";
+    shells.fish = {
+      enable = true;
+      default = true;
+    };
   };
 }
