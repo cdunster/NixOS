@@ -7,5 +7,6 @@
 
   hostOptions = {
     userName = "Callum";
+    allowUnfreePackages = true;
   };
 }

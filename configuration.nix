@@ -26,11 +26,7 @@
 
     enableVmUser = mkEnableOption "Enable the test user used inside a VM";
 
-    allowUnfreePackages = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Allow installation of proprietary/unfree packages";
-    };
+    allowUnfreePackages = mkEnableOption "Allow installation of proprietary/unfree packages";
   };
 
   config =
