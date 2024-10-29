@@ -4,24 +4,6 @@
 with lib;
 {
   options.hostOptions = {
-    shells = mkOption {
-      type = types.attrsOf (types.submodule {
-        options = {
-          enable = mkEnableOption "Enable this shell";
-          default = mkEnableOption "Set this shell as the default shell";
-        };
-      });
-      default = {
-        fish = {
-          enable = true;
-          default = true;
-        };
-        bash.enable = true;
-        zsh.enable = false;
-      };
-      description = "A set of shells to enable. Only one shell can be the default";
-    };
-
     desktopEnvironment = {
       gnome = {
         enable = mkOption {
