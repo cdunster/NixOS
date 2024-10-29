@@ -26,7 +26,6 @@ in
       accent = "blue";
       pointerCursor = {
         enable = true;
-        flavor = "frappe";
         accent = "dark";
       };
     };
@@ -36,13 +35,7 @@ in
       enable = true;
       catppuccin = {
         enable = true;
-        flavor = "frappe";
-        accent = "blue";
-        icon = {
-          enable = true;
-          flavor = "frappe";
-          accent = "blue";
-        };
+        icon.enable = true;
         gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
       };
       gtk3.extraConfig = {
@@ -54,11 +47,6 @@ in
     };
 
     # Qt system theme
-    qt.style.catppuccin = {
-      enable = true;
-      flavor = "frappe";
-      accent = "blue";
-    };
-
+    qt.style.catppuccin.enable = true;
   };
 }
