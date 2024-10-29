@@ -1,20 +1,11 @@
-{ inputs, pkgs, lib, config, ... }: {
-  options.hostOptions.neovim = with lib; {
-    enableNeorg = mkOption {
-      type = types.bool;
-      default = true;
-      description = "Enable the Neorg plugins";
-    };
-  };
-
+{ inputs, pkgs, config, ... }: {
   config =
     let
-      cfg = config.hostOptions.neovim;
       user = config.hostOptions.user;
     in
     {
       # Add the overlay to install the latest version of neorg
-      nixpkgs.overlays = lib.optional cfg.enableNeorg inputs.neorg-overlay.overlays.default;
+      nixpkgs.overlays = [ inputs.neorg-overlay.overlays.default ];
 
       # Enable neovim and set as default editor.
       programs.neovim = {
@@ -227,8 +218,7 @@
                 type = "lua";
                 config = "require('oil').setup()";
               }
-            ]
-            ++ (lib.optionals cfg.enableNeorg [
+
               # orgmode-like note taking in Neovim.
               {
                 plugin = neorg;
@@ -236,7 +226,7 @@
                 config = "require('plugins.neorg').config()";
               }
               neorg-telescope
-            ]);
+            ];
         };
 
         xdg.configFile."nvim/lua/plugins".source = ./nvim/lua/plugins;
