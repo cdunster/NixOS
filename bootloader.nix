@@ -5,7 +5,6 @@
 
   options.hostOptions.bootloader = with lib; mkOption {
     type = types.enum [ "grub" "systemd-boot" "lanzaboote" ];
-    default = "lanzaboote";
     description = "The type of bootloader to use";
   };
 

@@ -8,5 +8,6 @@
   hostOptions = {
     userName = "Callum";
     allowUnfreePackages = true;
+    bootloader = "lanzaboote";
   };
 }
