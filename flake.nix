@@ -39,7 +39,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           { networking.hostName = "${hostName}"; }
-          ./host-options.nix
           ./hosts/${hostName}
           ./configuration.nix
         ];
