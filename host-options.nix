@@ -4,12 +4,6 @@
 with lib;
 {
   options.hostOptions = {
-    bootloader = mkOption {
-      type = types.enum [ "grub" "systemd-boot" "lanzaboote" ];
-      default = "lanzaboote";
-      description = "The type of bootloader to use";
-    };
-
     shells = mkOption {
       type = types.attrsOf (types.submodule {
         options = {
