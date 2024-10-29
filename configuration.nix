@@ -15,8 +15,7 @@
   options.hostOptions = with lib; {
     userName = mkOption {
       type = types.nonEmptyStr;
-      default = "Callum";
-      description = "The displayed full name of the system user";
+      description = "The displayed full name of the main system user";
     };
 
     user = mkOption {
