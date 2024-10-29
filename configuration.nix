@@ -1,15 +1,15 @@
 { pkgs, lib, config, ... }: {
   imports = [
     ./bootloader.nix
-    ./shells
-    ./terminals
+    ./dconf
     ./desktop-envs
     ./fonts.nix
-    ./dconf
-    ./themes
-    ./neovim
     ./git.nix
     ./home-manager.nix
+    ./neovim
+    ./shells
+    ./terminals
+    ./themes
   ];
 
   options.hostOptions = with lib; {
