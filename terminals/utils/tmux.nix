@@ -1,6 +1,9 @@
-{ pkgs, ... }: {
-
-  programs.tmux = {
+{ pkgs, config, ... }:
+let
+  user = config.hostOptions.user;
+in
+{
+  home-manager.users.${user}.programs.tmux = {
     enable = true;
     keyMode = "vi";
     clock24 = true;

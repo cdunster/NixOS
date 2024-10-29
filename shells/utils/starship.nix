@@ -1,5 +1,9 @@
-{ pkgs, ... }: {
-  programs.starship = {
+{ config, ... }:
+let
+  user = config.hostOptions.user;
+in
+{
+  home-manager.users.${user}.programs.starship = {
     enable = true;
     settings = {
       aws.style = "bold #ffb86c";

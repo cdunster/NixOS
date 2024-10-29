@@ -1,4 +1,4 @@
-{ inputs, lib, config, ... }:
+{ inputs, pkgs, lib, config, ... }:
 let
   cfg = config.hostOptions;
 in
@@ -29,12 +29,12 @@ in
 
   # Enable Plymouth for GUI boot screen.
   boot.initrd.systemd.enable = true;
-  boot.plymouth = {
-    enable = true;
-    theme = "breeze";
-  };
+  boot.plymouth.enable = true;
   boot.kernelParams = [ "quiet" ];
 
   # Allow emulating ARM (for building RPi images).
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
+  # Install `sbctl`, a Secure Boot key manager if lanzaboote is enabled
+  home-manager.users.${cfg.user}.home.packages = lib.optional (cfg.bootloader == "lanzaboote") pkgs.sbctl;
 }

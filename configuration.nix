@@ -4,10 +4,15 @@ let
 in
 {
   imports = [
-    inputs.catppuccin.nixosModules.catppuccin
     ./bootloader.nix
+    ./shells
+    ./terminals
     ./desktop-envs
-    ./home-manager
+    ./dconf
+    ./themes
+    ./neovim
+    ./git.nix
+    ./home-manager.nix
   ];
 
   # Allow proprietary/unfree packages to be installed
@@ -17,10 +22,7 @@ in
   nixpkgs.overlays = [
     # My personal fork of nixpkgs (used for the `ttf-wps-fonts` package) accessable via `cdunster.<package>`
     (_final: prev: { cdunster = import inputs.cdunster-nixpkgs { system = prev.system; config = prev.config; }; })
-  ]
-  # Used to install the latest version of neorg
-  ++ lib.optional cfg.neovim.enableNeorg inputs.neorg-overlay.overlays.default
-  ;
+  ];
 
   # Nix configuration
   nix = {
@@ -78,10 +80,6 @@ in
     LC_ALL = "en_GB.UTF-8";
   };
 
-  console = {
-    font = "Lat2-Terminus16";
-  };
-
   services = {
     # Enable touchpad support.
     libinput.enable = true;
@@ -116,21 +114,6 @@ in
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  # System level packages to install (available for all users).
-  environment.systemPackages = [ ];
-
-  # Enable the fish shell.
-  programs.fish.enable = builtins.elem "fish" cfg.shells;
-
-  # Enable z shell.
-  programs.zsh.enable = builtins.elem "zsh" cfg.shells;
-
-  # Enable neovim and set as default editor.
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
 
   # Enable the GNU Privacy Guard agent for managing GPG keys.
   programs.gnupg.agent = {
@@ -170,7 +153,6 @@ in
     ${cfg.user} = {
       isNormalUser = true;
       description = cfg.userName;
-      shell = cfg.defaultShellPackage;
       extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
     };
     # Create a user to be used when testing with `build-vm`.
