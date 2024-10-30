@@ -10,6 +10,7 @@
     ./shells
     ./terminals
     ./themes
+    ./udev
   ];
 
   options.hostOptions = with lib; {
@@ -141,25 +142,6 @@
 
       # Enable VirtualBox.
       virtualisation.virtualbox.host.enable = true;
-
-      # Enable udev and add custom rules.
-      services.udev = {
-        enable = true;
-        packages =
-          let
-            createRule = file:
-              pkgs.writeTextFile {
-                name = builtins.baseNameOf file;
-                text = builtins.readFile file;
-                destination = "/etc/udev/rules.d/" + builtins.baseNameOf file;
-              };
-          in
-          [
-            (createRule ./udev-rules/69-probe-rs.rules)
-            (createRule ./udev-rules/90-saleae-logic.rules)
-            (createRule ./udev-rules/90-ledger-nano-x.rules)
-          ];
-      };
 
       # Define user accounts.
       users.users = {
