@@ -1,6 +1,7 @@
 { pkgs, lib, config, ... }: {
   imports = [
     ./bootloader.nix
+    ./brave.nix
     ./dconf
     ./desktop-envs
     ./dev-tools
