@@ -20,6 +20,7 @@
     ./terminals
     ./themes
     ./udev
+    ./vscode.nix
     ./zoxide.nix
   ];
 

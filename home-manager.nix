@@ -75,14 +75,5 @@ in
       lldb # The debugger for the LLVM Project (lldb-dap)
       llvm # Compiler tools for the LLVM Project (llvm-symbolizer)
     ];
-
-    programs.vscode = {
-      enable = true;
-      extensions = with pkgs.vscode-extensions; [
-        vscodevim.vim
-        rust-lang.rust-analyzer
-        vadimcn.vscode-lldb
-      ];
-    };
   };
 }
