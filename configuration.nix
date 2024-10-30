@@ -6,6 +6,7 @@
     ./dconf
     ./desktop-envs
     ./dev-tools
+    ./direnv.nix
     ./display-managers
     ./eza.nix
     ./fonts.nix

@@ -105,10 +105,5 @@ in
         "--header-first"
       ];
     };
-
-    programs.direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
   };
 }
