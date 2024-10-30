@@ -1,6 +1,7 @@
 { lib, config, ... }: {
   imports = [
     ./gdm.nix
+    ./sddm.nix
   ];
 
   options.hostOptions.displayManagers.enableAutoLogin = lib.mkEnableOption "Enable automatic login for the main system user";
