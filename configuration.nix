@@ -1,5 +1,6 @@
 { pkgs, lib, config, ... }: {
   imports = [
+    ./bat.nix
     ./bootloader.nix
     ./brave.nix
     ./dconf

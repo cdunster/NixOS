@@ -110,7 +110,5 @@ in
       enable = true;
       nix-direnv.enable = true;
     };
-
-    programs.bat.enable = true;
   };
 }
