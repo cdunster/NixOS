@@ -6,6 +6,7 @@
     ./desktop-envs
     ./dev-tools
     ./display-managers
+    ./eza.nix
     ./fonts.nix
     ./git.nix
     ./gpg.nix

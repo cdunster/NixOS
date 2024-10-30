@@ -112,6 +112,5 @@ in
     };
 
     programs.bat.enable = true;
-    programs.eza.enable = true;
   };
 }
