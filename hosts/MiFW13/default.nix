@@ -14,6 +14,10 @@
       default = true;
     };
     desktopEnvironments.gnome.enable = true;
+    displayManagers = {
+      enableAutoLogin = true;
+      gdm.enable = true;
+    };
     devTools.holochain.enable = true;
   };
 }

@@ -4,6 +4,7 @@
     ./dconf
     ./desktop-envs
     ./dev-tools
+    ./display-managers
     ./fonts.nix
     ./git.nix
     ./home-manager.nix
@@ -86,15 +87,7 @@
       services = {
         # Enable touchpad support.
         libinput.enable = true;
-
-        # Enable automatic login for a user.
-        displayManager.autoLogin.enable = true;
-        displayManager.autoLogin.user = cfg.user;
       };
-
-      # Required workaround for autoLogin.
-      systemd.services."getty@tty1".enable = false;
-      systemd.services."autovt@tty1".enable = false;
 
       # Override default packages (removes nano and others).
       environment.defaultPackages = [ ];
