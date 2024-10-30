@@ -8,6 +8,7 @@
     ./display-managers
     ./fonts.nix
     ./git.nix
+    ./gpg.nix
     ./home-manager.nix
     ./neovim
     ./shells
