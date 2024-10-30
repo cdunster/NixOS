@@ -18,10 +18,6 @@
               enable = true;
               mode = "2880x1920";
               rate = "120.00";
-              scale = {
-                x = 0.5;
-                y = 0.5;
-              };
               dpi = 192;
             };
           };
