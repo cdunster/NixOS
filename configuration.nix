@@ -10,6 +10,7 @@
     ./display-managers
     ./eza.nix
     ./fonts.nix
+    ./fzf.nix
     ./git.nix
     ./gpg.nix
     ./home-manager.nix
