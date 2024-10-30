@@ -14,5 +14,6 @@
       default = true;
     };
     desktopEnvironments.gnome.enable = true;
+    devTools.holochain.enable = true;
   };
 }

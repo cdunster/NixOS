@@ -45,7 +45,6 @@ in
       xxd # Hex dumper
       usbutils # lsusb and other utilities
       vlc # VLC media player
-      zoom-us # Video conferencing software
 
       # Nix tools
       nixpkgs-fmt # Format Nix files the nixpkgs' way
@@ -57,7 +56,6 @@ in
       godot_4 # Create games for freeeeeee
       wpsoffice # A free office suit
       obs-studio # Video/Screen recording and streaming app
-      discord # Chat desktop app for gamers and communities
       ledger-live-desktop # Desktop app to control and update Ledger Nano X HW wallet
       inkscape # Vector graphics for freeeeeee
 
@@ -73,9 +71,6 @@ in
       # DAPs Debuggers
       lldb # The debugger for the LLVM Project (lldb-dap)
       llvm # Compiler tools for the LLVM Project (llvm-symbolizer)
-
-      # Work
-      mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
     ];
 
     programs.vscode = {

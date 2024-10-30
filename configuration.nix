@@ -3,6 +3,7 @@
     ./bootloader.nix
     ./dconf
     ./desktop-envs
+    ./dev-tools
     ./fonts.nix
     ./git.nix
     ./home-manager.nix
@@ -42,18 +43,6 @@
       nix = {
         # Set nixpkgs version to the latest unstable version
         package = pkgs.nixVersions.latest;
-
-        # Settings added to /etc/nix/nix.conf
-        settings = {
-          substituters = [
-            "https://holochain-ci.cachix.org"
-            "https://holochain-wind-tunnel.cachix.org"
-          ];
-          trusted-public-keys = [
-            "holochain-ci.cachix.org-1:5IUSkZc0aoRS53rfkvH9Kid40NpyjwCMCzwRTXy+QN8="
-            "holochain-wind-tunnel.cachix.org-1:tnSm+7Y3hDKOc9xLdoVMuInMA2AQ0R/99Ucz5edYGJw="
-          ];
-        };
 
         # Extra lines to be added to /etc/nix/nix.conf
         extraOptions = ''
