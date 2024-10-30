@@ -15,6 +15,7 @@
     ./terminals
     ./themes
     ./udev
+    ./zoxide.nix
   ];
 
   options.hostOptions = with lib; {
