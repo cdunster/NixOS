@@ -84,15 +84,5 @@ in
         vadimcn.vscode-lldb
       ];
     };
-
-    programs.lazygit = {
-      enable = true;
-      settings = {
-        notARepository = "skip";
-        gui = {
-          showCommandLog = false;
-        };
-      };
-    };
   };
 }

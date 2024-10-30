@@ -14,6 +14,7 @@
     ./git.nix
     ./gpg.nix
     ./home-manager.nix
+    ./lazygit.nix
     ./neovim
     ./shells
     ./terminals
