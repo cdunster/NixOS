@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, config, ... }: {
   services.autorandr = {
     enable = true;
     profiles =
@@ -39,4 +39,11 @@
         };
       };
   };
+
+  home-manager.users.${config.hostOptions.user}.xdg.configFile."autostart/autorandr.desktop".text = (pkgs.makeDesktopItem {
+    name = "autorandr";
+    desktopName = "Autorandr Change Profile";
+    exec = "${pkgs.autorandr}/bin/autorandr --change";
+    noDisplay = true;
+  }).text;
 }
