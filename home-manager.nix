@@ -27,9 +27,6 @@ in
     # The version of Home-manager used.
     home.stateVersion = "22.11";
 
-    # Increase the cursor size to match Brave browser cursor
-    home.pointerCursor.size = 40;
-
     home.packages = with pkgs; [
       # Utilities
       clang # Modern C/C++ compiler
