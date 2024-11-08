@@ -132,7 +132,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/mutter" = {
-      dynamic-workspaces = true;
+      dynamic-workspaces = false;
       edge-tiling = false;
       experimental-features = [ ];
       workspaces-only-on-primary = true;
