@@ -137,6 +137,13 @@ M.config = function()
     lsp.nixd.setup({
         on_attach = on_attach,
         capabilities = capabilities,
+        settings = {
+            nixd = {
+                formatting = {
+                    command = { "nixpkgs-fmt" },
+                },
+            },
+        },
     })
 
     -- Protobuf LSP config.
