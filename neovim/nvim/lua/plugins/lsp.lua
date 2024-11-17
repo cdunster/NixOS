@@ -95,12 +95,7 @@ M.config = function()
     -- Lua LS LSP config.
     lsp.lua_ls.setup({
         on_init = function(client)
-            if next(vim.fs.find("source/main.lua", { upward = true })) then
-                client.config.settings.Lua.runtime.nonstandardSymbol = { "+=", "-=", "*=", "/=" }
-                client.config.settings.Lua.runtime.special = { import = "require" }
-                client.config.settings.Lua.diagnostics.globals = { 'playdate' }
-                client.config.settings.Lua.workspace.library = { os.getenv("PLAYDATE_SDK_PATH") .. "/CoreLibs/" }
-            elseif client.workspace_folders[1].name == "/etc/nixos/neovim/nvim" then
+            if client.workspace_folders[1].name == "/etc/nixos/neovim/nvim" then
                 client.config.settings.Lua.runtime.version = 'LuaJIT'
                 client.config.settings.Lua.diagnostics.globals = { 'vim' }
                 client.config.settings.Lua.workspace.library = vim.api.nvim_get_runtime_file("", true)
