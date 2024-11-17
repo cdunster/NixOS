@@ -62,7 +62,6 @@ in
       vscode-langservers-extracted # HTML/CSS/JSON/ESLint
       rust-analyzer # Rust
       nixd # Nix
-      buf-language-server # Protobuf
 
       # DAPs Debuggers
       lldb # The debugger for the LLVM Project (lldb-dap)

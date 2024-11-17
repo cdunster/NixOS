@@ -158,12 +158,6 @@ M.config = function()
         },
     })
 
-    -- Protobuf LSP config.
-    lsp.bufls.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-    })
-
     -- GDScript LSP config for the Godot game engine.
     lsp.gdscript.setup({
         on_attach = on_attach,
