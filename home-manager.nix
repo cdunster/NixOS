@@ -40,12 +40,12 @@ in
       glow # Render Markdown in the CLI
       xxd # Hex dumper
       usbutils # lsusb and other utilities
-      vlc # VLC media player
 
       # Nix tools
       nixpkgs-fmt # Format Nix files the nixpkgs' way
 
       # Applications
+      vlc # VLC media player
       spotify # Proprietary music streaming
       gimp # Edit photos for freeeeeee
       anki-bin # Free spaced repetition learning tool
