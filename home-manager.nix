@@ -38,7 +38,6 @@ in
       rargs # Batch CLI stuff (xargs + awk)
       slides # Slideshow in the terminal using Markdown
       glow # Render Markdown in the CLI
-      pandoc # Powerful document conversion tool
       plantuml # Create UML diagrams with a markup language
       nodePackages.mermaid-cli # Create nicer looking diagrams with a markup language
       xxd # Hex dumper
