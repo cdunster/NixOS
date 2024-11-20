@@ -5,10 +5,6 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
-    "apps/seahorse/listing" = {
-      keyrings-selected = [ "openssh:///home/callum/.ssh" ];
-    };
-
     "ca/desrt/dconf-editor" = {
       show-warning = false;
     };
