@@ -1,49 +1,75 @@
-{ pkgs, config, ... }: {
-  services.autorandr = {
-    enable = true;
-    profiles =
-      let
-        fingerprints = {
-          laptop = "00ffffffffffff0009e5b40c0000000034210104a51d1378070aa5a7554b9f250c505400000001010101010101010101010101010101119140a0b0807470302036001dbe1000001a000000fd001e78f4f44a010a202020202020000000fe00424f45204e4a0a202020202020000000fc004e4531333541314d2d4e59310a023170207902002000139a0e00b40c000000003417074e4531334e593121001d220b6c07400b8007886efa54b8749f56820c023554d05fd05f483512782200144c550b883f0b9f002f001f007f077300020005002500094c550b4c550b1e7880810013721a000003011e7800006a426a427800000000000000000000000000004f907020790000260009020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003690";
-          home_monitor = "00ffffffffffff004c2df2720000000008200104b55123783bbc55b04d3db7250f505421080081c0810081809500a9c0b300010101016d8870a0d0a0b25030203a0029623100001a000000fd003078c3c346010a202020202020000000fc004f647973736579204738355342000000ff004831414b3530303030300a202002c8020322f144903f04032309070783010000e305c301e6060501604a00e5018b849039565e00a0a0a029503020350029623100001a6fc200a0a0a055503020350029623100001a0474801871382d40582c450029623100001e000000000000000000000000000000000000000000000000000000000000000000000000000000c8701279030003013cf21001886f0d9f002f801f009f05b100020009004e230108ff099f002f801f009f057e0002000400fda600087f079f002f801f0037045e0002000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a90";
+{ pkgs, lib, config, ... }: {
+  options.hostOptions.autorandr = with lib; {
+    displays = {
+      # The details of the laptop display as determined by `autorandr --fingerprint`, set fingerprint to `null` if not a laptop
+      laptop = {
+        id = mkOption {
+          type = types.nonEmptyStr;
+          default = "eDP-1";
+          description = "The ID of the laptop display, usually eDP-1";
         };
-      in
-      {
-        "undocked" = {
-          fingerprint = {
-            eDP-1 = fingerprints.laptop;
-          };
-          config = {
-            eDP-1 = {
-              enable = true;
-              mode = "2880x1920";
-              rate = "120.00";
-              dpi = 192;
-            };
-          };
-        };
-        "docked-home" = {
-          fingerprint = {
-            eDP-1 = fingerprints.laptop;
-            DP-3 = fingerprints.home_monitor;
-          };
-          config = {
-            eDP-1.enable = false;
-            DP-3 = {
-              enable = true;
-              primary = true;
-              mode = "3440x1440";
-              rate = "119.96";
-            };
-          };
+
+        fingerprint = mkOption {
+          type = types.nullOr types.nonEmptyStr;
+          description = "The fingerprint of the laptop display, set to `null` if no laptop screen";
         };
       };
+
+      homeMonitor = {
+        id = mkOption {
+          type = types.nonEmptyStr;
+          description = "The ID of the monitor at home as determined by `autorandr --fingerprint`";
+        };
+      };
+    };
   };
 
-  home-manager.users.${config.hostOptions.user}.xdg.configFile."autostart/autorandr.desktop".text = (pkgs.makeDesktopItem {
-    name = "autorandr";
-    desktopName = "Autorandr Change Profile";
-    exec = "${pkgs.autorandr}/bin/autorandr --change";
-    noDisplay = true;
-  }).text;
+  config =
+    let
+      cfg = config.hostOptions.autorandr;
+    in
+    {
+      services.autorandr = {
+        enable = true;
+        profiles =
+          # Profiles that include the laptop display
+          lib.mkIf (cfg.displays.laptop.fingerprint != null) {
+            undocked = {
+              fingerprint = {
+                ${cfg.displays.laptop.id} = "${cfg.displays.laptop.fingerprint}";
+              };
+              config = {
+                ${cfg.displays.laptop.id} = {
+                  enable = true;
+                  mode = "2880x1920";
+                  rate = "120.00";
+                  dpi = 192;
+                };
+              };
+            };
+            docked-home = {
+              fingerprint = {
+                ${cfg.displays.laptop.id} = "${cfg.displays.laptop.fingerprint}";
+                ${cfg.displays.homeMonitor.id} = "00ffffffffffff004c2df2720000000008200104b55123783bbc55b04d3db7250f505421080081c0810081809500a9c0b300010101016d8870a0d0a0b25030203a0029623100001a000000fd003078c3c346010a202020202020000000fc004f647973736579204738355342000000ff004831414b3530303030300a202002c8020322f144903f04032309070783010000e305c301e6060501604a00e5018b849039565e00a0a0a029503020350029623100001a6fc200a0a0a055503020350029623100001a0474801871382d40582c450029623100001e000000000000000000000000000000000000000000000000000000000000000000000000000000c8701279030003013cf21001886f0d9f002f801f009f05b100020009004e230108ff099f002f801f009f057e0002000400fda600087f079f002f801f0037045e0002000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a90";
+              };
+              config = {
+                ${cfg.displays.laptop.id}.enable = false;
+                ${cfg.displays.homeMonitor.id} = {
+                  enable = true;
+                  primary = true;
+                  mode = "3440x1440";
+                  rate = "119.96";
+                };
+              };
+            };
+          };
+      };
+
+      home-manager.users.${config.hostOptions.user}.xdg.configFile."autostart/autorandr.desktop".text = (pkgs.makeDesktopItem {
+        name = "autorandr";
+        desktopName = "Autorandr Change Profile";
+        exec = "${pkgs.autorandr}/bin/autorandr --change";
+        noDisplay = true;
+      }).text;
+    };
 }
