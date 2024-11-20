@@ -30,11 +30,6 @@ with lib.hm.gvariant;
       active-view = "week";
     };
 
-    "org/gnome/desktop/applications/terminal" = {
-      exec = "/etc/profiles/per-user/callum/bin/wezterm";
-      exec-arg = "";
-    };
-
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
