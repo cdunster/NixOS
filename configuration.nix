@@ -32,7 +32,7 @@
     };
 
     user = mkOption {
-      type = types.str;
+      type = types.nonEmptyStr;
       default = toLower config.hostOptions.userName;
       description = "The used name of the system user";
     };
