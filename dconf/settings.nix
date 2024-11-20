@@ -26,12 +26,6 @@ with lib.hm.gvariant;
       active-view = "week";
     };
 
-    "org/gnome/desktop/background" = {
-      color-shading-type = "solid";
-      primary-color = "#000000000000";
-      secondary-color = "#000000000000";
-    };
-
     "org/gnome/desktop/calendar" = {
       show-weekdate = true;
     };
