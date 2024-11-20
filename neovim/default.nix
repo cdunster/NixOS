@@ -92,18 +92,18 @@
               # Treesitter
               {
                 plugin = (nvim-treesitter.withPlugins (
-                  plugins: with plugins; [
-                    tree-sitter-nix
-                    tree-sitter-c
-                    tree-sitter-rust
-                    tree-sitter-fish
-                    tree-sitter-python
-                    tree-sitter-lua
-                    tree-sitter-css
-                    tree-sitter-yaml
-                    tree-sitter-markdown
-                    tree-sitter-bash
-                    tree-sitter-gdscript
+                  grammars: [
+                    grammars.nix
+                    grammars.c
+                    grammars.rust
+                    grammars.fish
+                    grammars.python
+                    grammars.lua
+                    grammars.css
+                    grammars.yaml
+                    grammars.markdown
+                    grammars.bash
+                    grammars.gdscript
                   ]
                 ));
                 type = "lua";
