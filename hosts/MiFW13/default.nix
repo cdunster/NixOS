@@ -22,6 +22,7 @@
       enableAutoLogin = true;
       gdm.enable = true;
     };
+    dconf.background.path = ../../images/backgrounds/deer_sunset.jpg;
     devTools.holochain.enable = true;
     docker.enable = true;
   };

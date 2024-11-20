@@ -28,9 +28,6 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/background" = {
       color-shading-type = "solid";
-      picture-options = "zoom";
-      picture-uri = "file:///home/callum/.local/share/backgrounds/deer_sunset.jpg";
-      picture-uri-dark = "file:///home/callum/.local/share/backgrounds/deer_sunset.jpg";
       primary-color = "#000000000000";
       secondary-color = "#000000000000";
     };
