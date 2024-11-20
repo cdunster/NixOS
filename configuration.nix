@@ -125,10 +125,14 @@
         enable = true;
       };
 
-      # Enable docker in rootless configuration.
-      virtualisation.docker.rootless = {
+      virtualisation.docker = {
         enable = true;
-        setSocketVariable = true;
+
+        # Enable rootless configuration for docker
+        rootless = {
+          enable = true;
+          setSocketVariable = true;
+        };
       };
 
       # Enable VirtualBox.
