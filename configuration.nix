@@ -8,6 +8,7 @@
     ./dev-tools
     ./direnv.nix
     ./display-managers
+    ./docker.nix
     ./eza.nix
     ./fonts.nix
     ./fzf.nix
@@ -125,16 +126,6 @@
         enable = true;
       };
 
-      virtualisation.docker = {
-        enable = true;
-
-        # Enable rootless configuration for docker
-        rootless = {
-          enable = true;
-          setSocketVariable = true;
-        };
-      };
-
       # Enable VirtualBox.
       virtualisation.virtualbox.host.enable = true;
 
@@ -143,7 +134,7 @@
         ${cfg.user} = {
           isNormalUser = true;
           description = cfg.userName;
-          extraGroups = [ "networkmanager" "wheel" "docker" "vboxusers" ];
+          extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
         };
         # Create a user to be used when testing with `build-vm`.
         nixosvmtest = lib.mkIf cfg.enableVmUser {

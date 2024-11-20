@@ -19,5 +19,6 @@
       gdm.enable = true;
     };
     devTools.holochain.enable = true;
+    docker.enable = true;
   };
 }
