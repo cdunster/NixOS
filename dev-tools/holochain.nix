@@ -15,12 +15,14 @@
         substituters = [
           "https://holochain-ci.cachix.org"
           "https://holochain-wind-tunnel.cachix.org"
+          "https://holochain-scaffolding-cli.cachix.org"
         ];
 
         # Trust derivations from the official holochain caches
         trusted-public-keys = [
           "holochain-ci.cachix.org-1:5IUSkZc0aoRS53rfkvH9Kid40NpyjwCMCzwRTXy+QN8="
           "holochain-wind-tunnel.cachix.org-1:tnSm+7Y3hDKOc9xLdoVMuInMA2AQ0R/99Ucz5edYGJw="
+          "holochain-scaffolding-cli.cachix.org-1:DznpFcPqqPqiP05k/0lT6qeQ/N3KOvKQW/EP4Pf3A2E="
         ];
       };
 
