@@ -32,6 +32,7 @@ vim.opt.signcolumn = 'yes'              -- Always show the signcolumn.
 vim.opt.hlsearch = false                -- Disable highlighting the search results.
 vim.opt.wrap = true                     -- Wrap long lines onto multiple lines.
 vim.opt.linebreak = true                -- Don't wrap long lines in the middle of a word.
+vim.opt.breakindent = true              -- Indent wrapped long lines.
 vim.opt.timeoutlen = 300                -- Set the time to wait for a mapped sequence to complete.
 vim.opt.updatetime = 300                -- Better user experience.
 vim.opt.wildmode = 'longest,list'       -- Enable bash-like tab completions.
