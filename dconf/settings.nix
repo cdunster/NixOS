@@ -14,10 +14,6 @@ with lib.hm.gvariant;
       run-in-background = true;
     };
 
-    "org/gnome/calculator" = {
-      button-mode = "programming";
-    };
-
     "org/gnome/calendar" = {
       active-view = "week";
     };
@@ -132,8 +128,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      calculator = [ "<Super>c" ];
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" ];
+      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/" "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/" ];
       screensaver = [ "<Super>Escape" ];
       www = [ "<Super>b" ];
     };
@@ -152,7 +147,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2" = {
       binding = "<Super>x";
-      command = "gnome-session-quit --power-off";
+      command = "rofi -modi power-menu:rofi-power-menu -show power-menu";
       name = "Shutdown";
     };
 
@@ -160,6 +155,24 @@ with lib.hm.gvariant;
       binding = "<Shift><Control>Escape";
       command = "gnome-system-monitor";
       name = "System Monitor";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
+      binding = "<Super>r";
+      command = "rofi -show drun";
+      name = "Rofi Launcher";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5" = {
+      binding = "<Super>c";
+      command = "rofi -show calc";
+      name = "Rofi Calculator";
+    };
+
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6" = {
+      binding = "<Super>w";
+      command = "rofi -show window";
+      name = "Rofi Window Selector";
     };
 
     "org/gnome/settings-daemon/plugins/power" = {

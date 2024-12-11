@@ -85,6 +85,7 @@ in
 
           exec = "${./polybar-scripts/system-bluetooth-bluetoothctl.sh}";
           tail = "true";
+          click-left = "rofi-bluetooth";
           click-middle = "${./polybar-scripts/system-bluetooth-bluetoothctl.sh} --toggle &";
         };
         "module/network" = {
@@ -93,7 +94,7 @@ in
           # List interfaces with: `ip link`
           interface = "wlp1s0";
 
-          format-connected = "<ramp-signal> <label-connected>";
+          format-connected = "%{A1:rofi-wifi-menu:}<ramp-signal> <label-connected>%{A}";
           label-connected = "%essid% %{T2}%upspeed:5% %downspeed:5%%{T-}";
           speed-unit = " ";
 
@@ -103,10 +104,10 @@ in
           ramp-signal-3 = "󰤥";
           ramp-signal-4 = "󰤨";
 
-          format-disconnected = "󰤮";
+          format-disconnected = "%{A1:rofi-wifi-menu:}󰤮%{A}";
           format-disconnected-foreground = "\${theme.fg-disabled}";
 
-          format-packetloss = "<animation-packetloss> <label-connected>";
+          format-packetloss = "%{A1:rofi-wifi-menu:}<animation-packetloss> <label-connected>%{A}";
           animation-packetloss-0 = "󰤫";
           animation-packetloss-1 = "󰤯";
           animation-packetloss-framerate = "300";
