@@ -6,5 +6,7 @@
     ./utils/rofi.nix # A highly customisable menu and application runner
 
     ./gnome.nix # The GNOME Desktop Environment
+
+    ./i3.nix # The i3 tiling window manager with no desktop environment
   ];
 }

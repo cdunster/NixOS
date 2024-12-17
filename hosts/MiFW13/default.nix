@@ -18,6 +18,7 @@
       homeMonitor.id = "DP-3";
     };
     desktopEnvironments.gnome.enable = true;
+    desktopEnvironments.i3.enable = true;
     displayManagers = {
       enableAutoLogin = true;
       gdm.enable = true;
