@@ -26,6 +26,8 @@
         ];
       };
 
+      programs.extra-container.enable = true; # Run declarative NixOS containers without host system rebuilds
+
       home-manager.users.${user}.home.packages = with pkgs; [
         mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
         zoom-us # Video conferencing software
