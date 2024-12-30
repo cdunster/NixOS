@@ -9,10 +9,6 @@ with lib.hm.gvariant;
       show-warning = false;
     };
 
-    "com/mattjakeman/ExtensionManager" = {
-      last-used-version = "0.5.1";
-    };
-
     "org/gnome/Geary" = {
       autoselect = false;
       run-in-background = true;
