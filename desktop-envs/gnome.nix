@@ -46,7 +46,6 @@
 
       home-manager.users.${config.hostOptions.user} = {
         home.packages = with pkgs; [
-          gnome-extension-manager # Find, install, and manager gnome extensions
           gnome-tweaks # Extra settings for tweaking gnome
         ];
 
