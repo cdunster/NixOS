@@ -33,7 +33,6 @@ in
       enable = true;
       catppuccin = {
         enable = true;
-        icon.enable = true;
         gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
       };
       gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
