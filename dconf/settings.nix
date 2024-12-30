@@ -44,6 +44,7 @@ with lib.hm.gvariant;
       font-name = "JetBrainsMono Nerd Font 10";
       gtk-enable-primary-paste = false;
       monospace-font-name = "JetBrainsMono Nerd Font Mono 10";
+      icon-theme = "catppuccin-frappe-blue-cursors";
       show-battery-percentage = true;
     };
 
