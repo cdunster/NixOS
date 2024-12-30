@@ -34,15 +34,6 @@
                   sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
                 };
               };
-              neotest-rust = buildVimPlugin {
-                name = "neotest-rust";
-                src = pkgs.fetchFromGitHub {
-                  owner = "cdunster";
-                  repo = "neotest-rust";
-                  rev = "0c11d5a0e966d660048e0153cbe31d021521cf91";
-                  hash = "sha256-YiP1AOyI22sBk+5o502cs5Mu6lxgs00Nis2rlDm6TuA=";
-                };
-              };
               vim-godot = buildVimPlugin {
                 name = "vim-godot";
                 src = pkgs.fetchFromGitHub {
@@ -154,15 +145,6 @@
 
               # Better motions for words i.e. camelCase, snake_case, etc.
               vim-wordmotion
-
-              # Run unit tests from within Neovim.
-              {
-                plugin = neotest;
-                type = "lua";
-                config = "require('plugins.neotest').config()";
-              }
-              neotest-rust # Add Rust support for neotest (above)
-              nvim-coverage # Show coverage in the gutter
 
               # Better UI hooks for user input/output in nvim
               dressing-nvim
