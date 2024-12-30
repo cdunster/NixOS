@@ -14,7 +14,7 @@
     # The catppuccin theme for everything
     catppuccin = {
       url = "github:catppuccin/nix";
-      # inputs.nixpkgs.follows = "nixpkgs"; Cannot override, see https://github.com/catppuccin/nix/issues/431
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
 
