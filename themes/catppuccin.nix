@@ -30,7 +30,6 @@ in
 
       gtk = {
         enable = true;
-        icon.enable = true;
         gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
       };
     };
