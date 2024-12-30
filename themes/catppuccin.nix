@@ -19,28 +19,27 @@ in
       inputs.catppuccin.homeManagerModules.catppuccin
     ];
 
-    # System theme
     catppuccin = {
+      # Inherit system theme from NixOS module
       inherit (config.catppuccin) enable flavor accent;
-      pointerCursor = {
+
+      cursors = {
         enable = true;
         accent = "dark";
+      };
+
+      gtk = {
+        enable = true;
+        icon.enable = true;
+        gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
       };
     };
 
     # GTK system theme
     gtk = {
       enable = true;
-      catppuccin = {
-        enable = true;
-        icon.enable = true;
-        gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
-      };
       gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
       gtk4.extraConfig.gtk-application-prefer-dark-theme = true;
     };
-
-    # Qt system theme
-    qt.style.catppuccin.enable = true;
   };
 }
