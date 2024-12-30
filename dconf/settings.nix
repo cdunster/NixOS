@@ -179,6 +179,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/freon" = {
+      hot-sensors = [ "__max__" ];
       panel-box-index = 1;
     };
 
