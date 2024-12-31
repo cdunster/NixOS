@@ -51,18 +51,6 @@ in
       obs-studio # Video/Screen recording and streaming app
       ledger-live-desktop # Desktop app to control and update Ledger Nano X HW wallet
       inkscape # Vector graphics for freeeeeee
-
-      # LSPs
-      clang-tools # C/C++
-      pyright # Python
-      lua-language-server # Lua
-      vscode-langservers-extracted # HTML/CSS/JSON/ESLint
-      rust-analyzer # Rust
-      nixd # Nix
-
-      # DAPs Debuggers
-      lldb # The debugger for the LLVM Project (lldb-dap)
-      llvm # Compiler tools for the LLVM Project (llvm-symbolizer)
     ];
   };
 }
