@@ -113,6 +113,7 @@
                     grammars.markdown
                     grammars.bash
                     grammars.gdscript
+                    grammars.hcl
                   ]
                 ));
                 type = "lua";
