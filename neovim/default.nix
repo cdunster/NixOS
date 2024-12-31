@@ -1,9 +1,14 @@
-{ inputs, pkgs, config, ... }: {
+{ inputs, pkgs, lib, config, ... }: {
+  options.hostOptions.neovim = with lib; {
+    enable = mkEnableOption "Enable support Neovim";
+  };
+
   config =
     let
+      cfg = config.hostOptions.neovim;
       user = config.hostOptions.user;
     in
-    {
+    lib.mkIf cfg.enable {
       # Add the overlay to install the latest version of neorg
       nixpkgs.overlays = [ inputs.neorg-overlay.overlays.default ];
 

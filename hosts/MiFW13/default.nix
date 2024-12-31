@@ -23,6 +23,7 @@
       gdm.enable = true;
     };
     dconf.background.path = ../../images/backgrounds/deer_sunset.jpg;
+    neovim.enable = true;
     devTools.holochain.enable = true;
     docker.enable = true;
   };
