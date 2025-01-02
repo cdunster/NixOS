@@ -16,6 +16,9 @@
           "https://holochain-ci.cachix.org"
           "https://holochain-wind-tunnel.cachix.org"
           "https://holochain-scaffolding-cli.cachix.org"
+
+          # Use the new NixOS official binary cache (currently in beta)
+          "https://aseipp-nix-cache.freetls.fastly.net"
         ];
 
         # Trust derivations from the official holochain caches
