@@ -38,17 +38,13 @@ local on_attach = function(client, bufnr)
         },
     })
 
-    --Format on save if the LSP supports it.
-    if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            callback = function()
-                vim.lsp.buf.format({
-                    bufnr = bufnr,
-                })
-            end,
-        })
-    end
+    --Try to format on save but ignore any errors.
+    vim.api.nvim_create_autocmd("BufWritePre", {
+        buffer = bufnr,
+        callback = function()
+            pcall(vim.lsp.buf.format, { bufnr = bufnr })
+        end,
+    })
 end
 
 local M = {}
