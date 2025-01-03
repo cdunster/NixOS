@@ -129,6 +129,7 @@
               }
               lsp_signature-nvim
               rustaceanvim # Advanced LSP features for Rust.
+              flutter-tools-nvim # Advanced LSP features for Flutter
 
               # Display LSP progress in bottom right.
               {

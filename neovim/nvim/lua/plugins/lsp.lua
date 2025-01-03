@@ -82,6 +82,14 @@ M.config = function()
         },
     }
 
+    -- Use flutter-tools.nvim for Flutter/Dart.
+    require("flutter-tools").setup({
+        lsp = {
+            on_attach = on_attach,
+            capabilities = capabilities,
+        }
+    })
+
     -- pyright LSP config for Python.
     lsp.pyright.setup({
         on_attach = on_attach,
