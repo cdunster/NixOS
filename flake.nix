@@ -12,7 +12,10 @@
     };
 
     # The catppuccin theme for everything
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Enable Secure Boot on NixOS.
     lanzaboote = {
