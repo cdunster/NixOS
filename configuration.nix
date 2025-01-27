@@ -126,6 +126,12 @@
         enable = true;
       };
 
+      # Add support for running AppImages directly
+      programs.appimage = {
+        enable = true;
+        binfmt = true;
+      };
+
       # Enable VirtualBox.
       virtualisation.virtualbox.host.enable = true;
 
