@@ -100,22 +100,7 @@
 
               # Treesitter
               {
-                plugin = (nvim-treesitter.withPlugins (
-                  grammars: [
-                    grammars.nix
-                    grammars.c
-                    grammars.rust
-                    grammars.fish
-                    grammars.python
-                    grammars.lua
-                    grammars.css
-                    grammars.yaml
-                    grammars.markdown
-                    grammars.bash
-                    grammars.gdscript
-                    grammars.hcl
-                  ]
-                ));
+                plugin = nvim-treesitter.withAllGrammars;
                 type = "lua";
                 config = "require('plugins.treesitter').config()";
               }
