@@ -31,6 +31,7 @@
             vscode-langservers-extracted # HTML/CSS/JSON/ESLint
             rust-analyzer # Rust
             nixd # Nix
+            gopls #GoLang
 
             # DAPs Debuggers
             lldb # The debugger for the LLVM Project (lldb-dap)

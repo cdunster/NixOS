@@ -162,6 +162,12 @@ M.config = function()
         on_attach = on_attach,
         capabilities = capabilities,
     })
+
+    -- gopls official LSP for GoLang.
+    lsp.gopls.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+    })
 end
 
 return M
