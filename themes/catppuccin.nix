@@ -26,15 +26,14 @@ in
         enable = true;
         accent = "dark";
       };
-    };
-
-    # GTK system theme
-    gtk = {
-      enable = true;
-      catppuccin = {
+      gtk = {
         enable = true;
         gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
       };
+    };
+
+    gtk = {
+      enable = true;
       gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
       gtk4.extraConfig.gtk-application-prefer-dark-theme = true;
     };
