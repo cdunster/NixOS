@@ -7,6 +7,7 @@
     let
       cfg = config.hostOptions.pico8;
       user = config.hostOptions.user;
+      neovimEnabled = config.hostOptions.neovim.enable;
     in
     lib.mkIf cfg.enable {
       home-manager.users.${user} = {
@@ -52,6 +53,14 @@
             };
           in
           [ pico-8-bin-wrapped pico8DesktopItem ];
+
+
+        programs.neovim = lib.mkIf neovimEnabled {
+          plugins = with pkgs.vimPlugins; [
+            vim-pico8-syntax # PICO-8 syntax highlighting in Neovim
+          ];
+        };
+
       };
     };
 }
