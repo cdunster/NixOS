@@ -17,6 +17,7 @@
     ./home-manager.nix
     ./lazygit.nix
     ./neovim
+    ./pico-8.nix
     ./shells
     ./terminals
     ./themes

@@ -411,6 +411,19 @@
         "type": "github"
       }
     },
+    "pico-8-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738584775,
+        "narHash": "sha256-VRQYT1xkkYi89PzhYro1K9PTmQwjq6dtUaZZZLPBycE=",
+        "path": "/home/callum/Downloads/pico-8_0.2.6b_amd64.zip",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/callum/Downloads/pico-8_0.2.6b_amd64.zip",
+        "type": "path"
+      }
+    },
     "pre-commit-hooks-nix": {
       "inputs": {
         "flake-compat": [
@@ -446,7 +459,8 @@
         "lanzaboote": "lanzaboote",
         "neorg-overlay": "neorg-overlay",
         "nixos-hardware": "nixos-hardware",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "pico-8-src": "pico-8-src"
       }
     },
     "rust-overlay": {
