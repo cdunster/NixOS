@@ -22,7 +22,7 @@ in
     # System theme
     catppuccin = {
       inherit (config.catppuccin) enable flavor accent;
-      pointerCursor = {
+      cursors = {
         enable = true;
         accent = "dark";
       };
