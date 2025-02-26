@@ -31,7 +31,10 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     # Path to the zip file downloaded from https://www.lexaloffle.com/pico-8.php
-    pico-8-src.url = "path:/home/callum/Downloads/pico-8_0.2.6b_amd64.zip";
+    pico-8-src = {
+      url = "path:/home/callum/Downloads/pico-8_0.2.6b_amd64.zip";
+      flake = false;
+    };
   };
 
   outputs = { ... }@inputs:
