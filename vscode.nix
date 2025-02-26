@@ -6,7 +6,7 @@
     {
       home-manager.users.${user}.programs.vscode = {
         enable = true;
-        extensions = with pkgs.vscode-extensions; [
+        profiles.default.extensions = with pkgs.vscode-extensions; [
           vscodevim.vim
           rust-lang.rust-analyzer
           vadimcn.vscode-lldb
