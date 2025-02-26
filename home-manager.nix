@@ -32,7 +32,6 @@ in
       ripgrep # Search content of files
       ranger # Explore directories and files in the terminal
       grex # Get regex from results
-      rargs # Batch CLI stuff (xargs + awk)
       slides # Slideshow in the terminal using Markdown
       glow # Render Markdown in the CLI
       xxd # Hex dumper
