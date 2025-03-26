@@ -57,7 +57,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/peripherals/mouse" = {
-      speed = 0.25;
+      speed = 0.0;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
