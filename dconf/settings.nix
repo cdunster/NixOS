@@ -22,6 +22,15 @@ with lib.hm.gvariant;
       active-view = "week";
     };
 
+    "org/gnome/clocks" = {
+      world-clocks = [{
+        location = mkVariant [ (mkUint32 2) (mkVariant [ "Amsterdam" "EHAM" false [ (mkTuple [ 0.9128071987930342 8.319403349616054e-2 ]) ] [ (mkTuple [ 0.9128071987930342 8.319403349616054e-2 ]) ] ]) ];
+      }
+        {
+          location = mkVariant [ (mkUint32 2) (mkVariant [ "London" "EGWU" true [ (mkTuple [ 0.8997172294030767 (-7.272211034407213e-3) ]) ] [ (mkTuple [ 0.8988445647770796 (-2.0362232784242244e-3) ]) ] ]) ];
+        }];
+    };
+
     "org/gnome/desktop/calendar" = {
       show-weekdate = true;
     };
@@ -230,6 +239,10 @@ with lib.hm.gvariant;
       switch-to-application-8 = [ ];
       switch-to-application-9 = [ ];
       toggle-message-tray = [ "<Super>v" ];
+    };
+
+    "org/gnome/shell/world-clocks" = {
+      locations = [ (mkVariant [ (mkUint32 2) (mkVariant [ "Amsterdam" "EHAM" false [ (mkTuple [ 0.9128071987930342 8.319403349616054e-2 ]) ] [ (mkTuple [ 0.9128071987930342 8.319403349616054e-2 ]) ] ]) ]) (mkVariant [ (mkUint32 2) (mkVariant [ "London" "EGWU" true [ (mkTuple [ 0.8997172294030767 (-7.272211034407213e-3) ]) ] [ (mkTuple [ 0.8988445647770796 (-2.0362232784242244e-3) ]) ] ]) ]) ];
     };
 
     "org/gnome/system/location" = {
