@@ -38,5 +38,6 @@ vim.opt.updatetime = 300                -- Better user experience.
 vim.opt.wildmode = 'longest,list'       -- Enable bash-like tab completions.
 vim.opt.conceallevel = 2                -- Set the level to conceal special characters such as markup format characters.
 vim.opt.concealcursor = "n"             -- Also conceal special characters under cursor when in these modes.
+vim.opt.foldenable = false              -- Disable folding for all file types.
 vim.g.mapleader = ' '                   -- Set <SPC> to be the leader key for keybindings.
 vim.g.maplocalleader = ','              -- Set ',' to be the local leader key for language specific keybindings.
