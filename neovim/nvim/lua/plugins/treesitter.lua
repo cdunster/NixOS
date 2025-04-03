@@ -2,8 +2,13 @@ local M = {}
 
 M.config = function()
     require("nvim-treesitter.configs").setup {
+        ensure_installed = {},
+        sync_install = false,
+        auto_install = false,
+        ignore_install = {},
         indent = { enable = true },
         highlight = { enable = true },
+        modules = {},
         textobjects = {
             select = {
                 enable = true,
