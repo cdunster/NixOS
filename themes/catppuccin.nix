@@ -16,7 +16,7 @@ in
 
   home-manager.users.${cfg.user} = {
     imports = [
-      inputs.catppuccin.homeManagerModules.catppuccin
+      inputs.catppuccin.homeModules.catppuccin
     ];
 
     # System theme
