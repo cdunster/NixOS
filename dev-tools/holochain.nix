@@ -35,6 +35,7 @@
         mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
         zoom-us # Video conferencing software
         discord # Chat desktop app for gamers and communities
+        colmena # Simple and stateless NixOS deployment tool
       ];
     };
 }
