@@ -19,6 +19,7 @@
     ./neovim
     ./pico-8.nix
     ./shells
+    ./tailscale.nix
     ./terminals
     ./themes
     ./udev
