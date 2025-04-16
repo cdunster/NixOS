@@ -30,6 +30,5 @@
     devTools.holochain.enable = true;
     docker.enable = true;
     pico8.enable = true;
-    tailscale.enable = true;
   };
 }
