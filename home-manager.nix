@@ -36,6 +36,7 @@ in
       glow # Render Markdown in the CLI
       xxd # Hex dumper
       usbutils # lsusb and other utilities
+      jq # Command-line JSON processor
 
       # Nix tools
       nixpkgs-fmt # Format Nix files the nixpkgs' way
