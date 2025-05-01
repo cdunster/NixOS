@@ -134,8 +134,11 @@
         binfmt = true;
       };
 
-      # Enable VirtualBox.
-      virtualisation.virtualbox.host.enable = true;
+      # Enable VirtualBox with the expansion pack
+      virtualisation.virtualbox.host = {
+        enable = true;
+        enableExtensionPack = true;
+      };
 
       # Define user accounts.
       users.users = {
