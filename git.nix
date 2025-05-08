@@ -22,6 +22,7 @@ in
       init.defaultBranch = "main";
       pull.ff = "only";
       safe.directory = [ "/etc/nixos" ];
+      rerere.enabled = true;
     };
   };
 }
