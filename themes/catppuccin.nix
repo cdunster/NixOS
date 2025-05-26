@@ -28,7 +28,6 @@ in
       };
       gtk = {
         enable = true;
-        gnomeShellTheme = cfg.desktopEnvironments.gnome.enable;
       };
       tmux.extraConfig = ''
         set -g @catppuccin_status_modules_left "session directory"
