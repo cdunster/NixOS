@@ -4,7 +4,16 @@
     ./sddm.nix
   ];
 
-  options.hostOptions.displayManagers.enableAutoLogin = lib.mkEnableOption "Enable automatic login for the main system user";
+  options.hostOptions.displayManagers = with lib; {
+    displayManager = mkOption {
+      type = types.enum [ "gdm" "sddm" ];
+      description = "Select the display manager to use";
+    };
+
+    enableAutoLogin = mkEnableOption "Enable automatic login for the main system user";
+
+    enableWayland = mkEnableOption "Use Wayland as the display protocol instead of X11";
+  };
 
   config =
     let

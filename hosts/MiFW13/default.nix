@@ -20,7 +20,7 @@
     desktopEnvironments.gnome.enable = true;
     displayManagers = {
       enableAutoLogin = true;
-      gdm.enable = true;
+      displayManager = "gdm";
     };
     dconf.background.path = ../../images/backgrounds/deer_sunset.jpg;
     neovim.enable = true;
