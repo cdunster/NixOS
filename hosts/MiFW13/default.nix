@@ -21,6 +21,7 @@
       };
     };
     desktopEnvironments.gnome.enable = true;
+    desktopEnvironments.cosmic.enable = true;
     displayManagers = {
       enableAutoLogin = true;
       displayManager = "gdm";
