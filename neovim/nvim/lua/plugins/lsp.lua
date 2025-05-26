@@ -99,7 +99,7 @@ M.config = function()
     -- Lua LS LSP config.
     lsp.lua_ls.setup({
         on_init = function(client)
-            if client.workspace_folders[1].name == "/etc/nixos/neovim/nvim" then
+            if client.workspace_folders[1].name == "/etc/nixos" then
                 client.config.settings.Lua.runtime.version = 'LuaJIT'
                 client.config.settings.Lua.diagnostics.globals = { 'vim' }
                 client.config.settings.Lua.workspace.library = vim.api.nvim_get_runtime_file("", true)
