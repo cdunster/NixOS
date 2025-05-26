@@ -23,11 +23,11 @@ in
     catppuccin = {
       inherit (config.catppuccin) enable flavor accent;
       cursors = {
-        enable = true;
+        inherit (config.catppuccin) enable;
         accent = "dark";
       };
       gtk = {
-        enable = true;
+        inherit (config.catppuccin) enable;
       };
       tmux.extraConfig = ''
         set -g @catppuccin_status_modules_left "session directory"
