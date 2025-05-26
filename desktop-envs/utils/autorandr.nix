@@ -1,5 +1,7 @@
 { pkgs, lib, config, ... }: {
   options.hostOptions.autorandr = with lib; {
+    enable = mkEnableOption "Enable autorandr to automatically manage displays";
+
     displays = {
       # The details of the laptop display as determined by `autorandr --fingerprint`, set fingerprint to `null` if not a laptop
       laptop = {
@@ -28,7 +30,7 @@
     let
       cfg = config.hostOptions.autorandr;
     in
-    {
+    lib.mkIf cfg.enable {
       services.autorandr = {
         enable = true;
         profiles =
