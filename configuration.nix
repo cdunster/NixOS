@@ -62,6 +62,7 @@
           experimental-features = "nix-command flakes";
           keep-outputs = true;
           keep-derivations = true;
+          download-buffer-size = 524288000; # 500MiB
         };
       };
 
