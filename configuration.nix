@@ -58,11 +58,11 @@
         package = pkgs.nixVersions.latest;
 
         # Extra lines to be added to /etc/nix/nix.conf
-        extraOptions = ''
-          experimental-features = nix-command flakes
-          keep-outputs = true
-          keep-derivations = true
-        '';
+        settings = {
+          experimental-features = "nix-command flakes";
+          keep-outputs = true;
+          keep-derivations = true;
+        };
       };
 
       # Install firmware updates distributed through LVFS.
