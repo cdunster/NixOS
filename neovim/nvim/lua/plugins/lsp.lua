@@ -2,8 +2,6 @@ local on_attach = function(_, bufnr)
     -- Enable LSP signature plugin.
     require("lsp_signature").on_attach()
 
-    local wk = require("which-key")
-
     require("which-key").add({
         --Use K to show documentation in preview window.
         { "K", vim.lsp.buf.hover, desc = "Peek token documentation" },
