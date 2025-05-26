@@ -24,6 +24,7 @@
     desktopEnvironments.cosmic.enable = true;
     displayManagers = {
       enableAutoLogin = true;
+      enableWayland = true;
       displayManager = "gdm";
     };
     dconf.background.path = ../../images/backgrounds/deer_sunset.jpg;
