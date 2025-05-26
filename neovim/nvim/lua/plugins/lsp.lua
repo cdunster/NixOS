@@ -1,4 +1,4 @@
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
     -- Enable LSP signature plugin.
     require("lsp_signature").on_attach()
 
