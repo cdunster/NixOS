@@ -16,5 +16,7 @@ in
   home-manager.users.${cfg.user}.home.shellAliases = {
     lg = "lazygit";
     ll = "eza -lah";
+    gl = "git log --pretty=fuller";
+    gll = "git log --pretty=fuller -1";
   };
 }
