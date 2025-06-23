@@ -11,18 +11,20 @@
       # Enable managing dconf with NixOS and home-manager modules
       programs.dconf.enable = true;
 
-      services.xserver = {
-        # Enable the X11 display server
-        enable = true;
-
+      services = {
         # Use the GNOME Desktop Environment
         desktopManager.gnome.enable = true;
 
-        # Configure keyboard layout
-        xkb = {
-          layout = "us";
-          variant = "euro";
-          options = "caps:none";
+        xserver = {
+          # Enable the X11 display server
+          enable = true;
+
+          # Configure the X11 keyboard layout
+          xkb = {
+            layout = "us";
+            variant = "euro";
+            options = "caps:none";
+          };
         };
       };
 

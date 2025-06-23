@@ -4,7 +4,7 @@ let
 in
 lib.mkIf (cfg.displayManager == "gdm") {
   # Use the GNOME Display Manager (GDM)
-  services.xserver.displayManager.gdm = {
+  services.displayManager.gdm = {
     enable = true;
     wayland = cfg.enableWayland;
   };
