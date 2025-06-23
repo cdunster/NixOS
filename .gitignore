@@ -1,0 +1,2 @@
+# Symlink to built derivation when using `nixos-rebuild build`
+result
