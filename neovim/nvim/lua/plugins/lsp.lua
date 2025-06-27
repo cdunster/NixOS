@@ -68,9 +68,6 @@ M.config = function()
             capabilities = capabilities,
             default_settings = {
                 ["rust-analyzer"] = {
-                    checkOnSave = {
-                        command = "clippy"
-                    },
                     diagnostics = {
                         enable = true,
                         disabled = { "unresolved-proc-macro" },
