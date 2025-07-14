@@ -226,6 +226,7 @@
 
         xdg.configFile."nvim/lua/plugins".source = ./nvim/lua/plugins;
         xdg.configFile."nvim/lua/config".source = ./nvim/lua/config;
+        xdg.configFile."nvim/lua/overseer".source = ./nvim/lua/overseer;
         xdg.configFile."nvim/ftplugin".source = ./nvim/ftplugin;
 
         # This is a bit meta and very hacky but I want the spell file to be writeable.

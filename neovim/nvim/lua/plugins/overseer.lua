@@ -1,7 +1,10 @@
 local M = {}
 
 M.config = function()
-    require('overseer').setup()
+    local overseer = require('overseer')
+
+    overseer.setup()
+    overseer.load_template("nix")
 
     require('which-key').add({
         { '<leader>o',  group = '+overseer' },
