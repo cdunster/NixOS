@@ -214,6 +214,13 @@
                 config = "require('plugins.neorg').config()";
               }
               neorg-telescope
+
+              # Task runner and job manager.
+              {
+                plugin = overseer-nvim;
+                type = "lua";
+                config = "require('plugins.overseer').config()";
+              }
             ];
         };
 
