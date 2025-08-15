@@ -13,7 +13,7 @@ M.config = function()
         mapping = {
             ['<C-space>'] = cmp.mapping.complete(),
             ['<CR>'] = cmp.mapping.confirm({
-                behavior = cmp.ConfirmBehavior.Replace,
+                behavior = cmp.ConfirmBehavior.Insert,
                 select = false,
             }),
             ['<Tab>'] = cmp.mapping.select_next_item(),
