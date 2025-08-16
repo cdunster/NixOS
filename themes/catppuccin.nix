@@ -26,9 +26,6 @@ in
         inherit (config.catppuccin) enable;
         accent = "dark";
       };
-      gtk = {
-        inherit (config.catppuccin) enable;
-      };
       tmux.extraConfig = ''
         set -g @catppuccin_status_modules_left "session directory"
         set -g @catppuccin_status_modules_right "cpu date_time"
