@@ -44,6 +44,7 @@ with lib.hm.gvariant;
       enable-hot-corners = false;
       font-name = "JetBrainsMono Nerd Font 10";
       gtk-enable-primary-paste = false;
+      icon-theme = "Papirus-Dark";
       monospace-font-name = "JetBrainsMono Nerd Font Mono 10";
       show-battery-percentage = true;
     };
