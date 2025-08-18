@@ -9,6 +9,7 @@
         settings = {
           notARepository = "skip";
           gui.showCommandLog = false;
+          git.overrideGpg = true;
         };
       };
     };
