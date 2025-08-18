@@ -172,7 +172,6 @@ with lib.hm.gvariant;
 
     "org/gnome/shell" = {
       favorite-apps = [ ];
-      last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "46.3.1";
     };
 
