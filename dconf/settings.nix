@@ -38,6 +38,7 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       clock-show-seconds = true;
       clock-show-weekday = true;
+      color-scheme = "prefer-dark";
       cursor-theme = "catppuccin-frappe-dark-cursors";
       document-font-name = "JetBrainsMono Nerd Font 11";
       enable-hot-corners = false;
