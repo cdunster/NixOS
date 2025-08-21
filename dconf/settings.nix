@@ -179,11 +179,6 @@ with lib.hm.gvariant;
       application-list = [ "spotify.desktop:1" "Mattermost.desktop:2" "brave-browser.desktop:3" ];
     };
 
-    "org/gnome/shell/extensions/freon" = {
-      hot-sensors = [ "__max__" ];
-      panel-box-index = 1;
-    };
-
     "org/gnome/shell/extensions/pop-shell" = {
       activate-launcher = [ ];
       fullscreen-launcher = true;
@@ -195,10 +190,6 @@ with lib.hm.gvariant;
       toggle-tiling = [ ];
     };
 
-    "org/gnome/shell/extensions/system-monitor" = {
-      show-swap = false;
-    };
-
     "org/gnome/shell/extensions/trayIconsReloaded" = {
       icon-margin-horizontal = 4;
       icon-padding-horizontal = 0;
@@ -208,6 +199,13 @@ with lib.hm.gvariant;
       position-weight = 1;
       tray-margin-left = 0;
       tray-position = "left";
+    };
+
+    "org/gnome/shell/extensions/vitals" = {
+      hot-sensors = [ "__temperature_max__" "__fan_max__" "_processor_usage_" "_memory_usage_" "__network-tx_max__" "__network-rx_max__" "_gpu#1_usage_" "_storage_free_" ];
+      icon-style = 1;
+      menu-centered = true;
+      show-gpu = true;
     };
 
     "org/gnome/shell/keybindings" = {
