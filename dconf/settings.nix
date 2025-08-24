@@ -203,7 +203,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/vitals" = {
       fixed-widths = false;
-      hot-sensors = [ "__temperature_max__" "__fan_max__" "_processor_usage_" "_memory_usage_" "__network-tx_max__" "__network-rx_max__" "_gpu#1_usage_" "_storage_free_" ];
+      hot-sensors = [ "__temperature_max__" "_processor_usage_" "_memory_usage_" "__network-tx_max__" "__network-rx_max__" ];
       icon-style = 1;
       menu-centered = true;
       show-gpu = true;
