@@ -72,8 +72,11 @@
       # Enable fingerprint reader support.
       services.fprintd.enable = true;
 
-      # Set the system time zone.
-      time.timeZone = "Europe/Amsterdam";
+      # Set the system timezone.
+      time.timeZone = lib.mkDefault "Europe/Amsterdam";
+
+      # Allow the timezone to be set automatically.
+      services.automatic-timezoned.enable = true;
 
       # Enable networking.
       networking.networkmanager.enable = true;
