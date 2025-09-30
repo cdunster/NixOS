@@ -138,13 +138,11 @@
         binfmt = true;
       };
 
-      # Enable virt-manager as a Virtual Machine Manager (VM)
-      programs.virt-manager.enable = true;
-      virtualisation = {
-        libvirtd.enable = true;
-        spiceUSBRedirection.enable = true;
+      # Enable VirtualBox with the expansion pack
+      virtualisation.virtualbox.host = {
+        enable = true;
+        enableExtensionPack = true;
       };
-      users.groups.libvirtd.members = [ cfg.user ];
 
       # Define user accounts.
       users.users = {
