@@ -1,9 +1,20 @@
 local M = {}
 
 M.config = function()
+    -- Copy the default configuration
+    local vimgrep_arguments = { unpack(require("telescope.config").values.vimgrep_arguments) }
+
+    -- Search hidden files
+    table.insert(vimgrep_arguments, "--hidden")
+
+    -- But don't search git files in the .git directory
+    table.insert(vimgrep_arguments, "--glob")
+    table.insert(vimgrep_arguments, "!**/.git/*")
+
     require("telescope").setup({
         defaults = {
             cache_picker = { num_pickers = 5 },
+            vimgrep_arguments = vimgrep_arguments,
         },
         pickers = {
             find_files = {
