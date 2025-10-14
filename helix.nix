@@ -1,10 +1,20 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 let
   user = config.hostOptions.user;
 in
 {
   home-manager.users.${user}.programs.helix = {
     enable = true;
+    extraPackages = with pkgs;[
+      # LSPs
+      clang-tools # C/C++
+      pyright # Python
+      lua-language-server # Lua
+      vscode-langservers-extracted # HTML/CSS/JSON/ESLint
+      rust-analyzer # Rust
+      nixd # Nix
+      gopls #GoLang
+    ];
     settings = {
       editor = {
         line-number = "relative";
