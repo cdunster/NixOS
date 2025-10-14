@@ -14,6 +14,7 @@
     ./fzf.nix
     ./git.nix
     ./gpg.nix
+    ./helix.nix
     ./home-manager.nix
     ./lazygit.nix
     ./neovim
