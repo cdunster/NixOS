@@ -48,16 +48,19 @@ end
 local M = {}
 
 M.config = function()
-    local lsp = require("lspconfig")
-
     -- Add additional capabilities supported by nvim-cmp
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
-    -- clangd LSP config for C/C++.
-    lsp.clangd.setup({
+    -- The default configuration for all enabled LSPs
+    vim.lsp.config('*', {
         on_attach = on_attach,
         capabilities = capabilities,
+    })
+
+    -- clangd LSP config for C/C++.
+    vim.lsp.enable('clangd')
+    vim.lsp.config('clangd', {
         filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
     })
 
@@ -86,13 +89,11 @@ M.config = function()
     })
 
     -- pyright LSP config for Python.
-    lsp.pyright.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-    })
+    vim.lsp.enable('pyright')
 
     -- Lua LS LSP config.
-    lsp.lua_ls.setup({
+    vim.lsp.enable('lua_ls')
+    vim.lsp.config('lua_ls', {
         on_init = function(client)
             if client.workspace_folders[1].name == "/etc/nixos" then
                 client.config.settings.Lua.runtime.version = 'LuaJIT'
@@ -104,8 +105,6 @@ M.config = function()
             client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
             return true
         end,
-        on_attach = on_attach,
-        capabilities = capabilities,
         settings = {
             Lua = {
                 runtime = {},
@@ -122,15 +121,14 @@ M.config = function()
     local css_capabilities = capabilities
     css_capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-    lsp.cssls.setup({
-        on_attach = on_attach,
+    vim.lsp.enable('cssls')
+    vim.lsp.config('cssls', {
         capabilities = css_capabilities,
     })
 
     -- nixd LSP config for Nix.
-    lsp.nixd.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
+    vim.lsp.enable('nixd')
+    vim.lsp.config('nixd', {
         settings = {
             nixd = {
                 nixpkgs = {
@@ -153,16 +151,10 @@ M.config = function()
     })
 
     -- GDScript LSP config for the Godot game engine.
-    lsp.gdscript.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-    })
+    vim.lsp.enable('gdscript')
 
     -- gopls official LSP for GoLang.
-    lsp.gopls.setup({
-        on_attach = on_attach,
-        capabilities = capabilities,
-    })
+    vim.lsp.enable('gopls')
 end
 
 return M
