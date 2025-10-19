@@ -126,6 +126,9 @@ M.config = function()
         capabilities = css_capabilities,
     })
 
+    -- Svelte (JS framework)
+    vim.lsp.enable('svelte')
+
     -- nixd LSP config for Nix.
     vim.lsp.enable('nixd')
     vim.lsp.config('nixd', {
