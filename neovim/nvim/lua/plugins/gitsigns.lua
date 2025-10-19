@@ -6,8 +6,8 @@ M.config = function()
     })
 
     require('which-key').add({
-        { ']g', require('gitsigns.actions').next_hunk, desc = 'Next git hunk' },
-        { '[g', require('gitsigns.actions').prev_hunk, desc = 'Previous git hunk' },
+        { ']g', function() require('gitsigns').nav_hunk('next') end, desc = 'Next git hunk' },
+        { '[g', function() require('gitsigns').nav_hunk('prev') end, desc = 'Previous git hunk' },
 
         {
             { '<leader>g',  group = '+git' },
