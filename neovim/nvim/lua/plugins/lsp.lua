@@ -1,4 +1,4 @@
-local on_attach = function(_, bufnr)
+local on_attach_extra = function()
     -- Enable LSP signature plugin.
     require("lsp_signature").on_attach()
 
@@ -35,14 +35,6 @@ local on_attach = function(_, bufnr)
             },
         },
     })
-
-    --Try to format on save but ignore any errors.
-    vim.api.nvim_create_autocmd("BufWritePre", {
-        buffer = bufnr,
-        callback = function()
-            pcall(vim.lsp.buf.format, { bufnr = bufnr })
-        end,
-    })
 end
 
 local M = {}
@@ -54,7 +46,6 @@ M.config = function()
 
     -- The default configuration for all enabled LSPs
     vim.lsp.config('*', {
-        on_attach = on_attach,
         capabilities = capabilities,
     })
 
@@ -67,7 +58,6 @@ M.config = function()
     -- Use rustaceanvim plugin for Rust.
     vim.g.rustaceanvim = {
         server = {
-            on_attach = on_attach,
             capabilities = capabilities,
             default_settings = {
                 ["rust-analyzer"] = {
@@ -83,7 +73,6 @@ M.config = function()
     -- Use flutter-tools.nvim for Flutter/Dart.
     require("flutter-tools").setup({
         lsp = {
-            on_attach = on_attach,
             capabilities = capabilities,
         }
     })
@@ -158,6 +147,19 @@ M.config = function()
 
     -- gopls official LSP for GoLang.
     vim.lsp.enable('gopls')
+
+    -- Call the on_attach function common for all LSPs
+    vim.api.nvim_create_autocmd('LspAttach', {
+        desc = 'LSP actions',
+        callback = on_attach_extra,
+    })
+
+    --Try to format on save but ignore any errors.
+    vim.api.nvim_create_autocmd('BufWritePre', {
+        callback = function(opts)
+            pcall(vim.lsp.buf.format, { bufnr = opts.buf })
+        end,
+    })
 end
 
 return M
