@@ -1,37 +1,37 @@
 local on_attach_extra = function()
     -- Enable LSP signature plugin.
-    require("lsp_signature").on_attach()
+    require('lsp_signature').on_attach()
 
-    require("which-key").add({
+    require('which-key').add({
         --Use K to show documentation in preview window.
-        { "K", vim.lsp.buf.hover, desc = "Peek token documentation" },
+        { 'K', vim.lsp.buf.hover, desc = 'Peek token documentation' },
 
         --Navigate diagnostics.
         {
-            { "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", desc = "Previous diagnostic" },
-            { "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next diagnostic" },
+            { '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', desc = 'Previous diagnostic' },
+            { ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', desc = 'Next diagnostic' },
         },
 
         --Code navigation. With g prefix.
         {
-            { "gd", vim.lsp.buf.definition,                            desc = "Go to definition" },
-            { "gy", require('telescope.builtin').lsp_type_definitions, desc = "Go to type definition" },
-            { "gi", require('telescope.builtin').lsp_implementations,  desc = "Go to implementation" },
-            { "gr", require('telescope.builtin').lsp_references,       desc = "List references" },
+            { 'gd', vim.lsp.buf.definition,                            desc = 'Go to definition' },
+            { 'gy', require('telescope.builtin').lsp_type_definitions, desc = 'Go to type definition' },
+            { 'gi', require('telescope.builtin').lsp_implementations,  desc = 'Go to implementation' },
+            { 'gr', require('telescope.builtin').lsp_references,       desc = 'List references' },
         },
 
         --Code action bindings with <leader>+c.
         {
-            { "<leader>c",  group = "+code" },
-            { "<leader>cr", vim.lsp.buf.rename,                                                     desc = "Rename token" },
-            { "<leader>ca", vim.lsp.buf.code_action,                                                desc = "List line code actions" },
-            { "<leader>cd", function() require('telescope.builtin').diagnostics({ bufnr = 0 }) end, desc = "List buffer diagnostics" },
-            { "<leader>co", require('telescope.builtin').treesitter,                                desc = "Show buffer code outline" },
-            { "<leader>cs", require('telescope.builtin').lsp_document_symbols,                      desc = "List buffer code symbols" },
+            { '<leader>c',  group = '+code' },
+            { '<leader>cr', vim.lsp.buf.rename,                                                     desc = 'Rename token' },
+            { '<leader>ca', vim.lsp.buf.code_action,                                                desc = 'List line code actions' },
+            { '<leader>cd', function() require('telescope.builtin').diagnostics({ bufnr = 0 }) end, desc = 'List buffer diagnostics' },
+            { '<leader>co', require('telescope.builtin').treesitter,                                desc = 'Show buffer code outline' },
+            { '<leader>cs', require('telescope.builtin').lsp_document_symbols,                      desc = 'List buffer code symbols' },
             {
-                { "<leader>cw",  group = "+workspace" },
-                { "<leader>cwd", require('telescope.builtin').diagnostics,           desc = "List workspace diagnostics" },
-                { "<leader>cws", require('telescope.builtin').lsp_workspace_symbols, desc = "List workspace code symbols" },
+                { '<leader>cw',  group = '+workspace' },
+                { '<leader>cwd', require('telescope.builtin').diagnostics,           desc = 'List workspace diagnostics' },
+                { '<leader>cws', require('telescope.builtin').lsp_workspace_symbols, desc = 'List workspace code symbols' },
             },
         },
     })
@@ -42,7 +42,7 @@ local M = {}
 M.config = function()
     -- Add additional capabilities supported by nvim-cmp
     local capabilities = vim.lsp.protocol.make_client_capabilities()
-    capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+    capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
     -- The default configuration for all enabled LSPs
     vim.lsp.config('*', {
@@ -52,7 +52,7 @@ M.config = function()
     -- clangd LSP config for C/C++.
     vim.lsp.enable('clangd')
     vim.lsp.config('clangd', {
-        filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+        filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
     })
 
     -- Use rustaceanvim plugin for Rust.
@@ -60,10 +60,10 @@ M.config = function()
         server = {
             capabilities = capabilities,
             default_settings = {
-                ["rust-analyzer"] = {
+                ['rust-analyzer'] = {
                     diagnostics = {
                         enable = true,
-                        disabled = { "unresolved-proc-macro" },
+                        disabled = { 'unresolved-proc-macro' },
                     },
                 },
             },
@@ -71,7 +71,7 @@ M.config = function()
     }
 
     -- Use flutter-tools.nvim for Flutter/Dart.
-    require("flutter-tools").setup({
+    require('flutter-tools').setup({
         lsp = {
             capabilities = capabilities,
         }
@@ -84,14 +84,14 @@ M.config = function()
     vim.lsp.enable('lua_ls')
     vim.lsp.config('lua_ls', {
         on_init = function(client)
-            if client.workspace_folders[1].name == "/etc/nixos" then
+            if client.workspace_folders[1].name == '/etc/nixos' then
                 client.config.settings.Lua.runtime.version = 'LuaJIT'
                 client.config.settings.Lua.diagnostics.globals = { 'vim' }
-                client.config.settings.Lua.workspace.library = vim.api.nvim_get_runtime_file("", true)
+                client.config.settings.Lua.workspace.library = vim.api.nvim_get_runtime_file('', true)
                 client.config.settings.Lua.workspace.checkThirdParty = false
             end
 
-            client.notify("workspace/didChangeConfiguration", { settings = client.config.settings })
+            client.notify('workspace/didChangeConfiguration', { settings = client.config.settings })
             return true
         end,
         settings = {
@@ -127,10 +127,10 @@ M.config = function()
         settings = {
             nixd = {
                 nixpkgs = {
-                    expr = "import <nixpkgs> { }",
+                    expr = 'import <nixpkgs> { }',
                 },
                 formatting = {
-                    command = { "nixpkgs-fmt" },
+                    command = { 'nixpkgs-fmt' },
                 },
                 options = {
                     nixos = {
