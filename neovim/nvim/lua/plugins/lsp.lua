@@ -115,6 +115,9 @@ M.config = function()
         capabilities = css_capabilities,
     })
 
+    -- TypeScript and JavaScript
+    vim.lsp.enable('ts_ls')
+
     -- Svelte (JS framework)
     vim.lsp.enable('svelte')
 

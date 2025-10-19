@@ -29,6 +29,7 @@
             pyright # Python
             lua-language-server # Lua
             vscode-langservers-extracted # HTML/CSS/JSON/ESLint
+            typescript-language-server # TypeScript and JavaScript
             svelte-language-server # Svelte (JS framework)
             rust-analyzer # Rust
             nixd # Nix
