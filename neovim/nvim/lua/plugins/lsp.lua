@@ -8,8 +8,8 @@ local on_attach_extra = function()
 
         --Navigate diagnostics.
         {
-            { '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', desc = 'Previous diagnostic' },
-            { ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', desc = 'Next diagnostic' },
+            { '[d', vim.diagnostic.goto_prev, desc = 'Previous diagnostic' },
+            { ']d', vim.diagnostic.goto_next, desc = 'Next diagnostic' },
         },
 
         --Code navigation. With g prefix.
