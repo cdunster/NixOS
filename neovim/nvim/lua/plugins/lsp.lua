@@ -121,6 +121,9 @@ M.config = function()
     -- Svelte (JS framework)
     vim.lsp.enable('svelte')
 
+    -- Tailwind (CSS framework)
+    vim.lsp.enable('tailwindcss')
+
     -- nixd LSP config for Nix.
     vim.lsp.enable('nixd')
     vim.lsp.config('nixd', {

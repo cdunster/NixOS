@@ -31,6 +31,7 @@
             vscode-langservers-extracted # HTML/CSS/JSON/ESLint
             typescript-language-server # TypeScript and JavaScript
             svelte-language-server # Svelte (JS framework)
+            tailwindcss-language-server # Tailwind CSS framework
             rust-analyzer # Rust
             nixd # Nix
             gopls #GoLang
