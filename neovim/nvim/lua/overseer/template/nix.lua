@@ -34,7 +34,12 @@ local function parse_nix_flake_output(cwd, ret, cb)
             for _, line in ipairs(output) do
                 if line ~= '' then
                     local json = vim.json.decode(line)
-                    local packages = json.packages[system]
+
+                    if not json or not json.packages then
+                        break;
+                    end
+
+                    local packages = json.packages[system] or {}
 
                     for package_name, _ in pairs(packages) do
                         local flake = string.format(".#%s", package_name)
