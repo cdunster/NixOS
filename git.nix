@@ -5,8 +5,6 @@ in
 {
   home-manager.users.${user}.programs.git = {
     enable = true;
-    userName = "Callum Dunster";
-    userEmail = "cdunster@users.noreply.github.com";
     lfs.enable = true;
     signing = {
       key = null;
@@ -17,12 +15,18 @@ in
       ".cache"
       ".direnv"
     ];
-    extraConfig = {
-      credential.helper = "store";
-      init.defaultBranch = "main";
-      pull.ff = "only";
-      safe.directory = [ "/etc/nixos" ];
-      rerere.enabled = true;
+    settings = {
+      user = {
+        name = "Callum Dunster";
+        email = "cdunster@users.noreply.github.com";
+      };
+      extraConfig = {
+        credential.helper = "store";
+        init.defaultBranch = "main";
+        pull.ff = "only";
+        safe.directory = [ "/etc/nixos" ];
+        rerere.enabled = true;
+      };
     };
   };
 }
