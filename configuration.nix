@@ -42,6 +42,8 @@
 
     enableVmUser = mkEnableOption "Enable the test user used inside a VM";
 
+    enableVirtualBox = mkEnableOption "Enable VirtualBox program with extension pack";
+
     allowUnfreePackages = mkEnableOption "Allow installation of proprietary/unfree packages";
   };
 
@@ -140,7 +142,7 @@
       };
 
       # Enable VirtualBox with the expansion pack
-      virtualisation.virtualbox.host = {
+      virtualisation.virtualbox.host = lib.mkIf cfg.enableVirtualBox {
         enable = true;
         enableExtensionPack = true;
       };
