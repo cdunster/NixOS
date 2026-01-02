@@ -13,8 +13,14 @@ with lib;
       user = config.hostOptions.user;
     in
     mkIf cfg.enable {
-      # Enable the fish shell
-      programs.fish.enable = true;
+      programs.fish = {
+        # Enable the fish shell
+        enable = true;
+
+        # Translate configured environment to native fish using babelfish
+        useBabelfish = true;
+      };
+
 
       # Set the default shell of the main user to fish
       users.users.${user}.shell = mkIf cfg.default config.programs.fish.package;
