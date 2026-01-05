@@ -1,25 +1,6 @@
 local constants = require("overseer.constants")
 local log = require("overseer.log")
-local overseer = require("overseer")
 local TAG = constants.TAG
-
----@type overseer.TemplateFileDefinition
-local tmpl = {
-    name = "nix build",
-    priority = 40,
-    tags = { TAG.BUILD },
-    params = {
-        args = { optional = true, type = "list", delimiter = " " },
-        cwd = { optional = true },
-    },
-    builder = function(params)
-        return {
-            cmd = { "nix", "build" },
-            args = params.args,
-            cwd = params.cwd,
-        }
-    end,
-}
 
 local function parse_nix_flake_output(cwd, ret, cb)
     local job_id = vim.fn.jobstart({ "nix", "flake", "show", "--json" }, {
@@ -41,13 +22,39 @@ local function parse_nix_flake_output(cwd, ret, cb)
 
                     local packages = json.packages[system] or {}
 
+                    if packages.default then
+                        table.insert(
+                            ret, {
+                                name = "nix build",
+                                priority = 40,
+                                tags = { TAG.BUILD },
+                                builder = function(_)
+                                    return {
+                                        cmd = { "nix", "build" },
+                                        cwd = cwd,
+                                    }
+                                end,
+                            }
+                        )
+                    end
+
                     for package_name, _ in pairs(packages) do
                         local flake = string.format(".#%s", package_name)
                         local name = string.format("nix build %s", flake)
                         local args = { flake }
                         table.insert(
-                            ret,
-                            overseer.wrap_template(tmpl, { name = name }, { args = args, cwd = cwd })
+                            ret, {
+                                name = name,
+                                priority = 40,
+                                tags = { TAG.BUILD },
+                                builder = function(_)
+                                    return {
+                                        cmd = { "nix", "build" },
+                                        args = args,
+                                        cwd = cwd,
+                                    }
+                                end,
+                            }
                         )
                     end
                 end
@@ -91,7 +98,7 @@ local provider = {
         local flake_file = assert(get_flake_file(opts))
         local cwd = vim.fs.dirname(flake_file)
 
-        local ret = { overseer.wrap_template(tmpl, nil, { cwd = cwd }) }
+        local ret = {}
         parse_nix_flake_output(cwd, ret, cb)
     end,
 }
