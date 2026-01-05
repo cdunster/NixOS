@@ -18,6 +18,7 @@ config.colors = {
         },
     },
 }
+config.alternate_buffer_wheel_scroll_speed = 1 -- Set the scroll speed of full-screen terminal apps like NeoVim
 
 local act = wezterm.action
 config.keys = {
