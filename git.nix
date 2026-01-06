@@ -20,13 +20,11 @@ in
         name = "Callum Dunster";
         email = "cdunster@users.noreply.github.com";
       };
-      extraConfig = {
-        credential.helper = "store";
-        init.defaultBranch = "main";
-        pull.ff = "only";
-        safe.directory = [ "/etc/nixos" ];
-        rerere.enabled = true;
-      };
+      credential.helper = "store";
+      init.defaultBranch = "main";
+      pull.ff = "only";
+      safe.directory = [ "/etc/nixos" ];
+      rerere.enabled = true;
     };
   };
 }
