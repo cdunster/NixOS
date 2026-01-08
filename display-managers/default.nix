@@ -1,12 +1,13 @@
 { lib, config, ... }: {
   imports = [
+    ./cosmic-greeter.nix
     ./gdm.nix
     ./sddm.nix
   ];
 
   options.hostOptions.displayManagers = with lib; {
     displayManager = mkOption {
-      type = types.enum [ "gdm" "sddm" ];
+      type = types.enum [ "cosmic-greeter" "gdm" "sddm" ];
       description = "Select the display manager to use";
     };
 
