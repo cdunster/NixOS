@@ -28,7 +28,7 @@
     displayManagers = {
       enableAutoLogin = true;
       enableWayland = true;
-      displayManager = "gdm";
+      displayManager = "cosmic-greeter";
     };
     dconf.background.path = ../../images/backgrounds/deer_sunset.jpg;
     neovim.enable = true;
