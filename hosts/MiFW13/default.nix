@@ -23,14 +23,12 @@
         homeMonitor.id = "DP-2";
       };
     };
-    desktopEnvironments.gnome.enable = true;
     desktopEnvironments.cosmic.enable = true;
     displayManagers = {
       enableAutoLogin = true;
       enableWayland = true;
       displayManager = "cosmic-greeter";
     };
-    dconf.background.path = ../../images/backgrounds/deer_sunset.jpg;
     neovim.enable = true;
     devTools.holochain.enable = true;
     docker.enable = true;
