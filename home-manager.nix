@@ -51,6 +51,7 @@ in
       obs-studio # Video/Screen recording and streaming app
       ledger-live-desktop # Desktop app to control and update Ledger Nano X HW wallet
       inkscape # Vector graphics for freeeeeee
+      mpv # Media player
     ];
   };
 }
