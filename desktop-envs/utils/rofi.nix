@@ -14,6 +14,9 @@
           # Bluetooth
           bzmenu
           bluez
+
+          # Network
+          rofi-network-manager
         ];
         programs.rofi = {
           enable = true;
