@@ -13,7 +13,14 @@
         programs.rofi = {
           enable = true;
           plugins = with pkgs; [ rofi-calc ];
-          modes = [ "drun" "calc" ];
+          modes = [
+            "drun"
+            "calc"
+            {
+              name = "power-menu";
+              path = lib.getExe pkgs.rofi-power-menu;
+            }
+          ];
           extraConfig = {
             show-icons = true;
           };
