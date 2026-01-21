@@ -10,6 +10,11 @@
     in
     lib.mkIf cfg.enable {
       home-manager.users.${user} = {
+        home.packages = with pkgs; [
+          # Bluetooth
+          bzmenu
+          bluez
+        ];
         programs.rofi = {
           enable = true;
           plugins = with pkgs; [ rofi-calc ];
