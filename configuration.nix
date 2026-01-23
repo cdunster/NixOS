@@ -103,10 +103,8 @@
         LC_ALL = "en_GB.UTF-8";
       };
 
-      services = {
-        # Enable touchpad support.
-        libinput.enable = true;
-      };
+      # Enable touchpad support.
+      services.libinput.enable = true;
 
       # Override default packages (removes nano and others).
       environment.defaultPackages = [ ];
