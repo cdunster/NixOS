@@ -45,7 +45,7 @@
                   enable = true;
                   mode = "2880x1920";
                   rate = "120.00";
-                  dpi = 192;
+                  dpi = 256;
                 };
               };
             };
