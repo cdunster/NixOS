@@ -52,6 +52,7 @@ in
       ledger-live-desktop # Desktop app to control and update Ledger Nano X HW wallet
       inkscape # Vector graphics for freeeeeee
       mpv # Media player
+      neohtop # A modern system monitor GUI
     ];
   };
 }
