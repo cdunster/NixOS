@@ -12,6 +12,7 @@
     userName = "Callum";
     allowUnfreePackages = true;
     bootloader = "lanzaboote";
+    enableBluetooth = true;
     shells.fish = {
       enable = true;
       default = true;
