@@ -67,6 +67,9 @@
 
           # Network
           rofi-network-manager
+
+          # Sound
+          pulseaudio
         ];
         programs.rofi = {
           enable = true;
