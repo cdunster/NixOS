@@ -45,6 +45,8 @@
     enableVirtualBox = mkEnableOption "Enable VirtualBox program with extension pack";
 
     allowUnfreePackages = mkEnableOption "Allow installation of proprietary/unfree packages";
+
+    enableBluetooth = mkEnableOption "Enable Bluetooth support for this machine";
   };
 
   config =
@@ -126,7 +128,7 @@
       };
 
       # Enable Bluetooth support
-      hardware.bluetooth.enable = true;
+      hardware.bluetooth.enable = cfg.enableBluetooth;
 
       # Enable CUPS to print documents.
       services.printing.enable = true;

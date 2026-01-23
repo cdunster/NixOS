@@ -5,6 +5,7 @@
 
   config =
     let
+      bluetoothEnabled = config.hostOptions.enableBluetooth;
       cfg = config.hostOptions.rofi;
       user = config.hostOptions.user;
 
@@ -61,15 +62,15 @@
     lib.mkIf cfg.enable {
       home-manager.users.${user} = {
         home.packages = with pkgs; [
-          # Bluetooth
-          bzmenu
-          bluez
-
           # Network
           rofi-network-manager
 
           # Sound
           pulseaudio
+        ] ++ lib.optionals bluetoothEnabled [
+          # Bluetooth
+          bzmenu
+          bluez
         ];
         programs.rofi = {
           enable = true;
