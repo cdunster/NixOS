@@ -15,6 +15,24 @@
           type = types.nullOr types.nonEmptyStr;
           description = "The fingerprint of the laptop display, set to `null` if no laptop screen";
         };
+
+        resolution = mkOption {
+          type = types.nonEmptyStr;
+          description = "The resolution of the display written as {width}x{height}";
+          example = "2880x1920";
+        };
+
+        refreshRate = mkOption {
+          type = types.number;
+          description = "The refresh rate of the screen";
+          example = 60.0;
+        };
+
+        dpi = mkOption {
+          type = types.number;
+          description = "The DPI of the display";
+          example = 256;
+        };
       };
 
       homeMonitor = {
@@ -40,13 +58,13 @@
               fingerprint = {
                 ${cfg.displays.laptop.id} = "${cfg.displays.laptop.fingerprint}";
               };
-              config = {
-                ${cfg.displays.laptop.id} = {
+              config = with cfg.displays.laptop; {
+                ${id} = {
                   enable = true;
                   primary = true;
-                  mode = "2880x1920";
-                  rate = "120.00";
-                  dpi = 256;
+                  mode = resolution;
+                  rate = toString refreshRate;
+                  dpi = dpi;
                 };
               };
             };
