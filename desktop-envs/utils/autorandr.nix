@@ -33,6 +33,12 @@
           description = "The DPI of the display";
           example = 256;
         };
+
+        transformXY = mkOption {
+          type = types.number;
+          description = "The transformation to apply to the display's X and Y axis";
+          default = 1.0;
+        };
       };
 
       homeMonitor = {
@@ -65,6 +71,11 @@
                   mode = resolution;
                   rate = toString refreshRate;
                   dpi = dpi;
+                  transform = [
+                    [ transformXY 0.0 0.0 ]
+                    [ 0.0 transformXY 0.0 ]
+                    [ 0.0 0.0 1.0 ]
+                  ];
                 };
               };
             };
