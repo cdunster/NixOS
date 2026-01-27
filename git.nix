@@ -25,6 +25,7 @@ in
       pull.ff = "only";
       safe.directory = [ "/etc/nixos" ];
       rerere.enabled = true;
+      url."ssh://github.com/".pushInsteadOf = "https://github.com/";
     };
   };
 }
