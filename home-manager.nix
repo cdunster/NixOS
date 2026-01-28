@@ -52,6 +52,7 @@ in
       inkscape # Vector graphics for freeeeeee
       mpv # Media player
       neohtop # A modern system monitor GUI
+      aseprite # Pixel art drawing software
     ];
   };
 }
