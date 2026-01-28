@@ -40,7 +40,7 @@
             lldb # The debugger for the LLVM Project (lldb-dap)
             llvm # Compiler tools for the LLVM Project (llvm-symbolizer)
           ];
-          extraLuaConfig = ''
+          initLua = ''
             require('config.custom_bindings')
             require('config.settings')
           '';

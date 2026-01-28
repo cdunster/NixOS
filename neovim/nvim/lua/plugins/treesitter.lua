@@ -1,7 +1,7 @@
 local M = {}
 
 M.config = function()
-    require("nvim-treesitter.configs").setup {
+    require("nvim-treesitter").setup {
         ensure_installed = {},
         sync_install = false,
         auto_install = false,
