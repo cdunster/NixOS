@@ -4,8 +4,6 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
 
-    cdunster-nixpkgs.url = "github:cdunster/nixpkgs?ref=wps-fonts";
-
     home-manager = {
       url = "home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

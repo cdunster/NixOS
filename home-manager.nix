@@ -47,7 +47,6 @@ in
       gimp # Edit photos for freeeeeee
       anki-bin # Free spaced repetition learning tool
       godot_4 # Create games for freeeeeee
-      wpsoffice # A free office suit
       obs-studio # Video/Screen recording and streaming app
       ledger-live-desktop # Desktop app to control and update Ledger Nano X HW wallet
       inkscape # Vector graphics for freeeeeee

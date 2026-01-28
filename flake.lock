@@ -20,22 +20,6 @@
         "type": "github"
       }
     },
-    "cdunster-nixpkgs": {
-      "locked": {
-        "lastModified": 1713526940,
-        "narHash": "sha256-YpmZyTbierTxS7S7HFuBovIb23YxWREGPyhp7el+ctI=",
-        "owner": "cdunster",
-        "repo": "nixpkgs",
-        "rev": "738fe3c1d496aa86599b2950377640cb0c84db01",
-        "type": "github"
-      },
-      "original": {
-        "owner": "cdunster",
-        "ref": "wps-fonts",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "crane": {
       "locked": {
         "lastModified": 1766774972,
@@ -411,7 +395,6 @@
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
-        "cdunster-nixpkgs": "cdunster-nixpkgs",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "neorg-overlay": "neorg-overlay",
