@@ -19,6 +19,10 @@ config.colors = {
     },
 }
 config.alternate_buffer_wheel_scroll_speed = 1 -- Set the scroll speed of full-screen terminal apps like NeoVim
+config.mux_enable_ssh_agent = false            -- Don't override the system SSH agent
+config.set_environment_variables = {
+    SSH_AUTH_SOCK = '/run/user/1000/gcr/ssh',  -- Use the gcr-ssh-agent socket
+}
 
 local act = wezterm.action
 config.keys = {
