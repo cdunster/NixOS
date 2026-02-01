@@ -8,6 +8,7 @@
         enable = true;
         memory.source = ./claude-global.md;
         settings = {
+          theme = "dark";
           permissions = {
             allow = [
               "Bash(tree:*)"
