@@ -9,6 +9,7 @@
         memory.source = ./claude-global.md;
         settings = {
           theme = "dark";
+          model = "opus";
           permissions = {
             allow = [
               "Bash(tree:*)"
