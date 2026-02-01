@@ -10,6 +10,10 @@
         settings = {
           theme = "dark";
           model = "opus";
+          attribution = {
+            commit = "";
+            pr = "";
+          };
           permissions = {
             allow = [
               "Bash(tree:*)"
