@@ -3,7 +3,7 @@
     ./bat.nix
     ./bootloader.nix
     ./brave.nix
-    ./claude-code.nix
+    ./claude-code
     ./dconf
     ./desktop-envs
     ./dev-tools
