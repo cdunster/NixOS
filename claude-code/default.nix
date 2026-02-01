@@ -7,6 +7,17 @@
       home-manager.users.${user}.programs.claude-code = {
         enable = true;
         memory.source = ./claude-global.md;
+        settings = {
+          permissions = {
+            allow = [
+              "Bash(tree:*)"
+              "Bash(find:*)"
+              "Bash(cargo build:*)"
+              "Bash(cargo test:*)"
+              "Bash(cargo clippy:*)"
+            ];
+          };
+        };
       };
     };
 }
