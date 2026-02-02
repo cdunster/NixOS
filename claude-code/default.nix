@@ -18,6 +18,7 @@
             allow = [
               "Bash(tree:*)"
               "Bash(find:*)"
+              "Bash(grep:*)"
               "Bash(cargo build:*)"
               "Bash(cargo test:*)"
               "Bash(cargo clippy:*)"
