@@ -22,6 +22,7 @@
               "Bash(cargo test:*)"
               "Bash(cargo clippy:*)"
               "Bash(cargo check:*)"
+              "Bash(cargo doc:*)"
             ];
           };
         };
