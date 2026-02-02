@@ -9,7 +9,7 @@
         memory.source = ./claude-global.md;
         settings = {
           theme = "dark";
-          model = "opus";
+          model = "opusplan";
           attribution = {
             commit = "";
             pr = "";
