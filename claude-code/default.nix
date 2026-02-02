@@ -21,6 +21,7 @@
               "Bash(cargo build:*)"
               "Bash(cargo test:*)"
               "Bash(cargo clippy:*)"
+              "Bash(cargo check:*)"
             ];
           };
         };
