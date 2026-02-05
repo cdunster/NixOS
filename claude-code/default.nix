@@ -20,6 +20,7 @@
               "Bash(find:*)"
               "Bash(grep:*)"
               "Bash(cargo build:*)"
+              "Bash(cargo fmt:*)"
               "Bash(cargo test:*)"
               "Bash(cargo clippy:*)"
               "Bash(cargo check:*)"
