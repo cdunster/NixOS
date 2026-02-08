@@ -54,6 +54,7 @@ in
       mpv # Media player
       neohtop # A modern system monitor GUI
       aseprite # Pixel art drawing software
+      imv # Image view for X11 and Wayland
     ];
   };
 }
