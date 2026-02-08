@@ -14,6 +14,10 @@
             commit = "";
             pr = "";
           };
+          spinnerVerbs = {
+            mode = "replace";
+            verbs = [ "Calculating" "Computing" ];
+          };
           permissions = {
             allow = [
               "Bash(tree:*)"
