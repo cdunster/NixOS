@@ -2,8 +2,8 @@ local constants = require("overseer.constants")
 local log = require("overseer.log")
 local TAG = constants.TAG
 
-local function add_nix_item(ret, package_name, cwd)
-    local name = "nix build"
+local function add_nix_item(ret, sub_cmd, package_name, cwd)
+    local name = string.format("nix %s", sub_cmd)
     local args = nil
 
     if package_name then
@@ -12,20 +12,37 @@ local function add_nix_item(ret, package_name, cwd)
         args = { flake }
     end
 
+    local tags = {}
+    if sub_cmd == "run" then
+        tags = { TAG.RUN }
+    else
+        tags = { TAG.BUILD }
+    end
+
     table.insert(
         ret, {
             name = name,
             priority = 40,
-            tags = { TAG.BUILD },
+            tags = tags,
             builder = function(_)
                 return {
-                    cmd = { "nix", "build" },
+                    cmd = { "nix", sub_cmd },
                     args = args,
                     cwd = cwd,
                 }
             end,
         }
     )
+end
+
+local function add_nix_items(ret, sub_cmd, items, cwd)
+    if items.default then
+        add_nix_item(ret, sub_cmd, nil, cwd)
+    end
+
+    for item, _ in pairs(items) do
+        add_nix_item(ret, sub_cmd, item, cwd)
+    end
 end
 
 local function parse_nix_flake_output(cwd, ret, cb)
@@ -42,18 +59,18 @@ local function parse_nix_flake_output(cwd, ret, cb)
                 if line ~= '' then
                     local json = vim.json.decode(line)
 
-                    if not json or not json.packages then
+                    if not json then
                         break;
                     end
 
-                    local packages = json.packages[system] or {}
-
-                    if packages.default then
-                        add_nix_item(ret, nil, cwd)
+                    if json.packages then
+                        local packages = json.packages[system] or {}
+                        add_nix_items(ret, "build", packages, cwd)
                     end
 
-                    for package_name, _ in pairs(packages) do
-                        add_nix_item(ret, package_name, cwd)
+                    if json.apps then
+                        local apps = json.apps[system] or {}
+                        add_nix_items(ret, "run", apps, cwd)
                     end
                 end
             end
