@@ -2,6 +2,32 @@ local constants = require("overseer.constants")
 local log = require("overseer.log")
 local TAG = constants.TAG
 
+local function add_nix_item(ret, package_name, cwd)
+    local name = "nix build"
+    local args = nil
+
+    if package_name then
+        local flake = string.format(".#%s", package_name)
+        name = name .. flake
+        args = { flake }
+    end
+
+    table.insert(
+        ret, {
+            name = name,
+            priority = 40,
+            tags = { TAG.BUILD },
+            builder = function(_)
+                return {
+                    cmd = { "nix", "build" },
+                    args = args,
+                    cwd = cwd,
+                }
+            end,
+        }
+    )
+end
+
 local function parse_nix_flake_output(cwd, ret, cb)
     local job_id = vim.fn.jobstart({ "nix", "flake", "show", "--json" }, {
         cwd = cwd,
@@ -23,39 +49,11 @@ local function parse_nix_flake_output(cwd, ret, cb)
                     local packages = json.packages[system] or {}
 
                     if packages.default then
-                        table.insert(
-                            ret, {
-                                name = "nix build",
-                                priority = 40,
-                                tags = { TAG.BUILD },
-                                builder = function(_)
-                                    return {
-                                        cmd = { "nix", "build" },
-                                        cwd = cwd,
-                                    }
-                                end,
-                            }
-                        )
+                        add_nix_item(ret, nil, cwd)
                     end
 
                     for package_name, _ in pairs(packages) do
-                        local flake = string.format(".#%s", package_name)
-                        local name = string.format("nix build %s", flake)
-                        local args = { flake }
-                        table.insert(
-                            ret, {
-                                name = name,
-                                priority = 40,
-                                tags = { TAG.BUILD },
-                                builder = function(_)
-                                    return {
-                                        cmd = { "nix", "build" },
-                                        args = args,
-                                        cwd = cwd,
-                                    }
-                                end,
-                            }
-                        )
+                        add_nix_item(ret, package_name, cwd)
                     end
                 end
             end
