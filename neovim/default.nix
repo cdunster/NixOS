@@ -34,7 +34,7 @@
             tailwindcss-language-server # Tailwind CSS framework
             rust-analyzer # Rust
             nixd # Nix
-            gopls #GoLang
+            gopls # GoLang
 
             # DAPs Debuggers
             lldb # The debugger for the LLVM Project (lldb-dap)
