@@ -35,6 +35,7 @@
             rust-analyzer # Rust
             nixd # Nix
             gopls # GoLang
+            tinymist # Typst
 
             # DAPs Debuggers
             lldb # The debugger for the LLVM Project (lldb-dap)

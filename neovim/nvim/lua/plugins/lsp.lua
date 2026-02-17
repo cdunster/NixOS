@@ -154,6 +154,9 @@ M.config = function()
     -- gopls official LSP for GoLang.
     vim.lsp.enable('gopls')
 
+    -- Tinymist LSP for Typst.
+    vim.lsp.enable('tinymist')
+
     -- Call the on_attach function common for all LSPs
     vim.api.nvim_create_autocmd('LspAttach', {
         desc = 'LSP actions',
