@@ -26,19 +26,19 @@
             pico-8-bin-wrapped = pkgs.buildFHSEnv {
               name = "pico-8";
               targetPkgs = pkgs: (with pkgs; [
-                xorg.libX11
-                xorg.libXext
-                xorg.libXcursor
-                xorg.libXinerama
-                xorg.libXi
-                xorg.libXrandr
-                xorg.libXScrnSaver
-                xorg.libXxf86vm
-                xorg.libxcb
-                xorg.libXrender
-                xorg.libXfixes
-                xorg.libXau
-                xorg.libXdmcp
+                libX11
+                libXext
+                libXcursor
+                libXinerama
+                libXi
+                libXrandr
+                libXScrnSaver
+                libXxf86vm
+                libxcb
+                libXrender
+                libXfixes
+                libXau
+                libXdmcp
                 alsa-lib
                 udev
                 wget
