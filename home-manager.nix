@@ -38,6 +38,7 @@ in
       usbutils # lsusb and other utilities
       jq # Command-line JSON processor
       dua # Disk usage analyser CLI
+      evince # PDF viewer part of the GNOME project
 
       # Nix tools
       nixpkgs-fmt # Format Nix files the nixpkgs' way
