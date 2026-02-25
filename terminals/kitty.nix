@@ -14,9 +14,13 @@ in
         bold_italic_font = "auto";
         hide_window_decorations = "yes";
       };
+      keybindings = {
+        "ctrl+tab" = "send_key ctrl+tab";
+        "ctrl+shift+tab" = "send_key ctrl+shift+tab";
+      };
       extraConfig = "startup_session launch.conf";
     };
 
-    xdg.configFile."kitty/launch.conf".text = ''launch sh -c "tmux"'';
+    xdg.configFile."kitty/launch.conf".text = ''launch sh -c "zellij"'';
   };
 }
