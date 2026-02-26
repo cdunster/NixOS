@@ -85,6 +85,30 @@ in
                 }
                 {
                   bind = {
+                    _args = [ "Alt Shift h" "Alt Shift Left" ];
+                    _children = [{ Resize = "Increase Left"; }];
+                  };
+                }
+                {
+                  bind = {
+                    _args = [ "Alt Shift j" "Alt Shift Down" ];
+                    _children = [{ Resize = "Increase Down"; }];
+                  };
+                }
+                {
+                  bind = {
+                    _args = [ "Alt Shift k" "Alt Shift Up" ];
+                    _children = [{ Resize = "Increase Up"; }];
+                  };
+                }
+                {
+                  bind = {
+                    _args = [ "Alt Shift l" "Alt Shift Right" ];
+                    _children = [{ Resize = "Increase Right"; }];
+                  };
+                }
+                {
+                  bind = {
                     _args = [ "Alt g" ];
                     _children = [{ NewTab = { name = "Lazygit"; layout = "lazygit"; }; }];
                   };
