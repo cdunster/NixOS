@@ -153,6 +153,22 @@ in
                     ];
                   };
                 }
+                {
+                  bind = {
+                    _args = [ "Alt u" ];
+                    _children = [
+                      {
+                        LaunchOrFocusPlugin = {
+                          _args = [ "zellij:share" ];
+                          _children = [
+                            { floating = true; }
+                            { move_to_focused_tab = true; }
+                          ];
+                        };
+                      }
+                    ];
+                  };
+                }
               ];
             };
           }
