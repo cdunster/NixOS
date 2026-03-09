@@ -21,6 +21,6 @@ in
       extraConfig = "startup_session launch.conf";
     };
 
-    xdg.configFile."kitty/launch.conf".text = ''launch sh -c "zellij"'';
+    xdg.configFile."kitty/launch.conf".text = ''launch sh -c "zellij -l welcome"'';
   };
 }
