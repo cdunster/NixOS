@@ -26,7 +26,7 @@
       # Use lanzaboote as the bootloader to allow the use of Secure Boot.
       boot.lanzaboote = lib.mkIf (cfg.bootloader == "lanzaboote") {
         enable = true;
-        pkiBundle = "/etc/secureboot";
+        pkiBundle = "/var/lib/sbctl";
       };
 
       # Use the EFI bootloader.
