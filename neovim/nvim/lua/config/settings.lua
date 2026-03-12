@@ -11,6 +11,13 @@ vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter' }, {
     callback = function() vim.opt.relativenumber = false end,
 })
 
+-- Redraw on resize to clear artefacts when resizing panes in Zellij.
+vim.api.nvim_create_autocmd('VimResized', {
+    callback = function()
+        vim.cmd('redraw!')
+    end,
+})
+
 vim.opt.ignorecase = true               -- Enable case insensitive matching.
 vim.opt.smartcase = true                -- Enable smart-case matching (match case insensitively unless upper-case used).
 vim.opt.tabstop = 4                     -- Size of a tab.
