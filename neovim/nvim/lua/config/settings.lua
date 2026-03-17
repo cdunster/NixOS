@@ -12,9 +12,10 @@ vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter' }, {
 })
 
 -- Redraw on resize to clear artefacts when resizing panes in Zellij.
+-- The defer gives Zellij time to finish updating pty dimensions before redrawing.
 vim.api.nvim_create_autocmd('VimResized', {
     callback = function()
-        vim.cmd('redraw!')
+        vim.defer_fn(function() vim.cmd('redraw!') end, 100)
     end,
 })
 
