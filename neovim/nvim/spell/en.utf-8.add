@@ -24,3 +24,8 @@ holo
 inline
 timezone
 rebase
+stdout
+Pulumi
+args
+conn
+YAML
