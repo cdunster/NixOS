@@ -7,6 +7,14 @@
       home-manager.users.${user}.programs.claude-code = {
         enable = true;
         memory.source = ./claude-global.md;
+        mcpServers = {
+          dart = {
+            type = "stdio";
+            command = "dart";
+            args = [ "mcp-server" ];
+            env = { };
+          };
+        };
         settings = {
           theme = "dark";
           model = "opusplan";
