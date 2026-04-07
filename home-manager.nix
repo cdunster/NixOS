@@ -21,6 +21,9 @@ in
     # Add user profile picture.
     home.file.".face".source = ./images/backgrounds/deer_sunset.jpg;
 
+    # Enable the keyring secrets manager.
+    services.gnome-keyring.enable = true;
+
     # The version of Home-manager used.
     home.stateVersion = "22.11";
 
@@ -39,6 +42,7 @@ in
       jq # Command-line JSON processor
       dua # Disk usage analyser CLI
       evince # PDF viewer part of the GNOME project
+      gcr # Provides org.gnome.keyring.SystemPrompter
 
       # Nix tools
       nixpkgs-fmt # Format Nix files the nixpkgs' way

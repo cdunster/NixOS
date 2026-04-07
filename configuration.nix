@@ -134,6 +134,9 @@
       # Enable CUPS to print documents.
       services.printing.enable = true;
 
+      # Enable GNOME secrets manager support.
+      services.gnome.gnome-keyring.enable = true;
+
       # Enable the GNU Privacy Guard agent for managing GPG keys.
       programs.gnupg.agent = {
         enable = true;
