@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 let
   user = config.hostOptions.user;
 in
@@ -7,6 +7,8 @@ in
     enable = true;
     lfs.enable = true;
     signing = {
+      format = "openpgp";
+      signer = "${pkgs.gnupg}/bin/gpg";
       key = null;
       signByDefault = true;
     };
