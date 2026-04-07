@@ -53,7 +53,7 @@ in
       ledger-live-desktop # Desktop app to control and update Ledger Nano X HW wallet
       inkscape # Vector graphics for freeeeeee
       mpv # Media player
-      neohtop # A modern system monitor GUI
+      mission-center # A Windows-themed process monitoring GUI
       aseprite # Pixel art drawing software
       imv # Image view for X11 and Wayland
     ];
