@@ -84,8 +84,15 @@
       # Allow the timezone to be set automatically.
       services.automatic-timezoned.enable = true;
 
-      # Enable networking.
-      networking.networkmanager.enable = true;
+      # Manage networks with networkmanager.
+      networking.networkmanager = {
+        enable = true;
+
+        # Enable OpenVPN support.
+        plugins = with pkgs; [
+          networkmanager-openvpn
+        ];
+      };
 
       # Select internationalisation properties.
       i18n.defaultLocale = "en_GB.UTF-8";
