@@ -7,4 +7,5 @@ require("which-key").add({
     { "<localleader>r",             "<cmd>FlutterRun<cr>",                            desc = "Run Flutter app" },
     { "<localleader>R",             "<cmd>FlutterRestart<cr>",                        desc = "Restart the running Flutter app" },
     { "<localleader>q",             "<cmd>FlutterQuit<cr>",                           desc = "Quit the running Flutter app" },
+    { "<localleader>l",             "<cmd>FlutterLogToggle<cr>",                      desc = "Toggle the dev log buffer" },
 })
