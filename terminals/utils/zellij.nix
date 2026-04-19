@@ -145,6 +145,12 @@ in
                 }
                 {
                   bind = {
+                    _args = [ "Alt Shift t" ];
+                    _children = [{ CloseTab = { }; }];
+                  };
+                }
+                {
+                  bind = {
                     _args = [ "Alt w" ];
                     _children = [
                       {
