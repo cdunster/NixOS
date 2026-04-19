@@ -139,6 +139,12 @@ in
                 }
                 {
                   bind = {
+                    _args = [ "Alt Shift q" ];
+                    _children = [{ CloseFocus = { }; }];
+                  };
+                }
+                {
+                  bind = {
                     _args = [ "Alt w" ];
                     _children = [
                       {
