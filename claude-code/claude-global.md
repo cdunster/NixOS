@@ -15,6 +15,7 @@ This file provides general guidance to Claude Code across all projects.
 - Be very concise, direct, and straight to the point in responses
 - Avoid unnecessary emojis unless requested
 - Don't make time estimates for tasks
+- Always present a summary or plan of the changes you are going to make before trying to make them
 
 ### Tool Usage
 
