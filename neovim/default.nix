@@ -23,6 +23,8 @@
         programs.neovim = {
           enable = true;
           defaultEditor = true;
+          withRuby = false;
+          withPython3 = false;
           extraPackages = with pkgs;[
             # LSPs
             clang-tools # C/C++

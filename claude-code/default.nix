@@ -6,7 +6,7 @@
     {
       home-manager.users.${user}.programs.claude-code = {
         enable = true;
-        memory.source = ./claude-global.md;
+        context = ./claude-global.md;
         mcpServers = {
           dart = {
             type = "stdio";
