@@ -155,6 +155,22 @@ in
                 }
                 {
                   bind = {
+                    _args = [ "Alt o" ];
+                    _children = [
+                      {
+                        LaunchOrFocusPlugin = {
+                          _args = [ "zellij:layout-manager" ];
+                          _children = [
+                            { floating = true; }
+                            { move_to_focused_tab = true; }
+                          ];
+                        };
+                      }
+                    ];
+                  };
+                }
+                {
+                  bind = {
                     _args = [ "Alt u" ];
                     _children = [
                       {
