@@ -43,6 +43,7 @@ in
       dua # Disk usage analyser CLI
       evince # PDF viewer part of the GNOME project
       gcr # Provides org.gnome.keyring.SystemPrompter
+      gh # GitHub CLI tool
 
       # Nix tools
       nixpkgs-fmt # Format Nix files the nixpkgs' way
