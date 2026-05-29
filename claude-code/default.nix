@@ -23,6 +23,10 @@
             args = [ "mcp-server" ];
             env = { };
           };
+          flowbite-svelte = {
+            command = "node";
+            args = [ "/home/callum/repos/flowbite-svelte-mcp/build/server.js" ];
+          };
         };
         settings = {
           theme = "dark";
