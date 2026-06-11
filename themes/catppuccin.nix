@@ -1,4 +1,4 @@
-{ inputs, config, ... }:
+{ inputs, lib, config, ... }:
 let
   cfg = config.hostOptions;
 in
@@ -24,7 +24,7 @@ in
     catppuccin = {
       inherit (config.catppuccin) enable autoEnable flavor accent;
       cursors.accent = "dark";
-      tmux.extraConfig = ''
+      tmux.extraConfig = lib.mkIf cfg.tmux.enable ''
         set -g @catppuccin_status_modules_left "session directory"
         set -g @catppuccin_status_modules_right "cpu date_time"
 
