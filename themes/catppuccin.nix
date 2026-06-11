@@ -10,6 +10,7 @@ in
   # System theme
   catppuccin = {
     enable = true;
+    autoEnable = true;
     flavor = "frappe";
     accent = "blue";
   };
@@ -21,11 +22,8 @@ in
 
     # System theme
     catppuccin = {
-      inherit (config.catppuccin) enable flavor accent;
-      cursors = {
-        inherit (config.catppuccin) enable;
-        accent = "dark";
-      };
+      inherit (config.catppuccin) enable autoEnable flavor accent;
+      cursors.accent = "dark";
       tmux.extraConfig = ''
         set -g @catppuccin_status_modules_left "session directory"
         set -g @catppuccin_status_modules_right "cpu date_time"
