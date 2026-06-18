@@ -70,6 +70,13 @@
           keep-derivations = true;
           download-buffer-size = 524288000; # 500MiB
         };
+
+        # System garbage collection to free-up space
+        gc = {
+          automatic = true;
+          dates = "weekly";
+          options = "--delete-older-than 14d --delete-old";
+        };
       };
 
       # Install firmware updates distributed through LVFS.
