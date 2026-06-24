@@ -52,6 +52,7 @@
               "Bash(cargo doc:*)"
             ];
           };
+          awaySummaryEnabled = false;
         };
       };
     };
