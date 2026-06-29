@@ -50,6 +50,8 @@
               "Bash(cargo clippy:*)"
               "Bash(cargo check:*)"
               "Bash(cargo doc:*)"
+              "Bash(gh pr view:*)"
+              "Bash(gh pr diff:*)"
             ];
           };
           awaySummaryEnabled = false;
