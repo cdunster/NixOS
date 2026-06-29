@@ -52,6 +52,7 @@
               "Bash(cargo doc:*)"
               "Bash(gh pr view:*)"
               "Bash(gh pr diff:*)"
+              "Bash(gh issue view:*)"
             ];
           };
           awaySummaryEnabled = false;
