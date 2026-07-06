@@ -60,7 +60,7 @@ in
       mpv # Media player
       mission-center # A Windows-themed process monitoring GUI
       aseprite # Pixel art drawing software
-      imv # Image view for X11 and Wayland
+      loupe # GNOME image viewer
     ];
   };
 }
