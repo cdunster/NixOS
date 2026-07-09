@@ -99,6 +99,9 @@ with lib;
               end
             '';
           };
+          _open_helix = {
+            body = "hx .";
+          };
           lf = {
             description = "If file; print content to stdout, else list directory.";
             argumentNames = "path";
@@ -120,6 +123,7 @@ with lib;
           bind \cg _fzf_live_grep
           bind \cp _zoxide_zi
           bind \cn _open_neovim
+          bind \ch _open_helix
         '';
       };
     };
