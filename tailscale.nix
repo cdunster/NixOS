@@ -13,8 +13,13 @@ with lib;
       gnomeEnabled = config.hostOptions.desktopEnvironments.gnome.enable;
     in
     mkIf cfg.enable {
-      # Enable the Tailscale client daemon
-      services.tailscale.enable = true;
+      services.tailscale = {
+        # Enable the Tailscale client daemon
+        enable = true;
+
+        # Set this as a client to accept subnet routers and exit nodes
+        useRoutingFeatures = "client";
+      };
 
       home-manager.users.${user} = {
         programs.gnome-shell = mkIf gnomeEnabled {
