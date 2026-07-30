@@ -162,6 +162,9 @@
         binfmt = true;
       };
 
+      # Add support for Flatpaks
+      services.flatpak.enable = true;
+
       # Enable VirtualBox with the expansion pack
       virtualisation.virtualbox.host = lib.mkIf cfg.enableVirtualBox {
         enable = true;
