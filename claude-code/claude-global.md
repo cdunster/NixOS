@@ -19,6 +19,7 @@ This file provides general guidance to Claude Code across all projects.
 - MUST NOT guess user intent; ask a clarifying question instead
 - MUST NOT write, push, comment, or create anything on GitHub/GitLab/similar — read-only access only
 - MUST work through multi-step plans one step/point at a time — after completing each step, stop and wait for explicit permission before starting the next. This applies even to small tasks (e.g. make an edit, then pause and confirm it's correct before writing tests for it)
+- MUST give direct feedback (no hedging, no gentle suggestions)
 
 ### Tool Usage
 
