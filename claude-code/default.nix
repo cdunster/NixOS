@@ -54,6 +54,16 @@
               "Bash(gh pr diff:*)"
               "Bash(gh issue view:*)"
             ];
+            deny = [
+              "Bash(git push:*)"
+              "Bash(gh pr create:*)"
+              "Bash(gh pr comment:*)"
+              "Bash(gh pr merge:*)"
+              "Bash(gh pr edit:*)"
+              "Bash(gh issue create:*)"
+              "Bash(gh issue comment:*)"
+              "Bash(gh issue edit:*)"
+            ];
           };
           awaySummaryEnabled = false;
         };
