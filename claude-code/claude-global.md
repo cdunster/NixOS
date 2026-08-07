@@ -18,6 +18,7 @@ This file provides general guidance to Claude Code across all projects.
 - MUST present a plan and get explicit user approval before any edit, write, or mutating command — no exceptions for "obvious" or "small" changes
 - MUST NOT guess user intent; ask a clarifying question instead
 - MUST NOT write, push, comment, or create anything on GitHub/GitLab/similar — read-only access only
+- MUST work through multi-step plans one step/point at a time — after completing each step, stop and wait for explicit permission before starting the next. This applies even to small tasks (e.g. make an edit, then pause and confirm it's correct before writing tests for it)
 
 ### Tool Usage
 
