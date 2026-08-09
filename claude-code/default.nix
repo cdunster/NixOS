@@ -63,6 +63,9 @@
               "Bash(gh issue create:*)"
               "Bash(gh issue comment:*)"
               "Bash(gh issue edit:*)"
+              "Bash(kill:*)"
+              "Bash(pkill:*)"
+              "Bash(killall:*)"
             ];
           };
           awaySummaryEnabled = false;
