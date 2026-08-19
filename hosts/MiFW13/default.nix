@@ -23,6 +23,7 @@
       enableWayland = true;
       displayManager = "cosmic-greeter";
     };
+    themes.catppuccin.enable = true;
     neovim.enable = true;
     devTools.holochain.enable = true;
     docker.enable = true;
