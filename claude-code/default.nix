@@ -7,15 +7,15 @@
       home-manager.users.${user}.programs.claude-code = {
         enable = true;
         context = ./claude-global.md;
-        plugins = [
-          (pkgs.fetchFromGitHub {
+        plugins = {
+          sveltejs-ai-tools = (pkgs.fetchFromGitHub {
             owner = "sveltejs";
             repo = "ai-tools";
             rev = "main";
             sparseCheckout = [ "plugins/claude/svelte" ];
             hash = "sha256-wp2WEUba7clLN1DxLtWwMszLMAlcqD1TXYjBtOm26J8=";
-          })
-        ];
+          });
+        };
         mcpServers = {
           dart = {
             type = "stdio";
