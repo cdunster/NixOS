@@ -105,7 +105,6 @@ Home-manager is configured as a NixOS module (not standalone). User configuratio
 - **home-manager**: User environment manager
 - **catppuccin**: Theme for various applications
 - **lanzaboote**: Secure Boot support
-- **neorg-overlay**: Neorg packages for Neovim
 - **nixos-hardware**: Hardware-specific configurations
 
 ## Important Conventions

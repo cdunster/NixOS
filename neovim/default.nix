@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
   options.hostOptions.neovim = with lib; {
     enable = mkEnableOption "Enable support Neovim";
   };
@@ -9,9 +9,6 @@
       user = config.hostOptions.user;
     in
     lib.mkIf cfg.enable {
-      # Add the overlay to install the latest version of neorg
-      nixpkgs.overlays = [ inputs.neorg-overlay.overlays.default ];
-
       # Enable neovim and set as default editor.
       programs.neovim = {
         enable = true;
@@ -209,14 +206,6 @@
                 type = "lua";
                 config = "require('oil').setup()";
               }
-
-              # orgmode-like note taking in Neovim.
-              {
-                plugin = neorg;
-                type = "lua";
-                config = "require('plugins.neorg').config()";
-              }
-              neorg-telescope
 
               # Task runner and job manager.
               {
