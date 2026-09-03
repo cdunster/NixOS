@@ -107,7 +107,6 @@ Home-manager is configured as a NixOS module (not standalone). User configuratio
 - **lanzaboote**: Secure Boot support
 - **neorg-overlay**: Neorg packages for Neovim
 - **nixos-hardware**: Hardware-specific configurations
-- **pico-8-src**: Local path input (not in nix store)
 
 ## Important Conventions
 

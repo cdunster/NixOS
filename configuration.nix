@@ -19,7 +19,6 @@
     ./home-manager.nix
     ./lazygit.nix
     ./neovim
-    ./pico-8.nix
     ./shells
     ./tailscale.nix
     ./terminals
