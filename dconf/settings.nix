@@ -38,14 +38,8 @@ with lib.hm.gvariant;
     "org/gnome/desktop/interface" = {
       clock-show-seconds = true;
       clock-show-weekday = true;
-      color-scheme = "prefer-dark";
-      cursor-theme = "catppuccin-frappe-dark-cursors";
-      document-font-name = "JetBrainsMono Nerd Font 11";
       enable-hot-corners = false;
-      font-name = "JetBrainsMono Nerd Font 10";
       gtk-enable-primary-paste = false;
-      icon-theme = "Papirus-Dark";
-      monospace-font-name = "JetBrainsMono Nerd Font Mono 10";
       show-battery-percentage = true;
     };
 
