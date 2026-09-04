@@ -1,11 +1,11 @@
 { config, ... }:
 let
-  cfg = config.hostOptions;
+  user = config.hostOptions.user;
 in
 {
   imports = [
     # Utilities and tooling for multiple shells
-    ./utils/starship.nix # The starship cross-shell prompt
+    ./utils
 
     ./bash.nix
     ./fish.nix
@@ -13,7 +13,7 @@ in
   ];
 
   # Set aliases to be used by all shells
-  home-manager.users.${cfg.user}.home.shellAliases = {
+  home-manager.users.${user}.home.shellAliases = {
     lg = "lazygit";
     ll = "eza -lah";
     gl = "git log --pretty=fuller";
