@@ -21,7 +21,6 @@
     ./terminals
     ./themes
     ./udev
-    ./vscode.nix
   ];
 
   options.hostOptions = with lib; {
