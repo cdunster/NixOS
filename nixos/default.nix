@@ -14,6 +14,7 @@
     ./helix.nix
     ./home-manager.nix
     ./neovim
+    ./networking.nix
     ./shells
     ./tailscale.nix
     ./terminals
@@ -56,16 +57,6 @@
           dates = "weekly";
           options = "--delete-older-than 14d --delete-old";
         };
-      };
-
-      # Manage networks with networkmanager.
-      networking.networkmanager = {
-        enable = true;
-
-        # Enable OpenVPN support.
-        plugins = with pkgs; [
-          networkmanager-openvpn
-        ];
       };
 
       # Override default packages (removes nano and others).
