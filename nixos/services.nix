@@ -12,15 +12,6 @@
     # Enable touchpad support
     libinput.enable = true;
 
-    # Use PipeWire for sound control instead of PulseAudio
-    pulseaudio.enable = false;
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
-
     # Enable CUPS to print documents
     printing.enable = true;
 

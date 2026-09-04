@@ -1,5 +1,6 @@
 { pkgs, lib, config, ... }: {
   imports = [
+    ./audio.nix
     ./bootloader.nix
     ./brave.nix
     ./claude-code
@@ -57,9 +58,6 @@
           options = "--delete-older-than 14d --delete-old";
         };
       };
-
-      # Enable the RealtimeKit system service, which PipeWire uses to acquire realtime priority
-      security.rtkit.enable = true;
 
       # This value determines the NixOS release from which the default
       # settings for stateful data, like file locations and database versions
