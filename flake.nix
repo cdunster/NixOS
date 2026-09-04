@@ -36,7 +36,7 @@
         modules = [
           { networking.hostName = "${hostName}"; }
           ./hosts/${hostName}
-          ./configuration.nix
+          ./nixos
         ];
       };
     in
