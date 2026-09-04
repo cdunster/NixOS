@@ -3,6 +3,9 @@
     # Set the system timezone.
     time.timeZone = lib.mkDefault "Europe/Amsterdam";
 
+    # Allow the timezone to be set automatically
+    services.automatic-timezoned.enable = true;
+
     # Select internationalisation properties.
     i18n = {
       defaultLocale = "en_GB.UTF-8";

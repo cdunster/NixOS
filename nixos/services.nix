@@ -6,9 +6,6 @@
     # Enable fingerprint reader support
     fprintd.enable = true;
 
-    # Allow the timezone to be set automatically
-    automatic-timezoned.enable = true;
-
     # Enable touchpad support
     libinput.enable = true;
 
