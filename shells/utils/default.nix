@@ -4,7 +4,6 @@ let
 in
 {
   home-manager.users.${user}.programs = {
-
     # The custom, cross-shell shell prompt
     starship = {
       enable = true;
@@ -26,5 +25,8 @@ in
         };
       };
     };
+
+    # The modern, better cd command that remembers directories
+    zoxide.enable = true;
   };
 }

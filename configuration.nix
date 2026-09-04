@@ -25,7 +25,6 @@
     ./themes
     ./udev
     ./vscode.nix
-    ./zoxide.nix
   ];
 
   options.hostOptions = with lib; {
