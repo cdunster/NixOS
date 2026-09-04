@@ -11,6 +11,12 @@
   # Enable Bluetooth support
   hardware.bluetooth.enable = true;
 
+  # Enable fingerprint reader support
+  services.fprintd.enable = true;
+
+  # Enable touchpad support
+  services.libinput.enable = true;
+
   hostOptions = {
     userName = "Callum";
     allowUnfreePackages = true;
