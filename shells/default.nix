@@ -7,9 +7,7 @@ in
     # Utilities and tooling for multiple shells
     ./utils
 
-    ./bash.nix
     ./fish.nix
-    ./zsh.nix
   ];
 
   # Set aliases to be used by all shells
