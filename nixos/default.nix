@@ -71,17 +71,8 @@
         };
       };
 
-      # Install firmware updates distributed through LVFS.
-      services.fwupd.enable = true;
-
-      # Enable fingerprint reader support.
-      services.fprintd.enable = true;
-
       # Set the system timezone.
       time.timeZone = lib.mkDefault "Europe/Amsterdam";
-
-      # Allow the timezone to be set automatically.
-      services.automatic-timezoned.enable = true;
 
       # Manage networks with networkmanager.
       networking.networkmanager = {
@@ -112,36 +103,14 @@
         LC_ALL = "en_GB.UTF-8";
       };
 
-      # Enable touchpad support.
-      services.libinput.enable = true;
-
       # Override default packages (removes nano and others).
       environment.defaultPackages = [ ];
 
-      # Enable sound.
-      services.pulseaudio.enable = false;
+      # Enable the RealtimeKit system service, which PipeWire uses to acquire realtime priority
       security.rtkit.enable = true;
-      services.pipewire = {
-        enable = true;
-        alsa.enable = true;
-        alsa.support32Bit = true;
-        pulse.enable = true;
-        # If you want to use JACK applications, uncomment this
-        #jack.enable = true;
-
-        # use the example session manager (no others are packaged yet so this is enabled by default,
-        # no need to redefine it in your config for now)
-        #media-session.enable = true;
-      };
 
       # Enable Bluetooth support
       hardware.bluetooth.enable = cfg.enableBluetooth;
-
-      # Enable CUPS to print documents.
-      services.printing.enable = true;
-
-      # Enable GNOME secrets manager support.
-      services.gnome.gnome-keyring.enable = true;
 
       # Enable the GNU Privacy Guard agent for managing GPG keys.
       programs.gnupg.agent = {
@@ -153,9 +122,6 @@
         enable = true;
         binfmt = true;
       };
-
-      # Add support for Flatpaks
-      services.flatpak.enable = true;
 
       # Enable VirtualBox with the expansion pack
       virtualisation.virtualbox.host = lib.mkIf cfg.enableVirtualBox {
