@@ -6,7 +6,6 @@
     ./dconf
     ./desktop-envs
     ./dev-tools
-    ./direnv.nix
     ./display-managers
     ./docker.nix
     ./fonts.nix

@@ -56,5 +56,13 @@ in
         git.overrideGpg = true;
       };
     };
+
+    # Automatically run scripts and setup envs when changing directory
+    direnv = {
+      enable = true;
+
+      # Support entering Nix devShells via direnv
+      nix-direnv.enable = true;
+    };
   };
 }
