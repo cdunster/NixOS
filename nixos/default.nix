@@ -15,6 +15,7 @@
     ./home-manager.nix
     ./neovim
     ./networking.nix
+    ./programs.nix
     ./shells
     ./tailscale.nix
     ./terminals
@@ -25,8 +26,6 @@
   ];
 
   options.hostOptions = with lib; {
-    enableVirtualBox = mkEnableOption "Enable VirtualBox program with extension pack";
-
     allowUnfreePackages = mkEnableOption "Allow installation of proprietary/unfree packages";
   };
 
@@ -59,28 +58,8 @@
         };
       };
 
-      # Override default packages (removes nano and others).
-      environment.defaultPackages = [ ];
-
       # Enable the RealtimeKit system service, which PipeWire uses to acquire realtime priority
       security.rtkit.enable = true;
-
-      # Enable the GNU Privacy Guard agent for managing GPG keys.
-      programs.gnupg.agent = {
-        enable = true;
-      };
-
-      # Add support for running AppImages directly
-      programs.appimage = {
-        enable = true;
-        binfmt = true;
-      };
-
-      # Enable VirtualBox with the expansion pack
-      virtualisation.virtualbox.host = lib.mkIf cfg.enableVirtualBox {
-        enable = true;
-        enableExtensionPack = true;
-      };
 
       # This value determines the NixOS release from which the default
       # settings for stateful data, like file locations and database versions
