@@ -28,5 +28,8 @@ in
 
     # The modern, better cd command that remembers directories
     zoxide.enable = true;
+
+    # The modern replacement of cat with colours, paging, and other features
+    bat.enable = true;
   };
 }
