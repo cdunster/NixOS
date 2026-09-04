@@ -46,5 +46,15 @@ in
         "--header-first"
       ];
     };
+
+    # A very nice TUI for managing git repos
+    lazygit = {
+      enable = true;
+      settings = {
+        notARepository = "skip";
+        gui.showCommandLog = false;
+        git.overrideGpg = true;
+      };
+    };
   };
 }

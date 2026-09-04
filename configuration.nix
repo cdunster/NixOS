@@ -14,7 +14,6 @@
     ./gpg.nix
     ./helix.nix
     ./home-manager.nix
-    ./lazygit.nix
     ./neovim
     ./shells
     ./tailscale.nix
