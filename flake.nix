@@ -37,6 +37,16 @@
           { networking.hostName = "${hostName}"; }
           ./hosts/${hostName}
           ./nixos
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              backupFileExtension = "bak";
+              extraSpecialArgs = { inherit inputs; };
+              sharedModules = [ ./home-manager ];
+            };
+          }
         ];
       };
     in

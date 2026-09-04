@@ -13,7 +13,6 @@
     ./git.nix
     ./gpg.nix
     ./helix.nix
-    ./home-manager.nix
     ./neovim
     ./networking.nix
     ./programs.nix
