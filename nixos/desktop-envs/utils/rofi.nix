@@ -5,7 +5,7 @@
 
   config =
     let
-      bluetoothEnabled = config.hostOptions.enableBluetooth;
+      bluetoothEnabled = config.hardware.bluetooth.enable;
       cfg = config.hostOptions.rofi;
       user = config.hostOptions.user;
 

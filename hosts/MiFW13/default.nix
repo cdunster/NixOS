@@ -8,11 +8,13 @@
   # Workaround for "VirtualBox can't enable the AMD-V extension. Please disable the KVM kernel extension, recompile your kernel and reboot (VERR_SVM_IN_USE)."
   boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
 
+  # Enable Bluetooth support
+  hardware.bluetooth.enable = true;
+
   hostOptions = {
     userName = "Callum";
     allowUnfreePackages = true;
     bootloader = "lanzaboote";
-    enableBluetooth = true;
     shells.fish = {
       enable = true;
       default = true;

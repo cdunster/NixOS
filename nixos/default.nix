@@ -27,8 +27,6 @@
     enableVirtualBox = mkEnableOption "Enable VirtualBox program with extension pack";
 
     allowUnfreePackages = mkEnableOption "Allow installation of proprietary/unfree packages";
-
-    enableBluetooth = mkEnableOption "Enable Bluetooth support for this machine";
   };
 
   config =
@@ -75,9 +73,6 @@
 
       # Enable the RealtimeKit system service, which PipeWire uses to acquire realtime priority
       security.rtkit.enable = true;
-
-      # Enable Bluetooth support
-      hardware.bluetooth.enable = cfg.enableBluetooth;
 
       # Enable the GNU Privacy Guard agent for managing GPG keys.
       programs.gnupg.agent = {
