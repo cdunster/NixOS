@@ -10,7 +10,6 @@
     ./display-managers
     ./docker.nix
     ./fonts.nix
-    ./fzf.nix
     ./git.nix
     ./gpg.nix
     ./helix.nix

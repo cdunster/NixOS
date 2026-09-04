@@ -34,5 +34,17 @@ in
 
     # The modern replacement of ls
     eza.enable = true;
+
+    # Command-line fuzzy-finding tool
+    fzf = {
+      enable = true;
+      defaultCommand = "fd --type=f --hidden --exclude=.git";
+      defaultOptions = [
+        "--inline-info"
+        "--reverse"
+        "--height=30"
+        "--header-first"
+      ];
+    };
   };
 }
