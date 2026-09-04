@@ -31,5 +31,8 @@ in
 
     # The modern replacement of cat with colours, paging, and other features
     bat.enable = true;
+
+    # The modern replacement of ls
+    eza.enable = true;
   };
 }

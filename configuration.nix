@@ -9,7 +9,6 @@
     ./direnv.nix
     ./display-managers
     ./docker.nix
-    ./eza.nix
     ./fonts.nix
     ./fzf.nix
     ./git.nix
