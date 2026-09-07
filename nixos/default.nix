@@ -6,7 +6,6 @@
     ./dev-tools
     ./display-managers
     ./docker.nix
-    ./neovim
     ./networking.nix
     ./programs.nix
     ./shells

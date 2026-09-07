@@ -12,6 +12,12 @@
       environment.defaultPackages = [ ];
 
       programs = {
+        # Enable neovim and set as the system's default editor
+        neovim = {
+          enable = true;
+          defaultEditor = true;
+        };
+
         # Enable the GNU Privacy Guard agent for managing GPG keys
         gnupg.agent.enable = true;
 
