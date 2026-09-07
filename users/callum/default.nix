@@ -3,15 +3,6 @@
     inputs.catppuccin.nixosModules.catppuccin
   ];
 
-  # TODO: Remove after migration
-  options.hostOptions = with lib; {
-    user = mkOption {
-      type = types.nonEmptyStr;
-      default = toLower config.hostOptions.userName;
-      description = "The used name of the system user";
-    };
-  };
-
   config =
     let
       user = "callum";
@@ -49,7 +40,5 @@
 
       # Load the home-manager configuration for this user
       home-manager.users.${user} = ./home-manager;
-
-      hostOptions.user = user;
     };
 }
