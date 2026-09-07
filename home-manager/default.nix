@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./claude-code
+    ./dconf
   ];
 
   # Let home-manager manage its own installation.

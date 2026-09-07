@@ -8,4 +8,7 @@
     ./gnome.nix # The GNOME Desktop Environment
     ./cosmic.nix # The COSMIC Desktop Environment
   ];
+
+  # Enable managing dconf with NixOS and home-manager
+  programs.dconf.enable = true;
 }

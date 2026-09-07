@@ -2,7 +2,6 @@
   imports = [
     ./audio.nix
     ./bootloader.nix
-    ./dconf
     ./desktop-envs
     ./dev-tools
     ./display-managers
