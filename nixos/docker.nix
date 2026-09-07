@@ -26,8 +26,5 @@ with lib;
 
       # Add main system user to the docker group to provide access to the socket
       users.extraGroups.docker.members = [ "${user}" ];
-
-      # Enable lazydocker TUI app to manager docker images and containers
-      home-manager.users.${user}.programs.lazydocker.enable = true;
     };
 }

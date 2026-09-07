@@ -6,6 +6,7 @@
   config =
     let
       isDconfEnabled = osConfig.programs.dconf.enable;
+      isDockerEnabled = osConfig.virtualisation.docker.enable;
     in
     {
       # Let home-manager manage its own installation.
@@ -19,6 +20,9 @@
 
       # Enable the Brave browser
       programs.brave.enable = true;
+
+      # Enable lazydocker TUI to manager docker if docker itself is enabled
+      programs.lazydocker.enable = isDockerEnabled;
 
       # Extra packages, not handled by home-manager
       home.packages = with pkgs; [
