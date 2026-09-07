@@ -26,6 +26,12 @@
         ;
       };
 
+      # Enable automatic login for this user
+      services.displayManager.autoLogin = {
+        enable = true;
+        inherit user;
+      };
+
       home-manager.users.${user} = ./home-manager;
 
       hostOptions.user = user;

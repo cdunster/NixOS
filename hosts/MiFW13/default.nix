@@ -24,11 +24,6 @@
       default = true;
     };
     desktopEnvironments.cosmic.enable = true;
-    displayManagers = {
-      enableAutoLogin = true;
-      enableWayland = true;
-      displayManager = "cosmic-greeter";
-    };
     themes.catppuccin.enable = true;
     neovim.enable = true;
     devTools.holochain.enable = true;
