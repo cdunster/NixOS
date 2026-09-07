@@ -2,7 +2,6 @@
   imports = [
     ./audio.nix
     ./bootloader.nix
-    ./brave.nix
     ./claude-code
     ./dconf
     ./desktop-envs

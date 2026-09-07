@@ -11,6 +11,10 @@
   # The version of Home-manager used.
   home.stateVersion = "22.11";
 
+  # Enable the Brave browser
+  programs.brave.enable = true;
+
+  # Extra packages, not handled by home-manager
   home.packages = with pkgs; [
     # Utilities
     clang # Modern C/C++ compiler
