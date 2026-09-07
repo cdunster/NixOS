@@ -2,7 +2,6 @@
   imports = [
     ./audio.nix
     ./bootloader.nix
-    ./claude-code
     ./dconf
     ./desktop-envs
     ./dev-tools

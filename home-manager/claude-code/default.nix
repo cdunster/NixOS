@@ -1,0 +1,71 @@
+{ pkgs, ... }: {
+  config = {
+    programs.claude-code = {
+      enable = true;
+      context = ./claude-global.md;
+      plugins = {
+        sveltejs-ai-tools = (pkgs.fetchFromGitHub {
+          owner = "sveltejs";
+          repo = "ai-tools";
+          rev = "main";
+          sparseCheckout = [ "plugins/claude/svelte" ];
+          hash = "sha256-wp2WEUba7clLN1DxLtWwMszLMAlcqD1TXYjBtOm26J8=";
+        });
+      };
+      mcpServers = {
+        dart = {
+          type = "stdio";
+          command = "dart";
+          args = [ "mcp-server" ];
+          env = { };
+        };
+        flowbite-svelte = {
+          command = "node";
+          args = [ "/home/callum/repos/flowbite-svelte-mcp/build/server.js" ];
+        };
+      };
+      settings = {
+        theme = "dark";
+        model = "opusplan";
+        attribution = {
+          commit = "";
+          pr = "";
+        };
+        spinnerVerbs = {
+          mode = "replace";
+          verbs = [ "Calculating" "Computing" ];
+        };
+        permissions = {
+          allow = [
+            "Bash(tree:*)"
+            "Bash(find:*)"
+            "Bash(grep:*)"
+            "Bash(cargo build:*)"
+            "Bash(cargo fmt:*)"
+            "Bash(cargo test:*)"
+            "Bash(cargo clippy:*)"
+            "Bash(cargo check:*)"
+            "Bash(cargo doc:*)"
+            "Bash(gh pr view:*)"
+            "Bash(gh pr diff:*)"
+            "Bash(gh issue view:*)"
+          ];
+          deny = [
+            "Bash(git push:*)"
+            "Bash(gh pr create:*)"
+            "Bash(gh pr comment:*)"
+            "Bash(gh pr merge:*)"
+            "Bash(gh pr edit:*)"
+            "Bash(gh issue create:*)"
+            "Bash(gh issue comment:*)"
+            "Bash(gh issue edit:*)"
+            "Bash(kill:*)"
+            "Bash(pkill:*)"
+            "Bash(killall:*)"
+          ];
+        };
+        awaySummaryEnabled = false;
+      };
+    };
+  };
+}

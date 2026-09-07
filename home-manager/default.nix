@@ -1,4 +1,8 @@
 { pkgs, ... }: {
+  imports = [
+    ./claude-code
+  ];
+
   # Let home-manager manage its own installation.
   programs.home-manager.enable = true;
 
