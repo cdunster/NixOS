@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }: {
+{ lib, config, ... }: {
   options.hostOptions.dconf.background = with lib; {
     path = mkOption {
       type = types.nullOr types.pathInStore;
@@ -34,10 +34,5 @@
           picture-uri = "${cfg.background.path}";
         };
       };
-
-      home.packages = with pkgs; [
-        dconf-editor # GUI for editing dconf entries
-        dconf2nix # Convert dconf files to Nix files
-      ];
     };
 }
