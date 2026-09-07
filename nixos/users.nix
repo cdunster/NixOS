@@ -26,11 +26,6 @@
           description = cfg.userName;
           extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
         };
-        # Create a user to be used when testing with `build-vm`.
-        nixosvmtest = lib.mkIf cfg.enableVmUser {
-          isNormalUser = true;
-          initialPassword = "test";
-        };
       };
     };
 }
