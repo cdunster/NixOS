@@ -1,7 +1,6 @@
 { ... }: {
   imports = [
     # Utilities and tooling for multiple DM/DE/WM combinations
-    ./utils/autorandr.nix # Automatically configure displays for X11
     ./utils/gui-scale-applet.nix # Tailscale management applet for the COSMIC panel
 
     ./gnome.nix # The GNOME Desktop Environment
