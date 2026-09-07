@@ -25,6 +25,9 @@
       # Enable lazydocker TUI to manager docker if docker itself is enabled
       programs.lazydocker.enable = isDockerEnabled;
 
+      # Enable GNU Privacy Guard to manage PGP keys
+      programs.gpg.enable = true;
+
       # Extra packages, not handled by home-manager
       home.packages = with pkgs; [
         # Utilities
