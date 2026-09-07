@@ -8,9 +8,6 @@
   # Let home-manager manage its own installation.
   programs.home-manager.enable = true;
 
-  # Add user profile picture.
-  home.file.".face".source = ./images/backgrounds/deer_sunset.jpg;
-
   # Enable the keyring secrets manager.
   services.gnome-keyring.enable = true;
 
