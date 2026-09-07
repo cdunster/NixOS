@@ -19,7 +19,6 @@
     ./themes
     ./time-and-locale.nix
     ./udev
-    ./users.nix
   ];
 
   config = {

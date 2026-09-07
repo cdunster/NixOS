@@ -37,6 +37,7 @@
           { networking.hostName = "${hostName}"; }
           ./hosts/${hostName}
           ./nixos
+          ./users
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {

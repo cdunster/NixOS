@@ -18,7 +18,6 @@
   services.libinput.enable = true;
 
   hostOptions = {
-    userName = "Callum";
     bootloader = "lanzaboote";
     shells.fish = {
       enable = true;
