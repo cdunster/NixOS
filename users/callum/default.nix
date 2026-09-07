@@ -14,6 +14,7 @@
       fullName = "Callum Dunster";
       isNetworkManagerEnabled = config.networking.networkmanager.enable;
       isVirtualBoxEnabled = config.virtualisation.virtualbox.host.enable;
+      isDockerEnabled = config.virtualisation.docker.enable;
     in
     {
       # Define the NixOS system user.
@@ -23,6 +24,7 @@
         extraGroups = [ "wheel" ]
           ++ lib.lists.optional isNetworkManagerEnabled "networkmanager"
           ++ lib.lists.optional isVirtualBoxEnabled "vboxusers"
+          ++ lib.lists.optional isDockerEnabled "docker"
         ;
       };
 

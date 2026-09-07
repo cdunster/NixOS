@@ -9,7 +9,6 @@ with lib;
   config =
     let
       cfg = config.hostOptions.docker;
-      user = config.hostOptions.user;
     in
     mkIf cfg.enable {
       virtualisation.docker = {
@@ -23,8 +22,5 @@ with lib;
           setSocketVariable = true;
         };
       };
-
-      # Add main system user to the docker group to provide access to the socket
-      users.extraGroups.docker.members = [ "${user}" ];
     };
 }
