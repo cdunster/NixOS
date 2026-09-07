@@ -1,4 +1,10 @@
 { ... }: {
-  # Add user profile picture.
-  home.file.".face".source = ../../../images/backgrounds/deer_sunset.jpg;
+  imports = [
+    ./claude-code
+  ];
+
+  config = {
+    # Add user profile picture.
+    home.file.".face".source = ../../../images/backgrounds/deer_sunset.jpg;
+  };
 }
