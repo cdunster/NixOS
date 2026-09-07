@@ -8,6 +8,7 @@
     let
       isDconfEnabled = osConfig.programs.dconf.enable;
       isDockerEnabled = osConfig.virtualisation.docker.enable;
+      isBootloaderLanzaboote = osConfig.boot.lanzaboote.enable;
     in
     {
       # Let home-manager manage its own installation.
@@ -67,6 +68,9 @@
       ++ lib.lists.optionals isDconfEnabled [
         dconf-editor # GUI for editing dconf entries
         dconf2nix # Convert dconf files to Nix files
+      ]
+      ++ lib.lists.optionals isBootloaderLanzaboote [
+        sbctl # Secure Boot key manager
       ]
       ;
     };

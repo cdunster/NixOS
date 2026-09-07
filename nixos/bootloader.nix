@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, config, ... }: {
+{ inputs, lib, config, ... }: {
   imports = [
     inputs.lanzaboote.nixosModules.lanzaboote
   ];
@@ -40,8 +40,5 @@
 
       # Allow emulating ARM (for building RPi images).
       boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
-
-      # Install `sbctl`, a Secure Boot key manager if lanzaboote is enabled
-      home-manager.users.${cfg.user}.home.packages = lib.optional (cfg.bootloader == "lanzaboote") pkgs.sbctl;
     };
 }
