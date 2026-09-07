@@ -6,10 +6,9 @@
   config =
     let
       cfg = config.hostOptions.tmux;
-      user = config.hostOptions.user;
     in
     lib.mkIf cfg.enable {
-      home-manager.users.${user}.programs.tmux = {
+      programs.tmux = {
         enable = true;
         keyMode = "vi";
         clock24 = true;

@@ -9,7 +9,6 @@
     ./networking.nix
     ./programs.nix
     ./tailscale.nix
-    ./terminals
     ./themes
     ./time-and-locale.nix
     ./udev

@@ -1,9 +1,5 @@
-{ config, ... }:
-let
-  user = config.hostOptions.user;
-in
-{
-  home-manager.users.${user}.programs.zellij = {
+{ ... }: {
+  programs.zellij = {
     enable = true;
     layouts = {
       lazygit = {
