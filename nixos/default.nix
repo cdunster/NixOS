@@ -28,6 +28,11 @@
         keep-outputs = true;
         keep-derivations = true;
         download-buffer-size = 524288000; # 500MiB
+
+        substituters = [
+          # Use the new NixOS official binary cache (currently in beta)
+          "https://aseipp-nix-cache.freetls.fastly.net"
+        ];
       };
 
       # System garbage collection to free-up space
