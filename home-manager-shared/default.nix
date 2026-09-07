@@ -1,6 +1,7 @@
 { pkgs, lib, osConfig, ... }: {
   imports = [
     ./cosmic-de
+    ./git.nix
   ];
 
   config =

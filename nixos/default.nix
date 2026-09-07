@@ -6,7 +6,6 @@
     ./dev-tools
     ./display-managers
     ./docker.nix
-    ./git.nix
     ./gpg.nix
     ./helix.nix
     ./neovim

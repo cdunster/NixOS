@@ -16,5 +16,11 @@
         monospace = [ "JetBrainsMono Nerd Font Mono 11" ];
       };
     };
+
+    # User-specific git settings
+    programs.git.settings.user = {
+      name = "Callum Dunster";
+      email = "cdunster@users.noreply.github.com";
+    };
   };
 }

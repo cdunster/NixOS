@@ -1,9 +1,5 @@
-{ config, pkgs, ... }:
-let
-  user = config.hostOptions.user;
-in
-{
-  home-manager.users.${user}.programs.git = {
+{ pkgs, ... }: {
+  programs.git = {
     enable = true;
     lfs.enable = true;
     signing = {
@@ -18,10 +14,6 @@ in
       ".direnv"
     ];
     settings = {
-      user = {
-        name = "Callum Dunster";
-        email = "cdunster@users.noreply.github.com";
-      };
       credential.helper = "store";
       init.defaultBranch = "main";
       pull.ff = "only";
