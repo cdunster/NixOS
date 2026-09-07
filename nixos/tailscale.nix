@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }:
+{ lib, config, ... }:
 
 with lib;
 {
@@ -9,8 +9,6 @@ with lib;
   config =
     let
       cfg = config.hostOptions.tailscale;
-      user = config.hostOptions.user;
-      gnomeEnabled = config.hostOptions.desktopEnvironments.gnome.enable;
     in
     mkIf cfg.enable {
       services.tailscale = {
@@ -39,13 +37,5 @@ with lib;
       # Prevent systemd from waiting for network online
       systemd.network.wait-online.enable = false;
       boot.initrd.systemd.network.wait-online.enable = false;
-
-      home-manager.users.${user} = {
-        programs.gnome-shell = mkIf gnomeEnabled {
-          extensions = with pkgs.gnomeExtensions; [
-            { package = tailscale-qs; } # Quick settings entry for controlling Tailscale
-          ];
-        };
-      };
     };
 }
