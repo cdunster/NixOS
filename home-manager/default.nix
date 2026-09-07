@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ./claude-code
+    ./cosmic-de
     ./dconf
   ];
 
