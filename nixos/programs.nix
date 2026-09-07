@@ -12,6 +12,13 @@
       environment.defaultPackages = [ ];
 
       programs = {
+        # Enable the fish shell system-wide
+        fish = {
+          enable = true;
+          # Translate configured environment to native fish using babelfish
+          useBabelfish = true;
+        };
+
         # Enable neovim and set as the system's default editor
         neovim = {
           enable = true;

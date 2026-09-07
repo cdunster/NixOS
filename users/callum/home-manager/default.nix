@@ -3,6 +3,7 @@
     ./claude-code
     ./dconf
     ./helix.nix
+    ./shells
   ];
 
   config = {

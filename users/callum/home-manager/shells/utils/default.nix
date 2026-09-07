@@ -1,9 +1,5 @@
-{ config, ... }:
-let
-  user = config.hostOptions.user;
-in
-{
-  home-manager.users.${user}.programs = {
+{ ... }: {
+  programs = {
     # The custom, cross-shell shell prompt
     starship = {
       enable = true;

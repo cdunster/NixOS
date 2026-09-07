@@ -19,10 +19,6 @@
 
   hostOptions = {
     bootloader = "lanzaboote";
-    shells.fish = {
-      enable = true;
-      default = true;
-    };
     desktopEnvironments.cosmic.enable = true;
     themes.catppuccin.enable = true;
     devTools.holochain.enable = true;

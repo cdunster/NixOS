@@ -8,7 +8,6 @@
     ./docker.nix
     ./networking.nix
     ./programs.nix
-    ./shells
     ./tailscale.nix
     ./terminals
     ./themes

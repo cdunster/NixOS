@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ pkgs, lib, config, ... }: {
   # TODO: Remove after migration
   options.hostOptions = with lib; {
     user = mkOption {
@@ -26,6 +26,7 @@
           ++ lib.lists.optional isVirtualBoxEnabled "vboxusers"
           ++ lib.lists.optional isDockerEnabled "docker"
         ;
+        shell = pkgs.fish;
       };
 
       # Enable automatic login for this user
