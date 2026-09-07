@@ -44,7 +44,7 @@
               useUserPackages = true;
               backupFileExtension = "bak";
               extraSpecialArgs = { inherit inputs; };
-              sharedModules = [ ./home-manager ];
+              sharedModules = [ ./home-manager-shared ];
             };
           }
         ];
