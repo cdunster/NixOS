@@ -1,9 +1,5 @@
-{ config, pkgs, ... }:
-let
-  user = config.hostOptions.user;
-in
-{
-  home-manager.users.${user}.programs.helix = {
+{ pkgs, ... }: {
+  programs.helix = {
     enable = true;
     extraPackages = with pkgs;[
       # LSPs

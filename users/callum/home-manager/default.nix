@@ -2,6 +2,7 @@
   imports = [
     ./claude-code
     ./dconf
+    ./helix.nix
   ];
 
   config = {
