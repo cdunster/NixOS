@@ -1,4 +1,8 @@
-{ pkgs, lib, config, ... }: {
+{ inputs, pkgs, lib, config, ... }: {
+  imports = [
+    inputs.catppuccin.nixosModules.catppuccin
+  ];
+
   # TODO: Remove after migration
   options.hostOptions = with lib; {
     user = mkOption {
@@ -35,6 +39,15 @@
         inherit user;
       };
 
+      # Set the system theme to catppuccin
+      catppuccin = {
+        enable = true;
+        autoEnable = true;
+        flavor = "frappe";
+        accent = "blue";
+      };
+
+      # Load the home-manager configuration for this user
       home-manager.users.${user} = ./home-manager;
 
       hostOptions.user = user;

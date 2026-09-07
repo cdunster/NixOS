@@ -20,7 +20,6 @@
   hostOptions = {
     bootloader = "lanzaboote";
     desktopEnvironments.cosmic.enable = true;
-    themes.catppuccin.enable = true;
     devTools.holochain.enable = true;
     docker.enable = true;
     tailscale.enable = true;

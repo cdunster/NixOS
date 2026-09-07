@@ -4,6 +4,7 @@
     ./dconf
     ./helix.nix
     ./shells
+    ./style
     ./terminals
   ];
 
