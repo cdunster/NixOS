@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
     ./claude-code
+    ./dconf
   ];
 
   config = {

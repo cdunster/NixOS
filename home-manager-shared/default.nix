@@ -1,7 +1,6 @@
 { pkgs, lib, osConfig, ... }: {
   imports = [
     ./cosmic-de
-    ./dconf
   ];
 
   config =
