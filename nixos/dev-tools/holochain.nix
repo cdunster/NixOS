@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }: {
+{ lib, config, ... }: {
   options.hostOptions.devTools.holochain = with lib; {
     enable = mkEnableOption "Enable the tooling and config required to develop for Holochain";
   };
@@ -6,7 +6,6 @@
   config =
     let
       cfg = config.hostOptions.devTools.holochain;
-      user = config.hostOptions.user;
     in
     lib.mkIf cfg.enable {
       # Settings added to /etc/nix/nix.conf
@@ -25,11 +24,5 @@
           "holochain-scaffolding-cli.cachix.org-1:DznpFcPqqPqiP05k/0lT6qeQ/N3KOvKQW/EP4Pf3A2E="
         ];
       };
-
-      home-manager.users.${user}.home.packages = with pkgs; [
-        mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
-        zoom-us # Video conferencing software
-        discord # Chat desktop app for gamers and communities
-      ];
     };
 }
