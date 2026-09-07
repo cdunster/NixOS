@@ -38,15 +38,6 @@
             sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
           };
         };
-        vim-godot = buildVimPlugin {
-          name = "vim-godot";
-          src = pkgs.fetchFromGitHub {
-            owner = "habamax";
-            repo = "vim-godot";
-            rev = "d748a46be5195256f6b2c767ef32de87b05ae8f7";
-            sha256 = "0icsy983ivw409afv19mw2qi7axil8a21r0dwlfxcj9wqcaf1cbj";
-          };
-        };
       in
       with pkgs.vimPlugins; [
         # Automatic session management.
@@ -98,7 +89,6 @@
           type = "lua";
           config = "require('plugins.lsp').config()";
         }
-        lsp_signature-nvim
         rustaceanvim # Advanced LSP features for Rust.
         flutter-tools-nvim # Advanced LSP features for Flutter
 
@@ -166,20 +156,6 @@
           plugin = nvim-web-devicons;
           type = "lua";
           config = "require('nvim-web-devicons').setup()";
-        }
-
-        # Better GDScript support for the Godot engine.
-        {
-          plugin = vim-godot;
-          type = "lua";
-          config = "require('plugins.vim-godot').config()";
-        }
-
-        # Horizontally centre buffer content in floating window.
-        {
-          plugin = zen-mode-nvim;
-          type = "lua";
-          config = "require('plugins.zen-mode').config()";
         }
 
         # Edit filesystem in a buffer.
