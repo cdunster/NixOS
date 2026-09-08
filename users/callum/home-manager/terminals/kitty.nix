@@ -2,8 +2,6 @@
   programs.kitty = {
     enable = true;
     settings = {
-      font_size = "12.0";
-      font_family = "JetBrains Mono Nerd Font";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
