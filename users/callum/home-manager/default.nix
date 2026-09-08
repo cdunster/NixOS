@@ -3,6 +3,7 @@
     ./claude-code
     ./dconf
     ./helix.nix
+    ./neovim
     ./shells
     ./style
     ./terminals
