@@ -1,4 +1,4 @@
-{ inputs, pkgs, config, ... }: {
+{ inputs, pkgs, ... }: {
   imports = [
     inputs.stylix.nixosModules.stylix
   ];
@@ -13,9 +13,15 @@
 
       # Set the system fonts
       fonts = {
-        serif = config.stylix.fonts.monospace;
+        serif = {
+          package = pkgs.dejavu_fonts;
+          name = "DejaVu Serif";
+        };
 
-        sansSerif = config.stylix.fonts.monospace;
+        sansSerif = {
+          package = pkgs.dejavu_fonts;
+          name = "DejaVu Sans";
+        };
 
         monospace = {
           package = pkgs.nerd-fonts.jetbrains-mono;
