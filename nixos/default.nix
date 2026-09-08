@@ -24,7 +24,7 @@
 
       # Extra lines to be added to /etc/nix/nix.conf
       settings = {
-        experimental-features = "nix-command flakes";
+        experimental-features = [ "nix-command" "flakes" ];
         keep-outputs = true;
         keep-derivations = true;
         download-buffer-size = 524288000; # 500MiB

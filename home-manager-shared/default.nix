@@ -46,7 +46,7 @@
         jq # Command-line JSON processor
         dua # Disk usage analyser CLI
         evince # PDF viewer part of the GNOME project
-        gcr # Provides org.gnome.keyring.SystemPrompter
+        gcr_4 # Provides a prompter for GNOME keyrings
         gh # GitHub CLI tool
 
         # Nix tools
