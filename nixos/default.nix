@@ -8,6 +8,7 @@
     ./docker.nix
     ./networking.nix
     ./programs.nix
+    ./services.nix
     ./tailscale.nix
     ./time-and-locale.nix
     ./udev
