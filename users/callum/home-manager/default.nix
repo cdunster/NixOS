@@ -5,7 +5,6 @@
     ./helix.nix
     ./neovim
     ./shells
-    ./style
     ./terminals
   ];
 
