@@ -9,9 +9,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # The catppuccin theme for everything
-    catppuccin = {
-      url = "github:catppuccin/nix";
+    # Apply base16 themes, fonts, and other styling everywhere
+    stylix = {
+      url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

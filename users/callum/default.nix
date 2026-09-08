@@ -1,8 +1,4 @@
-{ inputs, pkgs, lib, config, ... }: {
-  imports = [
-    inputs.catppuccin.nixosModules.catppuccin
-  ];
-
+{ pkgs, lib, config, ... }: {
   config =
     let
       user = "callum";
@@ -28,14 +24,6 @@
       services.displayManager.autoLogin = {
         enable = true;
         inherit user;
-      };
-
-      # Set the system theme to catppuccin
-      catppuccin = {
-        enable = true;
-        autoEnable = true;
-        flavor = "frappe";
-        accent = "blue";
       };
 
       # Load the home-manager configuration for this user

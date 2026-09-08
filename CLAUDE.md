@@ -103,7 +103,6 @@ Home-manager is configured as a NixOS module (not standalone). User configuratio
 
 - **nixpkgs**: nixos-unstable channel
 - **home-manager**: User environment manager
-- **catppuccin**: Theme for various applications
 - **lanzaboote**: Secure Boot support
 - **nixos-hardware**: Hardware-specific configurations
 
