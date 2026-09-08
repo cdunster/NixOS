@@ -2,8 +2,6 @@ local wezterm = require('wezterm')
 
 local config = wezterm.config_builder()
 
-config.color_scheme = 'Catppuccin Frappe'                 -- Use the built-in Catppuccin colour scheme
-config.font = wezterm.font 'JetBrainsMono NF'             -- Use the JetBrainsMono Nerd Font system font
 config.front_end = 'WebGpu'                               -- Fix weird bug where all text is shown as blocks
 config.window_frame = {
     font = wezterm.font 'JetBrainsMono NF',               -- The font of the tab title
