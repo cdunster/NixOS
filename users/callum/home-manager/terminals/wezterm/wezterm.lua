@@ -8,14 +8,6 @@ config.window_frame = {
 }
 config.window_decorations = "TITLE | RESIZE"              -- Hide the window titlebar
 config.adjust_window_size_when_changing_font_size = false -- Using a tiling WM so window should stay a fixed size
-config.colors = {
-    tab_bar = {
-        active_tab = {
-            bg_color = '#303446', -- Use the Catppuccin Frappe background colour for the tab background
-            fg_color = '#c6d0f5', -- Use the Catppuccin Frappe foreground colour for the tab foreground / title text
-        },
-    },
-}
 config.alternate_buffer_wheel_scroll_speed = 1 -- Set the scroll speed of full-screen terminal apps like NeoVim
 config.mux_enable_ssh_agent = false            -- Don't override the system SSH agent
 config.set_environment_variables = {
