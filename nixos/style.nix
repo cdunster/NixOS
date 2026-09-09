@@ -9,7 +9,7 @@
       enable = true;
 
       # Set the base colour-scheme used by the entire system and all users by default
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/ia-light.yaml";
 
       # Set the system fonts
       fonts = {
