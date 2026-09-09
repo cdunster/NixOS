@@ -25,7 +25,7 @@
         };
       };
       settings = {
-        theme = "dark";
+        theme = "auto";
         model = "opusplan";
         attribution = {
           commit = "";
