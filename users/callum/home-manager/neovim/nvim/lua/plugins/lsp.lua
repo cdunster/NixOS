@@ -88,7 +88,7 @@ M.config = function()
                 client.config.settings.Lua.workspace.checkThirdParty = false
             end
 
-            client.notify('workspace/didChangeConfiguration', { settings = client.config.settings })
+            client:notify('workspace/didChangeConfiguration', { settings = client.config.settings })
             return true
         end,
         settings = {
