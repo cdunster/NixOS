@@ -2,6 +2,7 @@
   imports = [
     ./cosmic-de
     ./git.nix
+    ./style.nix
   ];
 
   config =
