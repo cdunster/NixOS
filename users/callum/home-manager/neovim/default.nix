@@ -35,18 +35,6 @@
       end)
     '';
     plugins =
-      with pkgs.vimUtils;
-      let
-        vim-spelunker = buildVimPlugin {
-          name = "vim-spelunker";
-          src = pkgs.fetchFromGitHub {
-            owner = "kamykn";
-            repo = "spelunker.vim";
-            rev = "a0bc530f62798bbe053905555a4aa9ed713485eb";
-            sha256 = "/1MN2KU5+rJhjt7FALvvwmTKRk3n29tU/XQdt1Q5OTE=";
-          };
-        };
-      in
       with pkgs.vimPlugins; [
         # Automatic session management.
         vim-obsession
@@ -143,13 +131,6 @@
           plugin = nvim-notify;
           type = "lua";
           config = "require('plugins.notify').config()";
-        }
-
-        # Better spellchecking (supports camelCase, snake_case, etc.).
-        {
-          plugin = vim-spelunker;
-          type = "lua";
-          config = "require('plugins.spelunker').config()";
         }
 
         # Better statusline. Requires devicons.

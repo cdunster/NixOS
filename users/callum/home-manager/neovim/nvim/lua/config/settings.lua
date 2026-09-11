@@ -31,7 +31,7 @@ vim.opt.termguicolors = true            -- Enable full GUI colours in the termin
 vim.opt.mouse = 'a'                     -- Enable the mouse for all modes.
 vim.opt.clipboard:append('unnamedplus') -- Use the system clipboard.
 vim.opt.scrolloff = 4                   -- Context lines around cursor when scrolling.
-vim.opt.spell = false                   -- Disable built-in spell-checking (replaced by spelunker).
+vim.opt.spell = true                    -- Enable built-in spell-checking.
 vim.opt.spelllang = 'en_gb'             -- Set language to proper English.
 vim.opt.list = true                     -- Show whitespace characters.
 vim.opt.lcs:append({ space = '·' })     -- Add spaces to the list of displayed whitespace characters.
