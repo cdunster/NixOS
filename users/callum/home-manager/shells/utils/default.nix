@@ -8,8 +8,8 @@
         shell.disabled = false;
         # Set the character used on the input line of the prompt
         character = {
-          success_symbol = "[⇒](bold #${config.lib.stylix.colors.base05})";
-          error_symbol = "[⇏](bold #${config.lib.stylix.colors.red})";
+          success_symbol = "[=>](bold #${config.lib.stylix.colors.base05})";
+          error_symbol = "[=>](bold #${config.lib.stylix.colors.red})";
         };
       };
     };
