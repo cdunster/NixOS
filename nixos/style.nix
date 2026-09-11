@@ -9,7 +9,7 @@
       enable = true;
 
       # Set the base colour-scheme used by the entire system and all users by default
-      base16Scheme = lib.mkDefault "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
+      base16Scheme = lib.mkDefault "${pkgs.base16-schemes}/share/themes/rose-pine-dawn.yaml";
 
       # Set the system light/dark mode
       polarity = lib.mkDefault "light";
@@ -40,7 +40,7 @@
 
     # A NixOS specialisation that changes the colour scheme to a dark variant
     specialisation.dark.configuration.stylix = {
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
       polarity = "dark";
     };
 
