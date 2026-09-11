@@ -188,5 +188,5 @@
   xdg.configFile."nvim/ftplugin".source = ./nvim/ftplugin;
 
   # This is a bit meta and very hacky but I want the spell file to be writeable.
-  xdg.configFile."nvim/spell/en.utf-8.add".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/neovim/nvim/spell/en.utf-8.add";
+  xdg.configFile."nvim/spell/en.utf-8.add".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/users/callum/home-manager/neovim/nvim/spell/en.utf-8.add";
 }
