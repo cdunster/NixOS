@@ -25,6 +25,14 @@
     initLua = ''
       require('config.custom_bindings')
       require('config.settings')
+
+      -- Override stylix's default colours for a few highlight groups to improve readability
+      -- Deferred because stylix applies its colourscheme after initLua runs.
+      vim.schedule(function()
+        vim.api.nvim_set_hl(0, 'Comment', { fg = '#${config.lib.stylix.colors.base04}' })
+        vim.api.nvim_set_hl(0, 'Whitespace', { fg = '#${config.lib.stylix.colors.base0F}' })
+        vim.api.nvim_set_hl(0, 'Delimiter', { fg = '#${config.lib.stylix.colors.base03}' })
+      end)
     '';
     plugins =
       with pkgs.vimUtils;
