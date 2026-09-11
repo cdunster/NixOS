@@ -11,6 +11,9 @@
       # Set the base colour-scheme used by the entire system and all users by default
       base16Scheme = lib.mkDefault "${pkgs.base16-schemes}/share/themes/catppuccin-latte.yaml";
 
+      # Set the system light/dark mode
+      polarity = lib.mkDefault "light";
+
       # Set the system fonts
       fonts = {
         serif = {
@@ -36,8 +39,9 @@
     };
 
     # A NixOS specialisation that changes the colour scheme to a dark variant
-    specialisation.dark.configuration = {
-      stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+    specialisation.dark.configuration.stylix = {
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
+      polarity = "dark";
     };
 
     # Allow switching configurations without a password, so that Darkman can switch between
