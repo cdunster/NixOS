@@ -14,6 +14,13 @@
       # Set the system light/dark mode
       polarity = lib.mkDefault "light";
 
+      # Set the system cursor theme used by all users by default
+      cursor = {
+        package = pkgs.rose-pine-cursor;
+        name = lib.mkDefault "BreezeX-RosePineDawn-Linux";
+        size = 24;
+      };
+
       # Set the system fonts
       fonts = {
         serif = config.stylix.fonts.sansSerif;
@@ -39,6 +46,7 @@
     specialisation.dark.configuration.stylix = {
       base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
       polarity = "dark";
+      cursor.name = "BreezeX-RosePine-Linux";
     };
 
     # Allow switching configurations without a password, so that Darkman can switch between
