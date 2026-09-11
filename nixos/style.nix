@@ -1,4 +1,4 @@
-{ inputs, pkgs, lib, ... }: {
+{ inputs, pkgs, lib, config, ... }: {
   imports = [
     inputs.stylix.nixosModules.stylix
   ];
@@ -16,19 +16,16 @@
 
       # Set the system fonts
       fonts = {
-        serif = {
-          package = pkgs.noto-fonts;
-          name = "Noto Serif";
-        };
+        serif = config.stylix.fonts.sansSerif;
 
         sansSerif = {
-          package = pkgs.noto-fonts;
-          name = "Noto Sans";
+          package = pkgs.nerd-fonts.caskaydia-cove;
+          name = "CaskaydiaCove Nerd Font Propo";
         };
 
         monospace = {
-          package = pkgs.nerd-fonts.jetbrains-mono;
-          name = "JetBrainsMono Nerd Font";
+          package = pkgs.nerd-fonts.caskaydia-cove;
+          name = "CaskaydiaCove Nerd Font Mono";
         };
 
         emoji = {
