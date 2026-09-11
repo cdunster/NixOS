@@ -14,13 +14,13 @@
       # Set the system fonts
       fonts = {
         serif = {
-          package = pkgs.dejavu_fonts;
-          name = "DejaVu Serif";
+          package = pkgs.noto-fonts;
+          name = "Noto Serif";
         };
 
         sansSerif = {
-          package = pkgs.dejavu_fonts;
-          name = "DejaVu Sans";
+          package = pkgs.noto-fonts;
+          name = "Noto Sans";
         };
 
         monospace = {
