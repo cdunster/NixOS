@@ -1,4 +1,4 @@
-{ ... }: {
+{ osConfig, ... }: {
   services.darkman = {
     enable = true;
 
@@ -17,5 +17,10 @@
         sudo /nix/var/nix/profiles/system/bin/switch-to-configuration switch
       fi
     '';
+  };
+
+  xdg.configFile.cosmic-is-dark-mode = {
+    target = "cosmic/com.system76.CosmicTheme.Mode/v1/is_dark";
+    text = if osConfig.stylix.polarity == "dark" then "true" else "false";
   };
 }
