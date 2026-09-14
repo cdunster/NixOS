@@ -46,151 +46,139 @@
                 {
                   bind = {
                     _args = [ "Ctrl Tab" ];
-                    _children = [{ GoToNextTab = { }; }];
+                    GoToNextTab = { };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Ctrl Shift Tab" ];
-                    _children = [{ GoToPreviousTab = { }; }];
+                    GoToPreviousTab = { };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt h" "Alt Left" ];
-                    _children = [{ MoveFocus = "Left"; }];
+                    MoveFocus = "Left";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt j" "Alt Down" ];
-                    _children = [{ MoveFocus = "Down"; }];
+                    MoveFocus = "Down";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt k" "Alt Up" ];
-                    _children = [{ MoveFocus = "Up"; }];
+                    MoveFocus = "Up";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt l" "Alt Right" ];
-                    _children = [{ MoveFocus = "Right"; }];
+                    MoveFocus = "Right";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt Shift h" "Alt Shift Left" ];
-                    _children = [{ Resize = "Increase Left"; }];
+                    Resize = "Increase Left";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt Shift j" "Alt Shift Down" ];
-                    _children = [{ Resize = "Increase Down"; }];
+                    Resize = "Increase Down";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt Shift k" "Alt Shift Up" ];
-                    _children = [{ Resize = "Increase Up"; }];
+                    Resize = "Increase Up";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt Shift l" "Alt Shift Right" ];
-                    _children = [{ Resize = "Increase Right"; }];
+                    Resize = "Increase Right";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt g" ];
-                    _children = [{ NewTab = { name = "Lazygit"; layout = "lazygit"; }; }];
+                    NewTab = { name = "Lazygit"; layout = "lazygit"; };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt z" ];
-                    _children = [{ ToggleFocusFullscreen = { }; }];
+                    ToggleFocusFullscreen = { };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt v" ];
-                    _children = [{ NewPane = "Down"; }];
+                    NewPane = "Down";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt s" ];
-                    _children = [{ NewPane = "Right"; }];
+                    NewPane = "Right";
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt t" ];
-                    _children = [{ NewTab = { }; }];
+                    NewTab = { };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt Shift q" ];
-                    _children = [{ CloseFocus = { }; }];
+                    CloseFocus = { };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt Shift t" ];
-                    _children = [{ CloseTab = { }; }];
+                    CloseTab = { };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt w" ];
-                    _children = [
-                      {
-                        LaunchOrFocusPlugin = {
-                          _args = [ "session-manager" ];
-                          _children = [
-                            { floating = true; }
-                            { move_to_focused_tab = true; }
-                          ];
-                        };
-                      }
-                    ];
+                    LaunchOrFocusPlugin = {
+                      _args = [ "session-manager" ];
+                      _children = [
+                        { floating = true; }
+                        { move_to_focused_tab = true; }
+                      ];
+                    };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt o" ];
-                    _children = [
-                      {
-                        LaunchOrFocusPlugin = {
-                          _args = [ "zellij:layout-manager" ];
-                          _children = [
-                            { floating = true; }
-                            { move_to_focused_tab = true; }
-                          ];
-                        };
-                      }
-                    ];
+                    LaunchOrFocusPlugin = {
+                      _args = [ "zellij:layout-manager" ];
+                      _children = [
+                        { floating = true; }
+                        { move_to_focused_tab = true; }
+                      ];
+                    };
                   };
                 }
                 {
                   bind = {
                     _args = [ "Alt u" ];
-                    _children = [
-                      {
-                        LaunchOrFocusPlugin = {
-                          _args = [ "zellij:share" ];
-                          _children = [
-                            { floating = true; }
-                            { move_to_focused_tab = true; }
-                          ];
-                        };
-                      }
-                    ];
+                    LaunchOrFocusPlugin = {
+                      _args = [ "zellij:share" ];
+                      _children = [
+                        { floating = true; }
+                        { move_to_focused_tab = true; }
+                      ];
+                    };
                   };
                 }
               ];
