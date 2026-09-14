@@ -34,6 +34,86 @@
             ];
           }
           {
+            normal._children = [
+              {
+                bind = {
+                  _args = [ "Alt a" ];
+                  SwitchToMode = "Scroll";
+                };
+              }
+            ];
+          }
+          {
+            scroll._children = [
+              {
+                bind = {
+                  _args = [ "Alt Esc" ];
+                  SwitchToMode = "Normal";
+                };
+              }
+              {
+                bind = {
+                  _args = [ "j" ];
+                  ScrollDown = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "k" ];
+                  ScrollUp = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "Ctrl d" ];
+                  HalfPageScrollDown = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "Ctrl u" ];
+                  HalfPageScrollUp = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "PageDown" ];
+                  PageScrollDown = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "PageUp" ];
+                  PageScrollUp = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "[" ];
+                  ScrollToPreviousPrompt = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "]" ];
+                  ScrollToNextPrompt = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "Ctrl Home" ];
+                  ScrollToTop = { };
+                };
+              }
+              {
+                bind = {
+                  _args = [ "q" "Ctrl End" ];
+                  ScrollToBottom = { };
+                };
+              }
+            ];
+          }
+          {
             shared_except = {
               _args = [ "locked" ];
               _children = [
