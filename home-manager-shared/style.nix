@@ -1,4 +1,4 @@
-{ osConfig, ... }: {
+{ osConfig, pkgs, ... }: {
   services.darkman = {
     enable = true;
 
@@ -16,6 +16,14 @@
       else
         sudo /nix/var/nix/profiles/system/bin/switch-to-configuration switch
       fi
+
+      # Force any running Neovim sessions to re-apply the new colour scheme
+      for sock in "''${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"/nvim.*.0; do
+        [ -S "$sock" ] || continue
+        ${pkgs.neovim}/bin/nvim --server "$sock" --remote-expr \
+          "luaeval(\"(function() require('config.recolour').reload() end)()\")" \
+          >/dev/null 2>&1 || true
+      done
     '';
   };
 

@@ -26,13 +26,8 @@
       require('config.custom_bindings')
       require('config.settings')
 
-      -- Override stylix's default colours for a few highlight groups to improve readability
-      -- Deferred because stylix applies its colourscheme after initLua runs.
-      vim.schedule(function()
-        vim.api.nvim_set_hl(0, 'Comment', { fg = '#${config.lib.stylix.colors.base04}' })
-        vim.api.nvim_set_hl(0, 'Whitespace', { fg = '#${config.lib.stylix.colors.base0F}' })
-        vim.api.nvim_set_hl(0, 'Delimiter', { fg = '#${config.lib.stylix.colors.base03}' })
-      end)
+      -- Apply stylix colourscheme based on the current dark mode
+      vim.schedule(function() require('config.recolour').apply() end)
     '';
     plugins =
       with pkgs.vimPlugins; [
@@ -167,6 +162,30 @@
   xdg.configFile."nvim/lua/config".source = ./nvim/lua/config;
   xdg.configFile."nvim/lua/overseer".source = ./nvim/lua/overseer;
   xdg.configFile."nvim/ftplugin".source = ./nvim/ftplugin;
+  xdg.configFile."nvim/colors".source = ./nvim/colors;
+
+  # The current Stylix palette, regenerated on every rebuild so it switches
+  # with the "dark" specialisation
+  xdg.configFile."nvim/lua/stylix_palette.lua".text = ''
+    return {
+      base00 = '#${config.lib.stylix.colors.base00}',
+      base01 = '#${config.lib.stylix.colors.base01}',
+      base02 = '#${config.lib.stylix.colors.base02}',
+      base03 = '#${config.lib.stylix.colors.base03}',
+      base04 = '#${config.lib.stylix.colors.base04}',
+      base05 = '#${config.lib.stylix.colors.base05}',
+      base06 = '#${config.lib.stylix.colors.base06}',
+      base07 = '#${config.lib.stylix.colors.base07}',
+      base08 = '#${config.lib.stylix.colors.base08}',
+      base09 = '#${config.lib.stylix.colors.base09}',
+      base0A = '#${config.lib.stylix.colors.base0A}',
+      base0B = '#${config.lib.stylix.colors.base0B}',
+      base0C = '#${config.lib.stylix.colors.base0C}',
+      base0D = '#${config.lib.stylix.colors.base0D}',
+      base0E = '#${config.lib.stylix.colors.base0E}',
+      base0F = '#${config.lib.stylix.colors.base0F}',
+    }
+  '';
 
   # This is a bit meta and very hacky but I want the spell file to be writeable.
   xdg.configFile."nvim/spell/en.utf-8.add".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/users/callum/home-manager/neovim/nvim/spell/en.utf-8.add";
