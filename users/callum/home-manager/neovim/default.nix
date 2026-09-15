@@ -11,6 +11,7 @@
       lua-language-server # Lua
       vscode-langservers-extracted # HTML/CSS/JSON/ESLint
       typescript-language-server # TypeScript and JavaScript
+      biome # TypeScript formatting and linting
       svelte-language-server # Svelte (JS framework)
       tailwindcss-language-server # Tailwind CSS framework
       rust-analyzer # Rust

@@ -114,6 +114,7 @@ M.config = function()
 
     -- TypeScript and JavaScript
     vim.lsp.enable('ts_ls')
+    vim.lsp.enable('biome')
 
     -- Svelte (JS framework)
     vim.lsp.enable('svelte')
@@ -163,7 +164,18 @@ M.config = function()
     --Try to format on save but ignore any errors.
     vim.api.nvim_create_autocmd('BufWritePre', {
         callback = function(opts)
-            pcall(vim.lsp.buf.format, { bufnr = opts.buf })
+            pcall(vim.lsp.buf.format, {
+                bufnr = opts.buf,
+                filter = function(client)
+                    local clients = vim.lsp.get_clients({ bufnr = opts.buf })
+                    for _, c in ipairs(clients) do
+                        if c.name == 'biome' then
+                            return client.name == 'biome'
+                        end
+                    end
+                    return true
+                end,
+            })
         end,
     })
 end
