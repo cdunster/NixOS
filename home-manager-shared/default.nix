@@ -49,6 +49,7 @@
         evince # PDF viewer part of the GNOME project
         gcr_4 # Provides a prompter for GNOME keyrings
         gh # GitHub CLI tool
+        gparted # Disk partitioning GUI
 
         # Nix tools
         nixpkgs-fmt # Format Nix files the nixpkgs' way
