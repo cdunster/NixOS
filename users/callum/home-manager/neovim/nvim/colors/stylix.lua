@@ -1,9 +1,8 @@
 local palette = require('stylix_palette')
 require('mini.base16').setup({ palette = palette })
 
-vim.api.nvim_set_hl(0, 'Comment', { fg = palette.base04 })
-vim.api.nvim_set_hl(0, 'Whitespace', { fg = palette.base0F })
-vim.api.nvim_set_hl(0, 'Delimiter', { fg = palette.base03 })
+vim.api.nvim_set_hl(0, 'Whitespace', { fg = palette.base02 })
+vim.api.nvim_set_hl(0, 'GitSignsCurrentLineBlame', { fg = palette.base02 })
 
 -- gitsigns derives some highlights the first time they're used, so clear the
 -- cached ones so the new colours can be created
