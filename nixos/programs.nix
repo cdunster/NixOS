@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ lib, config, pkgs, ... }: {
   options.hostOptions = with lib; {
     enableVirtualBox = mkEnableOption "Enable VirtualBox program with extension pack";
   };
@@ -10,6 +10,11 @@
     {
       # Override default packages (removes nano and others)
       environment.defaultPackages = [ ];
+
+      # System packages, installed for all users and can have root privileges
+      environment.systemPackages = with pkgs; [
+        gparted # Disk partition management GUI
+      ];
 
       programs = {
         # Enable the fish shell system-wide
