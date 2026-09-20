@@ -14,6 +14,10 @@
   # Enable fingerprint reader support
   services.fprintd.enable = true;
 
+  # Don't try fingerprint authentication for pkexec/polkit as there is no
+  # prompt so it looks like it's hanging for 30 seconds until the timeout
+  security.pam.services.polkit-1.fprintAuth = false;
+
   # Enable touchpad support
   services.libinput.enable = true;
 
