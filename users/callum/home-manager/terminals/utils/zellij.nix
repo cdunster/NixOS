@@ -1,6 +1,28 @@
-{ ... }: {
+{ lib, config, ... }: {
   programs.zellij = {
     enable = true;
+
+    # The theme that Stylix creates has some issues that need fixing
+    themes.stylix.themes.default = {
+      # This is a tabs' on-hover bg. By default, it uses the same colour as the fg
+      ribbon_unselected.emphasis_1 = lib.mkForce "#${config.lib.stylix.colors.base03}";
+
+      # This is unset by Stylix so it defaults to the text colour which is too dark
+      frame_unselected = {
+        # The unselected-pane's frame colour
+        base = "#${config.lib.stylix.colors.base03}";
+
+        # The following are currently unused
+        emphasis_0 = "#${config.lib.stylix.colors.base03}";
+        emphasis_1 = "#${config.lib.stylix.colors.base03}";
+        emphasis_2 = "#${config.lib.stylix.colors.base03}";
+        emphasis_3 = "#${config.lib.stylix.colors.base03}";
+      };
+
+      # The session-manager's selected-row background the default is too dark
+      list_selected.background = lib.mkForce "#${config.lib.stylix.colors.base02}";
+    };
+
     layouts = {
       lazygit = {
         layout._children = [
