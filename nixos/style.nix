@@ -17,8 +17,8 @@
           base00 = "#f6f6f4";
           base01 = "#edeae9";
           base02 = "#c5c5c5";
-          base03 = "#696969";
-          base04 = "#3c3c3c";
+          base03 = "#999999";
+          base04 = "#8f8f8f";
           base05 = "#252525"; # Text
           base06 = "#1e1e1e";
           base07 = "#141414";
