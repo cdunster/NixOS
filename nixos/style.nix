@@ -66,7 +66,29 @@
 
     # A NixOS specialisation that changes the colour scheme to a dark variant
     specialisation.dark.configuration.stylix = {
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
+      base16Scheme = {
+        scheme = "Custom Dark Colourscheme";
+        slug = "custom-dark-colourscheme";
+        variant = "dark";
+        palette = {
+          base00 = "#191938";
+          base01 = "#202046";
+          base02 = "#2c2c63";
+          base03 = "#9d9dd2";
+          base04 = "#000000";
+          base05 = "#f1f1f9"; # Text
+          base06 = "#f5f5ff";
+          base07 = "#ffffff";
+          base08 = "#eb6f92"; # Red
+          base09 = "#f6c177"; # Peach/Orange
+          base0A = "#f6c177"; # Yellow
+          base0B = "#61bd7b"; # Green
+          base0C = "#9ccfd8"; # Cyan
+          base0D = "#3e8fb0"; # Blue
+          base0E = "#c4a7e7"; # Magenta
+          base0F = "#56526e"; # Brown
+        };
+      };
       polarity = "dark";
       cursor.name = "BreezeX-RosePine-Linux";
     };
