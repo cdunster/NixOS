@@ -1,4 +1,8 @@
-{ lib, config, ... }: {
+{ lib, config, ... }:
+let
+  isZellijEnabled = config.programs.zellij.enable;
+in
+{
   programs.kitty = {
     enable = true;
     settings = {
@@ -18,7 +22,7 @@
       "alt+shift+0" = "send_key alt+shift+0";
     };
     extraConfig = lib.mkAfter ''
-      startup_session launch.conf
+      ${lib.optionalString isZellijEnabled "startup_session launch.conf"}
 
       # Stylix uses the `base02` colour for some text in kitty, this colour is
       # illegible so use `base03` instead.
@@ -26,5 +30,5 @@
     '';
   };
 
-  xdg.configFile."kitty/launch.conf".text = ''launch sh -c "zellij -l welcome"'';
+  xdg.configFile."kitty/launch.conf".text = lib.mkIf isZellijEnabled ''launch sh -c "zellij -l welcome"'';
 }
