@@ -27,6 +27,7 @@
       boot.lanzaboote = lib.mkIf (cfg.bootloader == "lanzaboote") {
         enable = true;
         pkiBundle = "/var/lib/sbctl";
+        configurationLimit = 5;
       };
 
       # Use the EFI bootloader.
