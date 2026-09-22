@@ -65,6 +65,7 @@
           ];
         };
         awaySummaryEnabled = false;
+        feedbackDrafts = "off";
       };
     };
   };
