@@ -1,7 +1,7 @@
 { ... }: {
   imports = [
     ./claude-code
-    ./dconf
+    ./dconf.nix
     ./helix.nix
     ./neovim
     ./shells
