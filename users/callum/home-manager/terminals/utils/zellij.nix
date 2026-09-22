@@ -225,6 +225,19 @@
                 }
                 {
                   bind = {
+                    _args = [ "Alt Shift v" ];
+                    _children = [
+                      { NewPane = "Down"; }
+                      { Resize = "Decrease Up"; }
+                      { Resize = "Decrease Up"; }
+                      { Resize = "Decrease Up"; }
+                      { Resize = "Decrease Up"; }
+                      { Resize = "Decrease Up"; }
+                    ];
+                  };
+                }
+                {
+                  bind = {
                     _args = [ "Alt s" ];
                     NewPane = "Right";
                   };
