@@ -1,6 +1,7 @@
 { ... }: {
-  # Use the Display Manager from System76 shipped with the COSMIC DE.
-  services.displayManager.cosmic-greeter = {
+  # Use the Display Manager from Dank Linux, goes with the DankMaterialShell
+  services.displayManager.dms-greeter = {
     enable = true;
+    compositor.name = "niri";
   };
 }
