@@ -2,6 +2,7 @@
   imports = [
     ./cosmic-de
     ./git.nix
+    ./niri-compositor.nix
     ./style.nix
     ./terminals
   ];
