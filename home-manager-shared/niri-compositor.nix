@@ -108,6 +108,47 @@
             _props.hotkey-overlay-title = "Open the Power Menu";
             spawn = [ "dms" "ipc" "call" "powermenu" "toggle" ];
           };
+
+          "XF86AudioRaiseVolume" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "audio" "increment" "5" ];
+          };
+          "XF86AudioLowerVolume" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "audio" "decrement" "5" ];
+          };
+          "XF86AudioMute" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "audio" "mute" ];
+          };
+          "XF86AudioMicMute" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "mic" "mute" ];
+          };
+          "XF86MonBrightnessUp" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "brightness" "increment" "5" "backlight:amdgpu_bl1" ];
+          };
+          "XF86MonBrightnessDown" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "brightness" "decrement" "5" "backlight:amdgpu_bl1" ];
+          };
+          "XF86AudioPlay" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "mpris" "playPause" ];
+          };
+          "XF86AudioNext" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "mpris" "next" ];
+          };
+          "XF86AudioPrev" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "mpris" "previous" ];
+          };
+          "XF86AudioStop" = {
+            _props.allow-when-locked = true;
+            spawn = [ "dms" "ipc" "call" "mpris" "stop" ];
+          };
         };
       };
     };
