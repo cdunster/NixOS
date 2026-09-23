@@ -1,4 +1,4 @@
-{ pkgs, lib, osConfig, ... }: {
+{ pkgs, lib, osConfig, config, ... }: {
   imports = [
     ./cosmic-de
     ./git.nix
@@ -34,11 +34,73 @@
         };
       };
 
+      # The custom, cross-shell shell prompt
+      programs.starship = {
+        enable = true;
+        settings = {
+          # Display the current shell in the prompt
+          shell.disabled = false;
+          # Set the character used on the input line of the prompt
+          character = {
+            success_symbol = "[=>](bold #${config.lib.stylix.colors.base05})";
+            error_symbol = "[=>](bold #${config.lib.stylix.colors.red})";
+          };
+        };
+      };
+
+      # The modern, better cd command that remembers directories
+      programs.zoxide.enable = true;
+
+      # The modern replacement of cat with colours, paging, and other features
+      programs.bat.enable = true;
+
+      # The modern replacement of ls
+      programs.eza.enable = true;
+
+      # Command-line fuzzy-finding tool
+      programs.fzf = {
+        enable = true;
+        defaultCommand = "fd --type=f --hidden --exclude=.git";
+        defaultOptions = [
+          "--inline-info"
+          "--reverse"
+          "--height=30"
+          "--header-first"
+        ];
+      };
+
+      # A very nice TUI for managing git repos
+      programs.lazygit = {
+        enable = true;
+        settings = {
+          notARepository = "skip";
+          gui.showCommandLog = false;
+          gui.theme.selectedLineBgColor = [ "#${config.lib.stylix.colors.base02}" ];
+          git.overrideGpg = true;
+        };
+      };
+
       # Enable lazydocker TUI to manager docker if docker itself is enabled
       programs.lazydocker.enable = isDockerEnabled;
 
+      # Automatically run scripts and setup envs when changing directory
+      programs.direnv = {
+        enable = true;
+
+        # Support entering Nix devShells via direnv
+        nix-direnv.enable = true;
+      };
+
       # Enable GNU Privacy Guard to manage PGP keys
       programs.gpg.enable = true;
+
+      # Set aliases to be used by all shells and all users
+      home.shellAliases = {
+        lg = "lazygit";
+        ll = "eza -lah";
+        gl = "git log --pretty=fuller";
+        gll = "git log --pretty=fuller -1";
+      };
 
       # Extra packages, not handled by home-manager
       home.packages = with pkgs; [
