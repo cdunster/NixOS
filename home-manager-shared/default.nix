@@ -25,6 +25,15 @@
       # Enable the Brave browser
       programs.brave.enable = true;
 
+      # Set Brave as the default browser
+      xdg.mimeApps = {
+        enable = true;
+        defaultApplications = {
+          "x-scheme-handler/http" = "brave-browser.desktop";
+          "x-scheme-handler/https" = "brave-browser.desktop";
+        };
+      };
+
       # Enable lazydocker TUI to manager docker if docker itself is enabled
       programs.lazydocker.enable = isDockerEnabled;
 
@@ -36,6 +45,7 @@
         # Utilities
         clang # Modern C/C++ compiler
         xclip # CLI clipboard manager
+        xdg-utils # Commands for launching user default programs
         fd # Find files and directories
         ripgrep # Search content of files
         ranger # Explore directories and files in the terminal
