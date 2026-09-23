@@ -4,14 +4,14 @@ local config = wezterm.config_builder()
 
 config.front_end = 'WebGpu'                               -- Fix weird bug where all text is shown as blocks
 config.window_frame = {
-    font = wezterm.font 'JetBrainsMono NF',               -- The font of the tab title
+    font = wezterm.font 'CaskaydiaCove Nerd Font Mono',   -- The font of the tab title
 }
 config.window_decorations = "TITLE | RESIZE"              -- Hide the window titlebar
 config.adjust_window_size_when_changing_font_size = false -- Using a tiling WM so window should stay a fixed size
-config.alternate_buffer_wheel_scroll_speed = 1 -- Set the scroll speed of full-screen terminal apps like NeoVim
-config.mux_enable_ssh_agent = false            -- Don't override the system SSH agent
+config.alternate_buffer_wheel_scroll_speed = 1            -- Set the scroll speed of full-screen terminal apps like NeoVim
+config.mux_enable_ssh_agent = false                       -- Don't override the system SSH agent
 config.set_environment_variables = {
-    SSH_AUTH_SOCK = '/run/user/1000/gcr/ssh',  -- Use the gcr-ssh-agent socket
+    SSH_AUTH_SOCK = '/run/user/1000/gcr/ssh',             -- Use the gcr-ssh-agent socket
 }
 
 local act = wezterm.action
