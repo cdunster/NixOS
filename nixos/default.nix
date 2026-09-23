@@ -4,7 +4,7 @@
     ./bootloader.nix
     ./desktop-envs
     ./dev-tools
-    ./display-managers
+    ./display-managers.nix
     ./docker.nix
     ./networking.nix
     ./programs.nix
