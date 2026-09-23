@@ -3,6 +3,7 @@
     ./cosmic-de
     ./git.nix
     ./style.nix
+    ./terminals
   ];
 
   config =
