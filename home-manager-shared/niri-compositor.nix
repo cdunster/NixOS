@@ -10,6 +10,12 @@
       enable = true;
 
       settings = {
+        # Enable tap inputs on touchpads
+        input.touchpad = {
+          tap = { };
+          tap-button-map = "left-right-middle";
+        };
+
         binds = {
           "Mod+Shift+Slash".show-hotkey-overlay = { };
 
