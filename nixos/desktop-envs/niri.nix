@@ -8,7 +8,11 @@
       cfg = config.hostOptions.desktopEnvironments.niri;
     in
     lib.mkIf cfg.enable {
+      # The infinite-scrolling Wayland compositor itself
       programs.niri.enable = true;
+
+      # The DankMaterialShell - a batteries-included shell to make compositors
+      # more like Desktop Environments
       programs.dms-shell.enable = true;
 
       environment.sessionVariables = {
