@@ -4,14 +4,15 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # Manage user settings and dotfiles within Nix
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Apply base16 themes, fonts, and other styling everywhere
-    stylix = {
-      url = "github:nix-community/stylix";
+    # Predefined config for specific hardware like Framework laptops
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -21,8 +22,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
+    # Apply base16 themes, fonts, and other styling everywhere
+    stylix = {
+      url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
