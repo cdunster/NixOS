@@ -1,4 +1,6 @@
-{ lib, config, ... }: {
+{ inputs, lib, config, ... }: {
+  imports = [ inputs.dms-plugin-registry.nixosModules.default ];
+
   options.hostOptions.desktopEnvironments.niri = with lib; {
     enable = mkEnableOption "Enable the niri compositor with the DankMaterialShell desktop shell";
   };
@@ -13,7 +15,21 @@
 
       # The DankMaterialShell - a batteries-included shell to make compositors
       # more like Desktop Environments
-      programs.dms-shell.enable = true;
+      programs.dms-shell = {
+        enable = true;
+
+        # The plugins to enable from the registry
+        plugins = {
+          # Do calculations in the DMS app launcher
+          calculator.enable = true;
+
+          # Manage Tailscale networks from the DMS topbar
+          dankscale.enable = true;
+
+          # View GitHub PRs and issues assigned to me from the DMS topbar
+          githubNotifier.enable = true;
+        };
+      };
 
       # Allow DankMaterialShell to read the battery status
       services.upower.enable = true;
