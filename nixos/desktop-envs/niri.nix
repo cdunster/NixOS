@@ -15,6 +15,9 @@
       # more like Desktop Environments
       programs.dms-shell.enable = true;
 
+      # Allow DankMaterialShell to read the battery status
+      services.upower.enable = true;
+
       environment.sessionVariables = {
         NIXOS_OZONE_WL = "1"; # Hint to electron apps to use Wayland
       };
