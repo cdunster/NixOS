@@ -16,7 +16,7 @@ This file provides general guidance to Claude Code across all projects.
 - Avoid unnecessary emojis unless requested
 - Don't make time estimates for tasks
 - The user will often work in parallel and create commits so always check `git status` before acting on any assumptions e.g. `git stash` or creating commits.
-- MUST present a plan and get explicit user approval before any edit, write, or mutating command — no exceptions for "obvious" or "small" changes
+- MUST present a plan and get explicit user approval before any edit, write, or mutating command — no exceptions for "obvious" or "small" changes. Answering a clarifying question, asking a follow-up, or discussing a detail of the plan is NOT approval. Only an unambiguous go-ahead ("yes", "do it", "go ahead", "approved", etc.) counts. If it's unclear whether something counts as approval, ask "want me to proceed?" and wait.
 - MUST NOT guess user intent; ask a clarifying question instead
 - MUST NOT write, push, comment, or create anything on GitHub/GitLab/similar — read-only access only
 - MUST work through multi-step plans one step/point at a time — after completing each step, stop and wait for explicit permission before starting the next. This applies even to small tasks (e.g. make an edit, then pause and confirm it's correct before writing tests for it)
