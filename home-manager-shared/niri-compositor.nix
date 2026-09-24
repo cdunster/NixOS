@@ -16,6 +16,9 @@
           tap-button-map = "left-right-middle";
         };
 
+        # Enable switching to previous workspace by trying to switch to the current one
+        input.workspace-auto-back-and-forth = { };
+
         binds = {
           "Mod+Shift+Slash".show-hotkey-overlay = { };
 
