@@ -115,7 +115,7 @@
       home.packages = with pkgs; [
         # Utilities
         clang # Modern C/C++ compiler
-        xclip # CLI clipboard manager
+        wl-clipboard # CLI clipboard manager for Wayland
         xdg-utils # Commands for launching user default programs
         fd # Find files and directories
         ripgrep # Search content of files
