@@ -36,6 +36,13 @@
         };
       };
 
+      # Manage standard user directories (Desktop, Documents, Downloads, etc.)
+      xdg.userDirs = {
+        enable = true;
+        createDirectories = true;
+        setSessionVariables = true;
+      };
+
       # The custom, cross-shell shell prompt
       programs.starship = {
         enable = true;
