@@ -19,6 +19,9 @@
         include "~/.config/niri/dms/binds.kdl" optional=true
         include "~/.config/niri/dms/cursor.kdl" optional=true
         include "~/.config/niri/dms/windowrules.kdl" optional=true
+
+        // Launch DankMaterialShell when Niri starts up
+        spawn-at-startup "dms" "run"
       '';
 
       settings = {

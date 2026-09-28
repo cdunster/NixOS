@@ -18,6 +18,11 @@
       programs.dms-shell = {
         enable = true;
 
+        # This systemd start up is unreliable with a fish login shell, which
+        # leaves dms.service without WAYLAND_DISPLAY. Disable it for now and
+        # start via Niri instead.
+        systemd.enable = false;
+
         # The plugins to enable from the registry
         plugins = {
           # Do calculations in the DMS app launcher
