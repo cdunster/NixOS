@@ -63,6 +63,9 @@
         # Set the system light/dark mode
         polarity = lib.mkDefault "light";
 
+        # Always use the dark colour-scheme for the Plymouth boot screen
+        targets.plymouth.colors.override = config.stylix.base16.mkSchemeAttrs darkColourscheme;
+
         # Set the system cursor theme used by all users by default
         cursor = {
           package = pkgs.rose-pine-cursor;
