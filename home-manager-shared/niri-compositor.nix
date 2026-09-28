@@ -9,6 +9,18 @@
     wayland.windowManager.niri = lib.mkIf osConfig.programs.niri.enable {
       enable = true;
 
+      extraConfig = ''
+        // Include all the Niri settings controlled by the DankMaterialShell
+        include "~/.config/niri/dms/outputs.kdl" optional=true
+        include "~/.config/niri/dms/colors.kdl" optional=true
+        include "~/.config/niri/dms/layout.kdl" optional=true
+        include "~/.config/niri/dms/alttab.kdl" optional=true
+        include "~/.config/niri/dms/wpblur.kdl" optional=true
+        include "~/.config/niri/dms/binds.kdl" optional=true
+        include "~/.config/niri/dms/cursor.kdl" optional=true
+        include "~/.config/niri/dms/windowrules.kdl" optional=true
+      '';
+
       settings = {
         # Enable tap inputs on touchpads
         input.touchpad = {
