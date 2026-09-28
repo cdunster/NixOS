@@ -37,6 +37,11 @@
             spawn = [ "xdg-open" "http://" ];
           };
 
+          "Mod+p" = {
+            _props.hotkey-overlay-title = "Toggle the built-in Display";
+            spawn-sh = "niri msg -j outputs | jq -e '.[\"eDP-1\"].logical == null' >/dev/null && niri msg output eDP-1 on || niri msg output eDP-1 off";
+          };
+
           "Mod+q".close-window = { };
 
           "Mod+w".toggle-overview = { };
