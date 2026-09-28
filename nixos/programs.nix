@@ -33,6 +33,9 @@
         # Enable the GNU Privacy Guard agent for managing GPG keys
         gnupg.agent.enable = true;
 
+        # GUI for managing the GNOME keyring secrets manager
+        seahorse.enable = true;
+
         # Add support for running AppImages directly
         appimage = {
           enable = true;
