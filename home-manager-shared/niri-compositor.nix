@@ -31,6 +31,9 @@
           tap-button-map = "left-right-middle";
         };
 
+        # Remap Caps Lock to Escape
+        input.keyboard.xkb.options = "caps:escape";
+
         # Enable switching to previous workspace by trying to switch to the current one
         input.workspace-auto-back-and-forth = { };
 
