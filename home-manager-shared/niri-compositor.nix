@@ -73,6 +73,7 @@
           "Mod+e".consume-or-expel-window-right = { };
           "Mod+y".toggle-column-tabbed-display = { };
           "Mod+g".toggle-window-floating = { };
+          "Mod+Shift+g".switch-focus-between-floating-and-tiling = { };
 
           "Mod+h".focus-column-left = { };
           "Mod+j".focus-window-down = { };
