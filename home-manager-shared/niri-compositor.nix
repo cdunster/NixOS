@@ -22,6 +22,9 @@
 
         // Launch DankMaterialShell when Niri starts up
         spawn-at-startup "dms" "run"
+
+        // Launch DankCalendar when Niri starts up
+        spawn-at-startup "dcal" "run" "--session" "--hidden"
       '';
 
       settings = {

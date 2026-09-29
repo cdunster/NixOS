@@ -1,4 +1,4 @@
-{ inputs, lib, config, ... }: {
+{ inputs, lib, config, pkgs, ... }: {
   imports = [ inputs.dms-plugin-registry.nixosModules.default ];
 
   options.hostOptions.desktopEnvironments.niri = with lib; {
@@ -35,6 +35,10 @@
           githubNotifier.enable = true;
         };
       };
+
+      environment.systemPackages = with pkgs; [
+        dankcalendar # The official calendar backend for DankMaterialShell
+      ];
 
       # Allow DankMaterialShell to read the battery status
       services.upower.enable = true;
