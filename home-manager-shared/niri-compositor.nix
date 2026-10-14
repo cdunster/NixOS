@@ -67,6 +67,21 @@
 
           "Mod+w".toggle-overview = { };
 
+          "Mod+s" = {
+            _props.hotkey-overlay-title = "Open the DMS Overview";
+            spawn = [ "dms" "ipc" "call" "dash" "toggle" "overview" ];
+          };
+
+          "Mod+n" = {
+            _props.hotkey-overlay-title = "Open Notifications";
+            spawn = [ "dms" "ipc" "call" "widget" "toggle" "notificationButton" ];
+          };
+
+          "Mod+v" = {
+            _props.hotkey-overlay-title = "Open Clipboard";
+            spawn = [ "dms" "ipc" "call" "clipboard" "toggle" ];
+          };
+
           "Mod+m".maximize-window-to-edges = { };
           "Mod+f".maximize-column = { };
           "Mod+Ctrl+f".expand-column-to-available-width = { };
