@@ -75,13 +75,13 @@
               }
               {
                 bind = {
-                  _args = [ "j" ];
+                  _args = [ "j" "Down" ];
                   ScrollDown = { };
                 };
               }
               {
                 bind = {
-                  _args = [ "k" ];
+                  _args = [ "k" "Up" ];
                   ScrollUp = { };
                 };
               }
