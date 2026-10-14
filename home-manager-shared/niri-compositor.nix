@@ -25,6 +25,9 @@
 
         // Launch DankCalendar when Niri starts up
         spawn-at-startup "dcal" "run" "--session" "--hidden"
+
+        // Re-import session env vars as sometimes Niri fails to do it during startup.
+        spawn-sh-at-startup "for i in $(seq 1 30); do systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP NIRI_SOCKET 2>/dev/null && dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP NIRI_SOCKET 2>/dev/null && break; sleep 0.5; done"
       '';
 
       settings = {
