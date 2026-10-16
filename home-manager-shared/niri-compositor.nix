@@ -31,6 +31,9 @@
       '';
 
       settings = {
+        # Don't show the "Important Hotkeys" pop-up on login.
+        hotkey-overlay.skip-at-startup = { };
+
         # Enable tap inputs on touchpads
         input.touchpad = {
           tap = { };
