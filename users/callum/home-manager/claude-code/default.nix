@@ -27,6 +27,7 @@
       settings = {
         theme = "auto";
         model = "opusplan";
+        outputStyle = "Concise";
         attribution = {
           commit = "";
           pr = "";

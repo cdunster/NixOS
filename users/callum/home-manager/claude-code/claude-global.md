@@ -12,6 +12,7 @@ This file provides general guidance to Claude Code across all projects.
 
 ### Communication
 
+- MUST write all English - especially responses and code comments - in ASD-STE100 Simplified Technical English
 - Be very concise, direct, and straight to the point in responses
 - Avoid unnecessary emojis unless requested
 - Don't make time estimates for tasks
