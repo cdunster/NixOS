@@ -147,6 +147,7 @@
         mission-center # A Windows-themed process monitoring GUI
         aseprite # Pixel art drawing software
         loupe # GNOME image viewer
+        nautilus # GNOME file browser
       ]
       ++ lib.lists.optionals isDconfEnabled [
         dconf-editor # GUI for editing dconf entries
