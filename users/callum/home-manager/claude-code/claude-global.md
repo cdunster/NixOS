@@ -9,6 +9,8 @@ This file provides general guidance to Claude Code across all projects.
 - Prioritize code clarity and maintainability over cleverness
 - Follow existing code style and conventions in each project
 - Only refactor when explicitly asked or when necessary for the task at hand
+- Give code comments a short note that states why the code exists. Do not state what the code does there; the code itself must show that.
+- Do not refer to other code, callers, or the history of a change in any comment.
 
 ### Communication
 
