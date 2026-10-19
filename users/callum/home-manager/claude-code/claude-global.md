@@ -41,6 +41,7 @@ This file provides general guidance to Claude Code across all projects.
 - Stage specific files rather than using `git add .` or `git add -A`
 - Follow the conventional commits guidelines for all commits and keep them as
   small as possible
+- Stick to 70-character-long commit messages as much as possible
 - Never skip hooks (--no-verify) unless explicitly requested
 - Always create new commits rather than amending (unless specifically asked to amend)
 
