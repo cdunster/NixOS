@@ -1,7 +1,7 @@
 { lib, osConfig, ... }: {
   config = {
-    # If dms-shell is enabled, let it manage GTK and Qt theming instead of Stylix
-    stylix.targets = lib.mkIf osConfig.programs.dms-shell.enable {
+    # If dux-shell is enabled, let it manage GTK and Qt theming instead of Stylix
+    stylix.targets = lib.mkIf osConfig.programs.dux-shell.enable {
       gtk.enable = false;
       qt.enable = false;
     };
@@ -10,7 +10,7 @@
       enable = true;
 
       extraConfig = ''
-        // Include all the Niri settings controlled by the DankMaterialShell
+        // Include all the Niri settings controlled by the Dux Shell (f.k.a DankMaterialShell)
         include "~/.config/niri/dms/outputs.kdl" optional=true
         include "~/.config/niri/dms/colors.kdl" optional=true
         include "~/.config/niri/dms/layout.kdl" optional=true
@@ -20,10 +20,10 @@
         include "~/.config/niri/dms/cursor.kdl" optional=true
         include "~/.config/niri/dms/windowrules.kdl" optional=true
 
-        // Launch DankMaterialShell when Niri starts up
+        // Launch Dux Shell when Niri starts up
         spawn-at-startup "dms" "run"
 
-        // Launch DankCalendar when Niri starts up
+        // Launch Dux Calendar when Niri starts up
         spawn-at-startup "dcal" "run" "--session" "--hidden"
 
         // Re-import session env vars as sometimes Niri fails to do it during startup.
@@ -74,7 +74,7 @@
           "Mod+w".toggle-overview = { };
 
           "Mod+s" = {
-            _props.hotkey-overlay-title = "Open the DMS Overview";
+            _props.hotkey-overlay-title = "Open the Dux Shell Overview";
             spawn = [ "dms" "ipc" "call" "dash" "toggle" "overview" ];
           };
 

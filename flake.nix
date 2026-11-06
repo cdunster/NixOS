@@ -28,9 +28,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # Plugin registry for the DankMaterialShell
-    dms-plugin-registry = {
-      url = "github:AvengeMedia/dms-plugin-registry";
+    # Plugin registry for the Dux Shell (f.k.a DankMaterialShell)
+    dux-plugin-registry = {
+      url = "github:duxlabs-dev/dux-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

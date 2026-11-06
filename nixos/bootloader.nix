@@ -35,7 +35,6 @@
       boot.loader.efi.efiSysMountPoint = "/boot";
 
       # Enable Plymouth for GUI boot screen.
-      boot.initrd.systemd.enable = true;
       boot.plymouth.enable = true;
       boot.kernelParams = [ "quiet" ];
 

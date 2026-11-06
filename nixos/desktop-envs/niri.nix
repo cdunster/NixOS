@@ -1,8 +1,8 @@
 { inputs, lib, config, pkgs, ... }: {
-  imports = [ inputs.dms-plugin-registry.nixosModules.default ];
+  imports = [ inputs.dux-plugin-registry.nixosModules.default ];
 
   options.hostOptions.desktopEnvironments.niri = with lib; {
-    enable = mkEnableOption "Enable the niri compositor with the DankMaterialShell desktop shell";
+    enable = mkEnableOption "Enable the niri compositor with the Dux desktop shell";
   };
 
   config =
@@ -13,34 +13,34 @@
       # The infinite-scrolling Wayland compositor itself
       programs.niri.enable = true;
 
-      # The DankMaterialShell - a batteries-included shell to make compositors
-      # more like Desktop Environments
-      programs.dms-shell = {
+      # A batteries-included wayland shell to make compositors more like
+      # Desktop Environments
+      programs.dux-shell = {
         enable = true;
 
         # This systemd start up is unreliable with a fish login shell, which
-        # leaves dms.service without WAYLAND_DISPLAY. Disable it for now and
+        # leaves dux-shell.service without WAYLAND_DISPLAY. Disable it for now and
         # start via Niri instead.
         systemd.enable = false;
 
         # The plugins to enable from the registry
         plugins = {
-          # Do calculations in the DMS app launcher
+          # Do calculations in the Dux app launcher
           calculator.enable = true;
 
-          # Manage Tailscale networks from the DMS topbar
+          # Manage Tailscale networks from the Dux Shell topbar
           dankscale.enable = true;
 
-          # View GitHub PRs and issues assigned to me from the DMS topbar
+          # View GitHub PRs and issues assigned to me from the Dux Shell topbar
           githubNotifier.enable = true;
         };
       };
 
       environment.systemPackages = with pkgs; [
-        dankcalendar # The official calendar backend for DankMaterialShell
+        dux-calendar # The official calendar backend for Dux Shell
       ];
 
-      # Allow DankMaterialShell to read the battery status
+      # Allow Dux Shell to read the battery status
       services.upower.enable = true;
 
       environment.sessionVariables = {
