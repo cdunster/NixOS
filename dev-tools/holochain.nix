@@ -1,4 +1,4 @@
-{ lib, config, ... }: {
+{ lib, config, pkgs, ... }: {
   options.hostOptions.devTools.holochain = with lib; {
     enable = mkEnableOption "Enable the tooling and config required to develop for Holochain";
   };
@@ -24,5 +24,15 @@
           "holochain-scaffolding-cli.cachix.org-1:DznpFcPqqPqiP05k/0lT6qeQ/N3KOvKQW/EP4Pf3A2E="
         ];
       };
+
+      home-manager.sharedModules = [
+        {
+          home.packages = with pkgs; [
+            mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
+            zoom-us # Video conferencing software
+            discord # Chat desktop app for gamers and communities
+          ];
+        }
+      ];
     };
 }

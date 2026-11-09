@@ -12,7 +12,6 @@
       isDconfEnabled = osConfig.programs.dconf.enable;
       isDockerEnabled = osConfig.virtualisation.docker.enable;
       isBootloaderLanzaboote = osConfig.boot.lanzaboote.enable;
-      isHolochainDevEnabled = osConfig.hostOptions.devTools.holochain.enable;
     in
     {
       # Let home-manager manage its own installation.
@@ -155,12 +154,6 @@
       ]
       ++ lib.lists.optionals isBootloaderLanzaboote [
         sbctl # Secure Boot key manager
-      ]
-      ++ lib.lists.optionals isHolochainDevEnabled [
-        mattermost-desktop # Desktop client Mattermost; a collaboration and chat app for businesses
-        zoom-us # Video conferencing software
-        discord # Chat desktop app for gamers and communities
-      ]
-      ;
+      ];
     };
 }
