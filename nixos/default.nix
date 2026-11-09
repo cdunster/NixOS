@@ -3,7 +3,6 @@
     ./audio.nix
     ./bootloader.nix
     ./desktop-envs
-    ./dev-tools
     ./display-managers.nix
     ./docker.nix
     ./networking.nix

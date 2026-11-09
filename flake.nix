@@ -49,6 +49,7 @@
           ./hosts/${hostName}
           ./nixos
           ./users
+          ./dev-tools
           inputs.home-manager.nixosModules.home-manager
           {
             home-manager = {
