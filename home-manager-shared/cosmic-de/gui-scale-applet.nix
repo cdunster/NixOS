@@ -2,7 +2,6 @@
   config =
     let
       cosmicEnabled = osConfig.services.desktopManager.cosmic.enable;
-      tailscaleEnabled = osConfig.services.tailscale.enable;
 
       gui-scale-applet = pkgs.rustPlatform.buildRustPackage {
         pname = "gui-scale-applet";
@@ -48,7 +47,7 @@
         };
       };
     in
-    lib.mkIf (cosmicEnabled && tailscaleEnabled) {
+    lib.mkIf cosmicEnabled {
       home.packages = [ gui-scale-applet ];
     };
 }
