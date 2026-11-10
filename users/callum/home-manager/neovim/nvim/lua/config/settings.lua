@@ -49,3 +49,5 @@ vim.opt.concealcursor = "n"             -- Also conceal special characters under
 vim.opt.foldenable = false              -- Disable folding for all file types.
 vim.g.mapleader = ' '                   -- Set <SPC> to be the leader key for keybindings.
 vim.g.maplocalleader = ','              -- Set ',' to be the local leader key for language specific keybindings.
+
+vim.cmd.colorscheme('dms')              -- Use the colourscheme that Dux generates with Matugen.
