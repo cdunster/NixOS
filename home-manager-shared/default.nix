@@ -4,6 +4,7 @@
     ./git.nix
     ./niri-compositor.nix
     ./style.nix
+    ./shells
     ./terminals
   ];
 
