@@ -76,7 +76,7 @@ Key module categories:
 - **Shells**: `shells/` (bash, fish, zsh with shared aliases in `default.nix`)
 - **Desktop environments**: `desktop-envs/` (GNOME, COSMIC)
 - **Display managers**: `display-managers.nix`
-- **Terminals**: `terminals/` (kitty, wezterm)
+- **Terminals**: `terminals/`
 - **Editors**: `helix.nix`, `vscode.nix`, `neovim/`
 - **Dev tools**: `dev-tools/` (holochain, etc.)
 - **System**: `bootloader.nix` (supports grub, systemd-boot, lanzaboote for Secure Boot)
