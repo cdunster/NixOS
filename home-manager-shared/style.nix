@@ -1,5 +1,14 @@
-{ osConfig, pkgs, ... }: {
+{ lib, osConfig, pkgs, ... }:
+let
+  isDuxShellEnabled = osConfig.programs.dux-shell.enable;
+in
+{
   config = {
+    # Dux uses Matugen to set the colours of these targets instead of Stylix
+    stylix.targets = lib.mkIf isDuxShellEnabled {
+      kitty.colors.enable = false;
+    };
+
     services.darkman = {
       enable = true;
 

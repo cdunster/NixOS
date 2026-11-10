@@ -1,6 +1,7 @@
-{ lib, config, ... }:
+{ lib, osConfig, config, ... }:
 let
   isZellijEnabled = config.programs.zellij.enable;
+  isDuxShellEnabled = osConfig.programs.dux-shell.enable;
 in
 {
   programs.kitty = {
@@ -24,9 +25,11 @@ in
     extraConfig = lib.mkAfter ''
       ${lib.optionalString isZellijEnabled "startup_session launch.conf"}
 
-      # Stylix uses the `base02` colour for some text in kitty, this colour is
-      # illegible so use `base03` instead.
-      color8 #${config.lib.stylix.colors.base03}
+      ${lib.optionalString isDuxShellEnabled ''
+        # Dux generates these files with Matugen
+        include dank-theme.conf
+        include dank-tabs.conf
+      ''}
     '';
   };
 
