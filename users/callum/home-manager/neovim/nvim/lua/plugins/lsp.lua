@@ -49,6 +49,7 @@ M.config = function()
     -- clangd LSP config for C/C++.
     vim.lsp.enable('clangd')
     vim.lsp.config('clangd', {
+        cmd = { 'clangd', '--query-driver=/nix/store/*/bin/*' },
         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
     })
 
