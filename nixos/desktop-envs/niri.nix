@@ -1,4 +1,4 @@
-{ inputs, lib, config, pkgs, ... }: {
+{ inputs, lib, config, ... }: {
   imports = [ inputs.dux-plugin-registry.nixosModules.default ];
 
   options.hostOptions.desktopEnvironments.niri = with lib; {
@@ -36,9 +36,8 @@
         };
       };
 
-      environment.systemPackages = with pkgs; [
-        dux-calendar # The official calendar backend for Dux Shell
-      ];
+      # The official calendar backend for Dux Shell
+      programs.dux-calendar.enable = true;
 
       # Allow Dux Shell to read the battery status
       services.upower.enable = true;
