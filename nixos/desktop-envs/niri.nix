@@ -39,6 +39,9 @@
       # The official calendar backend for Dux Shell
       programs.dux-calendar.enable = true;
 
+      # A stand-alone file manager for Wayland, from the creators of Dux Shell
+      programs.dux-files.enable = true;
+
       # Allow Dux Shell to read the battery status
       services.upower.enable = true;
 
