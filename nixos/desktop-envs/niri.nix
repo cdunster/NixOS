@@ -42,6 +42,9 @@
       # A stand-alone file manager for Wayland, from the creators of Dux Shell
       programs.dux-files.enable = true;
 
+      # A fast filesystem search service with fuzzy matching, from the creators of Dux Shell
+      programs.dux-search.enable = true;
+
       # Allow Dux Shell to read the battery status
       services.upower.enable = true;
 
