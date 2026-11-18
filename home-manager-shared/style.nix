@@ -6,13 +6,13 @@ in
   config = {
     # Dux uses Matugen to set the colours of these targets instead of Stylix
     stylix.targets = lib.mkIf isDuxShellEnabled {
-      gtk.enable = false;
-      qt.enable = false;
+      gtk.colors.enable = false;
+      qt.colors.enable = false;
       kitty.colors.enable = false;
-      neovim.enable = false;
-      zellij.enable = false;
-      starship.enable = false;
-      lazygit.enable = false;
+      neovim.colors.enable = false;
+      zellij.colors.enable = false;
+      starship.colors.enable = false;
+      lazygit.colors.enable = false;
     };
 
     services.darkman = {
