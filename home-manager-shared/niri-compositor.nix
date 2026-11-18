@@ -1,11 +1,5 @@
 { lib, osConfig, ... }: {
   config = {
-    # If dux-shell is enabled, let it manage GTK and Qt theming instead of Stylix
-    stylix.targets = lib.mkIf osConfig.programs.dux-shell.enable {
-      gtk.enable = false;
-      qt.enable = false;
-    };
-
     wayland.windowManager.niri = lib.mkIf osConfig.programs.niri.enable {
       enable = true;
 

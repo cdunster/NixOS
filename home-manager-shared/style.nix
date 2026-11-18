@@ -6,6 +6,8 @@ in
   config = {
     # Dux uses Matugen to set the colours of these targets instead of Stylix
     stylix.targets = lib.mkIf isDuxShellEnabled {
+      gtk.enable = false;
+      qt.enable = false;
       kitty.colors.enable = false;
       neovim.enable = false;
       zellij.enable = false;
