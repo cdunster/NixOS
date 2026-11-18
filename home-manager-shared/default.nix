@@ -1,4 +1,4 @@
-{ pkgs, lib, osConfig, config, ... }: {
+{ pkgs, lib, osConfig, ... }: {
   imports = [
     ./cosmic-de
     ./git.nix
@@ -61,7 +61,6 @@
         settings = {
           notARepository = "skip";
           gui.showCommandLog = false;
-          gui.theme.selectedLineBgColor = [ "#${config.lib.stylix.colors.base02}" ];
           git.overrideGpg = true;
         };
       };

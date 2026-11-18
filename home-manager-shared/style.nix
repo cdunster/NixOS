@@ -10,6 +10,7 @@ in
       neovim.enable = false;
       zellij.enable = false;
       starship.enable = false;
+      lazygit.enable = false;
     };
 
     services.darkman = {
