@@ -8,6 +8,7 @@ in
     stylix.targets = lib.mkIf isDuxShellEnabled {
       kitty.colors.enable = false;
       neovim.enable = false;
+      zellij.enable = false;
     };
 
     services.darkman = {
