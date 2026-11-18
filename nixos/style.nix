@@ -93,22 +93,5 @@
           };
         };
       };
-
-      # A NixOS specialisation that changes the colour scheme to a dark variant
-      specialisation.dark.configuration.stylix = {
-        base16Scheme = darkColourscheme;
-        polarity = "dark";
-        cursor.name = "BreezeX-RosePine-Linux";
-      };
-
-      # Allow switching configurations without a password, so that Darkman can switch between
-      # the base and dark specialisations to control the colour-scheme
-      security.sudo.extraRules = [{
-        groups = [ "wheel" ];
-        commands = [
-          { command = "/run/current-system/specialisation/dark/bin/switch-to-configuration switch"; options = [ "NOPASSWD" ]; }
-          { command = "/nix/var/nix/profiles/system/bin/switch-to-configuration switch"; options = [ "NOPASSWD" ]; }
-        ];
-      }];
     };
 }
