@@ -9,6 +9,7 @@ in
       kitty.colors.enable = false;
       neovim.enable = false;
       zellij.enable = false;
+      starship.enable = false;
     };
 
     services.darkman = {
